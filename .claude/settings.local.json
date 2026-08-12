@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npm create *)",
+      "Bash(mkdir -p \"/Users/kim-yesol/Desktop/Portfolio Web/src/components\" \"/Users/kim-yesol/Desktop/Portfolio Web/src/data\" \"/Users/kim-yesol/Desktop/Portfolio Web/src/i18n\" \"/Users/kim-yesol/Desktop/Portfolio Web/src/pages\" \"/Users/kim-yesol/Desktop/Portfolio Web/src/styles\" \"/Users/kim-yesol/Desktop/Portfolio Web/public/images/work/xr\" \"/Users/kim-yesol/Desktop/Portfolio Web/public/images/work/talkable\" \"/Users/kim-yesol/Desktop/Portfolio Web/public/images/work/skoleplan\" *)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "Bash(curl -sf http://localhost:5173)",
+      "Bash(break)",
+      "Read(//private/tmp/**)",
+      "Bash(chromium-cli --help)",
+      "Bash(npx --yes playwright --version)",
+      "Read(//Users/kim-yesol/.cache/**)",
+      "Bash(npx --yes playwright install chromium)",
+      "Bash(lsof -ti:5173 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)",
+      "Bash(node --experimental-vm-modules /private/tmp/claude-501/-Users-kim-yesol-Desktop-Portfolio-Web/9faac821-6b7d-4f2f-9398-492c70ed1bab/scratchpad/test.mjs)"
+    ],
+    "additionalDirectories": [
+      "/Users/kim-yesol/Desktop/Portfolio Web/src"
+    ]
+  }
+}
