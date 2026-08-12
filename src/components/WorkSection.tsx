@@ -1,23 +1,37 @@
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
-import { projectsByOrder } from '../data/projects';
+import { fullProjects, shortProjects } from '../data/projects';
 import { WorkCard } from './WorkCard';
+import { ShortWorkCard } from './ShortWorkCard';
+import { MoreWorkTeaser } from './MoreWorkTeaser';
+import { useInView } from '../hooks/useInView';
 
 export function WorkSection() {
   const { lang } = useLanguage();
   const work = siteCopy[lang].work;
+  const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <div id="work" className="section">
+    <div id="work" className={`section${inView ? ' in-view' : ''}`} ref={ref}>
       <div className="section-head">
-        <h2 className="section-title">{work.title}</h2>
-        <div className="section-meta">{work.count}</div>
+        <h2 className="section-title">
+          <span className="idx">01</span> {work.title}
+        </h2>
+        <div className="section-meta">
+          {fullProjects.length} CASE STUDIES · {shortProjects.length} MORE
+        </div>
       </div>
       <div className="work-grid">
-        {projectsByOrder.map((project) => (
+        {fullProjects.map((project) => (
           <WorkCard project={project} key={project.slug} />
         ))}
       </div>
+      <div className="short-grid">
+        {shortProjects.map((project) => (
+          <ShortWorkCard project={project} key={project.slug} />
+        ))}
+      </div>
+      <MoreWorkTeaser />
     </div>
   );
 }
