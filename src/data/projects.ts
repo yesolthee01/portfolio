@@ -30,16 +30,16 @@ export const projects: Project[] = [
     },
     process: {
       kr: [
-        { title: 'Research', desc: '관람객 동선 관찰 및 유사 XR 전시 벤치마킹.' },
-        { title: 'Ideation', desc: '헤드셋 없이 물리적 공간을 놀이터로 바꾸는 인터랙션 시나리오 스케치.' },
-        { title: 'Prototype', desc: '실사 크기 목업으로 동선·안내 사인 테스트.' },
-        { title: 'Test', desc: 'SIGGRAPH Asia 2024 현장 리허설 및 관람객 피드백 반영.' },
+        { title: 'Ideation', desc: '5면 공간형 플랫폼의 이점을 살리는 연출과 프로젝터 투사라는 하드웨어 제약을 함께 고려해 에셋·맵을 기획, 빛과 어둠의 대비를 적극 활용.' },
+        { title: 'Prototype', desc: '몰입도를 높이기 위한 배경 애니메이션 등을 반복적으로 제작.' },
+        { title: 'Internal Test', desc: '팀 내에서 애니메이션 강도, 인터랙션 반응성이 멀미나 하드웨어·소프트웨어 문제로 이어지지 않는지 반복 점검.' },
+        { title: 'User Test', desc: 'SIGGRAPH Asia·현대백화점 전시에 앞서 교내에서 학우들을 대상으로 시연 전시를 열고 유저 테스트를 진행, 그 결과를 다시 아이데이션에 반영하며 전체 과정을 반복.' },
       ],
       en: [
-        { title: 'Research', desc: 'Observed visitor flow and benchmarked comparable XR exhibitions.' },
-        { title: 'Ideation', desc: 'Sketched interaction scenarios that turn physical space into a playground without headsets.' },
-        { title: 'Prototype', desc: 'Tested wayfinding signage and flow with full-scale mockups.' },
-        { title: 'Test', desc: 'Ran on-site rehearsals at SIGGRAPH Asia 2024 and incorporated visitor feedback.' },
+        { title: 'Ideation', desc: "Planned assets and maps around the five-wall platform's strengths and the hardware constraints of projector-based wall projection, leaning into strong light/dark contrast." },
+        { title: 'Prototype', desc: 'Iterated on background animation and other elements to build immersion.' },
+        { title: 'Internal Test', desc: 'Repeatedly checked within the team whether animation intensity and interaction responsiveness caused motion sickness or hardware/software issues.' },
+        { title: 'User Test', desc: 'Ran an in-school demo exhibition and user testing with fellow students ahead of the SIGGRAPH Asia and Hyundai Department Store exhibitions, feeding results back into ideation and repeating the cycle.' },
       ],
     },
     card: {
@@ -62,11 +62,11 @@ export const projects: Project[] = [
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
         problemLabel: 'PROBLEM',
         problem:
-          '전시 시간이 짧고 헤드셋 없이 진행되는 XR 경험이 낯선 관람객이 많아, 대기·이동 동선에서 혼란을 겪고 몰입이 끊기는 문제가 있었다. 안내 인력에 의존하지 않고도 관람객이 스스로 규칙과 흐름을 이해할 수 있는 공간 설계가 필요했다.',
+          "'벽면·바닥면 5면 공간형 플랫폼'에 올라가는 콘텐츠를 만드는 것도, 게임 개발자·디자이너로 구성된 팀에서 협업하는 것도 모두 처음이었다. 게임 콘텐츠인 만큼 사용자가 재미있게 플레이하는 경험이 우선이어야 했고, 버튼이 아니라 몸을 움직여 플레이하는 방식이라 제한된 센서 인식 범위 안에서도 인터랙션이 직관적으로 이뤄지도록 설계해야 했다.",
         processLabel: 'PROCESS',
         resultLabel: 'RESULT / IMPACT',
         result:
-          '재설계된 동선 사인과 조닝으로 대기 구간의 혼란이 눈에 띄게 줄었고, 관람객들이 별도 안내 없이도 스스로 흐름을 이해하며 몰입도 높은 후기를 남겼다. SIGGRAPH Asia 2024 공식 전시작으로 선정되었다.',
+          '이 콘텐츠로 SIGGRAPH Asia 2024(도쿄) 한국 공동관에 선정되어 참가했고, 현대백화점 문화공간 전시에도 소개되었다.',
         prevLabel: '← PREVIOUS',
         nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
         backToWorkLabel: '← ALL WORK',
@@ -79,11 +79,11 @@ export const projects: Project[] = [
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
         problemLabel: 'PROBLEM',
         problem:
-          'Exhibition time was short, and many visitors were unfamiliar with a headset-free XR experience, causing confusion in queuing and movement that broke immersion. We needed a spatial design that let visitors understand the rules and flow on their own, without relying on staff guidance.',
+          'Both building content for a five-wall/floor spatial platform and collaborating with a team of game developers and designers were new to me. As game content, the priority had to be making play genuinely fun, and since the game was played through body movement rather than buttons, interactions needed to feel intuitive within the platform’s limited sensor range.',
         processLabel: 'PROCESS',
         resultLabel: 'RESULT / IMPACT',
         result:
-          'The redesigned wayfinding signage and zoning noticeably reduced confusion in waiting areas — visitors understood the flow on their own without guidance and left highly immersive reviews. Selected as an official exhibit at SIGGRAPH Asia 2024.',
+          'The project was selected for the Korea joint pavilion at SIGGRAPH Asia 2024 in Tokyo, and was also shown at a Hyundai Department Store cultural exhibition space.',
         prevLabel: '← PREVIOUS',
         nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
         backToWorkLabel: '← ALL WORK',
