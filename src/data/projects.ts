@@ -30,16 +30,40 @@ export const projects: Project[] = [
     },
     process: {
       kr: [
-        { title: 'Ideation', desc: '5면 공간형 플랫폼의 이점을 살리는 연출과 프로젝터 투사라는 하드웨어 제약을 함께 고려해 에셋·맵을 기획, 빛과 어둠의 대비를 적극 활용.' },
-        { title: 'Prototype', desc: '몰입도를 높이기 위한 배경 애니메이션 등을 반복적으로 제작.' },
-        { title: 'Internal Test', desc: '팀 내에서 애니메이션 강도, 인터랙션 반응성이 멀미나 하드웨어·소프트웨어 문제로 이어지지 않는지 반복 점검.' },
-        { title: 'User Test', desc: 'SIGGRAPH Asia·현대백화점 전시에 앞서 교내에서 학우들을 대상으로 시연 전시를 열고 유저 테스트를 진행, 그 결과를 다시 아이데이션에 반영하며 전체 과정을 반복.' },
+        {
+          title: 'Ideation',
+          desc: "'축제 같은 놀이공원'이라는 컨셉 아래 리듬·회피·슈팅 등 서로 다른 5개 맵(롤러코스터, 드롭타워, 서커스 무대, 벌룬 배틀, 포토존)을 기획. 5면 플랫폼의 이점과 프로젝터 투사 하드웨어 제약, 빛과 어둠의 대비를 함께 고려.",
+        },
+        {
+          title: 'Prototype',
+          desc: 'Unity와 프로젝션 매핑, Hokuyo 레이저 센서를 결합해 웨어러블 없이 신체 움직임을 인식하는 시스템을 구축. Blender·Maya로 3D 에셋과 인터랙티브 이펙트를 제작해 Unity에 통합.',
+        },
+        {
+          title: 'Internal Test',
+          desc: '충돌 판정, 오디오-비주얼 피드백 동기화, 신체 움직임과 반응 사이의 리듬감을 팀 내에서 반복 점검.',
+        },
+        {
+          title: 'User Test',
+          desc: 'SIGGRAPH Asia·현대백화점 전시에 앞서 교내에서 학우들을 대상으로 시연 전시를 열고 유저 테스트를 진행, 그 결과를 다시 아이데이션에 반영하며 전체 과정을 반복.',
+        },
       ],
       en: [
-        { title: 'Ideation', desc: "Planned assets and maps around the five-wall platform's strengths and the hardware constraints of projector-based wall projection, leaning into strong light/dark contrast." },
-        { title: 'Prototype', desc: 'Iterated on background animation and other elements to build immersion.' },
-        { title: 'Internal Test', desc: 'Repeatedly checked within the team whether animation intensity and interaction responsiveness caused motion sickness or hardware/software issues.' },
-        { title: 'User Test', desc: 'Ran an in-school demo exhibition and user testing with fellow students ahead of the SIGGRAPH Asia and Hyundai Department Store exhibitions, feeding results back into ideation and repeating the cycle.' },
+        {
+          title: 'Ideation',
+          desc: 'Planned five distinct maps — Roller Coaster, Drop Tower, Circus Stage, Balloon Battle, Photo Zone — spanning rhythm, dodging, and shooting mechanics under a festival concept, while weighing the five-wall platform’s strengths against the hardware constraints of projector-based wall projection and strong light/dark contrast.',
+        },
+        {
+          title: 'Prototype',
+          desc: 'Built a wearable-free motion tracking system combining Unity, projection mapping, and Hokuyo laser sensors. Produced 3D assets and interactive effects in Blender and Maya, then integrated them into Unity.',
+        },
+        {
+          title: 'Internal Test',
+          desc: 'Repeatedly checked collision detection, audio-visual feedback sync, and the rhythm between body movement and response within the team.',
+        },
+        {
+          title: 'User Test',
+          desc: 'Ran an in-school demo exhibition and user testing with fellow students ahead of the SIGGRAPH Asia and Hyundai Department Store exhibitions, feeding results back into ideation and repeating the cycle.',
+        },
       ],
     },
     card: {
@@ -60,13 +84,16 @@ export const projects: Project[] = [
         title: 'Midnight Carnival — 헤드셋 없는 XR e스포츠',
         subtitle: 'SIGGRAPH Asia 2024(도쿄) 선정 전시. 헤드셋 없이 물리적 공간을 인터랙티브 놀이터로 바꾸는 공간 기반 XR 경험을 설계했습니다.',
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
-        problemLabel: 'PROBLEM',
+        roleLabel: 'MY ROLE',
+        role:
+          '크리에이티브·경험 디자인을 맡아 5면 공간형 플랫폼의 핵심 컨셉과 전시 레이아웃을 설계하고, 모션·배경 비주얼 제작의 약 25%를 담당했다. 동시에 프로젝트 총괄로서 SIGGRAPH Asia·대학·현대백화점 문화홀과의 파트너십을 조율하고 게임 개발자·디자이너로 구성된 팀을 이끌었으며, 관련 리서치 논문을 공동 저술했다.',
+        problemLabel: 'THE CHALLENGE',
         problem:
-          "'벽면·바닥면 5면 공간형 플랫폼'에 올라가는 콘텐츠를 만드는 것도, 게임 개발자·디자이너로 구성된 팀에서 협업하는 것도 모두 처음이었다. 게임 콘텐츠인 만큼 사용자가 재미있게 플레이하는 경험이 우선이어야 했고, 버튼이 아니라 몸을 움직여 플레이하는 방식이라 제한된 센서 인식 범위 안에서도 인터랙션이 직관적으로 이뤄지도록 설계해야 했다.",
+          "경쟁적인 게임을 몸으로 즐기는 놀이터로 다시 설계하는 프로젝트였다. '벽면·바닥면 5면 공간형 플랫폼'에 콘텐츠를 올리는 것도, 게임 개발자·디자이너로 구성된 팀에서의 협업도 모두 처음이었다. Hokuyo 레이저 센서로 신체 움직임을 인식하는 방식이라, 버튼 없이도 제한된 센서 인식 범위 안에서 직관적으로 반응하는 인터랙션을 설계해야 했다.",
         processLabel: 'PROCESS',
         resultLabel: 'RESULT / IMPACT',
         result:
-          '이 콘텐츠로 SIGGRAPH Asia 2024(도쿄) 한국 공동관에 선정되어 참가했고, 현대백화점 문화공간 전시에도 소개되었다.',
+          'SIGGRAPH Asia 2024(도쿄) 한국 공동관에서 데뷔한 뒤 현대백화점 문화홀에서도 전시되며 수백 명의 관람객을 만났다.',
         prevLabel: '← PREVIOUS',
         nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
         backToWorkLabel: '← ALL WORK',
@@ -77,13 +104,16 @@ export const projects: Project[] = [
         subtitle:
           'Selected for SIGGRAPH Asia 2024 (Tokyo). Designed a spatial XR experience that turns physical space into an interactive playground — no headset required.',
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
-        problemLabel: 'PROBLEM',
+        roleLabel: 'MY ROLE',
+        role:
+          'Led creative and experience design — developing the core concept and exhibition layout for the five-wall spatial platform, and producing roughly 25% of the motion and background visuals. Also managed the project end-to-end, coordinating the team of game developers and designers and the partnerships with SIGGRAPH Asia, the university, and the Hyundai Department Store Culture Hall, and co-authored a related research paper.',
+        problemLabel: 'THE CHALLENGE',
         problem:
-          'Both building content for a five-wall/floor spatial platform and collaborating with a team of game developers and designers were new to me. As game content, the priority had to be making play genuinely fun, and since the game was played through body movement rather than buttons, interactions needed to feel intuitive within the platform’s limited sensor range.',
+          'The project reimagined competitive gaming as a full-body playground. Both building content for a five-wall/floor spatial platform and collaborating with a team of game developers and designers were new to me. Since movement was tracked through Hokuyo laser sensors, I needed to design interactions that felt intuitive — without buttons — within the sensor’s limited recognition range.',
         processLabel: 'PROCESS',
         resultLabel: 'RESULT / IMPACT',
         result:
-          'The project was selected for the Korea joint pavilion at SIGGRAPH Asia 2024 in Tokyo, and was also shown at a Hyundai Department Store cultural exhibition space.',
+          'The installation debuted at the Korea joint pavilion at SIGGRAPH Asia 2024 in Tokyo, and was later shown at the Hyundai Department Store Culture Hall, reaching hundreds of visitors.',
         prevLabel: '← PREVIOUS',
         nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
         backToWorkLabel: '← ALL WORK',
@@ -132,7 +162,7 @@ export const projects: Project[] = [
         title: 'Designing Empathy Through Space — 야외 돔 몰입 전시',
         subtitle: '덴마크에서 진행한 야외 돔 몰입 전시. 공간 연출만으로 낯선 이야기에 정서적으로 몰입하게 만드는 경험을 디렉팅했습니다.',
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
-        problemLabel: 'PROBLEM',
+        problemLabel: 'THE CHALLENGE',
         problem:
           '임시로 설치되는 야외 돔이라는 제한된 구조물 안에서, 관람객이 짧은 시간 안에 낯선 사람의 이야기에 감정적으로 몰입하게 만들어야 했다. 날씨와 야외 환경이라는 물리적 제약 속에서, 오직 공간 연출만으로 몰입을 끌어내는 것이 과제였다.',
         processLabel: 'PROCESS',
@@ -149,7 +179,7 @@ export const projects: Project[] = [
         subtitle:
           'An outdoor dome exhibition in Denmark. Directed a spatial experience that builds emotional immersion in an unfamiliar story through space alone.',
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
-        problemLabel: 'PROBLEM',
+        problemLabel: 'THE CHALLENGE',
         problem:
           'Inside a temporary outdoor dome structure, visitors needed to become emotionally immersed in an unfamiliar story within a short amount of time. Working within the physical constraints of weather and an outdoor setting, the challenge was to build that immersion through spatial direction alone.',
         processLabel: 'PROCESS',
@@ -204,7 +234,7 @@ export const projects: Project[] = [
         title: 'Talkable — AI 영어 학습 앱',
         subtitle: 'AI 기반 회화 피드백으로 실전 영어를 학습하는 앱의 전반적인 UX 설계.',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
-        problemLabel: 'PROBLEM',
+        problemLabel: 'THE CHALLENGE',
         problem:
           '기존 영어 학습 앱은 발화 피드백이 느리고 정형화되어 있어, 학습자가 실전 회화 자신감을 기르기 어려웠다. 반복 학습을 이어가게 하는 즉각적이고 개인화된 피드백 루프가 필요했다.',
         processLabel: 'PROCESS',
@@ -221,7 +251,7 @@ export const projects: Project[] = [
         subtitle:
           'End-to-end UX design for an app teaching practical English through AI-driven speaking feedback.',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
-        problemLabel: 'PROBLEM',
+        problemLabel: 'THE CHALLENGE',
         problem:
           'Existing English learning apps gave slow, formulaic speaking feedback, making it hard for learners to build real conversational confidence. We needed an immediate, personalized feedback loop that kept learners coming back.',
         processLabel: 'PROCESS',

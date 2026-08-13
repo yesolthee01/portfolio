@@ -12,6 +12,10 @@ export interface CaseStudyContent {
   title: string;
   subtitle: string;
   heroLabel: string;
+  /** Optional — leads the page with an ownership statement before the
+   * challenge/process/result. Omit until written for a given project. */
+  roleLabel?: string;
+  role?: string;
   problemLabel: string;
   problem: string;
   processLabel: string;

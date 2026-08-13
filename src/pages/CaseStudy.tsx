@@ -34,6 +34,13 @@ export function CaseStudy() {
           />
         </div>
 
+        {cs.role && (
+          <div className="case-row">
+            <div className="case-row-label">{cs.roleLabel ?? 'MY ROLE'}</div>
+            <p className="case-row-body">{cs.role}</p>
+          </div>
+        )}
+
         <div className="case-row">
           <div className="case-row-label">{cs.problemLabel}</div>
           <p className="case-row-body">{cs.problem}</p>
