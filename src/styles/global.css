@@ -869,6 +869,128 @@ button {
   color: var(--ink-soft);
 }
 
+.case-solution {
+  padding: 56px 0;
+  border-top: 1px solid var(--glass-border);
+}
+
+.case-solution-label {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 32px;
+}
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.solution-card {
+  border-radius: 20px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  padding: 26px 24px;
+}
+
+.solution-index {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.solution-card h3 {
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+}
+
+.solution-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.solution-desc {
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.case-findings {
+  padding: 56px 0;
+  border-top: 1px solid var(--glass-border);
+}
+
+.case-findings-label {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.case-findings-intro {
+  font-size: 14.5px;
+  margin: 0 0 24px;
+  color: var(--ink-soft);
+}
+
+.findings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.finding-card {
+  border-radius: 20px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  padding: 26px 24px;
+}
+
+.finding-index {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.finding-card h3 {
+  font-size: 14.5px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+}
+
+.finding-issue {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0 0 10px;
+  color: var(--ink-soft);
+}
+
+.finding-fix {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--accent-spatial);
+  font-weight: 500;
+}
+
 .case-footer-nav {
   padding: 44px 0 20px;
   display: flex;
@@ -888,7 +1010,8 @@ button {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  .process-grid {
+  .process-grid,
+  .solution-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .case-row {
@@ -902,6 +1025,9 @@ button {
     grid-template-columns: 1fr;
   }
   .short-grid {
+    grid-template-columns: 1fr;
+  }
+  .findings-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -952,7 +1078,8 @@ button {
 
 @media (max-width: 640px) {
   .ai-grid,
-  .process-grid {
+  .process-grid,
+  .solution-grid {
     grid-template-columns: 1fr;
   }
   .about-keywords {

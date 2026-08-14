@@ -32,37 +32,37 @@ export const projects: Project[] = [
       kr: [
         {
           title: 'Ideation',
-          desc: "'축제 같은 놀이공원'이라는 컨셉 아래 리듬·회피·슈팅 등 서로 다른 5개 맵(롤러코스터, 드롭타워, 서커스 무대, 벌룬 배틀, 포토존)을 기획. 5면 플랫폼의 이점과 프로젝터 투사 하드웨어 제약, 빛과 어둠의 대비를 함께 고려.",
+          desc: "'밤의 놀이공원(Night Carnival)'을 컨셉으로 리듬·회피·슈팅 등 서로 다른 인터랙션을 가진 5개 맵을 기획했다. 5면 플랫폼의 공간적 특성과 프로젝터 투사 환경, 빛과 어둠의 대비를 함께 고려해 경험의 방향을 설정했다.",
         },
         {
           title: 'Prototype',
-          desc: 'Unity와 프로젝션 매핑, Hokuyo 레이저 센서를 결합해 웨어러블 없이 신체 움직임을 인식하는 시스템을 구축. Blender·Maya로 3D 에셋과 인터랙티브 이펙트를 제작해 Unity에 통합.',
+          desc: 'Unity·프로젝션 매핑·Hokuyo 레이저 센서를 연결해 웨어러블 없이 신체 움직임으로 참여할 수 있는 프로토타입을 제작했다. 실제 공간에서 인터랙션의 인식 범위와 피드백 방식을 빠르게 검증하고, Blender·Maya로 제작한 3D 에셋과 인터랙티브 이펙트를 Unity에 통합했다.',
         },
         {
           title: 'Internal Test',
-          desc: '충돌 판정, 오디오-비주얼 피드백 동기화, 신체 움직임과 반응 사이의 리듬감을 팀 내에서 반복 점검.',
+          desc: '충돌 판정과 오디오·비주얼 피드백의 동기화, 사용자 움직임과 시스템 반응 사이의 타이밍을 반복적으로 테스트하며 조정했다.',
         },
         {
           title: 'User Test',
-          desc: 'SIGGRAPH Asia·현대백화점 전시에 앞서 교내에서 학우들을 대상으로 시연 전시를 열고 유저 테스트를 진행, 그 결과를 다시 아이데이션에 반영하며 전체 과정을 반복.',
+          desc: 'SIGGRAPH Asia와 현대백화점 전시에 앞서 교내 테스트 전시를 운영해 실제 사용자의 행동을 관찰했다. 발견한 문제를 디자인에 반영하며 Ideation → Prototype → Test 과정을 반복했다.',
         },
       ],
       en: [
         {
           title: 'Ideation',
-          desc: 'Planned five distinct maps — Roller Coaster, Drop Tower, Circus Stage, Balloon Battle, Photo Zone — spanning rhythm, dodging, and shooting mechanics under a festival concept, while weighing the five-wall platform’s strengths against the hardware constraints of projector-based wall projection and strong light/dark contrast.',
+          desc: "Planned five maps with distinct interactions — rhythm, dodging, shooting — under the 'Night Carnival' concept. Set the direction of the experience by weighing the five-wall platform's spatial characteristics, the projector-based projection environment, and light/dark contrast together.",
         },
         {
           title: 'Prototype',
-          desc: 'Built a wearable-free motion tracking system combining Unity, projection mapping, and Hokuyo laser sensors. Produced 3D assets and interactive effects in Blender and Maya, then integrated them into Unity.',
+          desc: 'Connected Unity, projection mapping, and Hokuyo laser sensors to build a prototype playable through body movement alone, with no wearables. Quickly validated recognition range and feedback in the actual space, and integrated 3D assets and interactive effects made in Blender and Maya into Unity.',
         },
         {
           title: 'Internal Test',
-          desc: 'Repeatedly checked collision detection, audio-visual feedback sync, and the rhythm between body movement and response within the team.',
+          desc: 'Repeatedly tested and adjusted collision detection, audio-visual feedback sync, and the timing between user movement and system response.',
         },
         {
           title: 'User Test',
-          desc: 'Ran an in-school demo exhibition and user testing with fellow students ahead of the SIGGRAPH Asia and Hyundai Department Store exhibitions, feeding results back into ideation and repeating the cycle.',
+          desc: 'Ran an in-school test exhibition ahead of the SIGGRAPH Asia and Hyundai Department Store exhibitions to observe real user behavior, feeding what was found back into the design and repeating the Ideation → Prototype → Test cycle.',
         },
       ],
     },
@@ -82,18 +82,53 @@ export const projects: Project[] = [
       kr: {
         eyebrow: 'CASE STUDY 01 — SPATIAL UX / XR',
         title: 'Midnight Carnival — 헤드셋 없는 XR e스포츠',
-        subtitle: 'SIGGRAPH Asia 2024(도쿄) 선정 전시. 헤드셋 없이 물리적 공간을 인터랙티브 놀이터로 바꾸는 공간 기반 XR 경험을 설계했습니다.',
+        subtitle:
+          "'미드나잇 카니발(Midnight Carnival)'은 5면 공간형 XR 플랫폼을 기반으로 한 체험형 e-sports 콘텐츠다. 신체 움직임과 디지털 인터랙션을 연결해, 여러 사용자가 온몸으로 함께 즐기는 협동형 경험을 제공한다.",
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
         roleLabel: 'MY ROLE',
         role:
-          '크리에이티브·경험 디자인을 맡아 5면 공간형 플랫폼의 핵심 컨셉과 전시 레이아웃을 설계하고, 모션·배경 비주얼 제작의 약 25%를 담당했다. 동시에 프로젝트 총괄로서 SIGGRAPH Asia·대학·현대백화점 문화홀과의 파트너십을 조율하고 게임 개발자·디자이너로 구성된 팀을 이끌었으며, 관련 리서치 논문을 공동 저술했다.',
+          'PM과 UX/UI Designer로 참여해 콘텐츠 기획부터 인터랙션 설계, 사용자 테스트, 전시까지 프로젝트 전 과정을 이끌었다. UI와 배경 비주얼 제작의 약 25%를 담당했으며, 게임 개발자와 디자이너 간 협업을 조율했다. 사용자 반응을 검증하고 경험을 개선하기 위해 교내 테스트 전시를 기획·운영했으며, 프로젝트 기반의 리서치 논문을 공동 저술했다.',
         problemLabel: 'THE CHALLENGE',
         problem:
-          "경쟁적인 게임을 몸으로 즐기는 놀이터로 다시 설계하는 프로젝트였다. '벽면·바닥면 5면 공간형 플랫폼'에 콘텐츠를 올리는 것도, 게임 개발자·디자이너로 구성된 팀에서의 협업도 모두 처음이었다. Hokuyo 레이저 센서로 신체 움직임을 인식하는 방식이라, 버튼 없이도 제한된 센서 인식 범위 안에서 직관적으로 반응하는 인터랙션을 설계해야 했다.",
+          '5면으로 둘러싸인 XR 공간에서 사용자가 별도의 학습 없이 몸을 움직여 게임을 이해하고 즐길 수 있어야 했다. 동시에 Hokuyo 레이저 센서의 제한된 인식 범위 안에서 움직임을 정확하게 감지하면서도, 게임의 재미와 몰입감을 유지하는 직관적인 인터랙션을 설계해야 했다.',
+        solutionLabel: 'THE SOLUTION',
+        solution: [
+          {
+            title: 'IMMERSION',
+            subtitle: '공간 전체를 경험의 일부로',
+            desc: '벽과 바닥을 하나의 플레이 공간으로 연결하고, 시각·사운드·신체 움직임이 함께 반응하도록 구성했다. 사용자가 화면을 바라보는 것을 넘어 공간 안에 직접 들어와 있다고 느낄 수 있는 경험을 설계했다.',
+          },
+          {
+            title: 'FUN',
+            subtitle: '서로 다른 플레이 리듬',
+            desc: '반복적인 경험을 피하기 위해 리듬·회피·슈팅 등 서로 다른 플레이 방식의 5개 맵을 구성했다. 각 맵마다 움직임과 난이도, 피드백의 리듬을 다르게 설계해 짧은 체험 안에서도 다양한 재미를 경험하도록 했다.',
+          },
+          {
+            title: 'INTUITIVENESS',
+            subtitle: '설명보다 반응으로 이해하는 인터랙션',
+            desc: '별도의 컨트롤러가 없는 환경에서 사용자가 자신의 움직임과 시스템의 반응을 즉시 연결할 수 있도록 시각·사운드 피드백을 설계했다. 사용자 테스트에서 플레이 방향의 변화나 시선 이동이 필요한 순간을 놓치는 문제를 발견했고, 행동을 유도하는 안내 UI와 피드백을 추가해 게임의 흐름을 보다 직관적으로 이해할 수 있도록 개선했다.',
+          },
+        ],
         processLabel: 'PROCESS',
+        findingsLabel: 'FROM USER TESTING',
+        findingsIntro: "특히 '드롭타워' 맵에서 두 가지 문제를 발견했다.",
+        findings: [
+          {
+            title: '방향 전환을 인지하지 못함',
+            issue:
+              '회전하는 바닥의 방향이 랜덤하게 변경되면 사용자가 달리는 방향도 바꿔야 했지만, 일부 사용자가 변화를 인지하지 못해 플레이 중 혼란을 겪었다.',
+            fix: '→ 회전 방향이 변경되는 순간, 벽면에 방향 화살표와 안내 UI를 추가해 다음 행동을 즉시 인지할 수 있도록 개선했다.',
+          },
+          {
+            title: '중요한 클라이맥스를 놓침',
+            issue:
+              '사용자는 회전하는 바닥의 구멍을 피하기 위해 플레이 중 대부분의 시선을 바닥에 두었다. 그 결과 게임 클리어 후 공간 전체가 급강하하는 핵심 연출이 벽면에서 재생되어도 이를 놓치는 경우가 발생했다.',
+            fix: '→ 클라이맥스 직전에 사용자의 시선을 벽면으로 유도하는 안내 UI를 추가해 의도한 공간 연출을 자연스럽게 경험하도록 개선했다.',
+          },
+        ],
         resultLabel: 'RESULT / IMPACT',
         result:
-          'SIGGRAPH Asia 2024(도쿄) 한국 공동관에서 데뷔한 뒤 현대백화점 문화홀에서도 전시되며 수백 명의 관람객을 만났다.',
+          'SIGGRAPH Asia 2024 Tokyo 한국 공동관에서 처음 공개된 후 현대백화점 문화홀에서도 전시되며 수백 명의 관람객을 만났다. 프로젝트의 경험과 연구 결과를 바탕으로 관련 리서치 논문을 공동 저술했다.',
         prevLabel: '← PREVIOUS',
         nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
         backToWorkLabel: '← ALL WORK',
@@ -102,18 +137,52 @@ export const projects: Project[] = [
         eyebrow: 'CASE STUDY 01 — SPATIAL UX / XR',
         title: 'Midnight Carnival — Headset-Free Spatial XR E-sport',
         subtitle:
-          'Selected for SIGGRAPH Asia 2024 (Tokyo). Designed a spatial XR experience that turns physical space into an interactive playground — no headset required.',
+          "'Midnight Carnival' is an experiential e-sports piece built on a five-wall spatial XR platform. It connects physical movement with digital interaction, letting multiple users play together with their whole bodies in a cooperative experience.",
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
         roleLabel: 'MY ROLE',
         role:
-          'Led creative and experience design — developing the core concept and exhibition layout for the five-wall spatial platform, and producing roughly 25% of the motion and background visuals. Also managed the project end-to-end, coordinating the team of game developers and designers and the partnerships with SIGGRAPH Asia, the university, and the Hyundai Department Store Culture Hall, and co-authored a related research paper.',
+          'Joined as PM and UX/UI Designer, leading the project from content planning and interaction design through user testing and exhibition. Handled roughly 25% of UI and background visual production, and coordinated collaboration between game developers and designers. Planned and ran an in-school test exhibition to validate user response and improve the experience, and co-authored a research paper based on the project.',
         problemLabel: 'THE CHALLENGE',
         problem:
-          'The project reimagined competitive gaming as a full-body playground. Both building content for a five-wall/floor spatial platform and collaborating with a team of game developers and designers were new to me. Since movement was tracked through Hokuyo laser sensors, I needed to design interactions that felt intuitive — without buttons — within the sensor’s limited recognition range.',
+          'In a five-wall XR space, users needed to understand and enjoy the game through body movement alone, with no separate instructions. At the same time, movement had to be accurately detected within the limited recognition range of the Hokuyo laser sensors — while designing interactions intuitive enough to keep the game fun and immersive.',
+        solutionLabel: 'THE SOLUTION',
+        solution: [
+          {
+            title: 'IMMERSION',
+            subtitle: 'Making the whole space part of the experience',
+            desc: "Connected the walls and floor into a single play space where visuals, sound, and body movement respond together. Designed the experience so users feel like they've stepped inside the space, not just watching a screen.",
+          },
+          {
+            title: 'FUN',
+            subtitle: 'Five different play rhythms',
+            desc: 'To avoid repetition, built five maps with distinct play styles — rhythm, dodging, shooting. Each map varies movement, difficulty, and feedback rhythm, so a short session still delivers a range of fun.',
+          },
+          {
+            title: 'INTUITIVENESS',
+            subtitle: 'Interaction understood through response, not instruction',
+            desc: "With no controller in hand, designed visual and sound feedback so users could immediately connect their movement to the system's response. User testing surfaced moments where players missed cues to change direction or look elsewhere, so guiding UI and feedback were added to make the game's flow more intuitive.",
+          },
+        ],
         processLabel: 'PROCESS',
+        findingsLabel: 'FROM USER TESTING',
+        findingsIntro: "Two issues in particular surfaced on the 'Drop Tower' map.",
+        findings: [
+          {
+            title: 'Missed direction changes',
+            issue:
+              "When the rotating floor's direction changed randomly, users had to change their running direction too — but some players didn't notice the change and got confused mid-play.",
+            fix: '→ Added directional arrows and guiding UI on the walls at the moment the rotation direction changes, so players could immediately register the next move.',
+          },
+          {
+            title: 'Missing the climax moment',
+            issue:
+              'To dodge the rotating floor’s holes, players kept most of their gaze on the floor throughout play. As a result, some missed the key moment after clearing the game when the whole space appeared to plunge, played out on the walls.',
+            fix: '→ Added guiding UI just before the climax to draw players’ gaze up to the walls, so they could naturally experience the intended spatial moment.',
+          },
+        ],
         resultLabel: 'RESULT / IMPACT',
         result:
-          'The installation debuted at the Korea joint pavilion at SIGGRAPH Asia 2024 in Tokyo, and was later shown at the Hyundai Department Store Culture Hall, reaching hundreds of visitors.',
+          "First unveiled at the Korea joint pavilion at SIGGRAPH Asia 2024 Tokyo, and later exhibited at the Hyundai Department Store Culture Hall, reaching hundreds of visitors. Co-authored a related research paper based on the project's experience and findings.",
         prevLabel: '← PREVIOUS',
         nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
         backToWorkLabel: '← ALL WORK',

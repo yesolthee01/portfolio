@@ -7,6 +7,23 @@ export interface ProcessStep {
   desc: string;
 }
 
+/** One of 2-3 design principles shown between THE CHALLENGE and PROCESS —
+ * a scannable bridge from "what was hard" to "how it was solved". */
+export interface SolutionPillar {
+  title: string;
+  subtitle: string;
+  desc: string;
+}
+
+/** A concrete usability issue surfaced in testing, paired with the fix
+ * that shipped. Rendered as its own section after PROCESS so it doesn't
+ * get squeezed into a process-step card. */
+export interface Finding {
+  title: string;
+  issue: string;
+  fix: string;
+}
+
 export interface CaseStudyContent {
   eyebrow: string;
   title: string;
@@ -18,7 +35,14 @@ export interface CaseStudyContent {
   role?: string;
   problemLabel: string;
   problem: string;
+  /** Optional — design principles bridging challenge and process. */
+  solutionLabel?: string;
+  solution?: SolutionPillar[];
   processLabel: string;
+  /** Optional — specific usability findings + fixes from testing. */
+  findingsLabel?: string;
+  findingsIntro?: string;
+  findings?: Finding[];
   resultLabel: string;
   result: string;
   prevLabel: string;

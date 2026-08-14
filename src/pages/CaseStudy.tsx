@@ -46,6 +46,22 @@ export function CaseStudy() {
           <p className="case-row-body">{cs.problem}</p>
         </div>
 
+        {cs.solution && cs.solution.length > 0 && (
+          <div className="case-solution">
+            <div className="case-solution-label">{cs.solutionLabel ?? 'THE SOLUTION'}</div>
+            <div className="solution-grid">
+              {cs.solution.map((pillar, i) => (
+                <div className="solution-card glass" key={pillar.title}>
+                  <div className="solution-index">{String(i + 1).padStart(2, '0')}</div>
+                  <h3>{pillar.title}</h3>
+                  <p className="solution-subtitle">{pillar.subtitle}</p>
+                  <p className="solution-desc">{pillar.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="case-process">
           <div className="case-process-label">{cs.processLabel}</div>
           <div className="process-grid">
@@ -58,6 +74,23 @@ export function CaseStudy() {
             ))}
           </div>
         </div>
+
+        {cs.findings && cs.findings.length > 0 && (
+          <div className="case-findings">
+            <div className="case-findings-label">{cs.findingsLabel ?? 'FROM USER TESTING'}</div>
+            {cs.findingsIntro && <p className="case-findings-intro">{cs.findingsIntro}</p>}
+            <div className="findings-grid">
+              {cs.findings.map((finding, i) => (
+                <div className="finding-card glass" key={finding.title}>
+                  <div className="finding-index">{String(i + 1).padStart(2, '0')}</div>
+                  <h3>{finding.title}</h3>
+                  <p className="finding-issue">{finding.issue}</p>
+                  <p className="finding-fix">{finding.fix}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="case-row">
           <div className="case-row-label">{cs.resultLabel}</div>
