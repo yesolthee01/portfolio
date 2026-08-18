@@ -39,6 +39,21 @@ export interface LoopStep {
   imageLabel?: string;
 }
 
+/** One segment (e.g. an age group) whose research insight is translated
+ * into a concrete design decision and interaction. Rendered as a
+ * full-width stacked row — used when a project's "solution" is really a
+ * research → design mapping across several segments rather than 2-3
+ * general pillars (see SolutionPillar). */
+export interface AgeCard {
+  /** e.g. 'EARLY YEARS' */
+  ageGroup: string;
+  /** e.g. 'Move & Discover' */
+  tagline: string;
+  insight: string;
+  translation: string;
+  interaction: string;
+}
+
 export interface CaseStudyContent {
   eyebrow: string;
   title: string;
@@ -58,6 +73,20 @@ export interface CaseStudyContent {
   loopLabel?: string;
   loopIntro?: string;
   loopSteps?: LoopStep[];
+  /** Optional — a research → design translation section, shown as
+   * stacked full-width segment cards (see AgeCard). Alternative to
+   * `solution` for research-driven projects. */
+  researchLabel?: string;
+  researchIntro?: string;
+  ageCards?: AgeCard[];
+  /** Optional — a single emphasized callout paragraph, typically a
+   * closing design principle. */
+  principleLabel?: string;
+  principle?: string;
+  /** Optional — a plain paragraph section, e.g. citing the research or
+   * theory a project's design decisions were grounded in. */
+  researchBasisLabel?: string;
+  researchBasis?: string;
   processLabel: string;
   /** Optional — specific usability findings + fixes from testing. */
   findingsLabel?: string;
@@ -83,8 +112,12 @@ export type Medium = 'app' | 'spatial' | 'ai';
 export interface Project {
   slug: string;
   order: number;
-  /** 'full' = gets a full case study page (problem/process/result).
-   *  'short' = single-screen summary card only, no case study page. */
+  /** Controls card SIZE/layout on the homepage only: 'full' = large card
+   * in the vertical Work list, 'short' = compact card in the 2-col grid.
+   * Whether a project has its own /work/:slug case study page is decided
+   * separately, by whether `process` + `caseStudy` are both set below —
+   * a 'short'-tier project can still link to a full case study page
+   * while keeping the compact card size (see ShortWorkCard). */
   tier: 'full' | 'short';
   medium: Medium;
   tags: string[];
@@ -93,9 +126,12 @@ export interface Project {
     hero: string;
   };
   card: Localized<WorkCardContent>;
-  /** Full-tier only: powers the /work/:slug case study page. */
+  /** Powers the /work/:slug case study page when set alongside
+   * `caseStudy`, regardless of `tier`. */
   process?: Localized<ProcessStep[]>;
   caseStudy?: Localized<CaseStudyContent>;
-  /** Short-tier only: one-line result shown directly on the compact card. */
+  /** One-line teaser shown directly on the compact ('short'-tier) card —
+   * the case study's own result/flow line when it has a full page, or a
+   * plain result summary when it doesn't. */
   resultLine?: Localized<string>;
 }

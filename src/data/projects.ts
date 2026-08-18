@@ -481,7 +481,7 @@ export const projects: Project[] = [
         result:
           'Talkable은 아이디어와 UI 디자인에서 끝나지 않고, AI 기반 실시간 대화와 개인화 피드백을 경험할 수 있는 프로토타입으로 구현해 졸업전시에서 직접 선보였다. 사용자 테스트와 전문가 피드백을 통해 핵심 Learning Loop의 발견성·정보 구조·Navigation을 반복적으로 개선했으며, 프로젝트의 연구 및 개발 과정을 바탕으로 관련 논문을 작성하고 학술 발표로 확장했다.',
         prevLabel: '← PREVIOUS — DESIGNING EMPATHY THROUGH SPACE',
-        nextLabel: 'BACK TO ALL WORK →',
+        nextLabel: 'NEXT — SEOUL CITY-FUNDED XR RESEARCH →',
         backToWorkLabel: '← ALL WORK',
       },
       en: {
@@ -576,7 +576,7 @@ export const projects: Project[] = [
         result:
           "Talkable didn't stop at an idea and UI design — it was built into a prototype where AI-driven real-time conversation and personalized feedback could actually be experienced, and demonstrated live at the graduation exhibition. Through user testing and expert feedback, the discoverability, information structure, and navigation of the core Learning Loop were repeatedly improved, and the project's research and development process was written up into a paper and presented at an academic conference.",
         prevLabel: '← PREVIOUS — DESIGNING EMPATHY THROUGH SPACE',
-        nextLabel: 'BACK TO ALL WORK →',
+        nextLabel: 'NEXT — SEOUL CITY-FUNDED XR RESEARCH →',
         backToWorkLabel: '← ALL WORK',
       },
     },
@@ -591,21 +591,195 @@ export const projects: Project[] = [
       thumb: '/images/work/seoul-xr-research/thumb.jpg',
       hero: '/images/work/seoul-xr-research/hero.jpg',
     },
+    process: {
+      kr: [
+        {
+          title: 'RESEARCH',
+          desc: '발달심리·운동발달·인지발달 관련 선행 연구를 조사하고, 아동부터 고령자까지 연령별 신체·인지적 특성을 정리했다.',
+        },
+        {
+          title: 'DEFINE',
+          desc: '각 연령대에서 중요하게 작용하는 움직임, 인지 능력, 참여 동기를 추출하고 이를 Experience Design의 기준으로 정의했다.',
+        },
+        {
+          title: 'TRANSLATE',
+          desc: '연구에서 도출한 추상적인 인사이트를 밟기·찾기·던지기·피하기·걷고 기억하기와 같은 구체적인 신체 행동과 게임 메커니즘으로 변환했다.',
+        },
+        {
+          title: 'PROTOTYPE & EXHIBITION',
+          desc: '연령별 컨셉을 5면 공간형 XR 플랫폼에서 실제 플레이할 수 있는 콘텐츠로 구현하고, 실제 공간에서 경험할 수 있는 형태로 전시했다.',
+        },
+      ],
+      en: [
+        {
+          title: 'RESEARCH',
+          desc: 'Reviewed prior research in developmental psychology, motor development, and cognitive development, and organized the physical and cognitive traits of each age group from early childhood to older adults.',
+        },
+        {
+          title: 'DEFINE',
+          desc: 'Extracted the movement, cognitive ability, and motivation to participate that mattered most at each age, and defined these as the criteria for Experience Design.',
+        },
+        {
+          title: 'TRANSLATE',
+          desc: 'Translated the abstract insights drawn from research into concrete physical actions and game mechanics — stepping, finding, throwing, dodging, walking and remembering.',
+        },
+        {
+          title: 'PROTOTYPE & EXHIBITION',
+          desc: 'Built each age-specific concept into content playable on the five-wall spatial XR platform, and exhibited it in a physical space where it could actually be experienced.',
+        },
+      ],
+    },
     card: {
       kr: {
         imgLabel: 'SEOUL CITY-FUNDED XR RESEARCH',
         title: '서울시 지원 산학 XR 리서치',
-        desc: '5개 연령대별 맞춤 콘텐츠를 설계한 산학협력 XR 리서치. 결과물이 실제 상업 전시로 이어졌습니다.',
+        desc: '발달심리 연구를 바탕으로 아동부터 고령자까지, 5개 연령대의 신체·인지 특성을 XR 인터랙션으로 설계한 산학협력 프로젝트.',
       },
       en: {
         imgLabel: 'SEOUL CITY-FUNDED XR RESEARCH',
         title: 'Seoul City-Funded XR Research',
-        desc: 'Industry-academia XR research designing age-tailored content across 5 age groups. The output went on to a real commercial exhibition.',
+        desc: 'An industry-academia project translating the physical and cognitive traits of five age groups — from children to older adults — into XR interaction, grounded in developmental psychology research.',
+      },
+    },
+    caseStudy: {
+      kr: {
+        eyebrow: 'CASE STUDY 04 — SPATIAL UX / RESEARCH',
+        title: '서울시 지원 산학 XR 리서치',
+        subtitle:
+          '발달심리와 운동·인지 발달 연구를 바탕으로, 아동부터 고령자까지 5개 연령대의 특성을 XR 인터랙션으로 번역한 산학협력 연구 프로젝트다. 하나의 5면 공간형 XR 플랫폼 안에서 각 연령대가 자신의 신체·인지 특성에 맞는 방식으로 움직이고 참여할 수 있도록 서로 다른 5개의 경험을 설계했다.',
+        heroLabel: 'HERO IMAGE — SEOUL CITY-FUNDED XR RESEARCH',
+        roleLabel: 'MY ROLE',
+        role:
+          'Research와 UX Concept을 중심으로 연령별 발달 특성을 조사하고, 연구에서 도출한 인사이트를 게임 컨셉과 신체 인터랙션으로 구체화하는 과정에 참여했다. 프로젝트의 연구 결과를 논문으로 정리하고 학술 발표까지 연결했으며, 실제 XR 콘텐츠 제작과 전시 과정에도 참여했다.',
+        problemLabel: 'THE CHALLENGE',
+        problem:
+          '같은 인터랙션이 모든 연령의 사용자에게 같은 경험을 제공하지 않는다. 연령에 따라 신체 능력과 인지 방식, 반응 속도와 참여 동기가 달라지는 만큼, 단순히 게임의 난이도를 조절하는 것이 아니라 각 연령의 특성을 어떤 움직임과 게임 메커니즘으로 변환할 것인가가 핵심 과제였다.',
+        researchLabel: 'RESEARCH → DESIGN TRANSLATION',
+        researchIntro:
+          '발달심리학·운동발달·인지발달 관련 연구를 바탕으로 연령별 주요 특성을 정리하고, 이를 실제 XR 공간에서 수행할 수 있는 행동과 인터랙션으로 변환했다.',
+        ageCards: [
+          {
+            ageGroup: 'EARLY YEARS',
+            tagline: 'Move & Discover',
+            insight: '감각·운동 경험과 대근육 움직임을 통한 신체 조절 능력이 발달하는 시기.',
+            translation: '복잡한 규칙보다 몸을 직접 움직이고 즉각적인 결과를 경험하는 활동에 집중했다.',
+            interaction: '→ 바닥의 물고기를 밟으며 수집하기',
+          },
+          {
+            ageGroup: 'SCHOOL AGE',
+            tagline: 'Find & Solve',
+            insight: '순발력과 판단력, 공간 인지가 발달하며 과제를 해결하는 과정에서 성취감을 경험하는 시기.',
+            translation: '공간을 직접 탐색하고 빠르게 목표를 발견해 해결하는 경험으로 연결했다.',
+            interaction: '→ 공간 속 목표물을 찾고 제거하기',
+          },
+          {
+            ageGroup: 'TEEN',
+            tagline: 'Aim & React',
+            insight: '정확성·전략성·민첩성과 함께 자기조절 및 전략적 판단 능력이 발달하는 시기.',
+            translation: '단순한 반응보다 목표를 판단하고 타이밍을 결정해야 하는 경쟁적 플레이로 구성했다.',
+            interaction: '→ 목표를 판단하고 피구공을 던지기',
+          },
+          {
+            ageGroup: 'ADULT',
+            tagline: 'Move & Release',
+            insight: '신체활동을 통한 스트레스 해소와 몰입 경험에 주목했다.',
+            translation: '설명이나 복잡한 과제보다 온몸을 빠르게 움직이며 즉각적으로 몰입할 수 있는 경험을 설계했다.',
+            interaction: '→ 날아오는 화살을 온몸으로 회피하기',
+          },
+          {
+            ageGroup: 'OLDER ADULT',
+            tagline: 'Walk & Remember',
+            insight:
+              '인지 자극과 신체활동을 함께 수행하고, 반복적인 자극을 통해 기억과 인지 기능을 유지하는 경험에 주목했다.',
+            translation: '빠른 반응을 요구하기보다 걷기와 기억, 간단한 인지 과제를 결합한 경험으로 구성했다.',
+            interaction: '→ 공간을 걷고, 기억하고, 농작물을 수확하기',
+          },
+        ],
+        principleLabel: 'DESIGN PRINCIPLE',
+        principle:
+          '연령에 따라 난이도만 조절한 것이 아니라, 인터랙션 자체를 다르게 설계했다. 아동은 밟고, 초등학생은 찾고 해결하며, 청소년은 판단하고 던진다. 성인은 빠르게 피하고, 고령자는 걷고 기억한다. 같은 XR 플랫폼을 사용하면서도 사용자의 신체·인지적 특성에 따라 플레이의 핵심 행동 자체를 다르게 설계하는 것을 프로젝트의 중심 원칙으로 삼았다.',
+        researchBasisLabel: 'RESEARCH BASIS',
+        researchBasis:
+          '연령별 Experience Design의 근거를 마련하기 위해 발달심리학, 운동발달, 인지발달 관련 선행 연구와 이론을 조사했다. Gallahue의 운동발달 이론, Piaget의 인지발달 이론, Erikson의 심리사회적 발달 이론을 비롯해 Kolb의 경험학습과 신경가소성 관련 연구 등을 참고해 Research Insight를 도출했다. 연구 이론 자체를 보여주는 데 그치지 않고, 각 인사이트가 실제 사용자의 행동과 인터랙션에 어떻게 반영될 수 있는지에 초점을 맞췄다.',
+        processLabel: 'PROCESS',
+        resultLabel: 'RESULT / IMPACT',
+        result:
+          '연구에서 도출한 연령별 디자인 원칙을 5개의 XR Experience로 구현했으며, 연구 결과가 프로토타입에 머물지 않고 실제 전시 경험으로 이어졌다. 프로젝트는 서울시 지원 산학협력 연구로 진행되었으며, 이후 현대백화점 문화홀에서 실제 관람객을 대상으로 전시됐다. 연구 과정과 결과는 논문으로 정리해 국내·국제 학술 발표로 확장했다.',
+        prevLabel: '← PREVIOUS — TALKABLE',
+        nextLabel: 'BACK TO ALL WORK →',
+        backToWorkLabel: '← ALL WORK',
+      },
+      en: {
+        eyebrow: 'CASE STUDY 04 — SPATIAL UX / RESEARCH',
+        title: 'Seoul City-Funded XR Research',
+        subtitle:
+          'A research collaboration project that translates the traits of five age groups — from early childhood to older adults — into XR interactions, grounded in developmental psychology and motor/cognitive development research. Within a single five-wall spatial XR platform, five distinct experiences were designed so each age group could move and participate in ways suited to their own physical and cognitive traits.',
+        heroLabel: 'HERO IMAGE — SEOUL CITY-FUNDED XR RESEARCH',
+        roleLabel: 'MY ROLE',
+        role:
+          "Centered on research and UX concept work, investigated developmental traits across age groups and took part in translating the resulting insights into game concepts and physical interactions. Wrote up the project's research findings into a paper and carried it through to academic presentations, while also taking part in producing the actual XR content and the exhibition.",
+        problemLabel: 'THE CHALLENGE',
+        problem:
+          "The same interaction doesn't deliver the same experience to users of every age. Physical ability, cognitive style, reaction speed, and motivation to participate all shift with age, so the core challenge wasn't simply tuning difficulty — it was deciding what movement and game mechanic each age group's traits should be translated into.",
+        researchLabel: 'RESEARCH → DESIGN TRANSLATION',
+        researchIntro:
+          'Based on research in developmental psychology, motor development, and cognitive development, the key traits of each age group were organized and translated into behaviors and interactions that could actually be performed in an XR space.',
+        ageCards: [
+          {
+            ageGroup: 'EARLY YEARS',
+            tagline: 'Move & Discover',
+            insight: 'A stage where sensory-motor experience and gross motor movement develop the ability to control the body.',
+            translation: 'Focused on activities built around moving the body directly and experiencing immediate results, rather than complex rules.',
+            interaction: '→ Step on and collect the fish on the floor',
+          },
+          {
+            ageGroup: 'SCHOOL AGE',
+            tagline: 'Find & Solve',
+            insight: 'A stage where quickness, judgment, and spatial awareness develop, and a sense of achievement comes from solving tasks.',
+            translation: 'Connected this to an experience of directly exploring the space and quickly finding and solving a goal.',
+            interaction: '→ Find and remove the target in the space',
+          },
+          {
+            ageGroup: 'TEEN',
+            tagline: 'Aim & React',
+            insight: 'A stage where accuracy, strategy, and agility develop alongside self-regulation and strategic judgment.',
+            translation: 'Built as competitive play that requires judging a target and deciding timing, rather than simple reaction.',
+            interaction: '→ Judge the target and throw the dodgeball',
+          },
+          {
+            ageGroup: 'ADULT',
+            tagline: 'Move & Release',
+            insight: 'Focused on stress relief and immersive experience through physical activity.',
+            translation: 'Designed an experience that lets the whole body move quickly for immediate immersion, rather than instructions or complex tasks.',
+            interaction: '→ Dodge incoming arrows with the whole body',
+          },
+          {
+            ageGroup: 'OLDER ADULT',
+            tagline: 'Walk & Remember',
+            insight:
+              'Focused on combining cognitive stimulation with physical activity, maintaining memory and cognitive function through repeated stimulation.',
+            translation: 'Built around walking, memory, and simple cognitive tasks, rather than demanding fast reactions.',
+            interaction: '→ Walk the space, remember, and harvest the crops',
+          },
+        ],
+        principleLabel: 'DESIGN PRINCIPLE',
+        principle:
+          "Difficulty wasn't the only thing adjusted by age — the interaction itself was designed differently. Children step, schoolchildren find and solve, teens judge and throw. Adults dodge quickly, older adults walk and remember. Designing the core action of play itself differently based on users' physical and cognitive traits, while using the same XR platform, was the project's central principle.",
+        researchBasisLabel: 'RESEARCH BASIS',
+        researchBasis:
+          "To ground the age-specific Experience Design, prior research and theory in developmental psychology, motor development, and cognitive development were reviewed. Research Insights were drawn from Gallahue's motor development theory, Piaget's theory of cognitive development, and Erikson's psychosocial development theory, alongside research on Kolb's experiential learning and neuroplasticity. Rather than simply presenting the theory itself, the focus stayed on how each insight could be reflected in actual user behavior and interaction.",
+        processLabel: 'PROCESS',
+        resultLabel: 'RESULT / IMPACT',
+        result:
+          'The age-specific design principles drawn from the research were built into five XR experiences, and the research did not stop at a prototype — it carried through into an actual exhibition experience. The project was carried out as a Seoul-funded industry-academia research collaboration, and was later exhibited to the public at the Hyundai Department Store Culture Hall. The research process and findings were written up into a paper and extended into domestic and international academic presentations.',
+        prevLabel: '← PREVIOUS — TALKABLE',
+        nextLabel: 'BACK TO ALL WORK →',
+        backToWorkLabel: '← ALL WORK',
       },
     },
     resultLine: {
-      kr: '연령별 맞춤 콘텐츠 설계 → 실제 상업 전시로 이어짐.',
-      en: 'Age-tailored content design → led to a real commercial exhibition.',
+      kr: 'Research Insight → 연령별 Experience Design → 실제 전시',
+      en: 'Research Insight → Age-Specific Experience Design → Live Exhibition',
     },
   },
   {
@@ -641,14 +815,20 @@ export const fullProjects = projects.filter((p) => p.tier === 'full').sort((a, b
 export const shortProjects = projects.filter((p) => p.tier === 'short').sort((a, b) => a.order - b.order);
 export const projectsByOrder = [...projects].sort((a, b) => a.order - b.order);
 
+/** Every project with its own /work/:slug case study page, regardless of
+ * card tier/size — powers page lookup and the prev/next footer nav so a
+ * compact-card project (like Seoul XR Research) still slots into the
+ * click-through chain between full-card case studies. */
+export const caseStudyProjects = projectsByOrder.filter((p) => p.process && p.caseStudy);
+
 export function getProjectBySlug(slug: string | undefined): Project | undefined {
-  return projects.find((p) => p.slug === slug && p.tier === 'full');
+  return caseStudyProjects.find((p) => p.slug === slug);
 }
 
 export function getAdjacentProjects(slug: string) {
-  const idx = fullProjects.findIndex((p) => p.slug === slug);
+  const idx = caseStudyProjects.findIndex((p) => p.slug === slug);
   return {
-    prev: idx > 0 ? fullProjects[idx - 1] : undefined,
-    next: idx >= 0 && idx < fullProjects.length - 1 ? fullProjects[idx + 1] : undefined,
+    prev: idx > 0 ? caseStudyProjects[idx - 1] : undefined,
+    next: idx >= 0 && idx < caseStudyProjects.length - 1 ? caseStudyProjects[idx + 1] : undefined,
   };
 }

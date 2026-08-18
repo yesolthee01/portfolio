@@ -4,7 +4,7 @@ import { ProjectImage } from '../components/ProjectImage';
 import { useLanguage } from '../i18n/LanguageContext';
 import { getProjectBySlug, getAdjacentProjects } from '../data/projects';
 import { useInView } from '../hooks/useInView';
-import type { Finding, LoopStep } from '../data/types';
+import type { Finding, LoopStep, AgeCard } from '../data/types';
 
 function FindingCard({
   finding,
@@ -21,6 +21,33 @@ function FindingCard({
       <h3>{finding.title}</h3>
       <p className="finding-issue">{finding.issue}</p>
       <p className="finding-fix">{finding.fix}</p>
+    </div>
+  );
+}
+
+function AgeCardRow({ card, index }: { card: AgeCard; index: number }) {
+  return (
+    <div className="age-card glass">
+      <div className="age-card-head">
+        <div className="age-card-index">{String(index + 1).padStart(2, '0')}</div>
+        <div>
+          <div className="age-card-group">{card.ageGroup}</div>
+          <div className="age-card-tagline">{card.tagline}</div>
+        </div>
+      </div>
+      <div className="age-card-body">
+        <div className="age-card-field">
+          <span className="age-card-field-label">Research Insight</span>
+          <p>{card.insight}</p>
+        </div>
+        <div className="age-card-field">
+          <span className="age-card-field-label">Design Translation</span>
+          <p>{card.translation}</p>
+        </div>
+        <div className="age-card-field age-card-field--interaction">
+          <p>{card.interaction}</p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -132,6 +159,34 @@ export function CaseStudy() {
                 <LoopStepRow step={step} index={i} key={step.title} />
               ))}
             </div>
+          </div>
+        )}
+
+        {cs.ageCards && cs.ageCards.length > 0 && (
+          <div className="case-research">
+            <div className="case-research-label">{cs.researchLabel ?? 'RESEARCH → DESIGN TRANSLATION'}</div>
+            {cs.researchIntro && <p className="case-research-intro">{cs.researchIntro}</p>}
+            <div className="age-cards">
+              {cs.ageCards.map((card, i) => (
+                <AgeCardRow card={card} index={i} key={card.ageGroup} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {cs.principle && (
+          <div className="case-principle">
+            <div className="case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
+            <div className="case-principle-card glass">
+              <p className="case-principle-body">{cs.principle}</p>
+            </div>
+          </div>
+        )}
+
+        {cs.researchBasis && (
+          <div className="case-row">
+            <div className="case-row-label">{cs.researchBasisLabel ?? 'RESEARCH BASIS'}</div>
+            <p className="case-row-body">{cs.researchBasis}</p>
           </div>
         )}
 
