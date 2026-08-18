@@ -17,11 +17,26 @@ export interface SolutionPillar {
 
 /** A concrete usability issue surfaced in testing, paired with the fix
  * that shipped. Rendered as its own section after PROCESS so it doesn't
- * get squeezed into a process-step card. */
+ * get squeezed into a process-step card.
+ * `featured` — when at least one finding in the array is featured, the
+ * section splits into a large "featured" row and a smaller "compact"
+ * row below it, in array order. If no finding sets `featured`, all
+ * findings render in the original single grid (unchanged behavior). */
 export interface Finding {
   title: string;
   issue: string;
   fix: string;
+  featured?: boolean;
+}
+
+/** One step in a repeating product loop (e.g. Conversation → Feedback →
+ * Review → Challenge). Rendered as its own scroll-revealed block with an
+ * optional UI screenshot; `image` omitted falls back to a placeholder. */
+export interface LoopStep {
+  title: string;
+  desc: string;
+  image?: string;
+  imageLabel?: string;
 }
 
 export interface CaseStudyContent {
@@ -38,6 +53,11 @@ export interface CaseStudyContent {
   /** Optional — design principles bridging challenge and process. */
   solutionLabel?: string;
   solution?: SolutionPillar[];
+  /** Optional — a repeating loop (e.g. product usage cycle) shown as a
+   * flow diagram followed by scroll-revealed step-by-step detail. */
+  loopLabel?: string;
+  loopIntro?: string;
+  loopSteps?: LoopStep[];
   processLabel: string;
   /** Optional — specific usability findings + fixes from testing. */
   findingsLabel?: string;

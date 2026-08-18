@@ -201,16 +201,40 @@ export const projects: Project[] = [
     },
     process: {
       kr: [
-        { title: 'Research', desc: '돔 부지 답사 및 유사 실외 이머시브 전시 벤치마킹.' },
-        { title: 'Ideation', desc: '빛·사운드·동선을 활용한 감정 곡선(emotional arc) 설계.' },
-        { title: 'Prototype', desc: '돔 내부 목업과 조명·사운드 큐 테스트.' },
-        { title: 'Test', desc: '현지 리허설 및 관람객 정서 반응 관찰.' },
+        {
+          title: 'DISCOVERY',
+          desc: '학교에 활용되지 않고 있던 투명 돔과 학생들이 스쿨트립에서 기록해 온 사람들의 사진·글·목소리를 전시로 연결했다. 서로 다른 기록을 하나의 경험으로 전달할 수 있는 방법을 탐색했다.',
+        },
+        {
+          title: 'CONCEPT',
+          desc: "서로 다른 사람의 삶을 이해해보는 경험을 '타인의 신발을 신고 걸어본다(Walking in Others' Shoes)'는 메타포로 정의했다. 이를 바탕으로 관람객이 이야기를 따라 걷고, 보고, 들을 수 있도록 비주얼과 오디오 두 개의 트랙으로 경험을 구성했다.",
+        },
+        {
+          title: 'SPACE DESIGN',
+          desc: '컨셉을 실제 공간 경험으로 옮기기 위해 컬러 팔레트, 식물, 전시물 배치와 발자국 동선을 설계했다. 관람객의 이동 순서와 시선, 주변 자연환경과의 관계를 함께 고려해 공간을 구성했다.',
+        },
+        {
+          title: 'ON-SITE BUILD & RUN',
+          desc: '짧은 준비 기간 안에 돔 내부의 전시물을 직접 설치하고 공간을 완성했다. 이후 약 일주일간 전시를 운영하며 관람객이 공간을 이동하고 이야기를 경험하는 방식을 관찰했다.',
+        },
       ],
       en: [
-        { title: 'Research', desc: 'Surveyed the dome site and benchmarked comparable outdoor immersive exhibitions.' },
-        { title: 'Ideation', desc: 'Designed an emotional arc using light, sound, and circulation.' },
-        { title: 'Prototype', desc: 'Tested lighting and sound cues with an in-dome mockup.' },
-        { title: 'Test', desc: 'Ran on-site rehearsals and observed visitors’ emotional response.' },
+        {
+          title: 'DISCOVERY',
+          desc: 'Connected an unused transparent dome at school with the photos, writing, and voice recordings students had collected from the people they met on a school trip, exploring how these different kinds of records could come together into a single experience.',
+        },
+        {
+          title: 'CONCEPT',
+          desc: "Defined the experience of understanding someone else's life through the metaphor of 'walking in others' shoes,' and built the experience around two tracks — visual and audio — so visitors could walk, see, and listen along the way.",
+        },
+        {
+          title: 'SPACE DESIGN',
+          desc: "Translated the concept into a physical space by designing the color palette, plant placement, exhibit layout, and footprint path — considering visitors' order of movement and sightlines alongside the surrounding natural environment.",
+        },
+        {
+          title: 'ON-SITE BUILD & RUN',
+          desc: 'Installed the exhibits inside the dome and completed the space within a short preparation window, then ran the exhibition for about a week, observing how visitors moved through the space and experienced the stories.',
+        },
       ],
     },
     card: {
@@ -229,15 +253,37 @@ export const projects: Project[] = [
       kr: {
         eyebrow: 'CASE STUDY 02 — SPATIAL UX / EXHIBITION',
         title: 'Designing Empathy Through Space — 야외 돔 몰입 전시',
-        subtitle: '덴마크에서 진행한 야외 돔 몰입 전시. 공간 연출만으로 낯선 이야기에 정서적으로 몰입하게 만드는 경험을 디렉팅했습니다.',
+        subtitle:
+          "'Everyone Has a Story to Tell — Walking in Others Shoes'는 타인의 삶과 관점을 직접 보고, 듣고, 따라 걸으며 경험하도록 설계한 공간형 스토리텔링 전시다. 학생들이 여행에서 만난 사람들의 사진과 글, 목소리를 하나의 경험으로 연결해, 관람객이 낯선 사람의 이야기를 단순히 감상하는 것을 넘어 그들의 관점에 잠시 머물 수 있도록 공간과 동선을 설계했다.",
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
+        roleLabel: 'MY ROLE',
+        role:
+          '공간과 비주얼을 총괄하는 전시 디렉터로 참여해 전시 컨셉부터 공간 구성, 포스터/인쇄물 디자인, 현장 설치까지 전반을 설계했다. 담당 교사와 사진·오디오 제작을 맡은 학생들과 협업해 전시를 완성했다.',
         problemLabel: 'THE CHALLENGE',
         problem:
-          '임시로 설치되는 야외 돔이라는 제한된 구조물 안에서, 관람객이 짧은 시간 안에 낯선 사람의 이야기에 감정적으로 몰입하게 만들어야 했다. 날씨와 야외 환경이라는 물리적 제약 속에서, 오직 공간 연출만으로 몰입을 끌어내는 것이 과제였다.',
+          '사방이 트인 투명 돔은 관람객이 전시를 한눈에 훑고 지나가기 쉬운 공간이었다. 또한 실외에 위치해 빛과 날씨가 계속 변화했다. 자연환경과 경쟁하지 않으면서도 관람객의 속도를 늦추고, 낯선 사람들의 이야기에 정서적으로 머무르게 만드는 것이 핵심 과제였다.',
+        solutionLabel: 'THE SOLUTION',
+        solution: [
+          {
+            title: 'PACING',
+            subtitle: '걸음을 늦추는 동선',
+            desc: "바닥에 발자국으로 이어지는 동선을 만들어 관람객이 전시를 한눈에 훑는 대신, 이야기를 따라 천천히 이동하도록 유도했다. '타인의 신발을 신고 걸어본다'는 전시의 메타포를 실제 관람객의 움직임으로 연결했다.",
+          },
+          {
+            title: 'ENVIRONMENT',
+            subtitle: '자연과 경쟁하지 않는 공간',
+            desc: '채도가 낮은 색상들을 중심으로 소프트 핑크를 포인트 컬러로 사용하고, 돔 내부에 식물을 배치해 내부 공간과 외부 풍경을 자연스럽게 연결했다. 변화하는 빛과 주변 자연을 통제하기보다 전시 경험의 일부로 받아들이는 방향을 선택했다.',
+          },
+          {
+            title: 'STORYTELLING',
+            subtitle: '보고, 들으며 만나는 이야기',
+            desc: '인물 사진과 글로 구성한 비주얼 트랙과, 학생들이 직접 녹음한 목소리와 자연음을 담은 오디오 트랙을 함께 구성했다. 관람객이 이야기를 읽는 것에 그치지 않고 보고 들으며 인물과 정서적으로 연결될 수 있도록 경험을 설계했다.',
+          },
+        ],
         processLabel: 'PROCESS',
         resultLabel: 'RESULT / IMPACT',
         result:
-          '관람객들이 낯선 이야기에도 짧은 체류 시간 안에 정서적으로 몰입했다는 반응을 얻었고, 야외라는 제약을 오히려 연출 요소로 활용한 사례로 남았다.',
+          '약 일주일간 운영된 전시에 학생 130여 명을 비롯해 학부모와 인근 주민들이 방문했다. 현장에서 관람객들이 발자국 동선을 따라 이동하고, 개별 인물의 사진과 이야기를 읽거나 오디오를 들으며 자연스럽게 걸음을 멈추는 모습을 관찰할 수 있었다.',
         prevLabel: '← PREVIOUS — MIDNIGHT CARNIVAL',
         nextLabel: 'NEXT — TALKABLE →',
         backToWorkLabel: '← ALL WORK',
@@ -246,15 +292,36 @@ export const projects: Project[] = [
         eyebrow: 'CASE STUDY 02 — SPATIAL UX / EXHIBITION',
         title: 'Designing Empathy Through Space — Outdoor Dome Exhibition',
         subtitle:
-          'An outdoor dome exhibition in Denmark. Directed a spatial experience that builds emotional immersion in an unfamiliar story through space alone.',
+          "'Everyone Has a Story to Tell — Walking in Others Shoes' is a spatial storytelling exhibition designed to let visitors see, hear, and walk alongside the lives and perspectives of others. Bringing together photos, writing, and voice recordings that students collected from people they met while traveling, the space and circulation were designed so visitors could do more than simply view a stranger's story — they could pause and stay within that person's perspective for a moment.",
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
+        roleLabel: 'MY ROLE',
+        role:
+          'Took part as exhibition director overseeing space and visuals, designing everything from the exhibition concept and spatial layout to poster/print design and on-site installation. Completed the exhibition in collaboration with a supervising teacher and the students responsible for photography and audio recording.',
         problemLabel: 'THE CHALLENGE',
         problem:
-          'Inside a temporary outdoor dome structure, visitors needed to become emotionally immersed in an unfamiliar story within a short amount of time. Working within the physical constraints of weather and an outdoor setting, the challenge was to build that immersion through spatial direction alone.',
+          'The fully open, transparent dome made it easy for visitors to scan the exhibition at a glance and walk past. Being outdoors also meant light and weather kept changing. The core challenge was slowing visitors down and helping them stay emotionally present with strangers’ stories, without competing against the surrounding natural environment.',
+        solutionLabel: 'THE SOLUTION',
+        solution: [
+          {
+            title: 'PACING',
+            subtitle: 'A path that slows the walk',
+            desc: "A path marked by footprints on the ground guided visitors to move slowly through the stories instead of scanning the exhibition at a glance — turning the exhibition's metaphor of 'walking in someone else's shoes' into an actual physical movement.",
+          },
+          {
+            title: 'ENVIRONMENT',
+            subtitle: "A space that doesn't compete with nature",
+            desc: 'A low-saturation palette with soft pink as an accent color, and plants placed inside the dome, connected the interior space naturally with the landscape outside. Rather than controlling the shifting light and surrounding nature, the design chose to absorb them as part of the exhibition experience.',
+          },
+          {
+            title: 'STORYTELLING',
+            subtitle: 'Stories met by seeing and hearing',
+            desc: 'A visual track built from portraits and writing was paired with an audio track of voice recordings made by the students and ambient natural sound. The experience was designed so visitors could connect with each person emotionally through seeing and hearing, not just reading.',
+          },
+        ],
         processLabel: 'PROCESS',
         resultLabel: 'RESULT / IMPACT',
         result:
-          'Visitors reported becoming emotionally immersed in the unfamiliar story even within a short visit, and the outdoor constraint itself became a directorial asset rather than a limitation.',
+          'Over roughly a week, the exhibition welcomed around 130 students along with parents and nearby residents. On site, visitors could be seen following the footprint path, pausing naturally as they read individual portraits and stories or listened to the audio.',
         prevLabel: '← PREVIOUS — MIDNIGHT CARNIVAL',
         nextLabel: 'NEXT — TALKABLE →',
         backToWorkLabel: '← ALL WORK',
@@ -273,16 +340,40 @@ export const projects: Project[] = [
     },
     process: {
       kr: [
-        { title: 'Research', desc: '학습자 인터뷰와 경쟁 앱 분석.' },
-        { title: 'Ideation', desc: 'AI 피드백 루프와 온보딩 플로우 설계.' },
-        { title: 'Prototype', desc: '대화형 UI 프로토타입 제작.' },
-        { title: 'Test', desc: '사용성 테스트 및 반복 개선.' },
+        {
+          title: 'DISCOVERY & RESEARCH',
+          desc: '영어 학습 경험과 기존 서비스의 한계를 조사하고 사용자 리서치를 진행했다. 이를 통해 개인화 부족, 제한적인 피드백, 낮은 학습 동기를 주요 Pain Point로 정의하고, 서로 다른 학습 목표와 행동을 가진 사용자를 바탕으로 Persona와 User Journey를 구성했다.',
+        },
+        {
+          title: 'DEFINE',
+          desc: "리서치 결과를 바탕으로 Talkable의 핵심 경험을 '말하기 → 피드백 → 복습 → 다시 말하기'로 정의했다. 단순한 AI 회화 서비스가 아니라, 사용자의 실제 대화가 개인화된 학습으로 이어지는 Learning Loop를 중심으로 서비스 구조와 Information Architecture를 설계했다.",
+        },
+        {
+          title: 'DESIGN & PROTOTYPE',
+          desc: 'AI Conversation, Feedback, Review, Dashboard, Challenge 등 핵심 기능의 User Flow와 UI를 설계하고 프로토타입을 제작했다. 프로토타입을 통해 각 기능을 개별적으로 확인하는 것뿐 아니라, 대화에서 피드백을 확인하고 복습한 뒤 다시 대화로 돌아오는 전체 흐름이 자연스럽게 연결되는지를 검토했다.',
+        },
+        {
+          title: 'USER TEST & ITERATION',
+          desc: '프로토타입을 대상으로 사용자 테스트와 전문가 피드백을 진행했다. 기능을 완성하는 것보다 사용자가 핵심 기능을 발견하고, 이해하고, 다음 행동으로 자연스럽게 이동할 수 있는지에 집중해 문제를 발견하고 디자인을 반복적으로 개선했다.',
+        },
       ],
       en: [
-        { title: 'Research', desc: 'Interviewed learners and analyzed competitor apps.' },
-        { title: 'Ideation', desc: 'Designed the AI feedback loop and onboarding flow.' },
-        { title: 'Prototype', desc: 'Built a conversational UI prototype.' },
-        { title: 'Test', desc: 'Ran usability testing and iterated.' },
+        {
+          title: 'DISCOVERY & RESEARCH',
+          desc: "Investigated existing English-learning experiences and the limitations of current services through user research. Defined lack of personalization, limited feedback, and low learning motivation as the core pain points, and built personas and user journeys around learners with different goals and behaviors.",
+        },
+        {
+          title: 'DEFINE',
+          desc: "Based on the research, defined Talkable's core experience as 'speak → feedback → review → speak again.' Rather than a simple AI conversation service, designed the service structure and information architecture around a Learning Loop that turns real conversations into personalized learning.",
+        },
+        {
+          title: 'DESIGN & PROTOTYPE',
+          desc: 'Designed the user flow and UI for core features — AI Conversation, Feedback, Review, Dashboard, and Challenge — and built a prototype. Beyond checking each feature individually, reviewed whether the full loop of checking feedback, reviewing, and returning to a new conversation connected naturally.',
+        },
+        {
+          title: 'USER TEST & ITERATION',
+          desc: "Ran user testing and expert review on the prototype. Focused less on finishing features and more on whether users could discover, understand, and naturally move on to the next action — surfacing problems and iterating on the design accordingly.",
+        },
       ],
     },
     card: {
@@ -301,15 +392,94 @@ export const projects: Project[] = [
       kr: {
         eyebrow: 'CASE STUDY 03 — AI PRODUCT / MOBILE',
         title: 'Talkable — AI 영어 학습 앱',
-        subtitle: 'AI 기반 회화 피드백으로 실전 영어를 학습하는 앱의 전반적인 UX 설계.',
+        subtitle:
+          'Talkable은 AI와의 실시간 대화를 통해 영어를 연습하고, 실제 대화에서 발견된 약점을 다음 학습으로 연결하는 개인화 영어 학습 서비스다. 사용자의 대화를 분석해 발음·문법·유창성·어휘에 대한 피드백을 제공하고, 이를 복습과 새로운 대화로 이어지는 지속적인 Learning Loop로 설계했다.',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
+        roleLabel: 'MY ROLE',
+        role:
+          '졸업 프로젝트의 UX/UI Designer로 참여해 사용자 리서치부터 서비스 구조 설계, UI 디자인, 프로토타이핑과 사용자 테스트까지 전반적인 UX/UI 디자인을 담당했다. 개발 과정에서는 AI 기반 대화와 개인화 피드백이 실제 서비스 경험으로 연결될 수 있도록 기능과 인터랙션을 구체화하고, 프로토타입을 반복적으로 테스트하며 개선했다.',
         problemLabel: 'THE CHALLENGE',
         problem:
-          '기존 영어 학습 앱은 발화 피드백이 느리고 정형화되어 있어, 학습자가 실전 회화 자신감을 기르기 어려웠다. 반복 학습을 이어가게 하는 즉각적이고 개인화된 피드백 루프가 필요했다.',
+          '영어회화는 실제로 말하며 연습해야 하지만, 학습자가 자신의 수준에 맞는 대화 상대와 지속적으로 연습하고 구체적인 피드백을 받기는 어렵다. 사용자 리서치를 통해 개인화된 학습의 부족, 제한적인 피드백, 지속적인 학습 동기 부족을 주요 문제로 정의했다. 단순히 AI와 대화하는 경험을 만드는 것을 넘어, 대화에서 발견된 약점이 실제 학습과 성장으로 이어지는 경험을 만드는 것이 핵심 과제였다.',
+        solutionLabel: 'THE SOLUTION',
+        solution: [
+          {
+            title: 'PERSONALIZATION',
+            subtitle: '내 대화에서 시작되는 학습',
+            desc: '정해진 학습 콘텐츠를 일방적으로 제공하는 대신, 사용자가 실제로 나눈 대화를 학습의 출발점으로 삼았다. AI와의 대화를 바탕으로 발음·문법·유창성·어휘를 분석하고, 사용자의 수준과 약점에 맞는 피드백을 제공하도록 설계했다.',
+          },
+          {
+            title: 'FEEDBACK',
+            subtitle: '실수를 다음 학습으로 연결',
+            desc: '피드백을 단순히 잘하고 못한 것을 평가하는 결과 화면으로 끝내지 않았다. 대화 중 발견된 표현과 피드백을 저장하고 다시 확인하거나 복습할 수 있도록 구성해, Conversation → Feedback → Review로 학습이 자연스럽게 이어지도록 했다.',
+          },
+          {
+            title: 'MOTIVATION',
+            subtitle: '보이지 않는 성장을 눈에 보이게',
+            desc: '언어 학습은 단기간에 성장을 체감하기 어렵다는 점에 주목했다. 학습 현황을 대시보드에서 시각화하고 Daily Challenge와 성장 요소를 결합해, 작은 학습의 반복과 성취를 지속적으로 확인할 수 있도록 설계했다.',
+          },
+        ],
+        loopLabel: 'LEARNING LOOP',
+        loopIntro:
+          '이 과정을 반복해 실제 대화에서 발견된 약점이 다음 학습으로 이어지는 순환 구조를 만들었다.',
+        loopSteps: [
+          {
+            title: 'CONVERSATION',
+            desc: 'AI와 자신의 수준에 맞는 주제로 실제 영어 대화를 나눈다.',
+            image: '/images/work/talkable/loop-conversation.jpg',
+            imageLabel: 'CONVERSATION — TALKABLE UI',
+          },
+          {
+            title: 'FEEDBACK',
+            desc: '대화를 기반으로 발음·문법·유창성·어휘에 대한 개인화 피드백을 확인한다.',
+            image: '/images/work/talkable/loop-feedback.jpg',
+            imageLabel: 'FEEDBACK — TALKABLE UI',
+          },
+          {
+            title: 'REVIEW',
+            desc: '대화에서 저장한 단어와 피드백을 다양한 학습 방식으로 다시 복습한다.',
+            image: '/images/work/talkable/loop-review.jpg',
+            imageLabel: 'REVIEW — TALKABLE UI',
+          },
+          {
+            title: 'CHALLENGE',
+            desc: '작은 학습 목표를 달성하며 성취를 확인하고, 다시 새로운 대화를 시작한다.',
+            image: '/images/work/talkable/loop-challenge.jpg',
+            imageLabel: 'CHALLENGE — TALKABLE UI',
+          },
+        ],
         processLabel: 'PROCESS',
+        findingsLabel: 'FROM USER TESTING',
+        findings: [
+          {
+            title: '중요한 피드백 기능을 더 쉽게 찾도록',
+            issue:
+              '대화가 끝난 뒤 받은 피드백을 확인하는 기능이 있었지만, 일부 사용자가 해당 버튼을 바로 발견하지 못했다. 중요한 학습 기능임에도 다른 인터페이스 요소에 묻혀 시각적 우선순위가 충분하지 않다는 문제를 발견했다.',
+            fix: "→ 피드백 아이콘을 보다 직관적인 형태로 변경하고 크기를 키워 시각적 위계를 강화했다. 대화가 끝난 뒤 사용자가 자연스럽게 '다음에는 피드백을 확인해야 한다'고 인지할 수 있도록 인터페이스를 개선했다.",
+            featured: true,
+          },
+          {
+            title: '피드백에서 다시 대화까지',
+            issue:
+              '사용자 테스트에서 피드백을 확인한 뒤 다시 대화로 돌아가는 과정에 일부 어려움이 나타났다. 또한 전문가 피드백을 통해 기존 피드백 화면의 정보 구조와 이동 방식이 학습 흐름을 방해할 수 있다는 점을 확인했다.',
+            fix: '→ 피드백을 스크롤형 구조로 재구성하고, 피드백 유형을 아이콘 방식에서 탭 구조로 변경했다. 또한 대화로 돌아가는 기능을 하단에서 상단으로 이동시켜, 피드백을 확인한 뒤 다음 행동으로 보다 자연스럽게 이어지도록 개선했다.',
+            featured: true,
+          },
+          {
+            title: '복습 기능을 독립적인 학습 영역으로',
+            issue:
+              '저장한 단어를 복습하는 기능이 기존 저장목록 내부에 위치해 있어 사용자가 단어 시험과 복습 기능을 쉽게 발견하기 어려웠다.',
+            fix: '→ 하단 Navigation에 Review 영역을 독립적으로 추가하고, 저장 단어와 피드백을 한곳에서 확인하도록 Information Architecture를 재구성했다. 또한 여러 단어 학습 방식을 상단에 배치해 사용자가 원하는 복습 방식에 바로 접근할 수 있도록 개선했다.',
+          },
+          {
+            title: '목표와 보상을 더 명확하게',
+            issue: '일부 사용자가 Challenge 아이템이 무엇을 의미하고 어떻게 획득하는지 바로 이해하지 못했다.',
+            fix: '→ Challenge에 학습 목표와 아이템에 대한 설명을 추가하고, 목표 달성 후 획득 결과가 명확하게 전달되도록 피드백을 보완했다. 이를 통해 사용자가 Challenge의 목적과 다음 행동을 보다 직관적으로 이해하도록 했다.',
+          },
+        ],
         resultLabel: 'RESULT / IMPACT',
         result:
-          '즉각적인 AI 피드백 루프 도입 이후 학습 지속 사용률이 개선되었고, 사용자들이 발화 피드백을 더 명확하게 이해한다는 반응을 얻었다.',
+          'Talkable은 아이디어와 UI 디자인에서 끝나지 않고, AI 기반 실시간 대화와 개인화 피드백을 경험할 수 있는 프로토타입으로 구현해 졸업전시에서 직접 선보였다. 사용자 테스트와 전문가 피드백을 통해 핵심 Learning Loop의 발견성·정보 구조·Navigation을 반복적으로 개선했으며, 프로젝트의 연구 및 개발 과정을 바탕으로 관련 논문을 작성하고 학술 발표로 확장했다.',
         prevLabel: '← PREVIOUS — DESIGNING EMPATHY THROUGH SPACE',
         nextLabel: 'BACK TO ALL WORK →',
         backToWorkLabel: '← ALL WORK',
@@ -318,15 +488,93 @@ export const projects: Project[] = [
         eyebrow: 'CASE STUDY 03 — AI PRODUCT / MOBILE',
         title: 'Talkable — AI English Learning App',
         subtitle:
-          'End-to-end UX design for an app teaching practical English through AI-driven speaking feedback.',
+          "Talkable is a personalized English-learning service that lets users practice through real-time conversation with AI and turns weaknesses found in those conversations into the next round of learning. It analyzes each conversation for pronunciation, grammar, fluency, and vocabulary, feeding that feedback into a continuous Learning Loop of review and new conversation.",
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
+        roleLabel: 'MY ROLE',
+        role:
+          'Joined as UX/UI Designer on a graduation capstone project, covering the full design process from user research through service structure, UI design, prototyping, and user testing. During development, worked out the features and interactions that turned AI-driven conversation and personalized feedback into an actual product experience, testing and refining the prototype through repeated iteration.',
         problemLabel: 'THE CHALLENGE',
         problem:
-          'Existing English learning apps gave slow, formulaic speaking feedback, making it hard for learners to build real conversational confidence. We needed an immediate, personalized feedback loop that kept learners coming back.',
+          "English conversation has to be practiced by actually speaking, but it's hard for learners to keep practicing with a conversation partner suited to their level and get specific feedback. User research identified a lack of personalization, limited feedback, and low motivation to keep learning as the core problems. The challenge went beyond simply building a conversation with AI — it was building an experience where weaknesses found in conversation actually led to learning and growth.",
+        solutionLabel: 'THE SOLUTION',
+        solution: [
+          {
+            title: 'PERSONALIZATION',
+            subtitle: 'Learning that starts from your own conversation',
+            desc: "Instead of delivering fixed learning content one-way, made the user's own conversations the starting point for learning. Analyzed pronunciation, grammar, fluency, and vocabulary from conversations with AI, designing feedback tailored to each user's level and weaknesses.",
+          },
+          {
+            title: 'FEEDBACK',
+            subtitle: 'Turning mistakes into the next lesson',
+            desc: "Feedback didn't stop at a results screen judging right and wrong. Expressions and feedback surfaced during conversation were saved for review, so learning flowed naturally through Conversation → Feedback → Review.",
+          },
+          {
+            title: 'MOTIVATION',
+            subtitle: 'Making invisible growth visible',
+            desc: 'Focused on the fact that language learning is hard to feel progress in over a short time. Visualized learning status on a dashboard and combined it with Daily Challenges and growth elements, so small repeated learning and small wins stayed visible over time.',
+          },
+        ],
+        loopLabel: 'LEARNING LOOP',
+        loopIntro:
+          'Repeating this cycle created a loop where weaknesses found in real conversation fed directly into the next round of learning.',
+        loopSteps: [
+          {
+            title: 'CONVERSATION',
+            desc: 'Has a real English conversation with AI on a topic suited to their level.',
+            image: '/images/work/talkable/loop-conversation.jpg',
+            imageLabel: 'CONVERSATION — TALKABLE UI',
+          },
+          {
+            title: 'FEEDBACK',
+            desc: 'Reviews personalized feedback on pronunciation, grammar, fluency, and vocabulary based on the conversation.',
+            image: '/images/work/talkable/loop-feedback.jpg',
+            imageLabel: 'FEEDBACK — TALKABLE UI',
+          },
+          {
+            title: 'REVIEW',
+            desc: 'Revisits saved words and feedback from the conversation through different review formats.',
+            image: '/images/work/talkable/loop-review.jpg',
+            imageLabel: 'REVIEW — TALKABLE UI',
+          },
+          {
+            title: 'CHALLENGE',
+            desc: 'Confirms progress by completing small learning goals, then starts a new conversation.',
+            image: '/images/work/talkable/loop-challenge.jpg',
+            imageLabel: 'CHALLENGE — TALKABLE UI',
+          },
+        ],
         processLabel: 'PROCESS',
+        findingsLabel: 'FROM USER TESTING',
+        findings: [
+          {
+            title: 'Making a key feedback feature easier to find',
+            issue:
+              "There was a way to check feedback after a conversation ended, but some users didn't notice the button right away. Despite being a core learning feature, it was buried among other interface elements without enough visual priority.",
+            fix: '→ Changed the feedback icon to a more intuitive form and enlarged it to strengthen visual hierarchy, so users would naturally recognize that feedback was the next thing to check after a conversation.',
+            featured: true,
+          },
+          {
+            title: 'From feedback back to conversation',
+            issue:
+              "User testing surfaced some difficulty in the path from checking feedback back to starting a new conversation. Expert feedback also confirmed that the existing feedback screen's information structure and navigation could interrupt the learning flow.",
+            fix: '→ Restructured feedback into a scrollable layout and switched feedback types from icons to a tab structure. Also moved the button to return to conversation from the bottom to the top of the screen, so the next action after checking feedback followed more naturally.',
+            featured: true,
+          },
+          {
+            title: 'Making review its own dedicated space',
+            issue:
+              'The feature for reviewing saved words lived inside the existing saved-items list, making it hard for users to discover vocabulary quizzes and review features.',
+            fix: '→ Added Review as its own area in the bottom navigation and restructured the information architecture so saved words and feedback could be checked in one place. Also placed the different review formats up top so users could jump straight to the one they wanted.',
+          },
+          {
+            title: 'Making goals and rewards clearer',
+            issue: "Some users didn't immediately understand what a Challenge item meant or how to earn it.",
+            fix: "→ Added explanations of the learning goal and the item to each Challenge, and improved the feedback shown after completing a goal so the reward was clearly communicated — helping users understand the purpose of each Challenge and what to do next.",
+          },
+        ],
         resultLabel: 'RESULT / IMPACT',
         result:
-          'After introducing the instant AI feedback loop, retention improved and users reported understanding their speaking feedback far more clearly.',
+          "Talkable didn't stop at an idea and UI design — it was built into a prototype where AI-driven real-time conversation and personalized feedback could actually be experienced, and demonstrated live at the graduation exhibition. Through user testing and expert feedback, the discoverability, information structure, and navigation of the core Learning Loop were repeatedly improved, and the project's research and development process was written up into a paper and presented at an academic conference.",
         prevLabel: '← PREVIOUS — DESIGNING EMPATHY THROUGH SPACE',
         nextLabel: 'BACK TO ALL WORK →',
         backToWorkLabel: '← ALL WORK',

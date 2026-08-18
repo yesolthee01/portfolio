@@ -3,6 +3,53 @@ import { Nav } from '../components/Nav';
 import { ProjectImage } from '../components/ProjectImage';
 import { useLanguage } from '../i18n/LanguageContext';
 import { getProjectBySlug, getAdjacentProjects } from '../data/projects';
+import { useInView } from '../hooks/useInView';
+import type { Finding, LoopStep } from '../data/types';
+
+function FindingCard({
+  finding,
+  index,
+  variant,
+}: {
+  finding: Finding;
+  index: number;
+  variant?: 'featured' | 'compact';
+}) {
+  return (
+    <div className={`finding-card glass${variant ? ` finding-card--${variant}` : ''}`}>
+      <div className="finding-index">{String(index + 1).padStart(2, '0')}</div>
+      <h3>{finding.title}</h3>
+      <p className="finding-issue">{finding.issue}</p>
+      <p className="finding-fix">{finding.fix}</p>
+    </div>
+  );
+}
+
+function LoopStepRow({ step, index }: { step: LoopStep; index: number }) {
+  const { ref, inView } = useInView<HTMLDivElement>(0.25);
+
+  return (
+    <div className={`loop-step${inView ? ' in-view' : ''}`} ref={ref}>
+      <div className="loop-step-text">
+        <div className="loop-step-index">{String(index + 1).padStart(2, '0')}</div>
+        <h3>{step.title}</h3>
+        <p>{step.desc}</p>
+      </div>
+      {step.image ? (
+        <ProjectImage
+          src={step.image}
+          alt={step.title}
+          label={step.imageLabel ?? `${step.title} UI`}
+          className="loop-step-image"
+        />
+      ) : (
+        <div className="img-placeholder loop-step-image">
+          <span>{step.imageLabel ?? `${step.title} UI`}</span>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function CaseStudy() {
   const { slug } = useParams<{ slug: string }>();
@@ -16,6 +63,11 @@ export function CaseStudy() {
   const cs = project.caseStudy[lang];
   const process = project.process[lang];
   const { prev, next } = getAdjacentProjects(project.slug);
+
+  const findings = cs.findings ?? [];
+  const featuredFindings = findings.filter((f) => f.featured);
+  const compactFindings = findings.filter((f) => !f.featured);
+  const findingsSplit = featuredFindings.length > 0 && compactFindings.length > 0;
 
   return (
     <div className="page">
@@ -62,6 +114,27 @@ export function CaseStudy() {
           </div>
         )}
 
+        {cs.loopSteps && cs.loopSteps.length > 0 && (
+          <div className="case-loop">
+            <div className="case-loop-label">{cs.loopLabel ?? 'LEARNING LOOP'}</div>
+            <div className="loop-flow glass">
+              {cs.loopSteps.map((step, i) => (
+                <span className="loop-flow-step" key={step.title}>
+                  {step.title}
+                  {i < cs.loopSteps!.length - 1 && <span className="loop-flow-arrow">→</span>}
+                </span>
+              ))}
+              <span className="loop-flow-arrow loop-flow-arrow--cycle">↻</span>
+            </div>
+            {cs.loopIntro && <p className="case-loop-intro">{cs.loopIntro}</p>}
+            <div className="loop-steps">
+              {cs.loopSteps.map((step, i) => (
+                <LoopStepRow step={step} index={i} key={step.title} />
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="case-process">
           <div className="case-process-label">{cs.processLabel}</div>
           <div className="process-grid">
@@ -75,20 +148,35 @@ export function CaseStudy() {
           </div>
         </div>
 
-        {cs.findings && cs.findings.length > 0 && (
+        {findings.length > 0 && (
           <div className="case-findings">
             <div className="case-findings-label">{cs.findingsLabel ?? 'FROM USER TESTING'}</div>
             {cs.findingsIntro && <p className="case-findings-intro">{cs.findingsIntro}</p>}
-            <div className="findings-grid">
-              {cs.findings.map((finding, i) => (
-                <div className="finding-card glass" key={finding.title}>
-                  <div className="finding-index">{String(i + 1).padStart(2, '0')}</div>
-                  <h3>{finding.title}</h3>
-                  <p className="finding-issue">{finding.issue}</p>
-                  <p className="finding-fix">{finding.fix}</p>
+            {findingsSplit ? (
+              <>
+                <div className="findings-grid findings-grid--featured">
+                  {featuredFindings.map((finding, i) => (
+                    <FindingCard finding={finding} index={i} variant="featured" key={finding.title} />
+                  ))}
                 </div>
-              ))}
-            </div>
+                <div className="findings-grid findings-grid--compact">
+                  {compactFindings.map((finding, i) => (
+                    <FindingCard
+                      finding={finding}
+                      index={featuredFindings.length + i}
+                      variant="compact"
+                      key={finding.title}
+                    />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="findings-grid">
+                {findings.map((finding, i) => (
+                  <FindingCard finding={finding} index={i} key={finding.title} />
+                ))}
+              </div>
+            )}
           </div>
         )}
 
