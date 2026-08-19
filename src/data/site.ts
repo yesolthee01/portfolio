@@ -21,13 +21,19 @@ export const siteCopy: Localized<{
   nav: { work: string; ai: string; about: string; contact: string };
   hero: {
     eyebrow: string;
-    headlinePre: string;
+    /** Optional plain text before the accent word, on the first line. */
+    headlinePre?: string;
+    /** Rendered inline, colored with the accent color. */
     headlineAccent: string;
-    headlinePost: string;
-    sub: string;
+    /** Rest of the first line, immediately after `headlineAccent`. */
+    headlineLine1Rest: string;
+    /** Second line — rendered on its own line below the first. */
+    headlineLine2: string;
+    subLine1: string;
+    subLine2: string;
     chips: string[];
     ctaWork: string;
-    ctaContact: string;
+    ctaAbout: string;
   };
   work: { title: string };
   moreWork: { title: string; badge: string; desc: string };
@@ -49,13 +55,14 @@ export const siteCopy: Localized<{
     nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
-      headlinePre: '저는 ',
       headlineAccent: '사람',
-      headlinePost: '이 무엇을, 어떻게 경험하는지를 설계합니다.',
-      sub: '디지털 프로덕트 UX부터 SIGGRAPH Asia 2024 XR 전시, 덴마크 몰입형 전시까지 — 반복적인 유저 테스트와 벤치마킹을 통해 사람의 경험을 설계해왔습니다.',
-      chips: ['APP', 'SPATIAL / XR', 'AI'],
+      headlineLine1Rest: '이 실제로 어떻게 쓰고,',
+      headlineLine2: '움직이고, 반응하는지에서 시작합니다.',
+      subLine1: '디지털 제품부터 XR과 공간 경험까지,',
+      subLine2: '사용자의 행동을 관찰하고 더 자연스러운 경험으로 바꾸는 UX Designer입니다.',
+      chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
       ctaWork: 'VIEW SELECTED WORK →',
-      ctaContact: 'GET IN TOUCH',
+      ctaAbout: 'ABOUT ME',
     },
     work: { title: 'Selected Work' },
     moreWork: {
@@ -123,13 +130,15 @@ export const siteCopy: Localized<{
     nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
-      headlinePre: 'I design what ',
+      headlinePre: 'I start with how ',
       headlineAccent: 'people',
-      headlinePost: ' experience, and how.',
-      sub: "From digital product UX to an XR exhibition at SIGGRAPH Asia 2024 and an immersive exhibition in Denmark — I've designed human experience through iterative user testing and benchmarking.",
-      chips: ['APP', 'SPATIAL / XR', 'AI'],
+      headlineLine1Rest: ' actually use,',
+      headlineLine2: 'move, and react.',
+      subLine1: 'From digital products to XR and spatial experiences,',
+      subLine2: 'I observe user behavior and design more natural experiences.',
+      chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
       ctaWork: 'VIEW SELECTED WORK →',
-      ctaContact: 'GET IN TOUCH',
+      ctaAbout: 'ABOUT ME',
     },
     work: { title: 'Selected Work' },
     moreWork: {

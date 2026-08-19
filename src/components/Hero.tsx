@@ -15,10 +15,16 @@ export function Hero() {
         <h1 className="hero-title">
           {hero.headlinePre}
           <span className="accent">{hero.headlineAccent}</span>
-          {hero.headlinePost}
+          {hero.headlineLine1Rest}
+          <br />
+          {hero.headlineLine2}
         </h1>
 
-        <p className="hero-sub">{hero.sub}</p>
+        <p className="hero-sub">
+          {hero.subLine1}
+          <br />
+          {hero.subLine2}
+        </p>
 
         <div className="chip-row">
           {hero.chips.map((chip) => (
@@ -32,8 +38,8 @@ export function Hero() {
           <a href="#work" className="btn btn-primary press-bounce">
             {hero.ctaWork}
           </a>
-          <a href="#contact" className="btn btn-outline press-bounce">
-            {hero.ctaContact}
+          <a href="#about" className="btn btn-outline press-bounce">
+            {hero.ctaAbout}
           </a>
         </div>
       </div>
