@@ -112,19 +112,29 @@ export const projects: Project[] = [
         ],
         processLabel: 'PROCESS',
         findingsLabel: 'FROM USER TESTING',
-        findingsIntro: "특히 '드롭타워' 맵에서 두 가지 문제를 발견했다.",
         findings: [
           {
-            title: '방향 전환을 인지하지 못함',
+            title: '텍스트만으로 게임을 구분하기 어려움',
             issue:
-              '회전하는 바닥의 방향이 랜덤하게 변경되면 사용자가 달리는 방향도 바꿔야 했지만, 일부 사용자가 변화를 인지하지 못해 플레이 중 혼란을 겪었다.',
-            fix: '→ 회전 방향이 변경되는 순간, 벽면에 방향 화살표와 안내 UI를 추가해 다음 행동을 즉시 인지할 수 있도록 개선했다.',
+              '초기 선택 화면은 게임명을 텍스트로만 제공해 처음 접하는 사용자가 각 게임의 특징을 직관적으로 파악하기 어려웠다. 다양한 연령대의 사용자를 고려해 텍스트 의존도를 낮출 필요도 있었다.',
+            fix: '→ 각 게임을 상징하는 그래픽을 추가해 언어나 사전 지식에 대한 의존도를 낮추고 선택을 직관적으로 만들었다.',
+            image: '/images/work/midnight-carnival/finding-1.jpg',
+            imageLabel: '게임 선택 아이콘 추가 — MIDNIGHT CARNIVAL UI',
           },
           {
-            title: '중요한 클라이맥스를 놓침',
+            title: '텍스트만으로 플레이 방법을 이해하기 어려움',
             issue:
-              '사용자는 회전하는 바닥의 구멍을 피하기 위해 플레이 중 대부분의 시선을 바닥에 두었다. 그 결과 게임 클리어 후 공간 전체가 급강하하는 핵심 연출이 벽면에서 재생되어도 이를 놓치는 경우가 발생했다.',
-            fix: '→ 클라이맥스 직전에 사용자의 시선을 벽면으로 유도하는 안내 UI를 추가해 의도한 공간 연출을 자연스럽게 경험하도록 개선했다.',
+              '처음 접하는 공간형 인터랙션에서 짧은 텍스트만으로는 사용자가 어디를 보고 어떻게 몸을 움직여야 하는지 빠르게 이해하기 어려웠다.',
+            fix: '→ 실제 게임 화면과 행동을 시각화한 그래픽을 함께 제공해 플레이 방식을 빠르게 이해하도록 튜토리얼 UI를 개선했다.',
+            image: '/images/work/midnight-carnival/finding-2.jpg',
+            imageLabel: '튜토리얼 시각화 — MIDNIGHT CARNIVAL UI',
+          },
+          {
+            title: '플레이 중 방향 전환을 인지하지 못함',
+            issue: '바닥 회전 방향이 바뀌어도 이를 인지하지 못해 기존 방향으로 계속 움직이는 사용자가 있었다.',
+            fix: '→ 벽면에 방향 안내 UI를 추가해 다음 행동을 즉각적으로 인지하도록 개선했다.',
+            image: '/images/work/midnight-carnival/finding-3.jpg',
+            imageLabel: '방향 안내 인터랙션 — MIDNIGHT CARNIVAL',
           },
         ],
         resultLabel: 'RESULT / IMPACT',
@@ -166,19 +176,30 @@ export const projects: Project[] = [
         ],
         processLabel: 'PROCESS',
         findingsLabel: 'FROM USER TESTING',
-        findingsIntro: "Two issues in particular surfaced on the 'Drop Tower' map.",
         findings: [
           {
-            title: 'Missed direction changes',
+            title: 'Games were hard to tell apart from text alone',
             issue:
-              "When the rotating floor's direction changed randomly, users had to change their running direction too — but some players didn't notice the change and got confused mid-play.",
-            fix: '→ Added directional arrows and guiding UI on the walls at the moment the rotation direction changes, so players could immediately register the next move.',
+              "The initial selection screen showed only game names as text, making it hard for first-time users to intuitively grasp what each game was about. With a wide range of user ages in mind, relying less on text also mattered.",
+            fix: '→ Added a symbolic graphic for each game, reducing dependence on language or prior knowledge and making selection more intuitive.',
+            image: '/images/work/midnight-carnival/finding-1.jpg',
+            imageLabel: 'GAME SELECTION ICONS — MIDNIGHT CARNIVAL UI',
           },
           {
-            title: 'Missing the climax moment',
+            title: 'How to play was hard to grasp from text alone',
             issue:
-              'To dodge the rotating floor’s holes, players kept most of their gaze on the floor throughout play. As a result, some missed the key moment after clearing the game when the whole space appeared to plunge, played out on the walls.',
-            fix: '→ Added guiding UI just before the climax to draw players’ gaze up to the walls, so they could naturally experience the intended spatial moment.',
+              "In a spatial interaction most users were encountering for the first time, short text alone made it hard to quickly understand where to look and how to move.",
+            fix: '→ Paired the tutorial with graphics visualizing the actual gameplay screen and required actions, so players could understand how to play more quickly.',
+            image: '/images/work/midnight-carnival/finding-2.jpg',
+            imageLabel: 'TUTORIAL VISUALIZATION — MIDNIGHT CARNIVAL UI',
+          },
+          {
+            title: 'Missed direction changes during play',
+            issue:
+              "Some users didn't notice when the rotating floor's direction changed and kept moving in the old direction.",
+            fix: '→ Added directional guiding UI on the walls so players could immediately register the next move.',
+            image: '/images/work/midnight-carnival/finding-3.jpg',
+            imageLabel: 'DIRECTIONAL GUIDE — MIDNIGHT CARNIVAL',
           },
         ],
         resultLabel: 'RESULT / IMPACT',
