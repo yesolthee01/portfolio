@@ -53,6 +53,12 @@ body {
   font-family: var(--font-mono);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  /* Prevent the browser's default CJK line-breaking from splitting a
+     Korean word/particle mid-syllable (e.g. "설계" -> "설" / "계.",
+     "경험하는지를" -> "경험하는지" / "를"). Only breaks at spaces, same
+     as normal Latin wrapping — doesn't affect English text. */
+  word-break: keep-all;
+  overflow-wrap: break-word;
   background:
     radial-gradient(900px 600px at 12% 6%, #ffd9bd 0%, transparent 55%),
     radial-gradient(800px 560px at 90% 16%, #bdeee2 0%, transparent 55%),
@@ -669,7 +675,10 @@ a.short-card:hover {
 
 .ai-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* auto-fit + minmax instead of a fixed repeat(4, 1fr): with fewer than
+     4 items (e.g. a 3-item toolkit category), the row still fills the
+     full container width instead of leaving an empty trailing column. */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
 }
 
@@ -992,7 +1001,10 @@ a.short-card:hover {
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* auto-fit + minmax instead of a fixed repeat(4, 1fr): projects with
+     only 3 process steps (e.g. SkolePlan) still fill the full row width
+     instead of leaving an empty trailing column. */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
 }
 
