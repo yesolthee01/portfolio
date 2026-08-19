@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import { Navigate, useParams, Link } from 'react-router-dom';
 import { Nav } from '../components/Nav';
 import { ProjectImage } from '../components/ProjectImage';
@@ -5,6 +6,40 @@ import { useLanguage } from '../i18n/LanguageContext';
 import { getProjectBySlug, getAdjacentProjects } from '../data/projects';
 import { useInView } from '../hooks/useInView';
 import type { Finding, LoopStep, AgeCard, RoleCard, PrincipleQA } from '../data/types';
+
+function HeroGallery({ images, alt, label }: { images: string[]; alt: string; label: string }) {
+  const [index, setIndex] = useState(0);
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    const el = trackRef.current;
+    if (!el) return;
+    const i = Math.round(el.scrollLeft / el.clientWidth);
+    setIndex(Math.min(images.length - 1, Math.max(0, i)));
+  };
+
+  return (
+    <div className="case-hero-gallery">
+      <div className="case-hero-gallery-track" ref={trackRef} onScroll={handleScroll}>
+        {images.map((src, i) => (
+          <div className="case-hero-gallery-slide" key={src}>
+            <ProjectImage
+              src={src}
+              alt={`${alt} ${i + 1}`}
+              label={`${label} ${i + 1}/${images.length}`}
+              className="case-hero-gallery-img"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="case-hero-gallery-dots">
+        {images.map((src, i) => (
+          <span className={`case-hero-gallery-dot${i === index ? ' active' : ''}`} key={src} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function FindingCard({
   finding,
@@ -149,6 +184,8 @@ export function CaseStudy() {
                 allowFullScreen
               />
             </div>
+          ) : project.heroImages && project.heroImages.length > 1 ? (
+            <HeroGallery images={project.heroImages} alt={cs.title} label={cs.heroLabel} />
           ) : (
             <ProjectImage
               src={project.images.hero}

@@ -163,10 +163,17 @@ export interface Project {
   };
   /** Optional — a YouTube video ID (not a full URL). When set, the case
    * study page's hero slot renders a playable embed instead of
-   * `images.hero`. `images.thumb`/`images.hero` are still used for the
-   * homepage card and as a non-JS fallback, so keep them set (e.g. to
-   * the video's own YouTube thumbnail) even when this is set. */
+   * `images.hero`/`heroImages`. `images.thumb`/`images.hero` are still
+   * used for the homepage card and as a non-JS fallback, so keep them
+   * set (e.g. to the video's own YouTube thumbnail) even when this is
+   * set. Takes priority over `heroImages` if both are set. */
   heroVideo?: string;
+  /** Optional — multiple hero photos. When set with 2+ entries (and no
+   * `heroVideo`), the hero slot renders a horizontal swipe/scroll
+   * gallery with dot indicators instead of the single `images.hero`
+   * image. A single-entry array (or omitted) falls back to the plain
+   * `images.hero` image. */
+  heroImages?: string[];
   card: Localized<WorkCardContent>;
   /** Powers the /work/:slug case study page when set alongside
    * `caseStudy`, regardless of `tier`. */

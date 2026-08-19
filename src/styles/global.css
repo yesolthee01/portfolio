@@ -841,6 +841,68 @@ a.short-card:hover {
   display: block;
 }
 
+.case-hero-gallery {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.case-hero-gallery-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.case-hero-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.case-hero-gallery-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.case-hero-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.case-hero-gallery-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(20, 18, 16, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.case-hero-gallery-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  transition: background 0.2s, transform 0.2s;
+}
+.case-hero-gallery-dot.active {
+  background: #fbf8f4;
+  transform: scale(1.3);
+}
+
 .case-row {
   padding: 56px 0;
   display: grid;
@@ -1561,7 +1623,8 @@ a.short-card:hover {
     text-align: center;
   }
   .case-hero-image,
-  .case-hero-video {
+  .case-hero-video,
+  .case-hero-gallery {
     height: 240px;
   }
 }
