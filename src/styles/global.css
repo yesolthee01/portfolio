@@ -912,7 +912,7 @@ a.short-card:hover {
   z-index: 2;
 }
 .case-hero-gallery:hover .case-hero-gallery-arrow {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 .case-hero-gallery-arrow:hover {
   opacity: 0.7 !important;
