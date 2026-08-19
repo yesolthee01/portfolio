@@ -1571,6 +1571,43 @@ a.short-card:hover {
   line-height: 1.55;
 }
 
+.findings-grid--banner {
+  grid-template-columns: 1fr;
+}
+
+.finding-card--banner {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  align-items: stretch;
+}
+.finding-card--banner .finding-image-box {
+  height: auto;
+  padding: 0;
+  background: #0d0d0d;
+  border-bottom: none;
+  border-right: 1px solid var(--glass-border);
+}
+.finding-card--banner .finding-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.finding-card--banner .finding-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .finding-card--banner {
+    grid-template-columns: 1fr;
+  }
+  .finding-card--banner .finding-image-box {
+    border-right: none;
+    border-bottom: 1px solid var(--glass-border);
+  }
+}
+
 .case-footer-nav {
   padding: 44px 0 20px;
   display: flex;

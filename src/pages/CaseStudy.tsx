@@ -91,7 +91,7 @@ function FindingCard({
 }: {
   finding: Finding;
   index: number;
-  variant?: 'featured' | 'compact';
+  variant?: 'featured' | 'compact' | 'banner';
 }) {
   return (
     <div className={`finding-card glass${variant ? ` finding-card--${variant}` : ''}`}>
@@ -220,6 +220,7 @@ export function CaseStudy() {
   const featuredFindings = findings.filter((f) => f.featured);
   const compactFindings = findings.filter((f) => !f.featured);
   const findingsSplit = featuredFindings.length > 0 && compactFindings.length > 0;
+  const findingsBanner = cs.findingsImageLayout === 'banner';
 
   return (
     <div className="page">
@@ -370,7 +371,13 @@ export function CaseStudy() {
           <div className="case-findings">
             <div className="case-findings-label">{cs.findingsLabel ?? 'FROM USER TESTING'}</div>
             {cs.findingsIntro && <p className="case-findings-intro">{cs.findingsIntro}</p>}
-            {findingsSplit ? (
+            {findingsBanner ? (
+              <div className="findings-grid findings-grid--banner">
+                {findings.map((finding, i) => (
+                  <FindingCard finding={finding} index={i} variant="banner" key={finding.title} />
+                ))}
+              </div>
+            ) : findingsSplit ? (
               <>
                 <div className="findings-grid findings-grid--featured">
                   {featuredFindings.map((finding, i) => (

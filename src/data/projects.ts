@@ -112,6 +112,7 @@ export const projects: Project[] = [
         ],
         processLabel: 'PROCESS',
         findingsLabel: 'FROM USER TESTING',
+        findingsImageLayout: 'banner',
         findings: [
           {
             title: '텍스트만으로 게임을 구분하기 어려움',
@@ -176,6 +177,7 @@ export const projects: Project[] = [
         ],
         processLabel: 'PROCESS',
         findingsLabel: 'FROM USER TESTING',
+        findingsImageLayout: 'banner',
         findings: [
           {
             title: 'Games were hard to tell apart from text alone',

@@ -130,6 +130,13 @@ export interface CaseStudyContent {
   findingsLabel?: string;
   findingsIntro?: string;
   findings?: Finding[];
+  /** Optional — when set to 'banner', each Finding with an `image` renders
+   * as a single-column wide card (image filling the left ~46% edge-to-edge
+   * on a dark backing, text on the right) instead of the default stacked
+   * "image on top, text below" card. Use for findings whose images are
+   * wide/landscape composites where a fixed-height contain box would leave
+   * heavy letterboxing. Ignored (falls back to default) when omitted. */
+  findingsImageLayout?: 'banner';
   resultLabel: string;
   result: string;
   prevLabel: string;
