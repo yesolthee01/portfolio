@@ -25,7 +25,7 @@ export const projects: Project[] = [
     medium: 'spatial',
     tags: ['SPATIAL UX', 'XR', 'SIGGRAPH ASIA 2024'],
     images: {
-      thumb: 'https://img.youtube.com/vi/sJRy-V2xb8I/hqdefault.jpg',
+      thumb: '/images/work/midnight-carnival/thumb.jpg',
       hero: 'https://img.youtube.com/vi/sJRy-V2xb8I/hqdefault.jpg',
     },
     heroVideo: 'sJRy-V2xb8I',
