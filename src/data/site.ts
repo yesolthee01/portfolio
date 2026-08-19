@@ -7,6 +7,16 @@ export interface AiToolItem {
   desc: string;
 }
 
+/** One group within the Toolkit section (e.g. Generative AI, Design &
+ * Motion). `note` is optional small print under the category's card row —
+ * used to signal the list isn't exhaustive without cluttering the cards
+ * themselves. */
+export interface ToolkitCategory {
+  label: string;
+  items: AiToolItem[];
+  note?: string;
+}
+
 export const siteCopy: Localized<{
   nav: { work: string; ai: string; about: string; contact: string };
   hero: {
@@ -21,7 +31,7 @@ export const siteCopy: Localized<{
   };
   work: { title: string };
   moreWork: { title: string; badge: string; desc: string };
-  aiToolkit: { title: string; sub: string; items: AiToolItem[] };
+  aiToolkit: { title: string; sub: string; categories: ToolkitCategory[] };
   about: { title: string; body: string; kw1: string; kw2: string; kw3: string; kw4: string };
   contact: {
     line1: string;
@@ -36,7 +46,7 @@ export const siteCopy: Localized<{
   };
 }> = {
   kr: {
-    nav: { work: 'Work', ai: 'AI Toolkit', about: 'About', contact: 'Contact' },
+    nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
       headlinePre: '저는 ',
@@ -54,13 +64,40 @@ export const siteCopy: Localized<{
       desc: '더 많은 프로젝트를 준비하고 있어요. 조만간 이 자리에 추가됩니다.',
     },
     aiToolkit: {
-      title: 'AI Toolkit',
-      sub: 'HOW I WORK WITH AI',
-      items: [
-        { mark: 'Fi', markBg: '#1A1A1A', title: 'Figma AI', desc: '와이어프레임 초안과 배리에이션을 빠르게 생성해 탐색 속도를 높입니다.' },
-        { mark: 'Cl', markBg: '#C1571F', title: 'Claude / ChatGPT', desc: '리서치 종합, 인터뷰 스크립트 분석, 카피 초안 작성에 활용합니다.' },
-        { mark: 'Mj', markBg: '#1A1A1A', title: 'Midjourney', desc: '전시·공간 컨셉의 무드보드와 초기 비주얼 레퍼런스를 만듭니다.' },
-        { mark: 'Cu', markBg: '#1A1A1A', title: 'Cursor / AI 코딩', desc: '디자인을 직접 동작하는 프로토타입으로 빠르게 구현합니다.' },
+      title: 'Toolkit',
+      sub: 'TOOLS & TECHNOLOGIES I WORK WITH',
+      categories: [
+        {
+          label: 'GENERATIVE AI',
+          items: [
+            { mark: 'Fi', markBg: '#1A1A1A', title: 'Figma AI', desc: '와이어프레임 초안과 배리에이션을 빠르게 생성해 탐색 속도를 높입니다.' },
+            { mark: 'Ai', markBg: '#1A1A1A', title: 'ChatGPT / Claude', desc: '리서치 종합, 인터뷰 스크립트 분석, 카피 초안 작성 등에 다양한 AI 챗봇을 활용합니다.' },
+            { mark: 'Mj', markBg: '#1A1A1A', title: 'Midjourney', desc: '전시·공간 컨셉의 무드보드와 초기 비주얼 레퍼런스를 만듭니다.' },
+            { mark: 'Cu', markBg: '#1A1A1A', title: 'Cursor / AI 코딩', desc: '디자인을 직접 동작하는 프로토타입으로 빠르게 구현합니다.' },
+          ],
+          note: '이 외에도 필요에 따라 새로운 AI 툴을 자유롭게 찾아 활용합니다.',
+        },
+        {
+          label: 'DESIGN & MOTION',
+          items: [
+            { mark: 'Il', markBg: '#1A1A1A', title: 'Illustrator', desc: '벡터 일러스트와 아이콘, 인쇄용 그래픽 작업에 사용합니다.' },
+            { mark: 'Ps', markBg: '#1A1A1A', title: 'Photoshop', desc: '이미지 리터칭과 합성, 무드보드 제작에 사용합니다.' },
+            { mark: 'Ae', markBg: '#1A1A1A', title: 'After Effects', desc: '인터랙션 모션 목업과 전시 영상 콘텐츠 제작에 사용합니다.' },
+          ],
+        },
+        {
+          label: 'REALTIME & DEVELOPMENT',
+          items: [
+            { mark: 'Ue', markBg: '#1A1A1A', title: 'Unreal Engine', desc: '공간형 XR 콘텐츠와 인터랙티브 전시를 실시간 엔진으로 구현합니다.' },
+            {
+              mark: 'Js',
+              markBg: '#1A1A1A',
+              title: '웹 개발 (JavaScript 등)',
+              desc: '프로토타입을 실제 동작하는 웹으로 직접 구현할 수 있습니다.',
+            },
+            { mark: 'Un', markBg: '#1A1A1A', title: 'Unity (C++ / C#)', desc: '인터랙티브 콘텐츠와 게임 메커니즘을 코드로 직접 구현합니다.' },
+          ],
+        },
       ],
     },
     about: {
@@ -84,7 +121,7 @@ export const siteCopy: Localized<{
     },
   },
   en: {
-    nav: { work: 'Work', ai: 'AI Toolkit', about: 'About', contact: 'Contact' },
+    nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
       headlinePre: 'I design what ',
@@ -102,13 +139,40 @@ export const siteCopy: Localized<{
       desc: 'More projects are on the way — this spot will fill in soon.',
     },
     aiToolkit: {
-      title: 'AI Toolkit',
-      sub: 'HOW I WORK WITH AI',
-      items: [
-        { mark: 'Fi', markBg: '#1A1A1A', title: 'Figma AI', desc: 'Speeds up exploration by rapidly generating wireframe drafts and variations.' },
-        { mark: 'Cl', markBg: '#C1571F', title: 'Claude / ChatGPT', desc: 'Used for research synthesis, interview transcript analysis, and copy drafting.' },
-        { mark: 'Mj', markBg: '#1A1A1A', title: 'Midjourney', desc: 'Builds mood boards and early visual references for exhibition and spatial concepts.' },
-        { mark: 'Cu', markBg: '#1A1A1A', title: 'Cursor / AI Coding', desc: 'Turns designs into working prototypes quickly.' },
+      title: 'Toolkit',
+      sub: 'TOOLS & TECHNOLOGIES I WORK WITH',
+      categories: [
+        {
+          label: 'GENERATIVE AI',
+          items: [
+            { mark: 'Fi', markBg: '#1A1A1A', title: 'Figma AI', desc: 'Speeds up exploration by rapidly generating wireframe drafts and variations.' },
+            { mark: 'Ai', markBg: '#1A1A1A', title: 'ChatGPT / Claude', desc: 'Used across various AI chat tools for research synthesis, interview transcript analysis, and copy drafting.' },
+            { mark: 'Mj', markBg: '#1A1A1A', title: 'Midjourney', desc: 'Builds mood boards and early visual references for exhibition and spatial concepts.' },
+            { mark: 'Cu', markBg: '#1A1A1A', title: 'Cursor / AI Coding', desc: 'Turns designs into working prototypes quickly.' },
+          ],
+          note: "I also freely explore and pick up new AI tools whenever a project calls for them.",
+        },
+        {
+          label: 'DESIGN & MOTION',
+          items: [
+            { mark: 'Il', markBg: '#1A1A1A', title: 'Illustrator', desc: 'Used for vector illustration, iconography, and print-ready graphics.' },
+            { mark: 'Ps', markBg: '#1A1A1A', title: 'Photoshop', desc: 'Used for image retouching, compositing, and mood board production.' },
+            { mark: 'Ae', markBg: '#1A1A1A', title: 'After Effects', desc: 'Used for interaction motion mockups and exhibition video content.' },
+          ],
+        },
+        {
+          label: 'REALTIME & DEVELOPMENT',
+          items: [
+            { mark: 'Ue', markBg: '#1A1A1A', title: 'Unreal Engine', desc: 'Builds spatial XR content and interactive exhibitions in a realtime engine.' },
+            {
+              mark: 'Js',
+              markBg: '#1A1A1A',
+              title: 'Web Development (JavaScript, etc.)',
+              desc: 'Able to build prototypes into fully working web experiences directly.',
+            },
+            { mark: 'Un', markBg: '#1A1A1A', title: 'Unity (C++ / C#)', desc: 'Implements interactive content and game mechanics directly in code.' },
+          ],
+        },
       ],
     },
     about: {
