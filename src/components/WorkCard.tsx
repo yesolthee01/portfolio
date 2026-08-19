@@ -10,7 +10,6 @@ export function WorkCard({ project }: { project: Project }) {
   return (
     <Link to={`/work/${project.slug}`} className="card press-bounce">
       <div className="card-visual">
-        <span className="card-idx-tag">FIG. {String(project.order).padStart(2, '0')}</span>
         <ProjectImage src={project.images.thumb} alt={card.title} label={card.imgLabel} />
       </div>
       <div className="card-body">
