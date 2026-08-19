@@ -863,6 +863,20 @@ a.short-card:hover {
   display: none;
 }
 
+@keyframes heroGalleryPeek {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-24px);
+  }
+}
+
+.case-hero-gallery-track.peek {
+  animation: heroGalleryPeek 1100ms ease-in-out 500ms 1;
+}
+
 .case-hero-gallery-slide {
   flex: 0 0 100%;
   width: 100%;
@@ -877,6 +891,39 @@ a.short-card:hover {
   display: block;
 }
 
+.case-hero-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(20, 18, 16, 0.65);
+  color: #fbf8f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+.case-hero-gallery:hover .case-hero-gallery-arrow {
+  opacity: 0.3;
+}
+.case-hero-gallery-arrow:hover {
+  opacity: 0.7 !important;
+}
+.case-hero-gallery-arrow--prev {
+  left: 14px;
+}
+.case-hero-gallery-arrow--next {
+  right: 14px;
+}
+
 .case-hero-gallery-dots {
   position: absolute;
   bottom: 14px;
@@ -889,13 +936,17 @@ a.short-card:hover {
   background: rgba(20, 18, 16, 0.35);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+  z-index: 2;
 }
 
 .case-hero-gallery-dot {
   width: 6px;
   height: 6px;
+  padding: 0;
+  border: none;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
   transition: background 0.2s, transform 0.2s;
 }
 .case-hero-gallery-dot.active {

@@ -10,6 +10,17 @@ import type { Finding, LoopStep, AgeCard, RoleCard, PrincipleQA } from '../data/
 function HeroGallery({ images, alt, label }: { images: string[]; alt: string; label: string }) {
   const [index, setIndex] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
+  // One-shot "peek" nudge on first entering the page, hinting the hero is
+  // swipeable — a small CSS transform on the track, independent of real
+  // scroll position, so it can't desync from the actual slide index.
+  const { ref: peekRef, inView: peek } = useInView<HTMLDivElement>(0.4);
+
+  const scrollToIndex = (i: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const clamped = Math.min(images.length - 1, Math.max(0, i));
+    el.scrollTo({ left: clamped * el.clientWidth, behavior: 'smooth' });
+  };
 
   const handleScroll = () => {
     const el = trackRef.current;
@@ -19,8 +30,12 @@ function HeroGallery({ images, alt, label }: { images: string[]; alt: string; la
   };
 
   return (
-    <div className="case-hero-gallery">
-      <div className="case-hero-gallery-track" ref={trackRef} onScroll={handleScroll}>
+    <div className="case-hero-gallery" ref={peekRef}>
+      <div
+        className={`case-hero-gallery-track${peek ? ' peek' : ''}`}
+        ref={trackRef}
+        onScroll={handleScroll}
+      >
         {images.map((src, i) => (
           <div className="case-hero-gallery-slide" key={src}>
             <ProjectImage
@@ -32,9 +47,37 @@ function HeroGallery({ images, alt, label }: { images: string[]; alt: string; la
           </div>
         ))}
       </div>
+
+      {index > 0 && (
+        <button
+          type="button"
+          className="case-hero-gallery-arrow case-hero-gallery-arrow--prev"
+          aria-label="Previous photo"
+          onClick={() => scrollToIndex(index - 1)}
+        >
+          ←
+        </button>
+      )}
+      {index < images.length - 1 && (
+        <button
+          type="button"
+          className="case-hero-gallery-arrow case-hero-gallery-arrow--next"
+          aria-label="Next photo"
+          onClick={() => scrollToIndex(index + 1)}
+        >
+          →
+        </button>
+      )}
+
       <div className="case-hero-gallery-dots">
         {images.map((src, i) => (
-          <span className={`case-hero-gallery-dot${i === index ? ' active' : ''}`} key={src} />
+          <button
+            type="button"
+            className={`case-hero-gallery-dot${i === index ? ' active' : ''}`}
+            key={src}
+            aria-label={`Go to photo ${i + 1}`}
+            onClick={() => scrollToIndex(i)}
+          />
         ))}
       </div>
     </div>
