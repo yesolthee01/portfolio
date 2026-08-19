@@ -198,8 +198,16 @@ export const projects: Project[] = [
     tags: ['SPATIAL UX', 'EXHIBITION', 'DENMARK'],
     images: {
       thumb: '/images/work/outdoor-dome/thumb.jpg',
-      hero: '/images/work/outdoor-dome/hero.jpg',
+      hero: '/images/work/outdoor-dome/hero-1.jpg',
     },
+    heroImages: [
+      '/images/work/outdoor-dome/hero-1.jpg',
+      '/images/work/outdoor-dome/hero-2.jpg',
+      '/images/work/outdoor-dome/hero-3.jpg',
+      '/images/work/outdoor-dome/hero-4.jpg',
+      '/images/work/outdoor-dome/hero-5.jpg',
+      '/images/work/outdoor-dome/hero-6.jpg',
+    ],
     process: {
       kr: [
         {
@@ -337,8 +345,9 @@ export const projects: Project[] = [
     tags: ['AI PRODUCT', 'MOBILE APP', 'EDTECH'],
     images: {
       thumb: '/images/work/talkable/thumb.jpg',
-      hero: '/images/work/talkable/hero.jpg',
+      hero: '/images/work/talkable/hero-1.jpg',
     },
+    heroImages: ['/images/work/talkable/hero-1.jpg', '/images/work/talkable/hero-2.jpg'],
     process: {
       kr: [
         {
@@ -792,8 +801,9 @@ export const projects: Project[] = [
     tags: ['EDTECH', 'ROLE-BASED UX', 'DENMARK'],
     images: {
       thumb: '/images/work/skoleplan/thumb.jpg',
-      hero: '/images/work/skoleplan/hero.jpg',
+      hero: '/images/work/skoleplan/hero-1.jpg',
     },
+    heroImages: ['/images/work/skoleplan/hero-1.jpg', '/images/work/skoleplan/hero-2.jpg'],
     process: {
       kr: [
         {
