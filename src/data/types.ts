@@ -27,6 +27,8 @@ export interface Finding {
   issue: string;
   fix: string;
   featured?: boolean;
+  image?: string;
+  imageLabel?: string;
 }
 
 /** One step in a repeating product loop (e.g. Conversation → Feedback →

@@ -95,10 +95,22 @@ function FindingCard({
 }) {
   return (
     <div className={`finding-card glass${variant ? ` finding-card--${variant}` : ''}`}>
-      <div className="finding-index">{String(index + 1).padStart(2, '0')}</div>
-      <h3>{finding.title}</h3>
-      <p className="finding-issue">{finding.issue}</p>
-      <p className="finding-fix">{finding.fix}</p>
+      {finding.image && (
+        <div className="finding-image-box">
+          <ProjectImage
+            src={finding.image}
+            alt={finding.title}
+            label={finding.imageLabel ?? finding.title}
+            className="finding-image"
+          />
+        </div>
+      )}
+      <div className="finding-card-body">
+        <div className="finding-index">{String(index + 1).padStart(2, '0')}</div>
+        <h3>{finding.title}</h3>
+        <p className="finding-issue">{finding.issue}</p>
+        <p className="finding-fix">{finding.fix}</p>
+      </div>
     </div>
   );
 }

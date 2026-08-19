@@ -466,25 +466,31 @@ export const projects: Project[] = [
             issue:
               '대화가 끝난 뒤 받은 피드백을 확인하는 기능이 있었지만, 일부 사용자가 해당 버튼을 바로 발견하지 못했다. 중요한 학습 기능임에도 다른 인터페이스 요소에 묻혀 시각적 우선순위가 충분하지 않다는 문제를 발견했다.',
             fix: "→ 피드백 아이콘을 보다 직관적인 형태로 변경하고 크기를 키워 시각적 위계를 강화했다. 대화가 끝난 뒤 사용자가 자연스럽게 '다음에는 피드백을 확인해야 한다'고 인지할 수 있도록 인터페이스를 개선했다.",
-            featured: true,
+            image: '/images/work/talkable/finding-1.png',
+            imageLabel: '피드백 발견성 개선 — TALKABLE UI',
           },
           {
             title: '피드백에서 다시 대화까지',
             issue:
               '사용자 테스트에서 피드백을 확인한 뒤 다시 대화로 돌아가는 과정에 일부 어려움이 나타났다. 또한 전문가 피드백을 통해 기존 피드백 화면의 정보 구조와 이동 방식이 학습 흐름을 방해할 수 있다는 점을 확인했다.',
             fix: '→ 피드백을 스크롤형 구조로 재구성하고, 피드백 유형을 아이콘 방식에서 탭 구조로 변경했다. 또한 대화로 돌아가는 기능을 하단에서 상단으로 이동시켜, 피드백을 확인한 뒤 다음 행동으로 보다 자연스럽게 이어지도록 개선했다.',
-            featured: true,
+            image: '/images/work/talkable/finding-2.png',
+            imageLabel: '피드백 구조 개편 — TALKABLE UI',
           },
           {
             title: '복습 기능을 독립적인 학습 영역으로',
             issue:
               '저장한 단어를 복습하는 기능이 기존 저장목록 내부에 위치해 있어 사용자가 단어 시험과 복습 기능을 쉽게 발견하기 어려웠다.',
             fix: '→ 하단 Navigation에 Review 영역을 독립적으로 추가하고, 저장 단어와 피드백을 한곳에서 확인하도록 Information Architecture를 재구성했다. 또한 여러 단어 학습 방식을 상단에 배치해 사용자가 원하는 복습 방식에 바로 접근할 수 있도록 개선했다.',
+            image: '/images/work/talkable/finding-3.png',
+            imageLabel: '리뷰 독립 탭 — TALKABLE UI',
           },
           {
             title: '목표와 보상을 더 명확하게',
             issue: '일부 사용자가 Challenge 아이템이 무엇을 의미하고 어떻게 획득하는지 바로 이해하지 못했다.',
             fix: '→ Challenge에 학습 목표와 아이템에 대한 설명을 추가하고, 목표 달성 후 획득 결과가 명확하게 전달되도록 피드백을 보완했다. 이를 통해 사용자가 Challenge의 목적과 다음 행동을 보다 직관적으로 이해하도록 했다.',
+            image: '/images/work/talkable/finding-4.png',
+            imageLabel: 'Challenge 목표/보상 개선 — TALKABLE UI',
           },
         ],
         resultLabel: 'RESULT / IMPACT',
@@ -561,25 +567,31 @@ export const projects: Project[] = [
             issue:
               "There was a way to check feedback after a conversation ended, but some users didn't notice the button right away. Despite being a core learning feature, it was buried among other interface elements without enough visual priority.",
             fix: '→ Changed the feedback icon to a more intuitive form and enlarged it to strengthen visual hierarchy, so users would naturally recognize that feedback was the next thing to check after a conversation.',
-            featured: true,
+            image: '/images/work/talkable/finding-1.png',
+            imageLabel: 'FEEDBACK DISCOVERABILITY — TALKABLE UI',
           },
           {
             title: 'From feedback back to conversation',
             issue:
               "User testing surfaced some difficulty in the path from checking feedback back to starting a new conversation. Expert feedback also confirmed that the existing feedback screen's information structure and navigation could interrupt the learning flow.",
             fix: '→ Restructured feedback into a scrollable layout and switched feedback types from icons to a tab structure. Also moved the button to return to conversation from the bottom to the top of the screen, so the next action after checking feedback followed more naturally.',
-            featured: true,
+            image: '/images/work/talkable/finding-2.png',
+            imageLabel: 'FEEDBACK RESTRUCTURE — TALKABLE UI',
           },
           {
             title: 'Making review its own dedicated space',
             issue:
               'The feature for reviewing saved words lived inside the existing saved-items list, making it hard for users to discover vocabulary quizzes and review features.',
             fix: '→ Added Review as its own area in the bottom navigation and restructured the information architecture so saved words and feedback could be checked in one place. Also placed the different review formats up top so users could jump straight to the one they wanted.',
+            image: '/images/work/talkable/finding-3.png',
+            imageLabel: 'REVIEW TAB — TALKABLE UI',
           },
           {
             title: 'Making goals and rewards clearer',
             issue: "Some users didn't immediately understand what a Challenge item meant or how to earn it.",
             fix: "→ Added explanations of the learning goal and the item to each Challenge, and improved the feedback shown after completing a goal so the reward was clearly communicated — helping users understand the purpose of each Challenge and what to do next.",
+            image: '/images/work/talkable/finding-4.png',
+            imageLabel: 'CHALLENGE GOALS & REWARDS — TALKABLE UI',
           },
         ],
         resultLabel: 'RESULT / IMPACT',

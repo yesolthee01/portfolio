@@ -1473,7 +1473,30 @@ a.short-card:hover {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.finding-card-body {
   padding: 26px 24px;
+}
+
+.finding-image-box {
+  width: 100%;
+  height: 268px;
+  padding: 24px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.finding-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .finding-index {
@@ -1510,8 +1533,11 @@ a.short-card:hover {
   margin-bottom: 18px;
 }
 
-.finding-card--featured {
+.finding-card--featured .finding-card-body {
   padding: 32px 28px;
+}
+.finding-card--featured .finding-image-box {
+  height: 300px;
 }
 .finding-card--featured .finding-index {
   font-size: 26px;
@@ -1524,8 +1550,12 @@ a.short-card:hover {
   font-size: 13.5px;
 }
 
-.finding-card--compact {
+.finding-card--compact .finding-card-body {
   padding: 20px 18px;
+}
+.finding-card--compact .finding-image-box {
+  height: 180px;
+  padding: 16px;
 }
 .finding-card--compact .finding-index {
   font-size: 16px;
