@@ -25,9 +25,10 @@ export const projects: Project[] = [
     medium: 'spatial',
     tags: ['SPATIAL UX', 'XR', 'SIGGRAPH ASIA 2024'],
     images: {
-      thumb: '/images/work/midnight-carnival/thumb.jpg',
-      hero: '/images/work/midnight-carnival/hero.jpg',
+      thumb: 'https://img.youtube.com/vi/sJRy-V2xb8I/hqdefault.jpg',
+      hero: 'https://img.youtube.com/vi/sJRy-V2xb8I/hqdefault.jpg',
     },
+    heroVideo: 'sJRy-V2xb8I',
     process: {
       kr: [
         {
@@ -588,9 +589,10 @@ export const projects: Project[] = [
     medium: 'spatial',
     tags: ['XR RESEARCH', 'SEOUL CITY-FUNDED', 'EXHIBITION'],
     images: {
-      thumb: '/images/work/seoul-xr-research/thumb.jpg',
-      hero: '/images/work/seoul-xr-research/hero.jpg',
+      thumb: 'https://img.youtube.com/vi/IvBbAEDmrlk/hqdefault.jpg',
+      hero: 'https://img.youtube.com/vi/IvBbAEDmrlk/hqdefault.jpg',
     },
+    heroVideo: 'IvBbAEDmrlk',
     process: {
       kr: [
         {

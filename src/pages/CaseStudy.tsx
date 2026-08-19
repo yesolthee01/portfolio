@@ -140,12 +140,23 @@ export function CaseStudy() {
           <div className="eyebrow glass">{cs.eyebrow}</div>
           <h1 className="case-title">{cs.title}</h1>
           <p className="case-subtitle">{cs.subtitle}</p>
-          <ProjectImage
-            src={project.images.hero}
-            alt={cs.title}
-            label={cs.heroLabel}
-            className="case-hero-image"
-          />
+          {project.heroVideo ? (
+            <div className="case-hero-video">
+              <iframe
+                src={`https://www.youtube.com/embed/${project.heroVideo}`}
+                title={cs.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          ) : (
+            <ProjectImage
+              src={project.images.hero}
+              alt={cs.title}
+              label={cs.heroLabel}
+              className="case-hero-image"
+            />
+          )}
         </div>
 
         {cs.role && (

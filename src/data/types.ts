@@ -161,6 +161,12 @@ export interface Project {
     thumb: string;
     hero: string;
   };
+  /** Optional — a YouTube video ID (not a full URL). When set, the case
+   * study page's hero slot renders a playable embed instead of
+   * `images.hero`. `images.thumb`/`images.hero` are still used for the
+   * homepage card and as a non-JS fallback, so keep them set (e.g. to
+   * the video's own YouTube thumbnail) even when this is set. */
+  heroVideo?: string;
   card: Localized<WorkCardContent>;
   /** Powers the /work/:slug case study page when set alongside
    * `caseStudy`, regardless of `tier`. */
