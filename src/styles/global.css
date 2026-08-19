@@ -335,13 +335,17 @@ button {
 }
 
 .hero-inner {
-  max-width: 900px;
+  max-width: 980px;
 }
 
 .hero-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(32px, 5.2vw, 60px);
+  /* Lower max than before (was 60px) — the headline's hand-set line
+     breaks (see `hero.headline` in site.ts) are sized to fit one line at
+     this cap; a larger cap risks a line wrapping a second time at wide
+     viewports. */
+  font-size: clamp(32px, 4.8vw, 56px);
   line-height: 1.16;
   letter-spacing: -0.02em;
   margin: 0 0 28px;

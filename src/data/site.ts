@@ -21,14 +21,15 @@ export const siteCopy: Localized<{
   nav: { work: string; ai: string; about: string; contact: string };
   hero: {
     eyebrow: string;
-    /** Optional plain text before the accent word, on the first line. */
-    headlinePre?: string;
-    /** Rendered inline, colored with the accent color. */
-    headlineAccent: string;
-    /** Rest of the first line, immediately after `headlineAccent`. */
-    headlineLine1Rest: string;
-    /** Second line — rendered on its own line below the first. */
-    headlineLine2: string;
+    /** Headline markup: '\n' forces a line break, '**word**' colors that
+     * word with the accent color. Kept as explicit markup (rather than a
+     * plain auto-wrapping string) because at the hero's large clamp()
+     * font size, natural reflow inside a fixed-width column doesn't land
+     * in the same place the copy was written for — short, deliberately
+     * placed lines avoid that. When editing, keep each line short enough
+     * to render on one line at the hero title's largest font size (rough
+     * budget: ~16 Korean characters or ~28 Latin characters per line). */
+    headline: string;
     subLine1: string;
     subLine2: string;
     chips: string[];
@@ -55,9 +56,7 @@ export const siteCopy: Localized<{
     nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
-      headlineAccent: '사람',
-      headlineLine1Rest: '이 실제로 어떻게 쓰고,',
-      headlineLine2: '움직이고, 반응하는지에서 시작합니다.',
+      headline: '**사람**이 실제로 어떻게 쓰고,\n움직이고,\n반응하는지에서 시작합니다.',
       subLine1: '디지털 제품부터 XR과 공간 경험까지,',
       subLine2: '사용자의 행동을 관찰하고 더 자연스러운 경험으로 바꾸는 UX Designer입니다.',
       chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
@@ -130,10 +129,7 @@ export const siteCopy: Localized<{
     nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
-      headlinePre: 'I start with how ',
-      headlineAccent: 'people',
-      headlineLine1Rest: ' actually use,',
-      headlineLine2: 'move, and react.',
+      headline: 'I start with how\n**people** actually use,\nmove, and react.',
       subLine1: 'From digital products to XR and spatial experiences,',
       subLine2: 'I observe user behavior and design more natural experiences.',
       chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
