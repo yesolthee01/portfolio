@@ -22,7 +22,7 @@ export function AboutSection() {
           <div className="about-keyword glass">{about.kw1}</div>
           <div className="about-keyword glass">{about.kw2}</div>
           <div className="about-keyword glass">{about.kw3}</div>
-          <div className="about-keyword glass accent">{about.kw4}</div>
+          <div className="about-keyword glass">{about.kw4}</div>
         </div>
       </div>
     </div>
