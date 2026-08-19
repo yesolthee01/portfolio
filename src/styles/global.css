@@ -817,7 +817,7 @@ a.short-card:hover {
 }
 
 .case-hero-image {
-  height: 400px;
+  aspect-ratio: 16 / 9;
   width: 100%;
   border-radius: var(--radius-card);
   overflow: hidden;
@@ -827,7 +827,7 @@ a.short-card:hover {
 }
 
 .case-hero-video {
-  height: 400px;
+  aspect-ratio: 16 / 9;
   width: 100%;
   border-radius: var(--radius-card);
   overflow: hidden;
@@ -843,7 +843,7 @@ a.short-card:hover {
 
 .case-hero-gallery {
   position: relative;
-  height: 400px;
+  aspect-ratio: 16 / 9;
   width: 100%;
   border-radius: var(--radius-card);
   overflow: hidden;
@@ -1621,10 +1621,5 @@ a.short-card:hover {
   }
   .case-footer-nav .btn {
     text-align: center;
-  }
-  .case-hero-image,
-  .case-hero-video,
-  .case-hero-gallery {
-    height: 240px;
   }
 }
