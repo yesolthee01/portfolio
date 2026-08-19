@@ -4,7 +4,7 @@ import { ProjectImage } from '../components/ProjectImage';
 import { useLanguage } from '../i18n/LanguageContext';
 import { getProjectBySlug, getAdjacentProjects } from '../data/projects';
 import { useInView } from '../hooks/useInView';
-import type { Finding, LoopStep, AgeCard } from '../data/types';
+import type { Finding, LoopStep, AgeCard, RoleCard, PrincipleQA } from '../data/types';
 
 function FindingCard({
   finding,
@@ -48,6 +48,41 @@ function AgeCardRow({ card, index }: { card: AgeCard; index: number }) {
           <p>{card.interaction}</p>
         </div>
       </div>
+    </div>
+  );
+}
+
+function RoleCardRow({ card, index }: { card: RoleCard; index: number }) {
+  return (
+    <div className="role-card glass">
+      <div className="role-card-head">
+        <div className="role-card-index">{String(index + 1).padStart(2, '0')}</div>
+        <div>
+          <div className="role-card-role">{card.role}</div>
+          <div className="role-card-focus">{card.focus}</div>
+        </div>
+      </div>
+      <p className="role-card-desc">{card.desc}</p>
+      <div className="role-card-priority">
+        <span className="role-card-priority-label">{card.priorityLabel}</span>
+        <div className="tag-row">
+          {card.priority.map((item) => (
+            <span className="tag glass" key={item}>
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PrincipleQACard({ qa }: { qa: PrincipleQA }) {
+  return (
+    <div className="qa-card glass">
+      <div className="qa-role">{qa.role}</div>
+      <p className="qa-question">“{qa.question}”</p>
+      <p className="qa-answer">→ {qa.answer}</p>
     </div>
   );
 }
@@ -174,13 +209,38 @@ export function CaseStudy() {
           </div>
         )}
 
-        {cs.principle && (
-          <div className="case-principle">
-            <div className="case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
-            <div className="case-principle-card glass">
-              <p className="case-principle-body">{cs.principle}</p>
+        {cs.roleCards && cs.roleCards.length > 0 && (
+          <div className="case-roles">
+            <div className="case-roles-label">{cs.rolesLabel ?? 'ROLE-BASED UX'}</div>
+            {cs.rolesIntro && <p className="case-roles-intro">{cs.rolesIntro}</p>}
+            <div className="role-cards">
+              {cs.roleCards.map((card, i) => (
+                <RoleCardRow card={card} index={i} key={card.role} />
+              ))}
             </div>
           </div>
+        )}
+
+        {cs.principleQA && cs.principleQA.length > 0 ? (
+          <div className="case-principle">
+            <div className="case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
+            {cs.principleIntro && <p className="case-principle-intro">{cs.principleIntro}</p>}
+            <div className="principle-qa-grid">
+              {cs.principleQA.map((qa) => (
+                <PrincipleQACard qa={qa} key={qa.role} />
+              ))}
+            </div>
+            {cs.principleClosing && <p className="case-principle-closing">{cs.principleClosing}</p>}
+          </div>
+        ) : (
+          cs.principle && (
+            <div className="case-principle">
+              <div className="case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
+              <div className="case-principle-card glass">
+                <p className="case-principle-body">{cs.principle}</p>
+              </div>
+            </div>
+          )
         )}
 
         {cs.researchBasis && (

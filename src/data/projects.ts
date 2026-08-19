@@ -706,7 +706,7 @@ export const projects: Project[] = [
         result:
           '연구에서 도출한 연령별 디자인 원칙을 5개의 XR Experience로 구현했으며, 연구 결과가 프로토타입에 머물지 않고 실제 전시 경험으로 이어졌다. 프로젝트는 서울시 지원 산학협력 연구로 진행되었으며, 이후 현대백화점 문화홀에서 실제 관람객을 대상으로 전시됐다. 연구 과정과 결과는 논문으로 정리해 국내·국제 학술 발표로 확장했다.',
         prevLabel: '← PREVIOUS — TALKABLE',
-        nextLabel: 'BACK TO ALL WORK →',
+        nextLabel: 'NEXT — SKOLEPLAN →',
         backToWorkLabel: '← ALL WORK',
       },
       en: {
@@ -773,7 +773,7 @@ export const projects: Project[] = [
         result:
           'The age-specific design principles drawn from the research were built into five XR experiences, and the research did not stop at a prototype — it carried through into an actual exhibition experience. The project was carried out as a Seoul-funded industry-academia research collaboration, and was later exhibited to the public at the Hyundai Department Store Culture Hall. The research process and findings were written up into a paper and extended into domestic and international academic presentations.',
         prevLabel: '← PREVIOUS — TALKABLE',
-        nextLabel: 'BACK TO ALL WORK →',
+        nextLabel: 'NEXT — SKOLEPLAN →',
         backToWorkLabel: '← ALL WORK',
       },
     },
@@ -787,26 +787,178 @@ export const projects: Project[] = [
     order: 5,
     tier: 'short',
     medium: 'app',
-    tags: ['EDU TECH', 'DENMARK', 'B2B'],
+    tags: ['EDTECH', 'ROLE-BASED UX', 'DENMARK'],
     images: {
       thumb: '/images/work/skoleplan/thumb.jpg',
       hero: '/images/work/skoleplan/hero.jpg',
     },
+    process: {
+      kr: [
+        {
+          title: 'OBSERVE',
+          desc: '실제 Efterskole 환경에서 교직원들의 시스템 사용 방식과 업무를 관찰하고, 인터뷰와 설문을 통해 기존 시스템의 문제를 조사했다. 그 결과, Deep Navigation · Low Information Visibility · Workflow Misalignment를 주요 문제로 정의했다.',
+        },
+        {
+          title: 'PRIORITIZE',
+          desc: '교사·주방·기숙사 담당자의 업무를 비교해 각 역할이 가장 자주 확인하는 정보와 핵심 Task의 우선순위를 정의했다. 이를 바탕으로 모든 사용자에게 동일한 정보를 제공하는 대신, 역할에 따라 정보의 우선순위가 달라지는 UX 전략을 수립했다.',
+        },
+        {
+          title: 'REDESIGN',
+          desc: '역할별 정보 우선순위를 바탕으로 Home Dashboard와 Navigation을 재설계했다. 핵심 업무까지 필요한 탐색 단계를 줄이고, 로그인 후 각 사용자에게 가장 중요한 정보를 바로 확인할 수 있도록 Information Hierarchy를 개선했다.',
+        },
+      ],
+      en: [
+        {
+          title: 'OBSERVE',
+          desc: "Observed how staff actually used the system and carried out their work in a real Efterskole setting, and investigated the existing system's problems through interviews and surveys. This surfaced deep navigation, low information visibility, and workflow misalignment as the core issues.",
+        },
+        {
+          title: 'PRIORITIZE',
+          desc: "Compared the workflows of teachers, kitchen staff, and dormitory staff to define the information each role checked most often and the priority of their core tasks. This became the basis for a UX strategy where information priority shifts by role, rather than showing everyone the same content.",
+        },
+        {
+          title: 'REDESIGN',
+          desc: "Redesigned the home dashboard and navigation around each role's information priorities. Reduced the navigation steps needed to reach core tasks, and improved the information hierarchy so each user sees what matters most immediately after logging in.",
+        },
+      ],
+    },
     card: {
       kr: {
         imgLabel: 'SKOLEPLAN APP SCREENS',
-        title: 'SkolePlan — 덴마크 학습 관리 앱',
-        desc: '덴마크 Skole IT 학습 관리 시스템의 학생·학부모·교사 경험을 재설계.',
+        title: 'SkolePlan — 덴마크 학교 내부 시스템',
+        desc: '실제 교직원의 업무를 리서치하고, 역할별 정보 우선순위에 맞게 내부 시스템을 재설계한 UX 프로젝트.',
       },
       en: {
         imgLabel: 'SKOLEPLAN APP SCREENS',
-        title: 'SkolePlan — Danish School Management App',
-        desc: 'Redesigned student, parent, and teacher experience for a Danish school-IT management system.',
+        title: 'SkolePlan — Danish School Internal System',
+        desc: 'A UX project researching real staff workflows and redesigning an internal school system around role-based information priorities.',
+      },
+    },
+    caseStudy: {
+      kr: {
+        eyebrow: 'CASE STUDY 05 — DIGITAL PRODUCT / ROLE-BASED UX',
+        title: 'SkolePlan — 덴마크 학교 내부 시스템 UX Redesign',
+        subtitle:
+          'SkolePlan은 덴마크 Efterskole 교직원들이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템을 재설계한 UX 프로젝트다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고, 하나의 동일한 인터페이스 대신 각 역할의 업무와 정보 우선순위에 맞는 Role-based System으로 재구성했다.',
+        heroLabel: 'HERO IMAGE — SKOLEPLAN',
+        roleLabel: 'MY ROLE',
+        role:
+          'UX Designer로서 현장 관찰과 인터뷰·설문을 통한 사용자 리서치부터 UX 전략, Information Architecture, User Flow와 UI 재설계까지 전반을 담당했다. 특히 실제 업무 흐름과 기존 시스템 사이의 차이를 파악하고, 각 역할이 필요한 정보와 핵심 업무에 더 빠르게 접근할 수 있도록 구조를 재설계하는 데 집중했다.',
+        problemLabel: 'THE CHALLENGE',
+        problem:
+          '같은 시스템을 사용하지만, 모든 교직원이 같은 정보를 필요로 하지는 않았다. 기존 시스템은 복잡한 Navigation 구조로 인해 필요한 정보를 찾기까지 여러 단계를 거쳐야 했고, 중요한 정보가 즉시 드러나지 않았다. 현장 리서치를 통해 교사·주방·기숙사 담당자마다 확인해야 할 정보와 수행하는 업무의 우선순위가 다르다는 점을 발견했다. 따라서 핵심 질문을 다음과 같이 정의했다 — 하나의 시스템이 서로 다른 역할의 실제 업무 방식에 어떻게 맞춰질 수 있을까?',
+        rolesLabel: 'ROLE-BASED UX',
+        rolesIntro:
+          '리서치에서 발견한 역할별 업무 차이를 바탕으로, 동일했던 기존 인터페이스를 각 사용자의 핵심 업무와 정보가 먼저 보이는 구조로 재설계했다.',
+        roleCards: [
+          {
+            role: 'TEACHER',
+            focus: 'Schedule & Attendance',
+            desc: '교사에게 가장 중요한 것은 오늘의 일정과 학생 출석 현황을 빠르게 확인하고 처리하는 것이었다. 여러 페이지를 탐색하는 대신 홈 화면에서 당일 수업과 출석 상태를 바로 확인하고 필요한 업무로 이동할 수 있도록 구성했다.',
+            priorityLabel: 'Priority',
+            priority: ['Schedule', 'Attendance', 'Upcoming Activities'],
+          },
+          {
+            role: 'KITCHEN STAFF',
+            focus: 'Meal Planning at a Glance',
+            desc: '주방 담당자는 개별 학생의 상세 정보보다 식사 인원과 식이 요구사항을 빠르게 파악하는 것이 중요했다. 홈 화면에서 전체 식사 인원과 Vegan · Vegetarian · Gluten-free · Halal 등의 정보를 한눈에 확인할 수 있도록 구성했다.',
+            priorityLabel: 'Priority',
+            priority: ['Student Count', 'Dietary Needs', 'Meal Planning'],
+          },
+          {
+            role: 'DORMITORY STAFF',
+            focus: 'Student Status & Presence',
+            desc: '기숙사 담당자에게는 학생들의 출결과 현재 상태를 빠르게 파악하는 것이 중요했다. 등교 여부와 외부 활동 등 학생 현황을 홈 화면에서 바로 확인할 수 있도록 해 반복적인 정보 탐색을 줄였다.',
+            priorityLabel: 'Priority',
+            priority: ['Presence', 'Absence', 'Student Status'],
+          },
+        ],
+        principleLabel: 'DESIGN PRINCIPLE',
+        principleIntro:
+          '모든 사용자에게 같은 정보를 보여주는 대신, 역할에 따라 정보의 우선순위를 다르게 설계했다. 같은 시스템을 사용하더라도 각 역할이 가장 먼저 알고 싶은 것은 달랐다.',
+        principleQA: [
+          { role: 'TEACHER', question: 'What do I need to do today?', answer: '오늘의 일정과 출석' },
+          {
+            role: 'KITCHEN STAFF',
+            question: 'How many students should I prepare for?',
+            answer: '식사 인원과 식이 요구사항',
+          },
+          { role: 'DORMITORY STAFF', question: 'What is the current student status?', answer: '학생 출결과 현황' },
+        ],
+        principleClosing:
+          '따라서 새로운 기능을 추가하는 것보다 실제 업무의 우선순위를 기준으로 Information Architecture와 Home Dashboard를 재구성하는 것을 핵심 디자인 원칙으로 삼았다.',
+        processLabel: 'PROCESS',
+        resultLabel: 'RESULT / IMPACT',
+        result:
+          '하나의 동일한 인터페이스를 역할별 Dashboard로 재구성해, 각 교직원이 자신의 핵심 업무와 정보에 바로 접근할 수 있는 프로토타입을 완성했다. 프로토타입에 대한 교직원 피드백에서 교사는 일정과 출석 확인, 주방 담당자는 식사 인원과 식이 요구사항 파악, 기숙사 담당자는 학생 출결과 현황 확인이 보다 명확해졌다는 긍정적인 반응을 확인했다.',
+        prevLabel: '← PREVIOUS — SEOUL CITY-FUNDED XR RESEARCH',
+        nextLabel: 'BACK TO ALL WORK →',
+        backToWorkLabel: '← ALL WORK',
+      },
+      en: {
+        eyebrow: 'CASE STUDY 05 — DIGITAL PRODUCT / ROLE-BASED UX',
+        title: 'SkolePlan — Danish School Internal System UX Redesign',
+        subtitle:
+          "SkolePlan redesigns the internal system staff at a Danish Efterskole use for everyday school operations — attendance, scheduling, and student status. After observing how teachers, kitchen staff, and dormitory staff actually worked on site, the single shared interface was rebuilt into a role-based system matched to each role's tasks and information priorities.",
+        heroLabel: 'HERO IMAGE — SKOLEPLAN',
+        roleLabel: 'MY ROLE',
+        role:
+          "As UX Designer, I led the process end to end — from on-site observation and user research through interviews and surveys, to UX strategy, information architecture, user flow, and UI redesign. The focus was on identifying the gap between actual workflows and the existing system, and restructuring it so each role could reach the information and tasks it needed faster.",
+        problemLabel: 'THE CHALLENGE',
+        problem:
+          "Everyone used the same system, but not everyone needed the same information. The existing system's deep navigation structure meant several steps were needed just to find what mattered, and key information wasn't surfaced immediately. On-site research showed that teachers, kitchen staff, and dormitory staff each checked different information and prioritized different tasks. This led to the core question: how can a single system adapt to the actual working styles of different roles?",
+        rolesLabel: 'ROLE-BASED UX',
+        rolesIntro:
+          "Based on the role-specific differences uncovered in research, the previously identical interface was redesigned so each user's core tasks and information surface first.",
+        roleCards: [
+          {
+            role: 'TEACHER',
+            focus: 'Schedule & Attendance',
+            desc: "For teachers, what mattered most was quickly checking and handling today's schedule and student attendance. Instead of navigating multiple pages, the home screen was built to show the day's classes and attendance status immediately, with a direct path to the task at hand.",
+            priorityLabel: 'Priority',
+            priority: ['Schedule', 'Attendance', 'Upcoming Activities'],
+          },
+          {
+            role: 'KITCHEN STAFF',
+            focus: 'Meal Planning at a Glance',
+            desc: 'For kitchen staff, quickly grasping meal counts and dietary requirements mattered more than individual student detail. The home screen was built to show the total meal count and dietary information — vegan, vegetarian, gluten-free, halal — at a glance.',
+            priorityLabel: 'Priority',
+            priority: ['Student Count', 'Dietary Needs', 'Meal Planning'],
+          },
+          {
+            role: 'DORMITORY STAFF',
+            focus: 'Student Status & Presence',
+            desc: "For dormitory staff, quickly grasping students' attendance and current status mattered most. Presence, absence, and off-site activity could now be checked directly from the home screen, cutting down on repetitive searching.",
+            priorityLabel: 'Priority',
+            priority: ['Presence', 'Absence', 'Student Status'],
+          },
+        ],
+        principleLabel: 'DESIGN PRINCIPLE',
+        principleIntro:
+          'Instead of showing every user the same information, information priority was designed differently by role. Even on the same system, what each role wanted to know first was different.',
+        principleQA: [
+          { role: 'TEACHER', question: 'What do I need to do today?', answer: "Today's schedule and attendance" },
+          {
+            role: 'KITCHEN STAFF',
+            question: 'How many students should I prepare for?',
+            answer: 'Meal count and dietary needs',
+          },
+          { role: 'DORMITORY STAFF', question: 'What is the current student status?', answer: 'Student attendance and status' },
+        ],
+        principleClosing:
+          "Rather than adding new features, the core design principle was to restructure the information architecture and home dashboard around the real priorities of each role's work.",
+        processLabel: 'PROCESS',
+        resultLabel: 'RESULT / IMPACT',
+        result:
+          'Rebuilt the single shared interface into role-based dashboards, completing a prototype that gives each staff member direct access to their own core tasks and information. Staff feedback on the prototype was positive: teachers found checking schedules and attendance clearer, kitchen staff found grasping meal counts and dietary needs clearer, and dormitory staff found checking student attendance and status clearer.',
+        prevLabel: '← PREVIOUS — SEOUL CITY-FUNDED XR RESEARCH',
+        nextLabel: 'BACK TO ALL WORK →',
+        backToWorkLabel: '← ALL WORK',
       },
     },
     resultLine: {
-      kr: '역할별 정보 구조 재설계로 교사 만족도 개선.',
-      en: 'Role-based information redesign improved teacher satisfaction.',
+      kr: '→ Real Workflow → Role-based UX → Clearer Information',
+      en: '→ Real Workflow → Role-based UX → Clearer Information',
     },
   },
 ];

@@ -54,6 +54,30 @@ export interface AgeCard {
   interaction: string;
 }
 
+/** One role's focused view within a role-based redesign (e.g. Teacher,
+ * Kitchen Staff, Dormitory Staff). Rendered as a full-width stacked card
+ * with a priority tag list — used instead of AgeCard when a project's
+ * segments are user roles rather than age groups. */
+export interface RoleCard {
+  /** e.g. 'TEACHER' */
+  role: string;
+  /** e.g. 'Schedule & Attendance' */
+  focus: string;
+  desc: string;
+  priorityLabel: string;
+  priority: string[];
+}
+
+/** One role's "what do I need first" question paired with the design
+ * answer. Rendered as a small card in a 3-up grid under DESIGN
+ * PRINCIPLE — used instead of the plain `principle` paragraph when a
+ * project's principle is best framed as a concrete per-role Q&A. */
+export interface PrincipleQA {
+  role: string;
+  question: string;
+  answer: string;
+}
+
 export interface CaseStudyContent {
   eyebrow: string;
   title: string;
@@ -79,10 +103,22 @@ export interface CaseStudyContent {
   researchLabel?: string;
   researchIntro?: string;
   ageCards?: AgeCard[];
+  /** Optional — a role-based UX section, shown as stacked full-width
+   * role cards (see RoleCard). Alternative to `solution`/`ageCards` for
+   * projects whose redesign is organized around distinct user roles. */
+  rolesLabel?: string;
+  rolesIntro?: string;
+  roleCards?: RoleCard[];
   /** Optional — a single emphasized callout paragraph, typically a
    * closing design principle. */
   principleLabel?: string;
   principle?: string;
+  /** Optional — when set, DESIGN PRINCIPLE renders as an intro
+   * paragraph + a 3-up Q&A grid (one card per role) + a closing
+   * paragraph, instead of the plain `principle` paragraph above. */
+  principleIntro?: string;
+  principleQA?: PrincipleQA[];
+  principleClosing?: string;
   /** Optional — a plain paragraph section, e.g. citing the research or
    * theory a project's design decisions were grounded in. */
   researchBasisLabel?: string;

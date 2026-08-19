@@ -1162,6 +1162,138 @@ a.short-card:hover {
   max-width: 760px;
 }
 
+.case-principle-intro {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  max-width: 720px;
+  margin: 0 0 28px;
+}
+
+.principle-qa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.qa-card {
+  border-radius: 20px;
+  padding: 26px 24px;
+}
+
+.qa-role {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.qa-question {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.qa-answer {
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.case-principle-closing {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  max-width: 720px;
+  margin: 28px 0 0;
+}
+
+.case-roles {
+  padding: 56px 0;
+  border-top: 1px solid var(--glass-border);
+}
+
+.case-roles-label {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.case-roles-intro {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  max-width: 720px;
+  margin: 0 0 32px;
+}
+
+.role-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.role-card {
+  border-radius: 24px;
+  padding: 28px 30px;
+}
+
+.role-card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.role-card-index {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.role-card-role {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.role-card-focus {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.role-card-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+  max-width: 640px;
+}
+
+.role-card-priority {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.role-card-priority-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
 .case-findings {
   padding: 56px 0;
   border-top: 1px solid var(--glass-border);
@@ -1281,7 +1413,8 @@ a.short-card:hover {
     gap: 32px;
   }
   .process-grid,
-  .solution-grid {
+  .solution-grid,
+  .principle-qa-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .case-row {
@@ -1312,6 +1445,12 @@ a.short-card:hover {
   }
   .case-principle-card {
     padding: 28px 26px;
+  }
+  .principle-qa-grid {
+    grid-template-columns: 1fr;
+  }
+  .role-card {
+    padding: 24px 22px;
   }
 }
 
