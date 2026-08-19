@@ -1150,7 +1150,7 @@ a.short-card:hover {
 
 .loop-step {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1.3fr 0.9fr;
   gap: 32px;
   align-items: center;
   border-radius: 24px;
@@ -1192,9 +1192,9 @@ a.short-card:hover {
 
 .loop-step-image {
   border-radius: 16px;
-  height: 220px;
+  height: 340px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .case-research {
@@ -1589,7 +1589,7 @@ a.short-card:hover {
     grid-template-columns: 1fr;
   }
   .loop-step-image {
-    height: 200px;
+    height: 280px;
   }
   .case-principle-card {
     padding: 28px 26px;
