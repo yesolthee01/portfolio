@@ -11,7 +11,7 @@ export function AiToolkitSection() {
     <div id="ai" className={`section${inView ? ' in-view' : ''}`} ref={ref}>
       <div className="section-head">
         <h2 className="section-title">
-          <span className="idx">02</span> {ai.title}
+          <span className="idx">03</span> {ai.title}
         </h2>
         <div className="section-meta">{ai.sub}</div>
       </div>

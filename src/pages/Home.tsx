@@ -15,6 +15,11 @@ export function Home() {
         <Hero />
       </div>
 
+      <WaveDivider watchId="about" />
+      <div className="frame">
+        <AboutSection />
+      </div>
+
       <WaveDivider watchId="work" />
       <div className="frame">
         <WorkSection />
@@ -23,11 +28,6 @@ export function Home() {
       <WaveDivider watchId="ai" />
       <div className="frame">
         <AiToolkitSection />
-      </div>
-
-      <WaveDivider watchId="about" />
-      <div className="frame">
-        <AboutSection />
       </div>
 
       <WaveDivider watchId="contact" />

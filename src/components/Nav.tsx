@@ -47,14 +47,14 @@ export function Nav({ variant = 'home', backHref = '/#work', backLabel }: NavPro
               <span />
             </button>
             <div className={`nav-links${open ? ' open' : ''}`}>
+              <a href="#about" onClick={() => setOpen(false)}>
+                {nav.about}
+              </a>
               <a href="#work" onClick={() => setOpen(false)}>
                 {nav.work}
               </a>
               <a href="#ai" onClick={() => setOpen(false)}>
                 {nav.ai}
-              </a>
-              <a href="#about" onClick={() => setOpen(false)}>
-                {nav.about}
               </a>
               <a href="#contact" onClick={() => setOpen(false)}>
                 {nav.contact}

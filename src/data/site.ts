@@ -72,7 +72,6 @@ export const siteCopy: Localized<{
           items: [
             { mark: 'Fi', markBg: '#1A1A1A', title: 'Figma AI', desc: '와이어프레임 초안과 배리에이션을 빠르게 생성해 탐색 속도를 높입니다.' },
             { mark: 'Ai', markBg: '#1A1A1A', title: 'ChatGPT / Claude', desc: '리서치 종합, 인터뷰 스크립트 분석, 카피 초안 작성 등에 다양한 AI 챗봇을 활용합니다.' },
-            { mark: 'Mj', markBg: '#1A1A1A', title: 'Midjourney', desc: '전시·공간 컨셉의 무드보드와 초기 비주얼 레퍼런스를 만듭니다.' },
             { mark: 'Cu', markBg: '#1A1A1A', title: 'Cursor / AI 코딩', desc: '디자인을 직접 동작하는 프로토타입으로 빠르게 구현합니다.' },
           ],
           note: '이 외에도 필요에 따라 새로운 AI 툴을 자유롭게 찾아 활용합니다.',
@@ -147,7 +146,6 @@ export const siteCopy: Localized<{
           items: [
             { mark: 'Fi', markBg: '#1A1A1A', title: 'Figma AI', desc: 'Speeds up exploration by rapidly generating wireframe drafts and variations.' },
             { mark: 'Ai', markBg: '#1A1A1A', title: 'ChatGPT / Claude', desc: 'Used across various AI chat tools for research synthesis, interview transcript analysis, and copy drafting.' },
-            { mark: 'Mj', markBg: '#1A1A1A', title: 'Midjourney', desc: 'Builds mood boards and early visual references for exhibition and spatial concepts.' },
             { mark: 'Cu', markBg: '#1A1A1A', title: 'Cursor / AI Coding', desc: 'Turns designs into working prototypes quickly.' },
           ],
           note: "I also freely explore and pick up new AI tools whenever a project calls for them.",

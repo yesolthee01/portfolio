@@ -11,7 +11,7 @@ export function AboutSection() {
     <div id="about" className={`section${inView ? ' in-view' : ''}`} ref={ref}>
       <div className="section-head">
         <h2 className="section-title">
-          <span className="idx">03</span> {about.title}
+          <span className="idx">01</span> {about.title}
         </h2>
       </div>
       <div className="about-grid">

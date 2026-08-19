@@ -15,7 +15,7 @@ export function WorkSection() {
     <div id="work" className={`section${inView ? ' in-view' : ''}`} ref={ref}>
       <div className="section-head">
         <h2 className="section-title">
-          <span className="idx">01</span> {work.title}
+          <span className="idx">02</span> {work.title}
         </h2>
         <div className="section-meta">
           {fullProjects.length} CASE STUDIES · {shortProjects.length} MORE
