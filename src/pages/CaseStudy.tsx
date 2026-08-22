@@ -253,20 +253,20 @@ export function CaseStudy() {
         </div>
 
         {cs.role && (
-          <div className="case-row">
-            <div className="case-row-label">{cs.roleLabel ?? 'MY ROLE'}</div>
+          <div className="case-section case-row">
+            <div className="case-section-label case-row-label">{cs.roleLabel ?? 'MY ROLE'}</div>
             <p className="case-row-body">{cs.role}</p>
           </div>
         )}
 
-        <div className="case-row">
-          <div className="case-row-label">{cs.problemLabel}</div>
+        <div className="case-section case-row">
+          <div className="case-section-label case-row-label">{cs.problemLabel}</div>
           <p className="case-row-body">{cs.problem}</p>
         </div>
 
         {cs.solution && cs.solution.length > 0 && (
-          <div className="case-solution">
-            <div className="case-solution-label">{cs.solutionLabel ?? 'THE SOLUTION'}</div>
+          <div className="case-section case-solution">
+            <div className="case-section-label case-solution-label">{cs.solutionLabel ?? 'THE SOLUTION'}</div>
             <div className="solution-grid">
               {cs.solution.map((pillar, i) => (
                 <div className="solution-card glass" key={pillar.title}>
@@ -281,8 +281,8 @@ export function CaseStudy() {
         )}
 
         {cs.loopSteps && cs.loopSteps.length > 0 && (
-          <div className="case-loop">
-            <div className="case-loop-label">{cs.loopLabel ?? 'LEARNING LOOP'}</div>
+          <div className="case-section case-loop">
+            <div className="case-section-label case-loop-label">{cs.loopLabel ?? 'LEARNING LOOP'}</div>
             <div className="loop-flow glass">
               {cs.loopSteps.map((step, i) => (
                 <span className="loop-flow-step" key={step.title}>
@@ -302,8 +302,8 @@ export function CaseStudy() {
         )}
 
         {cs.ageCards && cs.ageCards.length > 0 && (
-          <div className="case-research">
-            <div className="case-research-label">{cs.researchLabel ?? 'RESEARCH → DESIGN TRANSLATION'}</div>
+          <div className="case-section case-research">
+            <div className="case-section-label case-research-label">{cs.researchLabel ?? 'RESEARCH → DESIGN TRANSLATION'}</div>
             {cs.researchIntro && <p className="case-research-intro">{cs.researchIntro}</p>}
             <div className="age-cards">
               {cs.ageCards.map((card, i) => (
@@ -314,8 +314,8 @@ export function CaseStudy() {
         )}
 
         {cs.roleCards && cs.roleCards.length > 0 && (
-          <div className="case-roles">
-            <div className="case-roles-label">{cs.rolesLabel ?? 'ROLE-BASED UX'}</div>
+          <div className="case-section case-roles">
+            <div className="case-section-label case-roles-label">{cs.rolesLabel ?? 'ROLE-BASED UX'}</div>
             {cs.rolesIntro && <p className="case-roles-intro">{cs.rolesIntro}</p>}
             <div className="role-cards">
               {cs.roleCards.map((card, i) => (
@@ -326,8 +326,8 @@ export function CaseStudy() {
         )}
 
         {cs.principleQA && cs.principleQA.length > 0 ? (
-          <div className="case-principle">
-            <div className="case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
+          <div className="case-section case-principle">
+            <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
             {cs.principleIntro && <p className="case-principle-intro">{cs.principleIntro}</p>}
             <div className="principle-qa-grid">
               {cs.principleQA.map((qa) => (
@@ -338,8 +338,8 @@ export function CaseStudy() {
           </div>
         ) : (
           cs.principle && (
-            <div className="case-principle">
-              <div className="case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
+            <div className="case-section case-principle">
+              <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
               <div className="case-principle-card glass">
                 <p className="case-principle-body">{cs.principle}</p>
               </div>
@@ -348,14 +348,14 @@ export function CaseStudy() {
         )}
 
         {cs.researchBasis && (
-          <div className="case-row">
-            <div className="case-row-label">{cs.researchBasisLabel ?? 'RESEARCH BASIS'}</div>
+          <div className="case-section case-row">
+            <div className="case-section-label case-row-label">{cs.researchBasisLabel ?? 'RESEARCH BASIS'}</div>
             <p className="case-row-body">{cs.researchBasis}</p>
           </div>
         )}
 
-        <div className="case-process">
-          <div className="case-process-label">{cs.processLabel}</div>
+        <div className="case-section case-process">
+          <div className="case-section-label case-process-label">{cs.processLabel}</div>
           <div className="process-grid">
             {process.map((step, i) => (
               <div className="process-card glass" key={step.title}>
@@ -368,8 +368,8 @@ export function CaseStudy() {
         </div>
 
         {findings.length > 0 && (
-          <div className="case-findings">
-            <div className="case-findings-label">{cs.findingsLabel ?? 'FROM USER TESTING'}</div>
+          <div className="case-section case-findings">
+            <div className="case-section-label case-findings-label">{cs.findingsLabel ?? 'FROM USER TESTING'}</div>
             {cs.findingsIntro && <p className="case-findings-intro">{cs.findingsIntro}</p>}
             {findingsBanner ? (
               <div className="findings-grid findings-grid--banner">
@@ -405,8 +405,8 @@ export function CaseStudy() {
           </div>
         )}
 
-        <div className="case-row">
-          <div className="case-row-label">{cs.resultLabel}</div>
+        <div className="case-section case-row">
+          <div className="case-section-label case-row-label">{cs.resultLabel}</div>
           <p className="case-row-body">{cs.result}</p>
         </div>
 
