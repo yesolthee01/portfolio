@@ -414,13 +414,18 @@ button {
   fill: none;
 }
 
+/* Position/size/opacity only — the transform (idle drift + mouse-driven
+   seesaw tilt) is written directly to these elements' style.transform by
+   HeroBackdrop's rAF loop in Hero.tsx, not by a CSS animation. A CSS
+   keyframe animation would fight the JS for control of the same
+   `transform` property, so these are deliberately static here. */
 .hero-shape--ring-1 {
   top: -60px;
   left: 4%;
   width: 260px;
   height: 260px;
   opacity: 0.16;
-  animation: heroDriftA 34s ease-in-out infinite;
+  transform-origin: 50% 50%;
 }
 .hero-shape--ring-2 {
   bottom: -80px;
@@ -428,7 +433,7 @@ button {
   width: 340px;
   height: 340px;
   opacity: 0.13;
-  animation: heroDriftB 42s ease-in-out infinite;
+  transform-origin: 50% 50%;
 }
 .hero-shape--ring-3 {
   top: 30%;
@@ -436,7 +441,7 @@ button {
   width: 120px;
   height: 120px;
   opacity: 0.18;
-  animation: heroSpin 60s linear infinite;
+  transform-origin: 50% 50%;
 }
 .hero-shape--line-1 {
   top: 18%;
@@ -444,7 +449,7 @@ button {
   width: 46%;
   height: 220px;
   opacity: 0.14;
-  animation: heroDriftA 28s ease-in-out infinite;
+  transform-origin: 50% 50%;
 }
 .hero-shape--line-2 {
   bottom: 6%;
@@ -452,32 +457,7 @@ button {
   width: 50%;
   height: 200px;
   opacity: 0.12;
-  animation: heroDriftB 36s ease-in-out infinite;
-}
-
-@keyframes heroDriftA {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(18px, -14px) rotate(3deg);
-  }
-}
-@keyframes heroDriftB {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(-22px, 16px) rotate(-4deg);
-  }
-}
-@keyframes heroSpin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  transform-origin: 50% 50%;
 }
 
 /* Hero entrance — each direct child fades/slides up in sequence on page
@@ -500,13 +480,13 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-shape {
-    animation: none;
-  }
   .hero-reveal {
     animation: none;
     opacity: 1;
   }
+  /* HeroBackdrop's rAF loop checks this same media query itself and
+     never starts, so .hero-shape elements simply stay at their static
+     CSS position — no transform is ever applied. */
 }
 
 .hero-title {
@@ -606,6 +586,60 @@ button {
 .section.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ---------- SCROLL STAGGER ----------
+   Per-item reveal inside a section, reusing the same .section.in-view
+   trigger the section itself already fades in on — no separate observer
+   needed. Each item starts hidden and slides up; :nth-child sets an
+   increasing delay so items inside one row/list appear one after another
+   instead of all at once. Scoped to the specific card/item classes so it
+   never touches unrelated buttons or chips elsewhere on the page. */
+.section .card,
+.section .short-card,
+.section .ai-card,
+.section .about-point,
+.section .contact-cta > .btn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.section.in-view .card,
+.section.in-view .short-card,
+.section.in-view .ai-card,
+.section.in-view .about-point,
+.section.in-view .contact-cta > .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section .card:nth-child(1),
+.section .short-card:nth-child(1),
+.section .ai-card:nth-child(1),
+.section .about-point:nth-child(1),
+.section .contact-cta > .btn:nth-child(1) {
+  transition-delay: 0s;
+}
+.section .card:nth-child(2),
+.section .short-card:nth-child(2),
+.section .ai-card:nth-child(2),
+.section .about-point:nth-child(2),
+.section .contact-cta > .btn:nth-child(2) {
+  transition-delay: 0.09s;
+}
+.section .card:nth-child(3),
+.section .short-card:nth-child(3),
+.section .ai-card:nth-child(3),
+.section .about-point:nth-child(3) {
+  transition-delay: 0.18s;
+}
+.section .card:nth-child(4),
+.section .short-card:nth-child(4),
+.section .about-point:nth-child(4) {
+  transition-delay: 0.27s;
+}
+.section .card:nth-child(5) {
+  transition-delay: 0.36s;
 }
 
 .section-head {
@@ -803,6 +837,14 @@ a.short-card:hover {
   padding: 30px 28px;
   text-align: center;
   margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.4s,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.4s;
+}
+.section.in-view .more-work-card {
+  opacity: 1;
+  transform: translateY(0);
 }
 .more-work-badge {
   display: inline-block;
