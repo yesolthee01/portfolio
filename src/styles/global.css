@@ -35,8 +35,8 @@
      as soft/misty by design, but that's too light to carry small text
      or thin strokes; these are the same hues pushed dark enough to stay
      legible on the paper background. */
-  --accent: #46565b; /* deep slate — primary accent */
-  --accent-on-dark: #a9bcc0; /* lightened slate, for accent marks sitting on dark glass */
+  --accent: #345864; /* primary accent */
+  --accent-on-dark: #a4b4b9; /* lightened accent, for accent marks sitting on dark glass */
   --accent-spatial: #4c6067; /* deep dusty blue — spatial/XR medium */
   --accent-ai: #8a6b45; /* deep warm brown — AI medium, deliberate warm counterpoint */
 
@@ -87,12 +87,7 @@ body {
      as normal Latin wrapping — doesn't affect English text. */
   word-break: keep-all;
   overflow-wrap: break-word;
-  background:
-    radial-gradient(900px 600px at 12% 6%, #d7e2e4 0%, transparent 55%),
-    radial-gradient(800px 560px at 90% 16%, #e6e0d4 0%, transparent 55%),
-    radial-gradient(900px 640px at 55% 92%, #c3d3d6 0%, transparent 55%),
-    radial-gradient(700px 520px at 8% 90%, #ded7c9 0%, transparent 55%),
-    #f4f1e9;
+  background: #f5f5f5;
 }
 
 ::selection {
