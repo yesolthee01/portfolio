@@ -762,6 +762,18 @@ a.short-card:hover {
   max-width: 420px;
 }
 
+.about-more-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+.about-more-link:hover {
+  text-decoration: underline;
+}
+
 .about-keywords {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1594,6 +1606,128 @@ a.short-card:hover {
   }
 }
 
+/* ---------- ABOUT PAGE (/about) ----------
+   Reuses the shared case-section/case-section-label system and the
+   process-card grid (for STRENGTHS) from the CaseStudy page — only the
+   experience timeline and activities list below are new shapes. */
+
+.about-strengths-label,
+.about-exp-label,
+.about-activities-label {
+  margin-bottom: 20px;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exp-card {
+  border-radius: 24px;
+  padding: 28px 30px;
+}
+
+.exp-card-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-bottom: 16px;
+}
+
+.exp-card-index {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.exp-card-heading {
+  flex: 1 1 auto;
+}
+
+.exp-role {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.exp-org {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.exp-period {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.exp-bullets {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exp-bullets li {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+}
+
+.activity-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activity-group-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent-spatial);
+}
+
+.activity-item {
+  border-radius: 16px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  padding: 16px 20px;
+}
+
+.activity-org {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+.activity-role {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.activity-note {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+  margin-top: 6px;
+}
+
 .case-footer-nav {
   padding: 44px 0 20px;
   display: flex;
@@ -1659,6 +1793,13 @@ a.short-card:hover {
     grid-template-columns: 1fr;
   }
   .role-card {
+    padding: 24px 22px;
+  }
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .exp-card {
     padding: 24px 22px;
   }
 }

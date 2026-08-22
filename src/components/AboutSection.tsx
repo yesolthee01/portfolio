@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
 import { useInView } from '../hooks/useInView';
@@ -17,6 +18,9 @@ export function AboutSection() {
       <div className="about-grid">
         <div>
           <p className="about-body">{about.body}</p>
+          <Link to="/about" className="about-more-link">
+            {about.moreAboutLabel}
+          </Link>
         </div>
         <div className="about-keywords">
           <div className="about-keyword glass">{about.kw1}</div>

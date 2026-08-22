@@ -144,6 +144,58 @@ export interface CaseStudyContent {
   backToWorkLabel: string;
 }
 
+/** One line on the /about page's STRENGTHS grid — a short claim paired
+ * with a one-sentence explanation. Rendered with the same card shape as
+ * a CaseStudy PROCESS step (see `.process-card`). */
+export interface StrengthItem {
+  title: string;
+  desc: string;
+}
+
+/** One role on the /about page's EXPERIENCE or INTERNATIONAL EXPOSURE
+ * timeline — a stacked full-width card with a short bullet list. */
+export interface ExperienceItem {
+  role: string;
+  org: string;
+  location: string;
+  period: string;
+  highlights: string[];
+}
+
+/** One organization/activity on the /about page's ACTIVITIES list.
+ * `note` is optional — used for a one-line highlight (e.g. an award)
+ * that sets an entry apart from a plain membership line. */
+export interface ActivityItem {
+  org: string;
+  role: string;
+  note?: string;
+}
+
+/** Content for the standalone /about page — the deeper "More about me"
+ * destination linked from the homepage About section. Kept separate
+ * from `about` (the homepage section's own short body+keywords) so the
+ * homepage can stay brief while this page carries the fuller story. */
+export interface AboutPageContent {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  strengthsLabel: string;
+  strengths: StrengthItem[];
+  experienceLabel: string;
+  experience: ExperienceItem[];
+  intlLabel: string;
+  intlExposure: ExperienceItem[];
+  educationLabel: string;
+  educationOrg: string;
+  educationDept: string;
+  activitiesLabel: string;
+  uxActivitiesLabel: string;
+  uxActivities: ActivityItem[];
+  extraActivitiesLabel: string;
+  extraActivities: ActivityItem[];
+  backLabel: string;
+}
+
 export interface WorkCardContent {
   imgLabel: string;
   title: string;
