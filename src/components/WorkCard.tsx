@@ -2,13 +2,17 @@ import { Link } from 'react-router-dom';
 import type { Project } from '../data/types';
 import { useLanguage } from '../i18n/LanguageContext';
 import { ProjectImage } from './ProjectImage';
+import { useInView } from '../hooks/useInView';
 
 export function WorkCard({ project }: { project: Project }) {
   const { lang } = useLanguage();
   const card = project.card[lang];
+  // Own scroll-reveal, independent of sibling cards — see the SCROLL
+  // REVEAL block in global.css.
+  const { ref, inView } = useInView<HTMLAnchorElement>(0.2);
 
   return (
-    <Link to={`/work/${project.slug}`} className="card press-bounce">
+    <Link to={`/work/${project.slug}`} className={`card press-bounce${inView ? ' in-view' : ''}`} ref={ref}>
       <div className="card-visual">
         <ProjectImage src={project.images.thumb} alt={card.title} label={card.imgLabel} />
       </div>

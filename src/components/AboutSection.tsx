@@ -3,6 +3,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
 import { useInView } from '../hooks/useInView';
 import { renderInlineMarkup } from '../utils/markup';
+import { AboutPoint } from './AboutPoint';
 
 export function AboutSection() {
   const { lang } = useLanguage();
@@ -29,10 +30,7 @@ export function AboutSection() {
         </div>
         <div className="about-points">
           {[about.kw1, about.kw2, about.kw3, about.kw4].map((point, i) => (
-            <div className="about-point" key={point}>
-              <span className="about-point-index">{String(i + 1).padStart(2, '0')}</span>
-              <span className="about-point-text">{point}</span>
-            </div>
+            <AboutPoint index={i + 1} text={point} key={point} />
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
 import { useInView } from '../hooks/useInView';
+import { AiCard } from './AiCard';
 
 export function AiToolkitSection() {
   const { lang } = useLanguage();
@@ -20,13 +21,7 @@ export function AiToolkitSection() {
           <div className="toolkit-category-label">{category.label}</div>
           <div className="ai-grid">
             {category.items.map((item) => (
-              <div className="ai-card glass" key={item.title}>
-                <div className="ai-mark" style={{ background: item.markBg }}>
-                  {item.mark}
-                </div>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </div>
+              <AiCard markBg={item.markBg} mark={item.mark} title={item.title} desc={item.desc} key={item.title} />
             ))}
           </div>
           {category.note && <p className="toolkit-category-note">{category.note}</p>}

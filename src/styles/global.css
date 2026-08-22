@@ -414,25 +414,40 @@ button {
   fill: none;
 }
 
-/* Position/size/opacity only — the transform (idle drift + mouse-driven
-   seesaw tilt) is written directly to these elements' style.transform by
-   HeroBackdrop's rAF loop in Hero.tsx, not by a CSS animation. A CSS
+/* Two "seesaw" pairs — each a single <svg> holding one diagonal line
+   (the beam) and one filled ball riding on it. Position/size/opacity
+   only here: the transform (idle drift + mouse-driven tilt of the whole
+   beam) and the ball's cx/cy (sliding along the beam's own length, so it
+   visibly rides the line rather than just floating near it) are written
+   directly by HeroBackdrop's rAF loop in Hero.tsx, not by CSS. A CSS
    keyframe animation would fight the JS for control of the same
-   `transform` property, so these are deliberately static here. */
-.hero-shape--ring-1 {
-  top: -60px;
-  left: 4%;
-  width: 260px;
-  height: 260px;
-  opacity: 0.16;
+   properties, so these are deliberately static here. Kept perfectly
+   square (width === height) so the 100x100 viewBox scales uniformly —
+   any stretch would skew the line's angle and turn the ball into an
+   ellipse. */
+.hero-seesaw-line {
+  stroke: var(--accent);
+  stroke-width: 0.75;
+  fill: none;
+}
+.hero-seesaw-ball {
+  fill: var(--accent);
+  opacity: 0.85;
+}
+.hero-seesaw--1 {
+  top: -50px;
+  left: -2%;
+  width: 380px;
+  height: 380px;
+  opacity: 0.26;
   transform-origin: 50% 50%;
 }
-.hero-shape--ring-2 {
-  bottom: -80px;
-  right: 6%;
-  width: 340px;
-  height: 340px;
-  opacity: 0.13;
+.hero-seesaw--2 {
+  bottom: -60px;
+  right: -2%;
+  width: 360px;
+  height: 360px;
+  opacity: 0.22;
   transform-origin: 50% 50%;
 }
 .hero-shape--ring-3 {
@@ -441,22 +456,6 @@ button {
   width: 120px;
   height: 120px;
   opacity: 0.18;
-  transform-origin: 50% 50%;
-}
-.hero-shape--line-1 {
-  top: 18%;
-  left: -6%;
-  width: 46%;
-  height: 220px;
-  opacity: 0.14;
-  transform-origin: 50% 50%;
-}
-.hero-shape--line-2 {
-  bottom: 6%;
-  right: -8%;
-  width: 50%;
-  height: 200px;
-  opacity: 0.12;
   transform-origin: 50% 50%;
 }
 
@@ -485,8 +484,9 @@ button {
     opacity: 1;
   }
   /* HeroBackdrop's rAF loop checks this same media query itself and
-     never starts, so .hero-shape elements simply stay at their static
-     CSS position — no transform is ever applied. */
+     never starts, so the seesaw beams/balls and the lone ring simply
+     stay at their static JSX-default position — no transform is ever
+     applied. */
 }
 
 .hero-title {
@@ -588,58 +588,33 @@ button {
   transform: translateY(0);
 }
 
-/* ---------- SCROLL STAGGER ----------
-   Per-item reveal inside a section, reusing the same .section.in-view
-   trigger the section itself already fades in on — no separate observer
-   needed. Each item starts hidden and slides up; :nth-child sets an
-   increasing delay so items inside one row/list appear one after another
-   instead of all at once. Scoped to the specific card/item classes so it
-   never touches unrelated buttons or chips elsewhere on the page. */
-.section .card,
-.section .short-card,
-.section .ai-card,
-.section .about-point,
-.section .contact-cta > .btn {
+/* ---------- SCROLL REVEAL (per item) ----------
+   Each card/point/button watches its OWN scroll position via the
+   `useInView` hook (see WorkCard/ShortWorkCard/MoreWorkTeaser/AboutPoint/
+   AiCard/ContactSection) and gets its own `.in-view` class the instant
+   IT crosses the viewport threshold — not when its parent `.section`
+   does. That's what makes a grid of cards reveal one by one as you
+   actually scroll past them, instead of all together as soon as the
+   section appears. No :nth-child delay needed — the stagger comes from
+   real scroll position now, not a simulated one. */
+.card,
+.short-card,
+.ai-card,
+.about-point,
+.contact-cta > .btn,
+.more-work-card {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(22px);
   transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.section.in-view .card,
-.section.in-view .short-card,
-.section.in-view .ai-card,
-.section.in-view .about-point,
-.section.in-view .contact-cta > .btn {
+.card.in-view,
+.short-card.in-view,
+.ai-card.in-view,
+.about-point.in-view,
+.contact-cta > .btn.in-view,
+.more-work-card.in-view {
   opacity: 1;
   transform: translateY(0);
-}
-
-.section .card:nth-child(1),
-.section .short-card:nth-child(1),
-.section .ai-card:nth-child(1),
-.section .about-point:nth-child(1),
-.section .contact-cta > .btn:nth-child(1) {
-  transition-delay: 0s;
-}
-.section .card:nth-child(2),
-.section .short-card:nth-child(2),
-.section .ai-card:nth-child(2),
-.section .about-point:nth-child(2),
-.section .contact-cta > .btn:nth-child(2) {
-  transition-delay: 0.09s;
-}
-.section .card:nth-child(3),
-.section .short-card:nth-child(3),
-.section .ai-card:nth-child(3),
-.section .about-point:nth-child(3) {
-  transition-delay: 0.18s;
-}
-.section .card:nth-child(4),
-.section .short-card:nth-child(4),
-.section .about-point:nth-child(4) {
-  transition-delay: 0.27s;
-}
-.section .card:nth-child(5) {
-  transition-delay: 0.36s;
 }
 
 .section-head {
@@ -837,14 +812,9 @@ a.short-card:hover {
   padding: 30px 28px;
   text-align: center;
   margin-top: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.4s,
-    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.4s;
-}
-.section.in-view .more-work-card {
-  opacity: 1;
-  transform: translateY(0);
+  /* opacity/transform/transition + the .in-view reveal come from the
+     shared SCROLL REVEAL rule above — this card watches its own scroll
+     position via useInView, same as the others. */
 }
 .more-work-badge {
   display: inline-block;
