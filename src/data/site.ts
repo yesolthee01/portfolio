@@ -56,7 +56,7 @@ export const siteCopy: Localized<{
     nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
-      headline: '**사람**이 실제로 어떻게 쓰고,\n움직이고,\n반응하는지에서 시작합니다.',
+      headline: '좋은 디자인은\n올바른 **질문**에서 시작됩니다.',
       subLine1: '디지털 제품부터 XR과 공간 경험까지,',
       subLine2: '사용자의 행동을 관찰하고 더 자연스러운 경험으로 바꾸는 UX Designer입니다.',
       chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
@@ -129,7 +129,7 @@ export const siteCopy: Localized<{
     nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
-      headline: 'I start with how\n**people** actually use,\nmove, and react.',
+      headline: 'Good Design Starts\nwith the **Right Questions**.',
       subLine1: 'From digital products to XR and spatial experiences,',
       subLine2: 'I observe user behavior and design more natural experiences.',
       chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
