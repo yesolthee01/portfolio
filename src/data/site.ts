@@ -116,11 +116,11 @@ export const siteCopy: Localized<{
     },
     about: {
       title: 'About',
-      body: '사용자가 무엇을 필요로 하고, 어떤 맥락에서 어려움을 겪는지 이해하는 것에서 디자인을 시작합니다. 디지털 프로덕트부터 XR과 공간 경험까지 다양한 매체를 다루며, 사람의 행동을 중심으로 경험을 설계합니다.\n리서치와 기획을 통해 문제를 정의하고, 복잡한 정보와 요구를 명확한 사용자 흐름과 인터랙션으로 구조화하는 데 강점이 있습니다. 아이디어가 실제로 작동하는 형태가 될 때까지 다양한 역할의 팀원들과 함께 구체화해 나가는 과정을 좋아합니다.',
-      kw1: '창의 기획 & 디렉션',
-      kw2: '팀 리더십 & 협업',
-      kw3: '전략적 사고',
-      kw4: '호기심 & 적응력',
+      body: '**사용자가 무엇을 필요로 하고, 어떤 맥락에서 어려움을 겪는지 이해**하는 것에서 디자인을 시작합니다. 디지털 프로덕트부터 XR과 공간 경험까지 다양한 매체를 다루며, 사람의 행동을 중심으로 경험을 설계합니다.\n리서치와 기획을 통해 문제를 정의하고, 복잡한 정보와 요구를 명확한 사용자 흐름과 인터랙션으로 구조화하는 데 강점이 있습니다. 아이디어가 실제로 작동하는 형태가 될 때까지 다양한 역할의 팀원들과 함께 구체화해 나가는 과정을 좋아합니다.',
+      kw1: '문제의 핵심을 찾습니다',
+      kw2: '다양한 역할과 함께 만듭니다',
+      kw3: '복잡한 정보를 구조화합니다',
+      kw4: '빠르게 배우고 시도합니다',
       moreAboutLabel: 'More about me →',
     },
     aboutPage: {
@@ -296,11 +296,11 @@ export const siteCopy: Localized<{
     },
     about: {
       title: 'About',
-      body: "I start designing from understanding what users need and where they struggle, and in what context. Across digital products, XR, and spatial experiences, I design experiences centered on human behavior.\nI define problems through research and planning, and I'm strongest at structuring complex information and requirements into clear user flows and interactions. I enjoy the process of building ideas into working form together with teammates across different roles.",
-      kw1: 'Creative Direction & Planning',
-      kw2: 'Team Leadership & Collaboration',
-      kw3: 'Strategic Thinking',
-      kw4: 'Curiosity & Adaptability',
+      body: "I start designing from **understanding what users need, and in what context they struggle**. Across digital products, XR, and spatial experiences, I design experiences centered on human behavior.\nI define problems through research and planning, and I'm strongest at structuring complex information and requirements into clear user flows and interactions. I enjoy the process of building ideas into working form together with teammates across different roles.",
+      kw1: 'I find the core of the problem',
+      kw2: 'I build together with diverse roles',
+      kw3: 'I structure complex information',
+      kw4: 'I learn and try quickly',
       moreAboutLabel: 'More about me →',
     },
     aboutPage: {

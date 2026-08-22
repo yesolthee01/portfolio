@@ -366,8 +366,9 @@ button {
   margin: 0 0 28px;
 }
 
-.hero-title .accent {
+.hero-title strong {
   color: var(--accent);
+  font-weight: inherit;
 }
 
 .hero-sub {
@@ -762,6 +763,11 @@ a.short-card:hover {
   max-width: 420px;
 }
 
+.about-body strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
 .about-more-link {
   display: inline-block;
   margin-top: 18px;
@@ -774,27 +780,37 @@ a.short-card:hover {
   text-decoration: underline;
 }
 
-.about-keywords {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* Numbered list of short first-person statements, standing in for the
+   about-keyword chip grid this replaced: a full sentence reads awkwardly
+   forced into a square glass box, but flows naturally as one line in a
+   list. Reuses the index-number visual language of .process-index rather
+   than inventing a new one. */
+.about-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.about-point {
+  display: flex;
+  align-items: baseline;
   gap: 14px;
 }
 
-.about-keyword {
-  border-radius: 18px;
-  background: var(--glass);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--glass-border);
-  padding: 20px;
+.about-point-index {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.about-point-text {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 15.5px;
-}
-
-.about-keyword.accent {
-  color: var(--accent);
-  border-color: rgba(193, 87, 31, 0.4);
+  letter-spacing: -0.01em;
 }
 
 /* ---------- CONTACT ---------- */

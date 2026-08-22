@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
 import { useInView } from '../hooks/useInView';
+import { renderInlineMarkup } from '../utils/markup';
 
 export function AboutSection() {
   const { lang } = useLanguage();
@@ -19,18 +20,20 @@ export function AboutSection() {
         <div>
           {about.body.split('\n').map((para, i) => (
             <p className="about-body" key={i}>
-              {para}
+              {renderInlineMarkup(para)}
             </p>
           ))}
           <Link to="/about" className="about-more-link">
             {about.moreAboutLabel}
           </Link>
         </div>
-        <div className="about-keywords">
-          <div className="about-keyword glass">{about.kw1}</div>
-          <div className="about-keyword glass">{about.kw2}</div>
-          <div className="about-keyword glass">{about.kw3}</div>
-          <div className="about-keyword glass">{about.kw4}</div>
+        <div className="about-points">
+          {[about.kw1, about.kw2, about.kw3, about.kw4].map((point, i) => (
+            <div className="about-point" key={point}>
+              <span className="about-point-index">{String(i + 1).padStart(2, '0')}</span>
+              <span className="about-point-text">{point}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

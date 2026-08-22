@@ -1,24 +1,18 @@
 import { Fragment } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
+import { renderInlineMarkup } from '../utils/markup';
 
-/** Parses hero headline markup: '\n' -> line break, '**word**' -> accent
- * span. Keeps the copy in `site.ts` as plain, readable strings while still
+/** Parses hero headline markup: '\n' -> line break, '**word**' -> emphasis
+ * (see `renderInlineMarkup`; `.hero-title strong` renders it as an accent
+ * span). Keeps the copy in `site.ts` as plain, readable strings while still
  * giving each line an exact, deliberate break point (see the `headline`
  * field's doc comment for why that matters at this font size). */
 function renderHeadline(headline: string) {
   return headline.split('\n').map((line, lineIndex) => (
     <Fragment key={lineIndex}>
       {lineIndex > 0 && <br />}
-      {line.split(/(\*\*[^*]+\*\*)/).map((part, partIndex) =>
-        part.startsWith('**') && part.endsWith('**') ? (
-          <span className="accent" key={partIndex}>
-            {part.slice(2, -2)}
-          </span>
-        ) : (
-          <Fragment key={partIndex}>{part}</Fragment>
-        ),
-      )}
+      {renderInlineMarkup(line)}
     </Fragment>
   ));
 }
