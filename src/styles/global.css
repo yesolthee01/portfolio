@@ -12,17 +12,26 @@
    ============================================================ */
 
 :root {
-  --ink: #1c1d21;
-  --ink-soft: rgba(28, 29, 33, 0.62);
-  --ink-faint: rgba(28, 29, 33, 0.4);
+  --ink: #333f43;
+  --ink-soft: rgba(51, 63, 67, 0.62);
+  --ink-faint: rgba(51, 63, 67, 0.4);
 
-  --glass: rgba(255, 255, 255, 0.55);
-  --glass-strong: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass: rgba(241, 238, 227, 0.55);
+  --glass-strong: rgba(241, 238, 227, 0.72);
+  --glass-border: rgba(199, 211, 214, 0.55);
 
-  --accent: #c1571f; /* terracotta — primary accent */
-  --accent-spatial: #4f8f7f; /* muted mint — spatial/XR medium */
-  --accent-ai: #a3548a; /* muted rose — AI medium */
+  /* dark smoked glass — reserved for interactive chrome (nav, buttons),
+     never for content cards. Consistent neutral-dark tint regardless of
+     what's behind it, so it reads as "glass" from contrast, not hue. */
+  --glass-dark: rgba(26, 31, 33, 0.16);
+  --glass-dark-strong: rgba(26, 31, 33, 0.32);
+  --glass-dark-border: rgba(241, 238, 227, 0.32);
+  --ink-on-dark: #f1eee3;
+
+  --accent: #5c6d72; /* dark slate — primary accent */
+  --accent-on-dark: #a9bcc0; /* lightened slate, for accent marks sitting on dark glass */
+  --accent-spatial: #91a6ac; /* dusty blue — spatial/XR medium */
+  --accent-ai: #a68966; /* warm greige-brown — AI medium, deliberate warm counterpoint */
 
   --font-display: 'Pretendard', sans-serif;
   --font-mono: 'Pretendard', sans-serif;
@@ -72,16 +81,16 @@ body {
   word-break: keep-all;
   overflow-wrap: break-word;
   background:
-    radial-gradient(900px 600px at 12% 6%, #ffd9bd 0%, transparent 55%),
-    radial-gradient(800px 560px at 90% 16%, #bdeee2 0%, transparent 55%),
-    radial-gradient(900px 640px at 55% 92%, #ffe6b0 0%, transparent 55%),
-    radial-gradient(700px 520px at 8% 90%, #f0c9dd 0%, transparent 55%),
-    #fbf8f4;
+    radial-gradient(900px 600px at 12% 6%, #d7e2e4 0%, transparent 55%),
+    radial-gradient(800px 560px at 90% 16%, #e6e0d4 0%, transparent 55%),
+    radial-gradient(900px 640px at 55% 92%, #c3d3d6 0%, transparent 55%),
+    radial-gradient(700px 520px at 8% 90%, #ded7c9 0%, transparent 55%),
+    #f4f1e9;
 }
 
 ::selection {
   background: var(--accent);
-  color: #fbf8f4;
+  color: var(--ink-on-dark);
 }
 
 a {
@@ -149,7 +158,13 @@ button {
   align-items: center;
   padding: 13px 24px;
   border-radius: var(--radius-pill);
-  box-shadow: 0 8px 30px rgba(30, 20, 10, 0.06);
+  /* dark smoked glass — overrides the light .glass base so the nav
+     reads as clickable chrome, distinct from the light content cards */
+  background: var(--glass-dark-strong);
+  border: 1px solid var(--glass-dark-border);
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  box-shadow: 0 10px 34px rgba(26, 31, 33, 0.16);
 }
 
 .nav-logo {
@@ -158,11 +173,11 @@ button {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: -0.01em;
-  color: var(--ink);
+  color: var(--ink-on-dark);
   white-space: nowrap;
 }
 .nav-logo .dot {
-  color: var(--accent);
+  color: var(--accent-on-dark);
 }
 
 .nav-links {
@@ -176,11 +191,11 @@ button {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--ink-soft);
+  color: rgba(241, 238, 227, 0.72);
   transition: color 0.15s ease;
 }
 .nav-links a:hover {
-  color: var(--ink);
+  color: var(--ink-on-dark);
 }
 
 .nav-back {
@@ -188,10 +203,10 @@ button {
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: rgba(241, 238, 227, 0.72);
 }
 .nav-back:hover {
-  color: var(--ink);
+  color: var(--ink-on-dark);
 }
 
 .nav-simple {
@@ -206,7 +221,7 @@ button {
   display: flex;
   border-radius: var(--radius-pill);
   overflow: hidden;
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--glass-dark-border);
 }
 
 .lang-toggle button {
@@ -217,17 +232,17 @@ button {
   border: none;
   cursor: pointer;
   background: transparent;
-  color: var(--ink-soft);
+  color: rgba(241, 238, 227, 0.72);
 }
 
 .lang-toggle button.active {
-  background: var(--ink);
-  color: #fbf8f4;
+  background: var(--ink-on-dark);
+  color: var(--ink);
 }
 
 .nav-toggle-btn {
   display: none;
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--glass-dark-border);
   border-radius: var(--radius-pill);
   background: transparent;
   width: 38px;
@@ -244,7 +259,7 @@ button {
   display: block;
   width: 16px;
   height: 1.5px;
-  background: var(--ink);
+  background: var(--ink-on-dark);
   position: relative;
   content: '';
 }
@@ -322,16 +337,29 @@ button {
 }
 
 .btn-primary {
-  background: var(--ink);
-  color: #fbf8f4;
-  border: 1px solid var(--ink);
+  background: var(--glass-dark-strong);
+  color: var(--ink-on-dark);
+  border: 1px solid var(--glass-dark-border);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: 0 10px 30px rgba(26, 31, 33, 0.16), inset 0 1px 0 rgba(241, 238, 227, 0.14);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover {
+  background: rgba(26, 31, 33, 0.44);
+  box-shadow: 0 14px 38px rgba(26, 31, 33, 0.2), inset 0 1px 0 rgba(241, 238, 227, 0.18);
 }
 
 .btn-outline {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: var(--glass-dark);
+  border: 1px solid rgba(51, 63, 67, 0.28);
+  color: var(--ink);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  transition: background 0.3s ease;
+}
+.btn-outline:hover {
+  background: rgba(26, 31, 33, 0.26);
 }
 
 .btn-disabled {
@@ -502,11 +530,11 @@ button {
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 20px 60px rgba(40, 25, 10, 0.08);
+  box-shadow: 0 20px 60px rgba(26, 31, 33, 0.08);
   cursor: pointer;
 }
 .card:hover {
-  box-shadow: 0 26px 70px rgba(40, 25, 10, 0.12);
+  box-shadow: 0 26px 70px rgba(26, 31, 33, 0.12);
 }
 
 .card-visual {
@@ -515,7 +543,7 @@ button {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(241, 238, 227, 0.3);
   overflow: hidden;
 }
 .card-visual img {
@@ -530,7 +558,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(255, 208, 158, 0.5), rgba(159, 224, 210, 0.4));
+  background: linear-gradient(135deg, rgba(199, 211, 214, 0.5), rgba(217, 212, 199, 0.45));
 }
 .img-placeholder span {
   font-size: 10.5px;
@@ -612,7 +640,7 @@ a.short-card {
   cursor: pointer;
 }
 a.short-card:hover {
-  box-shadow: 0 20px 50px rgba(40, 25, 10, 0.1);
+  box-shadow: 0 20px 50px rgba(26, 31, 33, 0.1);
 }
 
 .short-card-title {
@@ -643,7 +671,7 @@ a.short-card:hover {
 .more-work-card {
   border-radius: 22px;
   border: 1px dashed var(--glass-border);
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(241, 238, 227, 0.32);
   padding: 30px 28px;
   text-align: center;
   margin-top: 20px;
@@ -715,7 +743,7 @@ a.short-card:hover {
 .ai-mark {
   width: 36px;
   height: 36px;
-  color: #fbf8f4;
+  color: var(--ink-on-dark);
   display: flex;
   align-items: center;
   justify-content: center;

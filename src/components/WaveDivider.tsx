@@ -56,14 +56,14 @@ export function WaveDivider({ watchId }: WaveDividerProps) {
     <div className="wave-wrap" ref={wrapRef} aria-hidden="true">
       <svg className="wave-svg" viewBox="0 0 2400 120" preserveAspectRatio="none">
         <path
-          fill="#ffcf9e"
+          fill="#c7d3d6"
           opacity=".55"
           d="M0,60 C150,100 350,20 600,60 C850,100 1050,20 1200,60 C1350,100 1550,20 1800,60 C2050,100 2250,20 2400,60 L2400,120 L0,120 Z"
         />
       </svg>
       <svg className="wave-svg layer2" viewBox="0 0 2400 120" preserveAspectRatio="none">
         <path
-          fill="#9fe0d2"
+          fill="#d9d4c7"
           opacity=".5"
           d="M0,70 C200,30 400,100 700,65 C950,35 1150,95 1400,65 C1650,35 1900,95 2400,65 L2400,120 L0,120 Z"
         />
