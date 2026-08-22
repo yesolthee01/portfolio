@@ -19,17 +19,19 @@
   --ink-soft: rgba(31, 36, 38, 0.72);
   --ink-faint: rgba(31, 36, 38, 0.5);
 
-  --glass: rgba(241, 238, 227, 0.55);
-  --glass-strong: rgba(241, 238, 227, 0.72);
+  --glass: rgba(208, 223, 230, 0.55);
+  --glass-strong: rgba(208, 223, 230, 0.72);
   --glass-border: rgba(199, 211, 214, 0.55);
 
-  /* dark smoked glass — reserved for interactive chrome (nav, buttons),
-     never for content cards. Consistent neutral-dark tint regardless of
-     what's behind it, so it reads as "glass" from contrast, not hue. */
-  --glass-dark: rgba(26, 31, 33, 0.16);
-  --glass-dark-strong: rgba(26, 31, 33, 0.32);
-  --glass-dark-border: rgba(241, 238, 227, 0.32);
-  --ink-on-dark: #f1eee3;
+  /* chrome glass — reserved for interactive chrome (nav, buttons), never
+     for content cards. Consistent neutral tint regardless of what's
+     behind it, so it reads as "glass" from contrast, not hue. Text sitting
+     on it uses --ink (dark), not --ink-on-dark — this tint is mid-gray,
+     not dark. */
+  --glass-dark: rgba(165, 164, 165, 0.38);
+  --glass-dark-strong: rgba(165, 164, 165, 0.85);
+  --glass-dark-border: rgba(31, 36, 38, 0.22);
+  --ink-on-dark: #f1eee3; /* still used for text on genuinely dark fills (ai-mark, lang-toggle active) */
 
   /* Accents darkened from the raw palette swatches — the swatches read
      as soft/misty by design, but that's too light to carry small text
@@ -87,7 +89,7 @@ body {
      as normal Latin wrapping — doesn't affect English text. */
   word-break: keep-all;
   overflow-wrap: break-word;
-  background: #f5f5f5;
+  background: #f2f2f0;
 }
 
 ::selection {
@@ -160,13 +162,13 @@ button {
   align-items: center;
   padding: 13px 24px;
   border-radius: var(--radius-pill);
-  /* dark smoked glass — overrides the light .glass base so the nav
-     reads as clickable chrome, distinct from the light content cards */
+  /* chrome glass — overrides the light .glass base so the nav reads as
+     clickable chrome, distinct from the light content cards */
   background: var(--glass-dark-strong);
   border: 1px solid var(--glass-dark-border);
   backdrop-filter: blur(22px) saturate(170%);
   -webkit-backdrop-filter: blur(22px) saturate(170%);
-  box-shadow: 0 10px 34px rgba(26, 31, 33, 0.16);
+  box-shadow: 0 10px 34px rgba(31, 36, 38, 0.14);
 }
 
 .nav-logo {
@@ -175,11 +177,11 @@ button {
   font-weight: 600;
   font-size: 16px;
   letter-spacing: -0.01em;
-  color: var(--ink-on-dark);
+  color: var(--ink);
   white-space: nowrap;
 }
 .nav-logo .dot {
-  color: var(--accent-on-dark);
+  color: var(--accent);
 }
 
 .nav-links {
@@ -193,11 +195,11 @@ button {
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(241, 238, 227, 0.72);
+  color: var(--ink-soft);
   transition: color 0.15s ease;
 }
 .nav-links a:hover {
-  color: var(--ink-on-dark);
+  color: var(--ink);
 }
 
 .nav-back {
@@ -205,10 +207,10 @@ button {
   font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(241, 238, 227, 0.72);
+  color: var(--ink-soft);
 }
 .nav-back:hover {
-  color: var(--ink-on-dark);
+  color: var(--ink);
 }
 
 .nav-simple {
@@ -234,7 +236,7 @@ button {
   border: none;
   cursor: pointer;
   background: transparent;
-  color: rgba(241, 238, 227, 0.72);
+  color: var(--ink-soft);
 }
 
 .lang-toggle button.active {
@@ -261,7 +263,7 @@ button {
   display: block;
   width: 16px;
   height: 1.5px;
-  background: var(--ink-on-dark);
+  background: var(--ink);
   position: relative;
   content: '';
 }
@@ -340,16 +342,16 @@ button {
 
 .btn-primary {
   background: var(--glass-dark-strong);
-  color: var(--ink-on-dark);
+  color: var(--ink);
   border: 1px solid var(--glass-dark-border);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  box-shadow: 0 10px 30px rgba(26, 31, 33, 0.16), inset 0 1px 0 rgba(241, 238, 227, 0.14);
+  box-shadow: 0 10px 30px rgba(31, 36, 38, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-primary:hover {
-  background: rgba(26, 31, 33, 0.44);
-  box-shadow: 0 14px 38px rgba(26, 31, 33, 0.2), inset 0 1px 0 rgba(241, 238, 227, 0.18);
+  background: rgba(165, 164, 165, 0.95);
+  box-shadow: 0 14px 38px rgba(31, 36, 38, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.34);
 }
 
 .btn-outline {
@@ -361,7 +363,7 @@ button {
   transition: background 0.3s ease;
 }
 .btn-outline:hover {
-  background: rgba(26, 31, 33, 0.26);
+  background: rgba(165, 164, 165, 0.55);
 }
 
 .btn-disabled {
@@ -545,7 +547,7 @@ button {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: rgba(241, 238, 227, 0.3);
+  background: rgba(208, 223, 230, 0.3);
   overflow: hidden;
 }
 .card-visual img {
@@ -673,7 +675,7 @@ a.short-card:hover {
 .more-work-card {
   border-radius: 22px;
   border: 1px dashed var(--glass-border);
-  background: rgba(241, 238, 227, 0.32);
+  background: rgba(208, 223, 230, 0.32);
   padding: 30px 28px;
   text-align: center;
   margin-top: 20px;
