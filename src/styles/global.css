@@ -1617,34 +1617,51 @@ a.short-card:hover {
   margin-bottom: 20px;
 }
 
-.exp-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+/* Vertical line-and-dot timeline: one shared grid per list so a single
+   continuous line (column 2) can run behind every entry's dot. Each
+   entry contributes 3 grid children in DOM order — date / dot / content
+   — with only the column fixed per child, so the row auto-advances one
+   step per entry. */
+.exp-timeline {
+  display: grid;
+  grid-template-columns: 108px 20px 1fr;
+  column-gap: 20px;
+  row-gap: 32px;
 }
 
-.exp-card {
-  border-radius: 24px;
-  padding: 28px 30px;
+.exp-timeline-line {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  justify-self: center;
+  width: 1px;
+  height: 100%;
+  background: var(--glass-border);
 }
 
-.exp-card-head {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 4px 16px;
-  margin-bottom: 16px;
+.exp-timeline-date {
+  grid-column: 1;
+  text-align: right;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  padding-top: 3px;
+  white-space: nowrap;
 }
 
-.exp-card-index {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 22px;
-  color: var(--accent);
+.exp-timeline-dot {
+  grid-column: 2;
+  justify-self: center;
+  align-self: start;
+  width: 9px;
+  height: 9px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--glass-strong);
 }
 
-.exp-card-heading {
-  flex: 1 1 auto;
+.exp-timeline-content {
+  grid-column: 3;
 }
 
 .exp-role {
@@ -1660,15 +1677,8 @@ a.short-card:hover {
   margin-top: 2px;
 }
 
-.exp-period {
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-  white-space: nowrap;
-}
-
 .exp-bullets {
-  margin: 0;
+  margin: 10px 0 0;
   padding-left: 18px;
   display: flex;
   flex-direction: column;
@@ -1799,8 +1809,13 @@ a.short-card:hover {
     grid-template-columns: 1fr;
     gap: 28px;
   }
-  .exp-card {
-    padding: 24px 22px;
+  .exp-timeline {
+    grid-template-columns: 74px 16px 1fr;
+    column-gap: 12px;
+  }
+  .exp-timeline-date {
+    font-size: 10px;
+    white-space: normal;
   }
 }
 

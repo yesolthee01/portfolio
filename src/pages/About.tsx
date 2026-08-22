@@ -1,26 +1,34 @@
+import { Fragment } from 'react';
 import { Nav } from '../components/Nav';
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
 import type { ExperienceItem, ActivityItem } from '../data/types';
 
-function ExperienceCard({ item, index }: { item: ExperienceItem; index: number }) {
+/** A vertical line-and-dot timeline (date left, marker center, content
+ * right) — one shared CSS grid per list so a single continuous line can
+ * span every entry, with each entry contributing 3 grid cells (date /
+ * dot / content) in document order. */
+function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
   return (
-    <div className="exp-card glass">
-      <div className="exp-card-head">
-        <div className="exp-card-index">{String(index + 1).padStart(2, '0')}</div>
-        <div className="exp-card-heading">
-          <div className="exp-role">{item.role}</div>
-          <div className="exp-org">
-            {item.org} · {item.location}
+    <div className="exp-timeline">
+      <div className="exp-timeline-line" />
+      {items.map((item) => (
+        <Fragment key={`${item.org}-${item.period}`}>
+          <div className="exp-timeline-date">{item.period}</div>
+          <div className="exp-timeline-dot" />
+          <div className="exp-timeline-content">
+            <div className="exp-role">{item.role}</div>
+            <div className="exp-org">
+              {item.org} · {item.location}
+            </div>
+            <ul className="exp-bullets">
+              {item.highlights.map((line, hi) => (
+                <li key={hi}>{line}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-        <div className="exp-period">{item.period}</div>
-      </div>
-      <ul className="exp-bullets">
-        {item.highlights.map((line, i) => (
-          <li key={i}>{line}</li>
-        ))}
-      </ul>
+        </Fragment>
+      ))}
     </div>
   );
 }
@@ -47,7 +55,11 @@ export function About() {
         <div className="case-hero">
           <div className="eyebrow glass">{ap.eyebrow}</div>
           <h1 className="case-title">{ap.title}</h1>
-          <p className="case-subtitle">{ap.intro}</p>
+          {ap.intro.split('\n').map((para, i) => (
+            <p className="case-subtitle" key={i}>
+              {para}
+            </p>
+          ))}
         </div>
 
         <div className="case-section">
@@ -65,20 +77,12 @@ export function About() {
 
         <div className="case-section">
           <div className="case-section-label about-exp-label">{ap.experienceLabel}</div>
-          <div className="exp-list">
-            {ap.experience.map((item, i) => (
-              <ExperienceCard item={item} index={i} key={`${item.org}-${item.period}`} />
-            ))}
-          </div>
+          <ExperienceTimeline items={ap.experience} />
         </div>
 
         <div className="case-section">
           <div className="case-section-label about-exp-label">{ap.intlLabel}</div>
-          <div className="exp-list">
-            {ap.intlExposure.map((item, i) => (
-              <ExperienceCard item={item} index={i} key={`${item.org}-${item.period}-intl`} />
-            ))}
-          </div>
+          <ExperienceTimeline items={ap.intlExposure} />
         </div>
 
         <div className="case-section case-row">

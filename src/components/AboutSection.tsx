@@ -17,7 +17,11 @@ export function AboutSection() {
       </div>
       <div className="about-grid">
         <div>
-          <p className="about-body">{about.body}</p>
+          {about.body.split('\n').map((para, i) => (
+            <p className="about-body" key={i}>
+              {para}
+            </p>
+          ))}
           <Link to="/about" className="about-more-link">
             {about.moreAboutLabel}
           </Link>
