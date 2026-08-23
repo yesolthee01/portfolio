@@ -414,40 +414,25 @@ button {
   fill: none;
 }
 
-/* Two "seesaw" pairs — each a single <svg> holding one diagonal line
-   (the beam) and one filled ball riding on it. Position/size/opacity
-   only here: the transform (idle drift + mouse-driven tilt of the whole
-   beam) and the ball's cx/cy (sliding along the beam's own length, so it
-   visibly rides the line rather than just floating near it) are written
-   directly by HeroBackdrop's rAF loop in Hero.tsx, not by CSS. A CSS
+/* Position/size/opacity only — the transform (idle drift + mouse-driven
+   seesaw tilt) is written directly to these elements' style.transform by
+   HeroBackdrop's rAF loop in Hero.tsx, not by a CSS animation. A CSS
    keyframe animation would fight the JS for control of the same
-   properties, so these are deliberately static here. Kept perfectly
-   square (width === height) so the 100x100 viewBox scales uniformly —
-   any stretch would skew the line's angle and turn the ball into an
-   ellipse. */
-.hero-seesaw-line {
-  stroke: var(--accent);
-  stroke-width: 0.75;
-  fill: none;
-}
-.hero-seesaw-ball {
-  fill: var(--accent);
-  opacity: 0.85;
-}
-.hero-seesaw--1 {
-  top: -50px;
-  left: -2%;
-  width: 380px;
-  height: 380px;
-  opacity: 0.26;
+   `transform` property, so these are deliberately static here. */
+.hero-shape--ring-1 {
+  top: -60px;
+  left: 4%;
+  width: 260px;
+  height: 260px;
+  opacity: 0.16;
   transform-origin: 50% 50%;
 }
-.hero-seesaw--2 {
-  bottom: -60px;
-  right: -2%;
-  width: 360px;
-  height: 360px;
-  opacity: 0.22;
+.hero-shape--ring-2 {
+  bottom: -80px;
+  right: 6%;
+  width: 340px;
+  height: 340px;
+  opacity: 0.13;
   transform-origin: 50% 50%;
 }
 .hero-shape--ring-3 {
@@ -456,6 +441,22 @@ button {
   width: 120px;
   height: 120px;
   opacity: 0.18;
+  transform-origin: 50% 50%;
+}
+.hero-shape--line-1 {
+  top: 18%;
+  left: -6%;
+  width: 46%;
+  height: 220px;
+  opacity: 0.14;
+  transform-origin: 50% 50%;
+}
+.hero-shape--line-2 {
+  bottom: 6%;
+  right: -8%;
+  width: 50%;
+  height: 200px;
+  opacity: 0.12;
   transform-origin: 50% 50%;
 }
 
@@ -484,9 +485,8 @@ button {
     opacity: 1;
   }
   /* HeroBackdrop's rAF loop checks this same media query itself and
-     never starts, so the seesaw beams/balls and the lone ring simply
-     stay at their static JSX-default position — no transform is ever
-     applied. */
+     never starts, so .hero-shape elements simply stay at their static
+     CSS position — no transform is ever applied. */
 }
 
 .hero-title {
