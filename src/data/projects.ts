@@ -70,12 +70,12 @@ export const projects: Project[] = [
     card: {
       kr: {
         imgLabel: 'HMD 착용 없이 즐기는 XR 게임',
-        title: 'Midnight Carnival — 헤드셋 없는 XR e스포츠',
+        title: 'Midnight Carnival',
         desc: 'SIGGRAPH Asia 2024(도쿄) 선정 전시. 헤드셋 없이 물리적 공간을 인터랙티브 놀이터로 바꾸는 공간 기반 XR 경험.',
       },
       en: {
         imgLabel: 'XR Gaming Without a Headset',
-        title: 'Midnight Carnival — Headset-Free Spatial XR E-sport',
+        title: 'Midnight Carnival',
         desc: 'Selected for SIGGRAPH Asia 2024 (Tokyo). A spatial XR experience that turns physical space into an interactive playground — no headset required.',
       },
     },
@@ -272,12 +272,12 @@ export const projects: Project[] = [
     card: {
       kr: {
         imgLabel: '야외 돔 전시',
-        title: 'Designing Empathy Through Space — 야외 돔 몰입 전시',
+        title: 'Designing Empathy Through Space',
         desc: '덴마크에서 진행한 야외 돔 몰입 전시. 공간 연출만으로 낯선 이야기에 정서적으로 몰입하게 만드는 경험을 디렉팅했습니다.',
       },
       en: {
         imgLabel: 'Outdoor Dome Exhibition',
-        title: 'Designing Empathy Through Space — Outdoor Dome Exhibition',
+        title: 'Designing Empathy Through Space',
         desc: 'An outdoor dome exhibition in Denmark. Directed a spatial experience that builds emotional immersion in an unfamiliar story through space alone.',
       },
     },
@@ -412,12 +412,12 @@ export const projects: Project[] = [
     card: {
       kr: {
         imgLabel: 'AI 선생님과 함께하는 맞춤형 영어학습 앱',
-        title: 'Talkable — AI 영어 학습 앱',
+        title: 'Talkable',
         desc: 'AI 기반 회화 피드백으로 실전 영어를 학습하는 앱의 전반적인 UX 설계.',
       },
       en: {
         imgLabel: 'A Personalized English App With an AI Teacher',
-        title: 'Talkable — AI English Learning App',
+        title: 'Talkable',
         desc: 'End-to-end UX design for an app teaching practical English through AI-driven speaking feedback.',
       },
     },
