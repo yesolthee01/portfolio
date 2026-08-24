@@ -960,37 +960,46 @@ a.short-card:hover {
 }
 
 /* Numbered list of short first-person statements, standing in for the
-   about-keyword chip grid this replaced: a full sentence reads awkwardly
-   forced into a square glass box, but flows naturally as one line in a
-   list. Reuses the index-number visual language of .process-index rather
-   than inventing a new one. Sits below the body text as a single row
-   (each point still exactly one line) rather than a side column, and
-   wraps only if the viewport is too narrow to fit all four. */
+   about-keyword chip grid this replaced. Reuses the .process-card glass
+   treatment from the CaseStudy PROCESS/STRENGTHS grid (same radius,
+   blur, border, index-number styling) instead of inventing a new card
+   look — each point is its own small card rather than a bare line, and
+   the row sits below a divider that echoes .case-section's border-top
+   rhythm. Fixed column counts (4 → 2 → 1 at the breakpoints below)
+   rather than auto-fit: auto-fit reflows to whatever fits the
+   available width, which for exactly 4 cards produces an awkward 3+1
+   split at in-between viewport widths. This is always a clean row of
+   4, 2, or 1. */
 .about-points {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 16px;
-  column-gap: 44px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+  border-top: 1px solid var(--glass-border);
+  padding-top: 32px;
 }
 
 .about-point {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
+  border-radius: 18px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  padding: 20px;
 }
 
 .about-point-index {
+  display: block;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 20px;
   color: var(--accent);
-  flex-shrink: 0;
+  margin-bottom: 10px;
 }
 
 .about-point-text {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 17px;
+  font-size: 15px;
   letter-spacing: -0.01em;
 }
 
@@ -1959,8 +1968,10 @@ a.short-card:hover {
     grid-template-columns: repeat(2, 1fr);
   }
   .about-grid {
-    grid-template-columns: 1fr;
     gap: 32px;
+  }
+  .about-points {
+    grid-template-columns: repeat(2, 1fr);
   }
   .process-grid,
   .solution-grid,
@@ -2074,7 +2085,8 @@ a.short-card:hover {
 @media (max-width: 640px) {
   .ai-grid,
   .process-grid,
-  .solution-grid {
+  .solution-grid,
+  .about-points {
     grid-template-columns: 1fr;
   }
   .about-keywords {
