@@ -1468,7 +1468,11 @@ a.short-card:hover {
   font-size: 14.5px;
   line-height: 1.8;
   color: var(--ink-soft);
-  max-width: var(--content-default);
+  /* Unlike other section intros, this one sits directly above the
+     full-width age-cards grid — capping it to --content-default made it
+     wrap onto extra lines it didn't need. Let it use the full section
+     width instead. */
+  max-width: none;
   margin: 0 0 32px;
 }
 
@@ -1513,7 +1517,20 @@ a.short-card:hover {
 .age-card-body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+}
+
+.age-card-field {
+  padding: 0 20px;
+  border-left: 1px solid var(--glass-border);
+}
+
+.age-card-field:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.age-card-field:last-child {
+  padding-right: 0;
 }
 
 .age-card-field-label {
@@ -2021,6 +2038,22 @@ a.short-card:hover {
   .age-card-body {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+  /* Fields stack to a single column here, so the dividers between them
+     need to switch from vertical (border-left) to horizontal
+     (border-top) or they'd render as a stray line down the left edge
+     of each full-width block. */
+  .age-card-field {
+    padding: 14px 0 0;
+    border-left: none;
+    border-top: 1px solid var(--glass-border);
+  }
+  .age-card-field:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+  .age-card-field:last-child {
+    padding-right: 0;
   }
 }
 

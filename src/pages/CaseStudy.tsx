@@ -252,6 +252,28 @@ export function CaseStudy() {
           )}
         </div>
 
+        {cs.principleQA && cs.principleQA.length > 0 ? (
+          <div className="case-section case-principle">
+            <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
+            {cs.principleIntro && <p className="case-principle-intro">{cs.principleIntro}</p>}
+            <div className="principle-qa-grid">
+              {cs.principleQA.map((qa) => (
+                <PrincipleQACard qa={qa} key={qa.role} />
+              ))}
+            </div>
+            {cs.principleClosing && <p className="case-principle-closing">{cs.principleClosing}</p>}
+          </div>
+        ) : (
+          cs.principle && (
+            <div className="case-section case-principle">
+              <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
+              <div className="case-principle-card glass">
+                <p className="case-principle-body">{cs.principle}</p>
+              </div>
+            </div>
+          )
+        )}
+
         {cs.role && (
           <div className="case-section case-row">
             <div className="case-section-label case-row-label">{cs.roleLabel ?? 'MY ROLE'}</div>
@@ -301,6 +323,13 @@ export function CaseStudy() {
           </div>
         )}
 
+        {cs.researchBasis && (
+          <div className="case-section case-row">
+            <div className="case-section-label case-row-label">{cs.researchBasisLabel ?? 'RESEARCH BASIS'}</div>
+            <p className="case-row-body">{cs.researchBasis}</p>
+          </div>
+        )}
+
         {cs.ageCards && cs.ageCards.length > 0 && (
           <div className="case-section case-research">
             <div className="case-section-label case-research-label">{cs.researchLabel ?? 'RESEARCH → DESIGN TRANSLATION'}</div>
@@ -322,35 +351,6 @@ export function CaseStudy() {
                 <RoleCardRow card={card} index={i} key={card.role} />
               ))}
             </div>
-          </div>
-        )}
-
-        {cs.principleQA && cs.principleQA.length > 0 ? (
-          <div className="case-section case-principle">
-            <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
-            {cs.principleIntro && <p className="case-principle-intro">{cs.principleIntro}</p>}
-            <div className="principle-qa-grid">
-              {cs.principleQA.map((qa) => (
-                <PrincipleQACard qa={qa} key={qa.role} />
-              ))}
-            </div>
-            {cs.principleClosing && <p className="case-principle-closing">{cs.principleClosing}</p>}
-          </div>
-        ) : (
-          cs.principle && (
-            <div className="case-section case-principle">
-              <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
-              <div className="case-principle-card glass">
-                <p className="case-principle-body">{cs.principle}</p>
-              </div>
-            </div>
-          )
-        )}
-
-        {cs.researchBasis && (
-          <div className="case-section case-row">
-            <div className="case-section-label case-row-label">{cs.researchBasisLabel ?? 'RESEARCH BASIS'}</div>
-            <p className="case-row-body">{cs.researchBasis}</p>
           </div>
         )}
 

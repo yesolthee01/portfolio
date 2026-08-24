@@ -86,6 +86,9 @@ export const projects: Project[] = [
         subtitle:
           "'미드나잇 카니발(Midnight Carnival)'은 5면 공간형 XR 플랫폼을 기반으로 한 체험형 e-sports 콘텐츠다. 신체 움직임과 디지털 인터랙션을 연결해, 여러 사용자가 온몸으로 함께 즐기는 협동형 경험을 제공한다.",
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
+        principleLabel: 'DESIGN PRINCIPLE',
+        principle:
+          '설명 없이도 몸이 이해할 수 있는 인터랙션을 설계하는 것이 핵심 원칙이었다. 점프하고, 밟고, 벽을 터치하는 — 누구나 이미 아는 동작으로 플레이를 구성하고, 그 움직임에 즉각적으로 반응하는 시각·사운드 피드백을 더해 사용자가 스스로 배우며 몰입하도록 했다. 컨트롤러 없이도, 별도의 설명 없이도 몸이 곧 인터페이스가 되는 경험을 만드는 것을 프로젝트의 중심 원칙으로 삼았다.',
         roleLabel: 'MY ROLE',
         role:
           'PM과 UX/UI Designer로 참여해 콘텐츠 기획부터 인터랙션 설계, 사용자 테스트, 전시까지 프로젝트 전 과정을 이끌었다. UI와 배경 비주얼 제작의 약 25%를 담당했으며, 게임 개발자와 디자이너 간 협업을 조율했다. 사용자 반응을 검증하고 경험을 개선하기 위해 교내 테스트 전시를 기획·운영했으며, 프로젝트 기반의 리서치 논문을 공동 저술했다.',
@@ -151,6 +154,9 @@ export const projects: Project[] = [
         subtitle:
           "'Midnight Carnival' is an experiential e-sports piece built on a five-wall spatial XR platform. It connects physical movement with digital interaction, letting multiple users play together with their whole bodies in a cooperative experience.",
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
+        principleLabel: 'DESIGN PRINCIPLE',
+        principle:
+          "The core principle was designing interaction the body could understand without instruction. Play was built around actions everyone already knows — jumping, stomping, touching a wall — paired with visual and sound feedback that responded instantly, so users could learn through their own movement and stay immersed. Making the body itself the interface, with no controller and no explanation needed, was the project's central design principle.",
         roleLabel: 'MY ROLE',
         role:
           'Joined as PM and UX/UI Designer, leading the project from content planning and interaction design through user testing and exhibition. Handled roughly 25% of UI and background visual production, and coordinated collaboration between game developers and designers. Planned and ran an in-school test exhibition to validate user response and improve the experience, and co-authored a research paper based on the project.',
@@ -288,6 +294,9 @@ export const projects: Project[] = [
         subtitle:
           "'Everyone Has a Story to Tell — Walking in Others Shoes'는 타인의 삶과 관점을 직접 보고, 듣고, 따라 걸으며 경험하도록 설계한 공간형 스토리텔링 전시다. 학생들이 여행에서 만난 사람들의 사진과 글, 목소리를 하나의 경험으로 연결해, 관람객이 낯선 사람의 이야기를 단순히 감상하는 것을 넘어 그들의 관점에 잠시 머물 수 있도록 공간과 동선을 설계했다.",
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
+        principleLabel: 'DESIGN PRINCIPLE',
+        principle:
+          "관람객에게 '천천히 보세요'라고 말하는 대신, 공간 자체가 걸음을 늦추도록 설계하는 것이 핵심 원칙이었다. 발자국으로 이어지는 동선, 자연과 경쟁하지 않는 색과 식물, 보고 들으며 이야기에 머무르게 하는 두 개의 감각 트랙 — 이 모든 요소는 관람객에게 지시하지 않으면서도 자연스럽게 낯선 사람의 이야기에 정서적으로 머무르게 만들었다. 설명이 아니라 공간과 감각으로 경험을 이끄는 것을 전시의 중심 원칙으로 삼았다.",
         roleLabel: 'MY ROLE',
         role:
           '공간과 비주얼을 총괄하는 전시 디렉터로 참여해 전시 컨셉부터 공간 구성, 포스터/인쇄물 디자인, 현장 설치까지 전반을 설계했다. 담당 교사와 사진·오디오 제작을 맡은 학생들과 협업해 전시를 완성했다.',
@@ -326,6 +335,9 @@ export const projects: Project[] = [
         subtitle:
           "'Everyone Has a Story to Tell — Walking in Others Shoes' is a spatial storytelling exhibition designed to let visitors see, hear, and walk alongside the lives and perspectives of others. Bringing together photos, writing, and voice recordings that students collected from people they met while traveling, the space and circulation were designed so visitors could do more than simply view a stranger's story — they could pause and stay within that person's perspective for a moment.",
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
+        principleLabel: 'DESIGN PRINCIPLE',
+        principle:
+          "Rather than telling visitors to slow down, the core principle was letting the space itself do that work. A footprint path that guided circulation, a palette and planting that never competed with nature, and two sensory tracks — seeing and hearing — that let visitors stay with a stranger's story: none of it instructed visitors directly, yet all of it naturally held them in someone else's story a little longer. Leading the experience through space and the senses, not explanation, was the exhibition's central design principle.",
         roleLabel: 'MY ROLE',
         role:
           'Took part as exhibition director overseeing space and visuals, designing everything from the exhibition concept and spatial layout to poster/print design and on-site installation. Completed the exhibition in collaboration with a supervising teacher and the students responsible for photography and audio recording.',
@@ -428,6 +440,9 @@ export const projects: Project[] = [
         subtitle:
           '대학교 졸업 캡스톤으로 진행한 프로젝트다. Talkable은 AI와의 실시간 대화를 통해 영어를 연습하고, 실제 대화에서 발견된 약점을 다음 학습으로 연결하는 개인 맞춤형 영어 회화 학습 서비스다. 사용자의 대화를 분석해 발음·문법·유창성·어휘에 대한 피드백을 제공하고, 이를 개인 맞춤형 복습과 챌린지 활동을 통해 지속적으로 학습할 수 있는 Learning Loop로 설계했다.',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
+        principleLabel: 'DESIGN PRINCIPLE',
+        principle:
+          '정해진 커리큘럼을 따라가는 학습이 아니라, 사용자가 실제로 나눈 대화에서 학습이 시작되도록 설계하는 것이 핵심 원칙이었다. 대화에서 발견된 약점은 피드백으로, 피드백은 복습과 챌린지로 자연스럽게 이어지도록 Conversation → Feedback → Review → Challenge의 순환 구조를 만들었다. 한 번의 평가로 끝나는 학습이 아니라, 내 대화가 계속 다음 학습으로 이어지고 그 성장이 눈에 보이게 만드는 것을 Talkable의 중심 설계 원칙으로 삼았다.',
         roleLabel: 'MY ROLE',
         role:
           'UX/UI Designer로 참여해 사용자 리서치부터 서비스 구조 설계, UI 디자인, 프로토타이핑과 사용자 테스트까지 전반적인 UX/UI 디자인을 담당했다. 개발 과정에서는 AI 기반 대화와 개인화 피드백이 실제 서비스 경험으로 연결될 수 있도록 기능과 인터랙션을 구체화하고, 프로토타입을 반복적으로 테스트하며 개선했다.',
@@ -529,6 +544,9 @@ export const projects: Project[] = [
         subtitle:
           "This was a university graduation capstone project. Talkable is a personalized English conversation-learning service that lets users practice through real-time conversation with AI and turns weaknesses found in those conversations into the next round of learning. It analyzes each conversation for pronunciation, grammar, fluency, and vocabulary, and turns that feedback into a continuous Learning Loop of personalized review and challenges.",
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
+        principleLabel: 'DESIGN PRINCIPLE',
+        principle:
+          "Rather than learning that follows a fixed curriculum, the core principle was making the user's own conversation the starting point for learning. Weaknesses surfaced in conversation fed into feedback, and feedback fed into review and challenges, forming a loop — Conversation → Feedback → Review → Challenge. Instead of learning that ends with a single assessment, making each conversation carry forward into the next round of learning, with that growth made visible, was Talkable's central design principle.",
         roleLabel: 'MY ROLE',
         role:
           'Joined as UX/UI Designer, covering the full design process from user research through service structure, UI design, prototyping, and user testing. During development, worked out the features and interactions that turned AI-driven conversation and personalized feedback into an actual product experience, testing and refining the prototype through repeated iteration.',
@@ -649,7 +667,7 @@ export const projects: Project[] = [
         },
         {
           title: 'TRANSLATE',
-          desc: '연구에서 도출한 추상적인 인사이트를 밟기·찾기·던지기·피하기·걷고 기억하기와 같은 구체적인 신체 행동과 게임 메커니즘으로 변환했다.',
+          desc: '연구에서 도출한 학술적 인사이트를 밟기·찾기·던지기·피하기·걷고 기억하기와 같은 구체적인 신체 행동과 게임 메커니즘으로 변환했다.',
         },
         {
           title: 'PROTOTYPE & EXHIBITION',
@@ -667,7 +685,7 @@ export const projects: Project[] = [
         },
         {
           title: 'TRANSLATE',
-          desc: 'Translated the abstract insights drawn from research into concrete physical actions and game mechanics — stepping, finding, throwing, dodging, walking and remembering.',
+          desc: 'Translated the scholarly insights drawn from research into concrete physical actions and game mechanics — stepping, finding, throwing, dodging, walking and remembering.',
         },
         {
           title: 'PROTOTYPE & EXHIBITION',
@@ -679,12 +697,12 @@ export const projects: Project[] = [
       kr: {
         imgLabel: '서울시 지원 XR 산학협력 프로젝트',
         title: '연령 맞춤형 XR 콘텐츠',
-        desc: '발달심리 연구를 바탕으로 아동부터 고령자까지, 5개 연령대의 신체·인지 특성을 XR 인터랙션으로 설계한 산학협력 프로젝트.',
+        desc: '유아부터 고령자까지 5개 연령대의 발달 이론을 근거로, 연령 맞춤형 XR 콘텐츠를 설계한 산학협력 프로젝트.',
       },
       en: {
         imgLabel: 'Seoul City-Funded XR Industry-Academia Project',
         title: 'Age-Tailored XR Content',
-        desc: 'An industry-academia project translating the physical and cognitive traits of five age groups — from children to older adults — into XR interaction, grounded in developmental psychology research.',
+        desc: 'An industry-academia project designing age-tailored XR content for five age groups — from early childhood to older adults — grounded in developmental theory.',
       },
     },
     caseStudy: {
@@ -692,11 +710,11 @@ export const projects: Project[] = [
         eyebrow: '서울시 지원 XR 산학협력 프로젝트',
         title: '연령 맞춤형 XR 콘텐츠',
         subtitle:
-          '발달심리와 운동·인지 발달 연구를 바탕으로, 아동부터 고령자까지 5개 연령대의 특성을 XR 인터랙션으로 번역한 산학협력 연구 프로젝트다. 하나의 5면 공간형 XR 플랫폼 안에서 각 연령대가 자신의 신체·인지 특성에 맞는 방식으로 움직이고 참여할 수 있도록 서로 다른 5개의 경험을 설계했다.',
+          '이 프로젝트는 서울시 지원 R&D 산학협력 과제 [생성형 AI를 활용한 헤드셋 프리 XR 콘텐츠 기술 개발]로 진행됐다. 유아, 아동, 중고등학생, 성인, 고령 5개 연령대의 발달심리·운동·인지 발달 이론을 근거로 연령 맞춤형 XR 콘텐츠를 설계했으며, 하나의 5면 공간형 XR 플랫폼 안에서 각 연령대가 자신의 신체·인지 특성에 맞는 방식으로 움직이고 참여할 수 있도록 서로 다른 5개의 경험을 구성했다.',
         heroLabel: 'HERO IMAGE — SEOUL CITY-FUNDED XR RESEARCH',
         roleLabel: 'MY ROLE',
         role:
-          'Research와 UX Concept을 중심으로 연령별 발달 특성을 조사하고, 연구에서 도출한 인사이트를 게임 컨셉과 신체 인터랙션으로 구체화하는 과정에 참여했다. 프로젝트의 연구 결과를 논문으로 정리하고 학술 발표까지 연결했으며, 실제 XR 콘텐츠 제작과 전시 과정에도 참여했다.',
+          'PM과 UX Designer로 참여해 연령별 발달 특성을 리서치하고, 인사이트를 게임 컨셉과 신체 인터랙션으로 구체화하는 과정을 이끌었다. 연구 결과를 논문으로 정리해 학술 발표로 연결했으며, 실제 XR 콘텐츠 제작과 전시 과정에도 참여했다.',
         problemLabel: 'THE CHALLENGE',
         problem:
           '같은 인터랙션이 모든 연령의 사용자에게 같은 경험을 제공하지 않는다. 연령에 따라 신체 능력과 인지 방식, 반응 속도와 참여 동기가 달라지는 만큼, 단순히 게임의 난이도를 조절하는 것이 아니라 각 연령의 특성을 어떤 움직임과 게임 메커니즘으로 변환할 것인가가 핵심 과제였다.',
@@ -716,14 +734,14 @@ export const projects: Project[] = [
             tagline: 'Find & Solve',
             insight: '순발력과 판단력, 공간 인지가 발달하며 과제를 해결하는 과정에서 성취감을 경험하는 시기.',
             translation: '공간을 직접 탐색하고 빠르게 목표를 발견해 해결하는 경험으로 연결했다.',
-            interaction: '→ 공간 속 목표물을 찾고 제거하기',
+            interaction: '→ 공간 속 목표물을 찾기',
           },
           {
             ageGroup: 'TEEN',
             tagline: 'Aim & React',
             insight: '정확성·전략성·민첩성과 함께 자기조절 및 전략적 판단 능력이 발달하는 시기.',
             translation: '단순한 반응보다 목표를 판단하고 타이밍을 결정해야 하는 경쟁적 플레이로 구성했다.',
-            interaction: '→ 목표를 판단하고 피구공을 던지기',
+            interaction: '→ 정확한 지점과 타이밍에 피구공을 던지기',
           },
           {
             ageGroup: 'ADULT',
@@ -759,11 +777,11 @@ export const projects: Project[] = [
         eyebrow: 'Seoul City-Funded XR Industry-Academia Project',
         title: 'Age-Tailored XR Content',
         subtitle:
-          'A research collaboration project that translates the traits of five age groups — from early childhood to older adults — into XR interactions, grounded in developmental psychology and motor/cognitive development research. Within a single five-wall spatial XR platform, five distinct experiences were designed so each age group could move and participate in ways suited to their own physical and cognitive traits.',
+          'This project was carried out as a Seoul City-funded R&D industry-academia initiative, [Development of Headset-Free XR Content Technology Using Generative AI]. Grounded in developmental psychology and motor/cognitive development theory across five age groups — early childhood, children, teenagers, adults, and older adults — it designed age-tailored XR content. Within a single five-wall spatial XR platform, five distinct experiences were built so each age group could move and participate in ways suited to their own physical and cognitive traits.',
         heroLabel: 'HERO IMAGE — SEOUL CITY-FUNDED XR RESEARCH',
         roleLabel: 'MY ROLE',
         role:
-          "Centered on research and UX concept work, investigated developmental traits across age groups and took part in translating the resulting insights into game concepts and physical interactions. Wrote up the project's research findings into a paper and carried it through to academic presentations, while also taking part in producing the actual XR content and the exhibition.",
+          "Joined as PM and UX Designer, leading the research into developmental traits across age groups and turning those insights into game concepts and physical interactions. Wrote up the findings into a paper that carried through to academic presentations, and also took part in producing the actual XR content and running the exhibition.",
         problemLabel: 'THE CHALLENGE',
         problem:
           "The same interaction doesn't deliver the same experience to users of every age. Physical ability, cognitive style, reaction speed, and motivation to participate all shift with age, so the core challenge wasn't simply tuning difficulty — it was deciding what movement and game mechanic each age group's traits should be translated into.",
@@ -783,14 +801,14 @@ export const projects: Project[] = [
             tagline: 'Find & Solve',
             insight: 'A stage where quickness, judgment, and spatial awareness develop, and a sense of achievement comes from solving tasks.',
             translation: 'Connected this to an experience of directly exploring the space and quickly finding and solving a goal.',
-            interaction: '→ Find and remove the target in the space',
+            interaction: '→ Find the target in the space',
           },
           {
             ageGroup: 'TEEN',
             tagline: 'Aim & React',
             insight: 'A stage where accuracy, strategy, and agility develop alongside self-regulation and strategic judgment.',
             translation: 'Built as competitive play that requires judging a target and deciding timing, rather than simple reaction.',
-            interaction: '→ Judge the target and throw the dodgeball',
+            interaction: '→ Throw the dodgeball at a precise point and timing',
           },
           {
             ageGroup: 'ADULT',
