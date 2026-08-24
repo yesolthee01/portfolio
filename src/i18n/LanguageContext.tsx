@@ -13,10 +13,16 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 function getInitialLang(): Lang {
-  if (typeof window === 'undefined') return 'kr';
+  // English is the default setting site-wide — a first-time visitor
+  // always lands in English regardless of browser/OS locale. Previously
+  // this fell back to detecting the browser's language (Korean locale ->
+  // 'kr'), which meant the "default" language actually varied by
+  // visitor. Once someone explicitly switches (via the KR/EN toggle),
+  // that choice is remembered via STORAGE_KEY as before.
+  if (typeof window === 'undefined') return 'en';
   const stored = window.localStorage.getItem(STORAGE_KEY);
   if (stored === 'kr' || stored === 'en') return stored;
-  return window.navigator.language?.toLowerCase().startsWith('ko') ? 'kr' : 'en';
+  return 'en';
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

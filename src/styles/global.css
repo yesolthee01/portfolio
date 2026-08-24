@@ -9,10 +9,15 @@
      dividers between sections. NOTE: an earlier canvas-based "pressable
      cushion" background was tried and deliberately dropped — don't
      reintroduce it, see project notes.
-   - Type scale floor: 12px is the smallest font-size anywhere on the
+   - Type scale floor: 14px is the smallest font-size anywhere on the
      site, including meta labels, timeline dates, and card eyebrows —
-     never introduce a sub-12px value. (Previously several small labels
-     sat at 10–11.5px; all were raised to 12px site-wide.)
+     never introduce a sub-14px value. (Raised site-wide from a previous
+     12px floor — see the TYPE SCALE tokens below; every font-size on
+     the site should reference one of those tokens rather than a bespoke
+     value, so "same UI role → same size" stays true as the site grows.)
+   - Margins follow the SPACING SCALE tokens below (also defined in
+     :root) — same rule: reach for an existing --space-N token instead
+     of a bespoke margin value.
    ============================================================ */
 
 :root {
@@ -72,6 +77,48 @@
   --content-default: 720px;
   --content-wide: 760px;
   --section-spacing: 56px;
+
+  /* ---------- TYPE SCALE ----------
+     Every font-size on the site pulls from one of these — reach for the
+     token whose comment matches the text's UI role rather than a
+     one-off value. Floor is 14px (--fs-caption): nothing on the site
+     should ever go smaller. A few components (the finding-card
+     featured/compact variants, and the fluid clamp() headings) still
+     set their own literal sizes where they need a step this scale
+     doesn't name or need to stay fluid — each is commented at its own
+     declaration explaining why. */
+  --fs-caption: 14px; /* smallest text anywhere: tags/chips/eyebrows, nav links, footer, meta labels, index sub-labels, timeline dates/org, badges, buttons, compact-card text */
+  --fs-sm: 15px; /* small card-body copy: process/solution/finding/loop-step/role/ai-card paragraphs, qa-answer, exp-bullets, small bold name labels (age-card-group, role-card-role, exp-role, activity-org) */
+  --fs-base: 16px; /* secondary paragraphs & compact descriptions: case section intros/closings, case-subtitle, short/more-work descriptions, qa-question, solution-subtitle, about-more-link */
+  --fs-lg: 17px; /* primary reading paragraphs: hero-sub, about-body, case-row-body */
+  --fs-emphasis: 18px; /* the one emphasized pull-quote paragraph: case-principle-body */
+  --fs-heading-sm: 18px; /* small card headings: short-card-title, more-work-title, and every card's h3 (ai/process/solution/finding/loop-step) */
+  --fs-index: 22px; /* accent index numerals: process/solution/loop-step/age-card/role-card/finding/about-point index badges */
+  --fs-heading-lg: 24px; /* home full work-card title */
+  --fs-section: 25px; /* site section headers (WORK, ABOUT, CONTACT, ...) */
+  --fs-display: 32px; /* about-title */
+
+  /* ---------- SPACING SCALE ----------
+     Every margin on the site is one of these — an even step (2px below
+     20px, 4px above it), so vertical rhythm reads as deliberate instead
+     of accumulated one-offs. Reach for the closest token rather than a
+     bespoke value. */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-36: 36px;
+  --space-40: 40px;
+  --space-48: 48px;
 }
 
 * {
@@ -194,7 +241,7 @@ button {
   display: flex;
   gap: 24px;
   align-items: center;
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -210,7 +257,7 @@ button {
 
 .nav-back {
   text-decoration: none;
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -235,7 +282,7 @@ button {
 }
 
 .lang-toggle button {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 7px 12px;
@@ -287,7 +334,7 @@ button {
 .chip,
 .eyebrow,
 .tag {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.05em;
   padding: 7px 13px;
   border-radius: var(--radius-pill);
@@ -300,7 +347,9 @@ button {
   gap: 8px;
   letter-spacing: 0.14em;
   padding: 8px 16px;
-  margin-bottom: 30px;
+  /* Was 30px — the one off-grid margin value on the site; snapped to
+     the spacing scale. */
+  margin-bottom: var(--space-32);
 }
 .eyebrow b {
   color: var(--accent);
@@ -335,7 +384,7 @@ button {
 .btn {
   text-decoration: none;
   font-weight: 500;
-  font-size: 13px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.04em;
   padding: 15px 26px;
   border-radius: var(--radius-pill);
@@ -374,7 +423,7 @@ button {
 
 .btn-disabled {
   opacity: 0.4;
-  font-size: 13px;
+  font-size: var(--fs-caption);
   border: none;
   padding: 15px 0;
 }
@@ -506,7 +555,7 @@ button {
   font-size: clamp(36px, 5vw, 60px);
   line-height: 1.16;
   letter-spacing: -0.02em;
-  margin: 0 0 28px;
+  margin: 0 0 var(--space-28);
 }
 
 .hero-title strong {
@@ -516,8 +565,8 @@ button {
 
 .hero-sub {
   max-width: 640px;
-  margin: 0 auto 36px;
-  font-size: 16px;
+  margin: 0 auto var(--space-36);
+  font-size: var(--fs-lg);
   line-height: 1.85;
   color: var(--ink-soft);
 }
@@ -527,7 +576,7 @@ button {
   gap: 14px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: var(--space-40);
 }
 
 /* ---------- WAVE DIVIDER ----------
@@ -540,6 +589,9 @@ button {
   overflow: hidden;
   line-height: 0;
   transform-origin: 50% 100%;
+  /* Deliberately outside the spacing scale — a small decorative overlap
+     (the -2px) that seats the wave graphic snugly against the section
+     below it, not a content-spacing margin. */
   margin: 4px 0 -2px;
 }
 
@@ -628,7 +680,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 32px;
+  margin-bottom: var(--space-32);
   gap: 16px;
   flex-wrap: wrap;
 }
@@ -639,18 +691,18 @@ button {
   gap: 10px;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 25px;
+  font-size: var(--fs-section);
   margin: 0;
 }
 .section-title .idx {
   font-family: var(--font-mono);
   font-weight: 500;
-  font-size: 12px;
+  font-size: var(--fs-caption);
   color: var(--accent);
 }
 
 .section-meta {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.06em;
   color: var(--ink-soft);
 }
@@ -705,7 +757,7 @@ button {
   background: linear-gradient(135deg, rgba(199, 211, 214, 0.5), rgba(217, 212, 199, 0.45));
 }
 .img-placeholder span {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.06em;
   color: var(--ink-soft);
   background: var(--glass);
@@ -720,7 +772,7 @@ button {
   position: absolute;
   top: 16px;
   left: 16px;
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.06em;
   color: var(--ink-soft);
   background: var(--glass);
@@ -737,24 +789,26 @@ button {
 }
 
 .card-eyebrow {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.08em;
   color: var(--accent);
-  margin-bottom: 14px;
+  margin-bottom: var(--space-14);
 }
 
 .card-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 24px;
-  margin: 0 0 12px;
+  font-size: var(--fs-heading-lg);
+  margin: 0 0 var(--space-12);
   line-height: 1.25;
 }
 
 .card-desc {
-  font-size: 15px;
+  /* Was 15px — bumped a step to sit clearly above short-card-desc
+     (--fs-sm), matching the full card's larger, more prominent role. */
+  font-size: var(--fs-base);
   line-height: 1.7;
-  margin: 0 0 20px;
+  margin: 0 0 var(--space-20);
   color: var(--ink-soft);
   flex: 1;
 }
@@ -765,7 +819,7 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin-top: 20px;
+  margin-top: var(--space-20);
 }
 
 .short-card {
@@ -790,23 +844,23 @@ a.short-card:hover {
 .short-card-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 18px;
-  margin: 0 0 10px;
+  font-size: var(--fs-heading-sm);
+  margin: 0 0 var(--space-10);
   line-height: 1.3;
 }
 
 .short-card-desc {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   line-height: 1.65;
   color: var(--ink-soft);
-  margin: 0 0 14px;
+  margin: 0 0 var(--space-14);
 }
 
 .short-card-result {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   line-height: 1.6;
   color: var(--accent);
-  margin: 0 0 16px;
+  margin: 0 0 var(--space-16);
   font-weight: 500;
 }
 
@@ -818,30 +872,33 @@ a.short-card:hover {
   background: rgba(232, 232, 232, 0.32);
   padding: 30px 28px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: var(--space-20);
   /* opacity/transform/transition + the .in-view reveal come from the
      shared SCROLL REVEAL rule above — this card watches its own scroll
      position via useInView, same as the others. */
 }
 .more-work-badge {
   display: inline-block;
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.08em;
   color: var(--accent);
   background: var(--glass);
   border: 1px solid var(--glass-border);
   padding: 5px 12px;
   border-radius: var(--radius-pill);
-  margin-bottom: 14px;
+  margin-bottom: var(--space-14);
 }
 .more-work-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 19px;
-  margin: 0 0 8px;
+  /* Was 19px — unified with .short-card-title (--fs-heading-sm): same
+     "compact card heading" role, one row below it in the homepage grid. */
+  font-size: var(--fs-heading-sm);
+  margin: 0 0 var(--space-8);
 }
 .more-work-desc {
-  font-size: 14px;
+  /* Was 14px — unified with .short-card-desc (--fs-sm), same family. */
+  font-size: var(--fs-sm);
   color: var(--ink-soft);
   margin: 0;
 }
@@ -849,24 +906,24 @@ a.short-card:hover {
 /* ---------- AI TOOLKIT ---------- */
 
 .toolkit-category {
-  margin-top: 36px;
+  margin-top: var(--space-36);
 }
 .toolkit-category:first-child {
-  margin-top: 20px;
+  margin-top: var(--space-20);
 }
 
 .toolkit-category-label {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   color: var(--accent);
   font-weight: 600;
   letter-spacing: 0.06em;
-  margin-bottom: 14px;
+  margin-bottom: var(--space-14);
 }
 
 .toolkit-category-note {
-  font-size: 12.5px;
+  font-size: var(--fs-caption);
   color: var(--ink-soft);
-  margin: 14px 0 0;
+  margin: var(--space-14) 0 0;
 }
 
 .ai-grid {
@@ -899,20 +956,21 @@ a.short-card:hover {
   justify-content: center;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 13px;
+  font-size: var(--fs-caption);
   border-radius: 10px;
-  margin-bottom: 14px;
+  margin-bottom: var(--space-14);
 }
 
 .ai-card h3 {
-  font-size: 15px;
+  /* Was 15px — unified with the other in-card h3's (--fs-heading-sm). */
+  font-size: var(--fs-heading-sm);
   font-weight: 600;
-  margin: 0 0 7px;
+  margin: 0 0 var(--space-8);
   font-family: var(--font-display);
 }
 
 .ai-card p {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   line-height: 1.55;
   margin: 0;
   color: var(--ink-soft);
@@ -932,18 +990,20 @@ a.short-card:hover {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  margin-top: 20px;
+  margin-top: var(--space-20);
 }
 
 .about-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 32px;
-  margin: 0 0 4px;
+  font-size: var(--fs-display);
+  margin: 0 0 var(--space-4);
 }
 
 .about-body {
-  font-size: 15.5px;
+  /* Was 15.5px — unified with hero-sub/case-row-body (--fs-lg), the
+     site's other primary reading paragraphs. */
+  font-size: var(--fs-lg);
   line-height: 1.8;
   color: var(--ink-soft);
   max-width: var(--content-default);
@@ -956,8 +1016,8 @@ a.short-card:hover {
 
 .about-more-link {
   display: inline-block;
-  margin-top: 18px;
-  font-size: 14px;
+  margin-top: var(--space-18);
+  font-size: var(--fs-base);
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
@@ -998,15 +1058,17 @@ a.short-card:hover {
   display: block;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 20px;
+  /* Was 20px — unified with every other accent index numeral on the
+     site (--fs-index), same badge-in-a-card pattern. */
+  font-size: var(--fs-index);
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: var(--space-10);
 }
 
 .about-point-text {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   letter-spacing: -0.01em;
 }
 
@@ -1020,7 +1082,7 @@ a.short-card:hover {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(34px, 5.6vw, 60px);
-  margin: 0 0 36px;
+  margin: 0 0 var(--space-36);
   line-height: 1.08;
 }
 
@@ -1032,7 +1094,8 @@ a.short-card:hover {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  /* Was 50px — the other off-grid margin value; snapped to the scale. */
+  margin-bottom: var(--space-48);
 }
 
 .footer {
@@ -1040,7 +1103,7 @@ a.short-card:hover {
   border-top: 1px solid var(--glass-border);
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: var(--fs-caption);
   color: var(--ink-soft);
   flex-wrap: wrap;
   gap: 8px;
@@ -1058,7 +1121,7 @@ a.short-card:hover {
    larger breathing room a hero title needs above it, since a card's
    14px is too tight at hero scale. */
 .case-eyebrow {
-  margin-bottom: 18px;
+  margin-bottom: var(--space-18);
 }
 
 .case-title {
@@ -1067,7 +1130,7 @@ a.short-card:hover {
   font-size: clamp(30px, 4.8vw, 56px);
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin: 0 0 24px;
+  margin: 0 0 var(--space-24);
   /* No max-width cap: the old 860px cap was narrower than the page's own
      1080px container, so a mid-length title (e.g. "Designing Empathy
      Through Space") wrapped even though the row had plenty of room left,
@@ -1078,10 +1141,10 @@ a.short-card:hover {
 
 .case-subtitle {
   max-width: var(--content-default);
-  font-size: 14.5px;
+  font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
-  margin: 0 0 36px;
+  margin: 0 0 var(--space-36);
 }
 
 .case-hero-image {
@@ -1237,7 +1300,7 @@ a.short-card:hover {
 }
 
 .case-section-label {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   color: var(--accent);
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -1255,7 +1318,7 @@ a.short-card:hover {
 
 .case-row-body {
   grid-column: 5 / 13;
-  font-size: 15.5px;
+  font-size: var(--fs-lg);
   line-height: 1.85;
   margin: 0;
   max-width: var(--content-default);
@@ -1263,7 +1326,7 @@ a.short-card:hover {
 }
 
 .case-process-label {
-  margin-bottom: 32px;
+  margin-bottom: var(--space-32);
 }
 
 .process-grid {
@@ -1287,27 +1350,27 @@ a.short-card:hover {
 .process-index {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 22px;
+  font-size: var(--fs-index);
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
 }
 
 .process-card h3 {
-  font-size: 14.5px;
+  font-size: var(--fs-heading-sm);
   font-weight: 600;
-  margin: 0 0 8px;
+  margin: 0 0 var(--space-8);
   font-family: var(--font-display);
 }
 
 .process-card p {
-  font-size: 13.5px;
+  font-size: var(--fs-sm);
   line-height: 1.6;
   margin: 0;
   color: var(--ink-soft);
 }
 
 .case-solution-label {
-  margin-bottom: 32px;
+  margin-bottom: var(--space-32);
 }
 
 .solution-grid {
@@ -1328,40 +1391,40 @@ a.short-card:hover {
 .solution-index {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 22px;
+  font-size: var(--fs-index);
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
 }
 
 .solution-card h3 {
-  font-size: 14.5px;
+  font-size: var(--fs-heading-sm);
   font-weight: 700;
   letter-spacing: 0.03em;
-  margin: 0 0 6px;
+  margin: 0 0 var(--space-6);
   font-family: var(--font-display);
 }
 
 .solution-subtitle {
-  font-size: 14px;
+  font-size: var(--fs-base);
   font-weight: 600;
-  margin: 0 0 10px;
+  margin: 0 0 var(--space-10);
   color: var(--ink);
 }
 
 .solution-desc {
-  /* Matches .process-card p (13.5px) — these two are the same
+  /* Matches .process-card p (--fs-sm) — these two are the same
      index-card pattern (index number + h3 + short paragraph) used back
      to back on this page, so their body copy reads at one consistent
      size instead of solution cards feeling smaller than process cards
-     right below them. */
-  font-size: 13.5px;
+     right above them. */
+  font-size: var(--fs-sm);
   line-height: 1.7;
   margin: 0;
   color: var(--ink-soft);
 }
 
 .case-loop-label {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-24);
 }
 
 .loop-flow {
@@ -1380,7 +1443,7 @@ a.short-card:hover {
   font-weight: 600;
   font-size: clamp(14px, 2.3vw, 21px);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-20);
 }
 
 .loop-flow-step {
@@ -1397,11 +1460,11 @@ a.short-card:hover {
 }
 
 .loop-flow-arrow--cycle {
-  margin-left: 4px;
+  margin-left: var(--space-4);
 }
 
 .case-loop-intro {
-  font-size: 14.5px;
+  font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
   /* Same fix as .case-research-intro below: this sits directly above a
@@ -1409,7 +1472,7 @@ a.short-card:hover {
      --content-default wrapped it onto extra lines the section had no
      reason to force. */
   max-width: none;
-  margin: 0 0 36px;
+  margin: 0 0 var(--space-36);
 }
 
 .loop-steps {
@@ -1441,20 +1504,21 @@ a.short-card:hover {
 .loop-step-index {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 22px;
+  font-size: var(--fs-index);
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: var(--space-10);
 }
 
 .loop-step-text h3 {
-  font-size: 16px;
+  /* Was 16px — unified with the other in-card h3's (--fs-heading-sm). */
+  font-size: var(--fs-heading-sm);
   font-weight: 600;
-  margin: 0 0 10px;
+  margin: 0 0 var(--space-10);
   font-family: var(--font-display);
 }
 
 .loop-step-text p {
-  font-size: 13.5px;
+  font-size: var(--fs-sm);
   line-height: 1.75;
   margin: 0;
   color: var(--ink-soft);
@@ -1468,11 +1532,11 @@ a.short-card:hover {
 }
 
 .case-research-label {
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
 }
 
 .case-research-intro {
-  font-size: 14.5px;
+  font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
   /* Unlike other section intros, this one sits directly above the
@@ -1480,7 +1544,7 @@ a.short-card:hover {
      wrap onto extra lines it didn't need. Let it use the full section
      width instead. */
   max-width: none;
-  margin: 0 0 32px;
+  margin: 0 0 var(--space-32);
 }
 
 .age-cards {
@@ -1503,21 +1567,21 @@ a.short-card:hover {
 .age-card-index {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 22px;
+  font-size: var(--fs-index);
   color: var(--accent);
 }
 
 .age-card-group {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   letter-spacing: 0.02em;
 }
 
 .age-card-tagline {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   color: var(--ink-soft);
-  margin-top: 2px;
+  margin-top: var(--space-2);
 }
 
 .age-card-body {
@@ -1557,15 +1621,15 @@ a.short-card:hover {
 
 .age-card-field-label {
   display: block;
-  font-size: 12px;
+  font-size: var(--fs-caption);
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--accent-spatial);
-  margin-bottom: 6px;
+  margin-bottom: var(--space-6);
 }
 
 .age-card-field p {
-  font-size: 12.5px;
+  font-size: var(--fs-sm);
   line-height: 1.65;
   margin: 0;
   color: var(--ink-soft);
@@ -1577,7 +1641,7 @@ a.short-card:hover {
 }
 
 .case-principle-label {
-  margin-bottom: 20px;
+  margin-bottom: var(--space-20);
 }
 
 .case-principle-card {
@@ -1587,7 +1651,10 @@ a.short-card:hover {
 }
 
 .case-principle-body {
-  font-size: 16.5px;
+  /* Was 16.5px — the one deliberately-emphasized paragraph on the site
+     (a pull-quote-style principle statement), so it keeps its own step
+     above --fs-lg rather than folding into the regular body tier. */
+  font-size: var(--fs-emphasis);
   line-height: 1.9;
   color: var(--ink);
   margin: 0;
@@ -1595,13 +1662,13 @@ a.short-card:hover {
 }
 
 .case-principle-intro {
-  font-size: 14.5px;
+  font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
   /* Same width-mismatch fix as .case-research-intro / .case-loop-intro —
      this sits right above the full-width principle-qa-grid. */
   max-width: none;
-  margin: 0 0 28px;
+  margin: 0 0 var(--space-28);
 }
 
 .principle-qa-grid {
@@ -1618,47 +1685,49 @@ a.short-card:hover {
 .qa-role {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.04em;
   color: var(--accent);
-  margin-bottom: 14px;
+  margin-bottom: var(--space-14);
 }
 
 .qa-question {
-  font-size: 14px;
+  /* Was 14px — bumped a step above --fs-sm so it still reads clearly
+     larger than .qa-answer beneath it. */
+  font-size: var(--fs-base);
   font-style: italic;
   color: var(--ink);
-  margin: 0 0 10px;
+  margin: 0 0 var(--space-10);
   line-height: 1.6;
 }
 
 .qa-answer {
-  font-size: 12.5px;
+  font-size: var(--fs-sm);
   line-height: 1.65;
   color: var(--ink-soft);
   margin: 0;
 }
 
 .case-principle-closing {
-  font-size: 14.5px;
+  font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
   /* Same fix — sits right below the full-width principle-qa-grid. */
   max-width: none;
-  margin: 28px 0 0;
+  margin: var(--space-28) 0 0;
 }
 
 .case-roles-label {
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
 }
 
 .case-roles-intro {
-  font-size: 14.5px;
+  font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
   /* Same fix — sits right above the full-width role-cards column. */
   max-width: none;
-  margin: 0 0 32px;
+  margin: 0 0 var(--space-32);
 }
 
 .role-cards {
@@ -1695,34 +1764,34 @@ a.short-card:hover {
   display: flex;
   align-items: baseline;
   gap: 16px;
-  margin-bottom: 14px;
+  margin-bottom: var(--space-14);
 }
 
 .role-card-index {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 22px;
+  font-size: var(--fs-index);
   color: var(--accent);
 }
 
 .role-card-role {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   letter-spacing: 0.02em;
 }
 
 .role-card-focus {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   color: var(--ink-soft);
-  margin-top: 2px;
+  margin-top: var(--space-2);
 }
 
 .role-card-desc {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   line-height: 1.7;
   color: var(--ink-soft);
-  margin: 0 0 20px;
+  margin: 0 0 var(--space-20);
 }
 
 .role-card-priority {
@@ -1733,24 +1802,24 @@ a.short-card:hover {
 }
 
 .role-card-priority-label {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--accent);
 }
 
 .case-findings-label {
-  /* Matches .case-process-label / .case-solution-label (32px) — this was
-     12px, the odd one out among the label-directly-above-a-grid
+  /* Matches .case-process-label / .case-solution-label (--space-32) —
+     this was 12px, the odd one out among the label-directly-above-a-grid
      sections, so the gap under "FROM USER TESTING" read noticeably
      tighter than the same gap under "THE SOLUTION" / "PROCESS" right
      above it on the same page. */
-  margin-bottom: 32px;
+  margin-bottom: var(--space-32);
 }
 
 .case-findings-intro {
-  font-size: 14.5px;
-  margin: 0 0 24px;
+  font-size: var(--fs-base);
+  margin: 0 0 var(--space-24);
   color: var(--ink-soft);
 }
 
@@ -1795,27 +1864,27 @@ a.short-card:hover {
 .finding-index {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 22px;
+  font-size: var(--fs-index);
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: var(--space-10);
 }
 
 .finding-card h3 {
-  font-size: 14.5px;
+  font-size: var(--fs-heading-sm);
   font-weight: 600;
-  margin: 0 0 12px;
+  margin: 0 0 var(--space-12);
   font-family: var(--font-display);
 }
 
 .finding-issue {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   line-height: 1.7;
-  margin: 0 0 10px;
+  margin: 0 0 var(--space-10);
   color: var(--ink-soft);
 }
 
 .finding-fix {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   line-height: 1.7;
   margin: 0;
   color: var(--accent-spatial);
@@ -1823,7 +1892,7 @@ a.short-card:hover {
 }
 
 .findings-grid--featured {
-  margin-bottom: 18px;
+  margin-bottom: var(--space-18);
 }
 
 .finding-card--featured .finding-card-body {
@@ -1833,14 +1902,20 @@ a.short-card:hover {
   height: 300px;
 }
 .finding-card--featured .finding-index {
+  /* Kept as its own literal step above --fs-index (22px): this is the
+     one place on the site that deliberately emphasizes a finding above
+     the standard index-badge size. */
   font-size: 26px;
 }
 .finding-card--featured h3 {
-  font-size: 16px;
+  /* One literal step above --fs-heading-sm (18px), so "featured" still
+     reads larger than the base finding-card h3 right below it in the
+     grid, instead of the two collapsing to the same size. */
+  font-size: 20px;
 }
 .finding-card--featured .finding-issue,
 .finding-card--featured .finding-fix {
-  font-size: 13.5px;
+  font-size: var(--fs-base);
 }
 
 .finding-card--compact .finding-card-body {
@@ -1851,16 +1926,18 @@ a.short-card:hover {
   padding: 16px;
 }
 .finding-card--compact .finding-index {
+  /* Deliberately smaller than --fs-index (22px) for the compact tier —
+     still comfortably above the 14px floor. */
   font-size: 16px;
-  margin-bottom: 6px;
+  margin-bottom: var(--space-6);
 }
 .finding-card--compact h3 {
-  font-size: 12.5px;
-  margin-bottom: 8px;
+  font-size: var(--fs-caption);
+  margin-bottom: var(--space-8);
 }
 .finding-card--compact .finding-issue,
 .finding-card--compact .finding-fix {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   line-height: 1.55;
 }
 
@@ -1909,7 +1986,7 @@ a.short-card:hover {
 .about-strengths-label,
 .about-exp-label,
 .about-activities-label {
-  margin-bottom: 20px;
+  margin-bottom: var(--space-20);
 }
 
 /* Vertical line-and-dot timeline: one shared grid per list so a single
@@ -1944,7 +2021,7 @@ a.short-card:hover {
 .exp-timeline-date {
   grid-column: 1;
   text-align: right;
-  font-size: 12px;
+  font-size: var(--fs-caption);
   letter-spacing: 0.04em;
   color: var(--ink-soft);
   padding-top: 3px;
@@ -1957,7 +2034,7 @@ a.short-card:hover {
   align-self: start;
   width: 9px;
   height: 9px;
-  margin-top: 4px;
+  margin-top: var(--space-4);
   border-radius: 50%;
   background: var(--accent);
   border: 2px solid var(--glass-strong);
@@ -1970,18 +2047,18 @@ a.short-card:hover {
 .exp-role {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 15px;
+  font-size: var(--fs-sm);
   letter-spacing: 0.02em;
 }
 
 .exp-org {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   color: var(--ink-soft);
-  margin-top: 2px;
+  margin-top: var(--space-2);
 }
 
 .exp-bullets {
-  margin: 10px 0 0;
+  margin: var(--space-10) 0 0;
   padding-left: 18px;
   display: flex;
   flex-direction: column;
@@ -1989,7 +2066,7 @@ a.short-card:hover {
 }
 
 .exp-bullets li {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   line-height: 1.7;
   color: var(--ink-soft);
 }
@@ -2007,7 +2084,7 @@ a.short-card:hover {
 }
 
 .activity-group-label {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--accent-spatial);
@@ -2025,20 +2102,22 @@ a.short-card:hover {
 .activity-org {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 13.5px;
+  /* Was 13.5px — unified with the other small bold "name" labels
+     (age-card-group, role-card-role, exp-role) at --fs-sm. */
+  font-size: var(--fs-sm);
 }
 
 .activity-role {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   color: var(--ink-soft);
-  margin-top: 2px;
+  margin-top: var(--space-2);
 }
 
 .activity-note {
-  font-size: 12px;
+  font-size: var(--fs-caption);
   color: var(--accent);
   font-weight: 500;
-  margin-top: 6px;
+  margin-top: var(--space-6);
 }
 
 .case-footer-nav {
@@ -2142,7 +2221,7 @@ a.short-card:hover {
     left: 94px;
   }
   .exp-timeline-date {
-    font-size: 12px;
+    font-size: var(--fs-caption);
     white-space: normal;
   }
 }
@@ -2173,7 +2252,7 @@ a.short-card:hover {
     display: flex;
   }
   .nav-links .lang-toggle {
-    margin-top: 4px;
+    margin-top: var(--space-4);
   }
   .nav-toggle-btn {
     display: flex;
