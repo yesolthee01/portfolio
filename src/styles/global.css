@@ -1052,7 +1052,12 @@ a.short-card:hover {
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 0 24px;
-  max-width: 860px;
+  /* No max-width cap: the old 860px cap was narrower than the page's own
+     1080px container, so a mid-length title (e.g. "Designing Empathy
+     Through Space") wrapped even though the row had plenty of room left,
+     orphaning a short last word onto its own line. Letting it use the
+     full container means it only wraps when a title is actually too
+     long for the available width — never “insurance” wraps. */
 }
 
 .case-subtitle {
