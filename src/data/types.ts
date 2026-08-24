@@ -54,6 +54,11 @@ export interface AgeCard {
   insight: string;
   translation: string;
   interaction: string;
+  /** Small supporting image shown under the index/group/tagline header.
+   * Optional — renders a soft placeholder (labeled with imageLabel, or
+   * ageGroup if that's not set) until a real file is added. */
+  image?: string;
+  imageLabel?: string;
 }
 
 /** One role's focused view within a role-based redesign (e.g. Teacher,

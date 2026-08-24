@@ -1491,7 +1491,6 @@ a.short-card:hover {
   display: flex;
   align-items: baseline;
   gap: 16px;
-  margin-bottom: 18px;
 }
 
 .age-card-index {
@@ -1516,7 +1515,10 @@ a.short-card:hover {
 
 .age-card-body {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* Head column (index/group/tagline + small image) reads as a fourth
+     item alongside Research Insight / Design Translation / →
+     interaction, so the card looks like a 4-up row. */
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .age-card-field {
@@ -1531,6 +1533,19 @@ a.short-card:hover {
 
 .age-card-field:last-child {
   padding-right: 0;
+}
+
+.age-card-field--head {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.age-card-image {
+  border-radius: 12px;
+  height: 84px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .age-card-field-label {

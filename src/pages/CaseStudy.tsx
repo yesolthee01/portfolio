@@ -118,14 +118,28 @@ function FindingCard({
 function AgeCardRow({ card, index }: { card: AgeCard; index: number }) {
   return (
     <div className="age-card glass">
-      <div className="age-card-head">
-        <div className="age-card-index">{String(index + 1).padStart(2, '0')}</div>
-        <div>
-          <div className="age-card-group">{card.ageGroup}</div>
-          <div className="age-card-tagline">{card.tagline}</div>
-        </div>
-      </div>
       <div className="age-card-body">
+        <div className="age-card-field age-card-field--head">
+          <div className="age-card-head">
+            <div className="age-card-index">{String(index + 1).padStart(2, '0')}</div>
+            <div>
+              <div className="age-card-group">{card.ageGroup}</div>
+              <div className="age-card-tagline">{card.tagline}</div>
+            </div>
+          </div>
+          {card.image ? (
+            <ProjectImage
+              src={card.image}
+              alt={`${card.ageGroup} — ${card.tagline}`}
+              label={card.imageLabel ?? card.ageGroup}
+              className="age-card-image"
+            />
+          ) : (
+            <div className="img-placeholder age-card-image">
+              <span>{card.imageLabel ?? card.ageGroup}</span>
+            </div>
+          )}
+        </div>
         <div className="age-card-field">
           <span className="age-card-field-label">Research Insight</span>
           <p>{card.insight}</p>

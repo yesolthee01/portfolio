@@ -728,6 +728,8 @@ export const projects: Project[] = [
             insight: '감각·운동 경험과 대근육 움직임을 통한 신체 조절 능력이 발달하는 시기.',
             translation: '복잡한 규칙보다 몸을 직접 움직이고 즉각적인 결과를 경험하는 활동에 집중했다.',
             interaction: '→ 바닥의 물고기를 밟으며 수집하기',
+            image: '/images/work/seoul-xr-research/age-card-1.jpg',
+            imageLabel: '수족관 물고기 잡기 — SEOUL XR RESEARCH',
           },
           {
             ageGroup: 'SCHOOL AGE',
@@ -735,6 +737,8 @@ export const projects: Project[] = [
             insight: '순발력과 판단력, 공간 인지가 발달하며 과제를 해결하는 과정에서 성취감을 경험하는 시기.',
             translation: '공간을 직접 탐색하고 빠르게 목표를 발견해 해결하는 경험으로 연결했다.',
             interaction: '→ 공간 속 목표물을 찾기',
+            image: '/images/work/seoul-xr-research/age-card-2.jpg',
+            imageLabel: '벽면 쥐 잡기 — SEOUL XR RESEARCH',
           },
           {
             ageGroup: 'TEEN',
@@ -742,6 +746,8 @@ export const projects: Project[] = [
             insight: '정확성·전략성·민첩성과 함께 자기조절 및 전략적 판단 능력이 발달하는 시기.',
             translation: '단순한 반응보다 목표를 판단하고 타이밍을 결정해야 하는 경쟁적 플레이로 구성했다.',
             interaction: '→ 정확한 지점과 타이밍에 피구공을 던지기',
+            image: '/images/work/seoul-xr-research/age-card-3.jpg',
+            imageLabel: '피구 게임 — SEOUL XR RESEARCH',
           },
           {
             ageGroup: 'ADULT',
@@ -749,6 +755,8 @@ export const projects: Project[] = [
             insight: '신체활동을 통한 스트레스 해소와 몰입 경험에 주목했다.',
             translation: '설명이나 복잡한 과제보다 온몸을 빠르게 움직이며 즉각적으로 몰입할 수 있는 경험을 설계했다.',
             interaction: '→ 날아오는 화살을 온몸으로 회피하기',
+            image: '/images/work/seoul-xr-research/age-card-4.jpg',
+            imageLabel: '화살 피하기 — SEOUL XR RESEARCH',
           },
           {
             ageGroup: 'OLDER ADULT',
@@ -757,6 +765,8 @@ export const projects: Project[] = [
               '인지 자극과 신체활동을 함께 수행하고, 반복적인 자극을 통해 기억과 인지 기능을 유지하는 경험에 주목했다.',
             translation: '빠른 반응을 요구하기보다 걷기와 기억, 간단한 인지 과제를 결합한 경험으로 구성했다.',
             interaction: '→ 공간을 걷고, 기억하고, 농작물을 수확하기',
+            image: '/images/work/seoul-xr-research/age-card-5.jpg',
+            imageLabel: '농장 걷기와 수확 — SEOUL XR RESEARCH',
           },
         ],
         principleLabel: 'DESIGN PRINCIPLE',
@@ -795,6 +805,8 @@ export const projects: Project[] = [
             insight: 'A stage where sensory-motor experience and gross motor movement develop the ability to control the body.',
             translation: 'Focused on activities built around moving the body directly and experiencing immediate results, rather than complex rules.',
             interaction: '→ Step on and collect the fish on the floor',
+            image: '/images/work/seoul-xr-research/age-card-1.jpg',
+            imageLabel: 'CATCH THE FISH — SEOUL XR RESEARCH',
           },
           {
             ageGroup: 'SCHOOL AGE',
@@ -802,6 +814,8 @@ export const projects: Project[] = [
             insight: 'A stage where quickness, judgment, and spatial awareness develop, and a sense of achievement comes from solving tasks.',
             translation: 'Connected this to an experience of directly exploring the space and quickly finding and solving a goal.',
             interaction: '→ Find the target in the space',
+            image: '/images/work/seoul-xr-research/age-card-2.jpg',
+            imageLabel: 'CATCH THE MOUSE — SEOUL XR RESEARCH',
           },
           {
             ageGroup: 'TEEN',
@@ -809,6 +823,8 @@ export const projects: Project[] = [
             insight: 'A stage where accuracy, strategy, and agility develop alongside self-regulation and strategic judgment.',
             translation: 'Built as competitive play that requires judging a target and deciding timing, rather than simple reaction.',
             interaction: '→ Throw the dodgeball at a precise point and timing',
+            image: '/images/work/seoul-xr-research/age-card-3.jpg',
+            imageLabel: 'DODGEBALL — SEOUL XR RESEARCH',
           },
           {
             ageGroup: 'ADULT',
@@ -816,6 +832,8 @@ export const projects: Project[] = [
             insight: 'Focused on stress relief and immersive experience through physical activity.',
             translation: 'Designed an experience that lets the whole body move quickly for immediate immersion, rather than instructions or complex tasks.',
             interaction: '→ Dodge incoming arrows with the whole body',
+            image: '/images/work/seoul-xr-research/age-card-4.jpg',
+            imageLabel: 'DODGE THE ARROWS — SEOUL XR RESEARCH',
           },
           {
             ageGroup: 'OLDER ADULT',
@@ -824,6 +842,8 @@ export const projects: Project[] = [
               'Focused on combining cognitive stimulation with physical activity, maintaining memory and cognitive function through repeated stimulation.',
             translation: 'Built around walking, memory, and simple cognitive tasks, rather than demanding fast reactions.',
             interaction: '→ Walk the space, remember, and harvest the crops',
+            image: '/images/work/seoul-xr-research/age-card-5.jpg',
+            imageLabel: 'WALK & HARVEST — SEOUL XR RESEARCH',
           },
         ],
         principleLabel: 'DESIGN PRINCIPLE',
