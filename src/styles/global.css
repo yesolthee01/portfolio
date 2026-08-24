@@ -5,10 +5,13 @@
    - Warm pastel palette (coral / mint / gold / rose), not the typical
      blue-purple "AI tool" gradient
    - Glass panels (backdrop-filter) for nav / chips / buttons / cards
-   - Interaction language: press-bounce on click, scroll-triggered wave
-     dividers between sections. NOTE: an earlier canvas-based "pressable
-     cushion" background was tried and deliberately dropped — don't
-     reintroduce it, see project notes.
+   - Interaction language: press-bounce on click + a slight grow on hover
+     (see --hover-scale / .press-bounce), scroll-triggered wave dividers
+     between sections, and a slow/eased scroll-reveal (see the SCROLL
+     REVEAL SYSTEM tokens) for sections, case-study blocks, and cards.
+     NOTE: an earlier canvas-based "pressable cushion" background was
+     tried and deliberately dropped — don't reintroduce it, see project
+     notes.
    - Type scale floor: 14px is the smallest font-size anywhere on the
      site, including meta labels, timeline dates, and card eyebrows —
      never introduce a sub-14px value. (Raised site-wide from a previous
@@ -65,6 +68,25 @@
   /* the shared "press then spring back" curve used everywhere something
      is clickable — squish fast on the way down, overshoot on the way up */
   --bounce-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---------- SCROLL REVEAL SYSTEM ----------
+     Shared timing for every scroll-triggered reveal (.section,
+     .case-section, .loop-step, and the per-item cards/points/buttons) —
+     one duration+ease pair per tier so "how a thing arrives on scroll"
+     reads as one consistent feel site-wide instead of drifting per
+     component. Slowed down and eased into a long, gentle deceleration
+     with no snap (closer to Framer-style portfolio scroll reveals) after
+     feedback that the previous 0.6–0.7s reveal felt too fast/abrupt. */
+  --reveal-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --reveal-duration-section: 1.3s; /* whole top-level sections (.section, .case-section) */
+  --reveal-duration-item: 1s; /* repeated per-item reveals (cards, loop steps) */
+  --reveal-distance-section: 40px;
+  --reveal-distance-item: 30px;
+
+  /* the shared "grow slightly on hover" affordance for clickable
+     surfaces — see .press-bounce below, which already carries every
+     clickable card/button and now handles hover as well as press. */
+  --hover-scale: 1.03;
 
   /* ---------- LAYOUT SYSTEM ----------
      Shared sizing tokens for page structure (container width, grid gaps,
@@ -185,15 +207,23 @@ button {
 
 /* ---------- PRESS-BOUNCE (shared interaction language) ----------
    fast transition on :active (press down), slower overshoot transition
-   on the base class (release) — letting go springs past 1 and settles.
-   Applied to every clickable surface: buttons, cards, nav links. */
+   on the base class (release/hover) — letting go (or hovering in) springs
+   past 1 and settles. Applied to every clickable surface: buttons, cards,
+   nav links. The actual `:hover`/`:active` rules live further down (right
+   after the per-item SCROLL REVEAL block) rather than here — several
+   press-bounce elements (.card, .short-card, .contact-cta > .btn) are
+   ALSO targeted by that reveal system's `transition:` (opacity/transform,
+   1s reveal-ease) and `.in-view { transform: translateY(0) }` — the
+   highest-specificity `transition` declaration governs how EVERY change
+   to that property animates, not just the rule that happens to set the
+   new value. `.contact-cta > .btn` alone is 2 classes, and with
+   `.in-view` added, 3 — both at or above plain `.press-bounce`'s 1 or
+   `.press-bounce:hover`/`:active`'s 2, so without help the reveal
+   system's slow 1s transition silently governs hover/press too. See the
+   note further down for how that's fixed. */
 
 .press-bounce {
   transition: transform 0.5s var(--bounce-ease), box-shadow 0.3s ease;
-}
-.press-bounce:active {
-  transform: scale(0.96);
-  transition: transform 0.08s ease;
 }
 
 /* ---------- NAV ---------- */
@@ -639,8 +669,9 @@ button {
 .section {
   padding: 16px 0 84px;
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(var(--reveal-distance-section));
+  transition: opacity var(--reveal-duration-section) var(--reveal-ease),
+    transform var(--reveal-duration-section) var(--reveal-ease);
 }
 .section.in-view {
   opacity: 1;
@@ -663,8 +694,9 @@ button {
 .contact-cta > .btn,
 .more-work-card {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(var(--reveal-distance-item));
+  transition: opacity var(--reveal-duration-item) var(--reveal-ease),
+    transform var(--reveal-duration-item) var(--reveal-ease);
 }
 .card.in-view,
 .short-card.in-view,
@@ -674,6 +706,35 @@ button {
 .more-work-card.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Press-bounce's :hover (grow) and :active (squish) live here — after
+   the per-item reveal's `.in-view` rule above — rather than up next to
+   `.press-bounce` itself (see the PRESS-BOUNCE comment for why). Both
+   selectors repeat `.press-bounce` to reach 3-class specificity, matching
+   `.contact-cta > .btn.in-view` (2 classes + `.in-view` = 3; the `>`
+   combinator itself adds none) — otherwise that rule's own `transition`
+   (1s, reveal-ease) would keep governing hover/press on the contact CTA
+   buttons instead of press-bounce's fast bounce/squish timing, regardless
+   of source order. `:hover` is gated to real hover-capable pointers so it
+   never gets "stuck" scaled-up after a tap on touch devices; `:active`
+   isn't, so the press-squish still works there. */
+@media (hover: hover) and (pointer: fine) {
+  .press-bounce.press-bounce:hover {
+    transform: scale(var(--hover-scale));
+    /* Redeclared here, not just inherited from `.press-bounce` above —
+       `transition` is a single cascaded property, and without this the
+       reveal system's own `transition: transform 1s var(--reveal-ease)`
+       (equal 3-class specificity, declared earlier) would still end up
+       governing this scale change instead of the fast press-bounce
+       timing, purely because THIS rule only listed `transform`'s target
+       value, not its timing. */
+    transition: transform 0.5s var(--bounce-ease);
+  }
+}
+.press-bounce.press-bounce:active {
+  transform: scale(0.96);
+  transition: transform 0.08s ease;
 }
 
 .section-head {
@@ -1304,13 +1365,15 @@ a.short-card:hover {
 .case-section {
   padding: var(--section-spacing) 0;
   border-top: 1px solid var(--glass-border);
-  /* Same reveal-on-scroll treatment as the homepage `.section` blocks —
-     see SECTION_REVEAL_ROOT_MARGIN in useInView.ts for why the trigger
-     point is pulled up instead of firing the instant the section pokes
-     into view. */
+  /* Same reveal-on-scroll treatment as the homepage `.section` blocks,
+     using the shared SCROLL REVEAL SYSTEM tokens (:root) — see
+     SECTION_REVEAL_ROOT_MARGIN in useInView.ts for why the trigger point
+     is pulled up instead of firing the instant the section pokes into
+     view. */
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(var(--reveal-distance-section));
+  transition: opacity var(--reveal-duration-section) var(--reveal-ease),
+    transform var(--reveal-duration-section) var(--reveal-ease);
 }
 
 .case-section.in-view {
@@ -1512,12 +1575,29 @@ a.short-card:hover {
   border: 1px solid var(--glass-border);
   padding: 30px;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(var(--reveal-distance-item));
+  transition: opacity var(--reveal-duration-item) var(--reveal-ease),
+    transform var(--reveal-duration-item) var(--reveal-ease);
 }
 .loop-step.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section,
+  .case-section,
+  .loop-step,
+  .card,
+  .short-card,
+  .ai-card,
+  .about-point,
+  .contact-cta > .btn,
+  .more-work-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .loop-step-index {
