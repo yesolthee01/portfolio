@@ -69,12 +69,12 @@ export const projects: Project[] = [
     },
     card: {
       kr: {
-        imgLabel: 'MIDNIGHT CARNIVAL — SIGGRAPH ASIA 2024',
+        imgLabel: 'HMD 착용 없이 즐기는 XR 게임',
         title: 'Midnight Carnival — 헤드셋 없는 XR e스포츠',
         desc: 'SIGGRAPH Asia 2024(도쿄) 선정 전시. 헤드셋 없이 물리적 공간을 인터랙티브 놀이터로 바꾸는 공간 기반 XR 경험.',
       },
       en: {
-        imgLabel: 'MIDNIGHT CARNIVAL — SIGGRAPH ASIA 2024',
+        imgLabel: 'XR Gaming Without a Headset',
         title: 'Midnight Carnival — Headset-Free Spatial XR E-sport',
         desc: 'Selected for SIGGRAPH Asia 2024 (Tokyo). A spatial XR experience that turns physical space into an interactive playground — no headset required.',
       },
@@ -271,12 +271,12 @@ export const projects: Project[] = [
     },
     card: {
       kr: {
-        imgLabel: 'DESIGNING EMPATHY THROUGH SPACE — OUTDOOR DOME, DENMARK',
+        imgLabel: '야외 돔 전시',
         title: 'Designing Empathy Through Space — 야외 돔 몰입 전시',
         desc: '덴마크에서 진행한 야외 돔 몰입 전시. 공간 연출만으로 낯선 이야기에 정서적으로 몰입하게 만드는 경험을 디렉팅했습니다.',
       },
       en: {
-        imgLabel: 'DESIGNING EMPATHY THROUGH SPACE — OUTDOOR DOME, DENMARK',
+        imgLabel: 'Outdoor Dome Exhibition',
         title: 'Designing Empathy Through Space — Outdoor Dome Exhibition',
         desc: 'An outdoor dome exhibition in Denmark. Directed a spatial experience that builds emotional immersion in an unfamiliar story through space alone.',
       },
@@ -411,12 +411,12 @@ export const projects: Project[] = [
     },
     card: {
       kr: {
-        imgLabel: 'TALKABLE APP SCREENS',
+        imgLabel: 'AI 선생님과 함께하는 맞춤형 영어학습 앱',
         title: 'Talkable — AI 영어 학습 앱',
         desc: 'AI 기반 회화 피드백으로 실전 영어를 학습하는 앱의 전반적인 UX 설계.',
       },
       en: {
-        imgLabel: 'TALKABLE APP SCREENS',
+        imgLabel: 'A Personalized English App With an AI Teacher',
         title: 'Talkable — AI English Learning App',
         desc: 'End-to-end UX design for an app teaching practical English through AI-driven speaking feedback.',
       },
@@ -677,13 +677,13 @@ export const projects: Project[] = [
     },
     card: {
       kr: {
-        imgLabel: 'SEOUL CITY-FUNDED XR RESEARCH',
-        title: '서울시 지원 산학 XR 리서치',
+        imgLabel: '서울시 지원 XR 산학협력 프로젝트',
+        title: '연령 맞춤형 XR 콘텐츠',
         desc: '발달심리 연구를 바탕으로 아동부터 고령자까지, 5개 연령대의 신체·인지 특성을 XR 인터랙션으로 설계한 산학협력 프로젝트.',
       },
       en: {
-        imgLabel: 'SEOUL CITY-FUNDED XR RESEARCH',
-        title: 'Seoul City-Funded XR Research',
+        imgLabel: 'Seoul City-Funded XR Industry-Academia Project',
+        title: 'Age-Tailored XR Content',
         desc: 'An industry-academia project translating the physical and cognitive traits of five age groups — from children to older adults — into XR interaction, grounded in developmental psychology research.',
       },
     },
@@ -823,10 +823,6 @@ export const projects: Project[] = [
         backToWorkLabel: '← ALL WORK',
       },
     },
-    resultLine: {
-      kr: 'Research Insight → 연령별 Experience Design → 실제 전시',
-      en: 'Research Insight → Age-Specific Experience Design → Live Exhibition',
-    },
   },
   {
     slug: 'skoleplan',
@@ -871,13 +867,13 @@ export const projects: Project[] = [
     },
     card: {
       kr: {
-        imgLabel: 'SKOLEPLAN APP SCREENS',
-        title: 'SkolePlan — 덴마크 학교 내부 시스템',
+        imgLabel: '덴마크 학교 임직원 어플리케이션 리디자인',
+        title: 'SkolePlan(DK) 리디자인',
         desc: '실제 교직원의 업무를 리서치하고, 역할별 정보 우선순위에 맞게 내부 시스템을 재설계한 UX 프로젝트.',
       },
       en: {
-        imgLabel: 'SKOLEPLAN APP SCREENS',
-        title: 'SkolePlan — Danish School Internal System',
+        imgLabel: 'Danish School Staff Application Redesign',
+        title: 'SkolePlan (DK) Redesign',
         desc: 'A UX project researching real staff workflows and redesigning an internal school system around role-based information priorities.',
       },
     },
@@ -1002,10 +998,6 @@ export const projects: Project[] = [
         nextLabel: 'BACK TO ALL WORK →',
         backToWorkLabel: '← ALL WORK',
       },
-    },
-    resultLine: {
-      kr: '→ Real Workflow → Role-based UX → Clearer Information',
-      en: '→ Real Workflow → Role-based UX → Clearer Information',
     },
   },
 ];

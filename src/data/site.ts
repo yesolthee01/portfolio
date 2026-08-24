@@ -67,7 +67,7 @@ export const siteCopy: Localized<{
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
       headline: '좋은 디자인은\n올바른 **질문**에서 시작됩니다.',
       subLine1: '디지털 제품부터 XR과 공간 경험까지,',
-      subLine2: '사용자의 행동을 관찰하고 더 자연스러운 경험으로 바꾸는 UX Designer입니다.',
+      subLine2: '사용자의 행동을 관찰하여, 최고의 경험을 디자인하는 UX Designer입니다.',
       chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
       ctaWork: 'VIEW SELECTED WORK →',
       ctaAbout: 'ABOUT ME',
@@ -76,7 +76,7 @@ export const siteCopy: Localized<{
     moreWork: {
       title: 'More Work',
       badge: 'SOON',
-      desc: '더 많은 프로젝트를 준비하고 있어요. 조만간 이 자리에 추가됩니다.',
+      desc: '더 많은 프로젝트를 준비하고 있어요.',
     },
     aiToolkit: {
       title: 'Toolkit',
@@ -85,15 +85,15 @@ export const siteCopy: Localized<{
         {
           label: 'GENERATIVE AI',
           items: [
-            { mark: 'Fi', markBg: '#333f43', title: 'Figma AI', desc: '와이어프레임 초안과 배리에이션을 빠르게 생성해 탐색 속도를 높입니다.' },
-            { mark: 'Ai', markBg: '#333f43', title: 'ChatGPT / Claude', desc: '리서치 종합, 인터뷰 스크립트 분석, 카피 초안 작성 등에 다양한 AI 챗봇을 활용합니다.' },
+            { mark: 'Ai', markBg: '#333f43', title: 'ChatGPT / Claude', desc: '리서치 종합, 인터뷰 스크립트 분석, 카피 초안 작성 등 다양한 작업에 생성형 AI를 활용합니다.' },
             { mark: 'Cu', markBg: '#333f43', title: 'Cursor / AI 코딩', desc: '디자인을 직접 동작하는 프로토타입으로 빠르게 구현합니다.' },
           ],
           note: '이 외에도 필요에 따라 새로운 AI 툴을 자유롭게 찾아 활용합니다.',
         },
         {
-          label: 'DESIGN & MOTION',
+          label: 'DESIGN & EDIT',
           items: [
+            { mark: 'Fi', markBg: '#333f43', title: 'Figma', desc: 'UI 디자인과 컴포넌트 시스템 구축에 사용합니다.' },
             { mark: 'Il', markBg: '#333f43', title: 'Illustrator', desc: '벡터 일러스트와 아이콘, 인쇄용 그래픽 작업에 사용합니다.' },
             { mark: 'Ps', markBg: '#333f43', title: 'Photoshop', desc: '이미지 리터칭과 합성, 무드보드 제작에 사용합니다.' },
             { mark: 'Ae', markBg: '#333f43', title: 'After Effects', desc: '인터랙션 모션 목업과 전시 영상 콘텐츠 제작에 사용합니다.' },
@@ -118,7 +118,7 @@ export const siteCopy: Localized<{
       title: 'About',
       body: '**사용자가 무엇을 필요로 하고, 어떤 맥락에서 어려움을 겪는지 이해**하는 것에서 디자인을 시작합니다. 디지털 프로덕트부터 XR과 공간 경험까지 다양한 매체를 다루며, 사람의 행동을 중심으로 경험을 설계합니다.\n리서치와 기획을 통해 문제를 정의하고, 복잡한 정보와 요구를 명확한 사용자 흐름과 인터랙션으로 구조화하는 데 강점이 있습니다. 아이디어가 실제로 작동하는 형태가 될 때까지 다양한 역할의 팀원들과 함께 구체화해 나가는 과정을 좋아합니다.',
       kw1: '문제의 핵심을 찾습니다',
-      kw2: '다양한 역할과 함께 만듭니다',
+      kw2: '다양한 직무와 협업합니다',
       kw3: '복잡한 정보를 구조화합니다',
       kw4: '빠르게 배우고 시도합니다',
       moreAboutLabel: 'More about me →',
@@ -247,7 +247,7 @@ export const siteCopy: Localized<{
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
       headline: 'Good Design Starts\nwith the **Right Questions**.',
       subLine1: 'From digital products to XR and spatial experiences,',
-      subLine2: 'I observe user behavior and design more natural experiences.',
+      subLine2: 'I observe user behavior to design the best possible experience.',
       chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
       ctaWork: 'VIEW SELECTED WORK →',
       ctaAbout: 'ABOUT ME',
@@ -256,7 +256,7 @@ export const siteCopy: Localized<{
     moreWork: {
       title: 'More Work',
       badge: 'SOON',
-      desc: 'More projects are on the way — this spot will fill in soon.',
+      desc: 'More projects are on the way.',
     },
     aiToolkit: {
       title: 'Toolkit',
@@ -265,15 +265,15 @@ export const siteCopy: Localized<{
         {
           label: 'GENERATIVE AI',
           items: [
-            { mark: 'Fi', markBg: '#333f43', title: 'Figma AI', desc: 'Speeds up exploration by rapidly generating wireframe drafts and variations.' },
-            { mark: 'Ai', markBg: '#333f43', title: 'ChatGPT / Claude', desc: 'Used across various AI chat tools for research synthesis, interview transcript analysis, and copy drafting.' },
+            { mark: 'Ai', markBg: '#333f43', title: 'ChatGPT / Claude', desc: 'Applies generative AI across research synthesis, interview transcript analysis, and copy drafting.' },
             { mark: 'Cu', markBg: '#333f43', title: 'Cursor / AI Coding', desc: 'Turns designs into working prototypes quickly.' },
           ],
           note: "I also freely explore and pick up new AI tools whenever a project calls for them.",
         },
         {
-          label: 'DESIGN & MOTION',
+          label: 'DESIGN & EDIT',
           items: [
+            { mark: 'Fi', markBg: '#333f43', title: 'Figma', desc: 'Used for UI design and building component systems.' },
             { mark: 'Il', markBg: '#333f43', title: 'Illustrator', desc: 'Used for vector illustration, iconography, and print-ready graphics.' },
             { mark: 'Ps', markBg: '#333f43', title: 'Photoshop', desc: 'Used for image retouching, compositing, and mood board production.' },
             { mark: 'Ae', markBg: '#333f43', title: 'After Effects', desc: 'Used for interaction motion mockups and exhibition video content.' },
@@ -298,7 +298,7 @@ export const siteCopy: Localized<{
       title: 'About',
       body: "I start designing from **understanding what users need, and in what context they struggle**. Across digital products, XR, and spatial experiences, I design experiences centered on human behavior.\nI define problems through research and planning, and I'm strongest at structuring complex information and requirements into clear user flows and interactions. I enjoy the process of building ideas into working form together with teammates across different roles.",
       kw1: 'I find the core of the problem',
-      kw2: 'I build together with diverse roles',
+      kw2: 'I collaborate across disciplines',
       kw3: 'I structure complex information',
       kw4: 'I learn and try quickly',
       moreAboutLabel: 'More about me →',

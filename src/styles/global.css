@@ -865,45 +865,48 @@ a.short-card:hover {
 .ai-grid {
   display: grid;
   /* auto-fit + minmax instead of a fixed repeat(4, 1fr): with fewer than
-     4 items (e.g. a 3-item toolkit category), the row still fills the
-     full container width instead of leaving an empty trailing column. */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+     4 items (e.g. a 2-item toolkit category), the row still fills the
+     full container width instead of leaving an empty trailing column.
+     Kept narrow enough (190px) that the largest category (4 items, in
+     Design & Edit) still lands in a single row instead of wrapping to a
+     second one. */
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
 }
 
 .ai-card {
-  border-radius: 20px;
+  border-radius: 18px;
   background: var(--glass);
   backdrop-filter: blur(16px) saturate(150%);
   -webkit-backdrop-filter: blur(16px) saturate(150%);
   border: 1px solid var(--glass-border);
-  padding: 22px;
+  padding: 18px;
 }
 
 .ai-mark {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   color: var(--ink-on-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 14px;
-  border-radius: 12px;
-  margin-bottom: 16px;
+  font-size: 13px;
+  border-radius: 10px;
+  margin-bottom: 14px;
 }
 
 .ai-card h3 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  margin: 0 0 8px;
+  margin: 0 0 7px;
   font-family: var(--font-display);
 }
 
 .ai-card p {
-  font-size: 13.5px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.55;
   margin: 0;
   color: var(--ink-soft);
 }
