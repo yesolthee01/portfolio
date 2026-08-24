@@ -31,17 +31,17 @@ export function Hero() {
           <b>{hero.eyebrow}</b>
         </div>
 
-        <h1 className="hero-title hero-reveal" style={{ animationDelay: '0.12s' }}>
+        <h1 className="hero-title hero-reveal" style={{ animationDelay: '0.16s' }}>
           {renderHeadline(hero.headline)}
         </h1>
 
-        <p className="hero-sub hero-reveal" style={{ animationDelay: '0.24s' }}>
+        <p className="hero-sub hero-reveal" style={{ animationDelay: '0.32s' }}>
           {hero.subLine1}
           <br />
           {hero.subLine2}
         </p>
 
-        <div className="chip-row hero-reveal" style={{ animationDelay: '0.34s' }}>
+        <div className="chip-row hero-reveal" style={{ animationDelay: '0.46s' }}>
           {hero.chips.map((chip) => (
             <span className="chip glass" key={chip}>
               {chip}
@@ -49,7 +49,7 @@ export function Hero() {
           ))}
         </div>
 
-        <div className="hero-cta hero-reveal" style={{ animationDelay: '0.44s' }}>
+        <div className="hero-cta hero-reveal" style={{ animationDelay: '0.6s' }}>
           <a href="#work" className="btn btn-primary press-bounce">
             {hero.ctaWork}
           </a>

@@ -469,7 +469,10 @@ button {
    play immediately rather than wait for an IntersectionObserver). */
 .hero-reveal {
   opacity: 0;
-  animation: heroReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  /* Was 0.8s — slowed down so the entrance reads as a deliberate, gentle
+     unfold rather than a quick pop; pairs with the wider stagger delays
+     set inline in Hero.tsx. */
+  animation: heroReveal 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes heroReveal {

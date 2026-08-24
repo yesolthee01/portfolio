@@ -10,6 +10,15 @@ import { useEffect, useRef } from 'react';
  * independent idle drift so the backdrop is never fully still even
  * without pointer input.
  *
+ * The pointer is tracked with a proper dt-normalized spring (critically
+ * damped — no bounce/overshoot) rather than a flat per-frame lerp, so the
+ * shapes settle at a consistent, predictable rate regardless of monitor
+ * refresh rate. Both pointer axes drive the tilt/lift math (earlier this
+ * only read the horizontal position, so moving the cursor vertically did
+ * nothing — the beams now react correctly no matter which way the
+ * pointer moves), and the idle drift amplitude is kept well below the
+ * pointer-reactive range so it never masks or fights the direct response.
+ *
  * Driven entirely by a single requestAnimationFrame loop writing directly
  * to each shape's `style.transform` via refs — not React state — so
  * pointer movement never triggers a re-render. Deliberately NOT a CSS
@@ -41,8 +50,19 @@ export function HeroBackdrop() {
     let targetY = 0;
     let smoothX = 0;
     let smoothY = 0;
+    let velX = 0;
+    let velY = 0;
     let raf = 0;
     const start = performance.now();
+    let prev = start;
+
+    // Critically damped spring (mass = 1): snaps to the pointer within a
+    // couple hundred ms with zero overshoot/oscillation, instead of the
+    // old flat 0.06-per-frame lerp (frame-rate dependent, and slow enough
+    // to read as "not quite tracking the cursor"). damping ≈ 2*sqrt(stiffness)
+    // is the critical point; nudged slightly past it so it settles cleanly.
+    const STIFFNESS = 70;
+    const DAMPING = 17;
 
     function onMove(e: MouseEvent) {
       const rect = hitTarget!.getBoundingClientRect();
@@ -56,38 +76,48 @@ export function HeroBackdrop() {
 
     function tick(now: number) {
       const t = (now - start) / 1000;
-      // Ease the raw pointer position toward smoothed values so the
-      // seesaw settles instead of snapping.
-      smoothX += (targetX - smoothX) * 0.06;
-      smoothY += (targetY - smoothY) * 0.06;
+      // Clamp dt so a dropped/backgrounded tab doesn't fling the spring on
+      // return (e.g. after alt-tabbing away for a minute).
+      const dt = Math.min((now - prev) / 1000, 1 / 30);
+      prev = now;
 
-      // Seesaw pair 1 (top-left): line-1 tilts with the pointer's
-      // horizontal position; ring-1 rides the opposite end of the beam.
-      const tilt1 = smoothX * 9;
-      const idleFloat1 = Math.sin(t * 0.12) * 14;
+      const accX = (targetX - smoothX) * STIFFNESS - velX * DAMPING;
+      velX += accX * dt;
+      smoothX += velX * dt;
+
+      const accY = (targetY - smoothY) * STIFFNESS - velY * DAMPING;
+      velY += accY * dt;
+      smoothY += velY * dt;
+
+      // Seesaw pair 1 (top-left): line-1 tilts mainly with the pointer's
+      // horizontal position, with a lighter vertical contribution so
+      // moving the cursor up/down also visibly moves the beam instead of
+      // being ignored; ring-1 rides the opposite end.
+      const tilt1 = smoothX * 9 + smoothY * 4;
+      const idleFloat1 = Math.sin(t * 0.12) * 9;
       if (line1Ref.current) {
-        const driftX = Math.sin(t * 0.08) * 10;
-        const driftY = Math.cos(t * 0.1) * 8;
+        const driftX = Math.sin(t * 0.08) * 6;
+        const driftY = Math.cos(t * 0.1) * 5;
         line1Ref.current.style.transform = `translate(${driftX}px, ${driftY}px) rotate(${tilt1}deg)`;
       }
       if (ring1Ref.current) {
-        const seesawLift = smoothX * -20;
-        const driftX = Math.cos(t * 0.09) * 12;
+        const seesawLift = smoothX * -20 + smoothY * -9;
+        const driftX = Math.cos(t * 0.09) * 7;
         ring1Ref.current.style.transform = `translate(${driftX}px, ${idleFloat1 + seesawLift}px)`;
       }
 
       // Seesaw pair 2 (bottom-right): line-2 tilts the opposite sense;
       // ring-2 rides it.
-      const tilt2 = smoothX * -8;
-      const idleFloat2 = Math.sin(t * 0.1 + 2) * 16;
+      const tilt2 = smoothX * -8 + smoothY * -3;
+      const idleFloat2 = Math.sin(t * 0.1 + 2) * 10;
       if (line2Ref.current) {
-        const driftX = Math.sin(t * 0.07 + 1) * -12;
-        const driftY = Math.cos(t * 0.09) * 10;
+        const driftX = Math.sin(t * 0.07 + 1) * -7;
+        const driftY = Math.cos(t * 0.09) * 6;
         line2Ref.current.style.transform = `translate(${driftX}px, ${driftY}px) rotate(${tilt2}deg)`;
       }
       if (ring2Ref.current) {
-        const seesawLift = smoothX * 18;
-        const driftX = Math.cos(t * 0.08 + 1) * -14;
+        const seesawLift = smoothX * 18 + smoothY * 8;
+        const driftX = Math.cos(t * 0.08 + 1) * -8;
         ring2Ref.current.style.transform = `translate(${driftX}px, ${idleFloat2 + seesawLift}px)`;
       }
 
