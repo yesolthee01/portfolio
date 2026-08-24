@@ -1140,7 +1140,14 @@ a.short-card:hover {
 }
 
 .case-subtitle {
-  max-width: var(--content-default);
+  /* No max-width cap — same fix as .case-title right above it: this sat
+     capped at 720px while .case-title (no cap) and the full-width hero
+     image right below both use the page's full ~1080px container, so
+     the subtitle wrapped narrower than either neighbor for no reason
+     (e.g. stranding a lone "It" at the end of a line on Midnight
+     Carnival's EN subtitle). Only wraps now when the text is actually
+     too long for the container. */
+  max-width: none;
   font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
