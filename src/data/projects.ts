@@ -33,7 +33,7 @@ export const projects: Project[] = [
       kr: [
         {
           title: 'Ideation',
-          desc: "'밤의 놀이공원(Night Carnival)'을 컨셉으로 리듬·회피·슈팅 등 서로 다른 인터랙션을 가진 5개 맵을 기획했다. 5면 플랫폼의 공간적 특성과 프로젝터 투사 환경, 빛과 어둠의 대비를 함께 고려해 경험의 방향을 설정했다.",
+          desc: "'밤의 놀이공원(Night Carnival)'을 컨셉으로 점프·바닥 밟기·벽면 터치 등 서로 다른 인터랙션을 가진 5개 맵을 기획했다. 5면 플랫폼의 공간적 특성과 프로젝터 투사 환경, 빛과 어둠의 대비를 함께 고려해 경험의 방향을 설정했다.",
         },
         {
           title: 'Prototype',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
       en: [
         {
           title: 'Ideation',
-          desc: "Planned five maps with distinct interactions — rhythm, dodging, shooting — under the 'Night Carnival' concept. Set the direction of the experience by weighing the five-wall platform's spatial characteristics, the projector-based projection environment, and light/dark contrast together.",
+          desc: "Planned five maps with distinct interactions — jumping, floor-stomping, wall-touching — under the 'Night Carnival' concept. Set the direction of the experience by weighing the five-wall platform's spatial characteristics, the projector-based projection environment, and light/dark contrast together.",
         },
         {
           title: 'Prototype',
@@ -95,19 +95,19 @@ export const projects: Project[] = [
         solutionLabel: 'THE SOLUTION',
         solution: [
           {
-            title: 'IMMERSION',
-            subtitle: '공간 전체를 경험의 일부로',
-            desc: '벽과 바닥을 하나의 플레이 공간으로 연결하고, 시각·사운드·신체 움직임이 함께 반응하도록 구성했다. 사용자가 화면을 바라보는 것을 넘어 공간 안에 직접 들어와 있다고 느낄 수 있는 경험을 설계했다.',
+            title: 'FEEDBACK',
+            subtitle: '설명보다 반응으로 이해하는 인터랙션',
+            desc: '별도의 컨트롤러가 없는 환경에서 사용자가 자신의 움직임과 시스템의 반응을 즉시 연결할 수 있도록 시각·사운드 피드백을 설계했다. 사용자 테스트에서 플레이 방향의 변화나 시선 이동이 필요한 순간을 놓치는 문제를 발견했고, 행동을 유도하는 안내 UI와 피드백을 추가해 게임의 흐름을 보다 직관적으로 이해할 수 있도록 개선했다.',
           },
           {
             title: 'FUN',
-            subtitle: '서로 다른 플레이 리듬',
-            desc: '반복적인 경험을 피하기 위해 리듬·회피·슈팅 등 서로 다른 플레이 방식의 5개 맵을 구성했다. 각 맵마다 움직임과 난이도, 피드백의 리듬을 다르게 설계해 짧은 체험 안에서도 다양한 재미를 경험하도록 했다.',
+            subtitle: '설명 없이 몸이 먼저 반응하는 플레이',
+            desc: '점프하기, 바닥 밟기, 벽면 터치하기 등 누구나 이미 알고 있는 몸의 동작으로 플레이를 구성했다. 규칙을 따로 설명하지 않아도 몸이 먼저 반응할 수 있도록 설계해, 다섯 개의 맵마다 다른 동작을 자연스럽게 시도하며 즐길 수 있도록 했다.',
           },
           {
-            title: 'INTUITIVENESS',
-            subtitle: '설명보다 반응으로 이해하는 인터랙션',
-            desc: '별도의 컨트롤러가 없는 환경에서 사용자가 자신의 움직임과 시스템의 반응을 즉시 연결할 수 있도록 시각·사운드 피드백을 설계했다. 사용자 테스트에서 플레이 방향의 변화나 시선 이동이 필요한 순간을 놓치는 문제를 발견했고, 행동을 유도하는 안내 UI와 피드백을 추가해 게임의 흐름을 보다 직관적으로 이해할 수 있도록 개선했다.',
+            title: 'IMMERSION',
+            subtitle: '공간 전체를 경험의 일부로',
+            desc: '벽과 바닥을 하나의 플레이 공간으로 연결하고, 시각·사운드·신체 움직임이 함께 반응하도록 구성했다. 사용자가 화면을 바라보는 것을 넘어 공간 안에 직접 들어와 있다고 느낄 수 있는 경험을 설계했다.',
           },
         ],
         processLabel: 'PROCESS',
@@ -160,19 +160,19 @@ export const projects: Project[] = [
         solutionLabel: 'THE SOLUTION',
         solution: [
           {
-            title: 'IMMERSION',
-            subtitle: 'Making the whole space part of the experience',
-            desc: "Connected the walls and floor into a single play space where visuals, sound, and body movement respond together. Designed the experience so users feel like they've stepped inside the space, not just watching a screen.",
+            title: 'FEEDBACK',
+            subtitle: 'Interaction understood through response, not instruction',
+            desc: "With no controller in hand, designed visual and sound feedback so users could immediately connect their movement to the system's response. User testing surfaced moments where players missed cues to change direction or look elsewhere, so guiding UI and feedback were added to make the game's flow more intuitive.",
           },
           {
             title: 'FUN',
-            subtitle: 'Five different play rhythms',
-            desc: 'To avoid repetition, built five maps with distinct play styles — rhythm, dodging, shooting. Each map varies movement, difficulty, and feedback rhythm, so a short session still delivers a range of fun.',
+            subtitle: 'Play the body already knows',
+            desc: 'Built play around actions everyone already knows — jumping, stomping the floor, touching a wall — so the rules land through the body before any instruction is needed. Each of the five maps calls for a different action, keeping the experience varied without ever feeling repetitive.',
           },
           {
-            title: 'INTUITIVENESS',
-            subtitle: 'Interaction understood through response, not instruction',
-            desc: "With no controller in hand, designed visual and sound feedback so users could immediately connect their movement to the system's response. User testing surfaced moments where players missed cues to change direction or look elsewhere, so guiding UI and feedback were added to make the game's flow more intuitive.",
+            title: 'IMMERSION',
+            subtitle: 'Making the whole space part of the experience',
+            desc: "Connected the walls and floor into a single play space where visuals, sound, and body movement respond together. Designed the experience so users feel like they've stepped inside the space, not just watching a screen.",
           },
         ],
         processLabel: 'PROCESS',
