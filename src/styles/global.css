@@ -2217,3 +2217,82 @@ a.short-card:hover {
     text-align: center;
   }
 }
+
+/* ---------- CURSOR SPOTLIGHT — cards respond to the cursor ---------- */
+/* A soft glow follows the pointer across every card surface, set via
+   --spot-x/--spot-y (percentages) from a single delegated listener in
+   App.tsx (see useCursorSpotlight). Scoped to card-level elements only —
+   tags/chips/nav stay untouched so the effect reads as one restrained,
+   intentional detail rather than a busy system. `position: relative` is
+   only added here for cards that don't already establish one elsewhere.
+   `border-radius: inherit` lets the glow automatically match each card
+   type's own corner radius. `pointer-events: none` keeps clicks/links
+   working through the glow layer. Disabled entirely on touch devices
+   (no hover) and for reduced-motion users. */
+.card,
+.short-card,
+.ai-card,
+.finding-card,
+.age-card,
+.role-card,
+.qa-card,
+.solution-card,
+.process-card,
+.case-principle-card {
+  position: relative;
+}
+
+.card::after,
+.short-card::after,
+.ai-card::after,
+.finding-card::after,
+.age-card::after,
+.role-card::after,
+.qa-card::after,
+.solution-card::after,
+.process-card::after,
+.case-principle-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    280px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    rgba(193, 87, 31, 0.14),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover::after,
+  .short-card:hover::after,
+  .ai-card:hover::after,
+  .finding-card:hover::after,
+  .age-card:hover::after,
+  .role-card:hover::after,
+  .qa-card:hover::after,
+  .solution-card:hover::after,
+  .process-card:hover::after,
+  .case-principle-card:hover::after {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card::after,
+  .short-card::after,
+  .ai-card::after,
+  .finding-card::after,
+  .age-card::after,
+  .role-card::after,
+  .qa-card::after,
+  .solution-card::after,
+  .process-card::after,
+  .case-principle-card::after {
+    display: none;
+  }
+}

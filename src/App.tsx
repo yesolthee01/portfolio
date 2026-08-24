@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { CaseStudy } from './pages/CaseStudy';
 import { About } from './pages/About';
+import { useCursorSpotlight } from './hooks/useCursorSpotlight';
 
 function ScrollManager() {
   const location = useLocation();
@@ -22,6 +23,8 @@ function ScrollManager() {
 }
 
 export function App() {
+  useCursorSpotlight();
+
   return (
     <>
       <ScrollManager />
