@@ -81,7 +81,7 @@ export const projects: Project[] = [
     },
     caseStudy: {
       kr: {
-        eyebrow: 'CASE STUDY 01 — SPATIAL UX / XR',
+        eyebrow: 'PROJECT 01 — SPATIAL UX / XR',
         title: 'Midnight Carnival — 헤드셋 없는 XR e스포츠',
         subtitle:
           "'미드나잇 카니발(Midnight Carnival)'은 5면 공간형 XR 플랫폼을 기반으로 한 체험형 e-sports 콘텐츠다. 신체 움직임과 디지털 인터랙션을 연결해, 여러 사용자가 온몸으로 함께 즐기는 협동형 경험을 제공한다.",
@@ -146,7 +146,7 @@ export const projects: Project[] = [
         backToWorkLabel: '← ALL WORK',
       },
       en: {
-        eyebrow: 'CASE STUDY 01 — SPATIAL UX / XR',
+        eyebrow: 'PROJECT 01 — SPATIAL UX / XR',
         title: 'Midnight Carnival — Headset-Free Spatial XR E-sport',
         subtitle:
           "'Midnight Carnival' is an experiential e-sports piece built on a five-wall spatial XR platform. It connects physical movement with digital interaction, letting multiple users play together with their whole bodies in a cooperative experience.",
@@ -283,7 +283,7 @@ export const projects: Project[] = [
     },
     caseStudy: {
       kr: {
-        eyebrow: 'CASE STUDY 02 — SPATIAL UX / EXHIBITION',
+        eyebrow: 'PROJECT 02 — SPATIAL UX / EXHIBITION',
         title: 'Designing Empathy Through Space — 야외 돔 몰입 전시',
         subtitle:
           "'Everyone Has a Story to Tell — Walking in Others Shoes'는 타인의 삶과 관점을 직접 보고, 듣고, 따라 걸으며 경험하도록 설계한 공간형 스토리텔링 전시다. 학생들이 여행에서 만난 사람들의 사진과 글, 목소리를 하나의 경험으로 연결해, 관람객이 낯선 사람의 이야기를 단순히 감상하는 것을 넘어 그들의 관점에 잠시 머물 수 있도록 공간과 동선을 설계했다.",
@@ -321,7 +321,7 @@ export const projects: Project[] = [
         backToWorkLabel: '← ALL WORK',
       },
       en: {
-        eyebrow: 'CASE STUDY 02 — SPATIAL UX / EXHIBITION',
+        eyebrow: 'PROJECT 02 — SPATIAL UX / EXHIBITION',
         title: 'Designing Empathy Through Space — Outdoor Dome Exhibition',
         subtitle:
           "'Everyone Has a Story to Tell — Walking in Others Shoes' is a spatial storytelling exhibition designed to let visitors see, hear, and walk alongside the lives and perspectives of others. Bringing together photos, writing, and voice recordings that students collected from people they met while traveling, the space and circulation were designed so visitors could do more than simply view a stranger's story — they could pause and stay within that person's perspective for a moment.",
@@ -423,7 +423,7 @@ export const projects: Project[] = [
     },
     caseStudy: {
       kr: {
-        eyebrow: 'CASE STUDY 03 — AI PRODUCT / MOBILE',
+        eyebrow: 'PROJECT 03 — AI PRODUCT / MOBILE',
         title: 'Talkable — AI 영어 학습 앱',
         subtitle:
           'Talkable은 AI와의 실시간 대화를 통해 영어를 연습하고, 실제 대화에서 발견된 약점을 다음 학습으로 연결하는 개인화 영어 학습 서비스다. 사용자의 대화를 분석해 발음·문법·유창성·어휘에 대한 피드백을 제공하고, 이를 복습과 새로운 대화로 이어지는 지속적인 Learning Loop로 설계했다.',
@@ -524,7 +524,7 @@ export const projects: Project[] = [
         backToWorkLabel: '← ALL WORK',
       },
       en: {
-        eyebrow: 'CASE STUDY 03 — AI PRODUCT / MOBILE',
+        eyebrow: 'PROJECT 03 — AI PRODUCT / MOBILE',
         title: 'Talkable — AI English Learning App',
         subtitle:
           "Talkable is a personalized English-learning service that lets users practice through real-time conversation with AI and turns weaknesses found in those conversations into the next round of learning. It analyzes each conversation for pronunciation, grammar, fluency, and vocabulary, feeding that feedback into a continuous Learning Loop of review and new conversation.",
@@ -689,7 +689,7 @@ export const projects: Project[] = [
     },
     caseStudy: {
       kr: {
-        eyebrow: 'CASE STUDY 04 — SPATIAL UX / RESEARCH',
+        eyebrow: 'PROJECT 04 — SPATIAL UX / RESEARCH',
         title: '서울시 지원 산학 XR 리서치',
         subtitle:
           '발달심리와 운동·인지 발달 연구를 바탕으로, 아동부터 고령자까지 5개 연령대의 특성을 XR 인터랙션으로 번역한 산학협력 연구 프로젝트다. 하나의 5면 공간형 XR 플랫폼 안에서 각 연령대가 자신의 신체·인지 특성에 맞는 방식으로 움직이고 참여할 수 있도록 서로 다른 5개의 경험을 설계했다.',
@@ -756,7 +756,7 @@ export const projects: Project[] = [
         backToWorkLabel: '← ALL WORK',
       },
       en: {
-        eyebrow: 'CASE STUDY 04 — SPATIAL UX / RESEARCH',
+        eyebrow: 'PROJECT 04 — SPATIAL UX / RESEARCH',
         title: 'Seoul City-Funded XR Research',
         subtitle:
           'A research collaboration project that translates the traits of five age groups — from early childhood to older adults — into XR interactions, grounded in developmental psychology and motor/cognitive development research. Within a single five-wall spatial XR platform, five distinct experiences were designed so each age group could move and participate in ways suited to their own physical and cognitive traits.',
@@ -879,7 +879,7 @@ export const projects: Project[] = [
     },
     caseStudy: {
       kr: {
-        eyebrow: 'CASE STUDY 05 — DIGITAL PRODUCT / ROLE-BASED UX',
+        eyebrow: 'PROJECT 05 — DIGITAL PRODUCT / ROLE-BASED UX',
         title: 'SkolePlan — 덴마크 학교 내부 시스템 UX Redesign',
         subtitle:
           'SkolePlan은 덴마크 Efterskole 교직원들이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템을 재설계한 UX 프로젝트다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고, 하나의 동일한 인터페이스 대신 각 역할의 업무와 정보 우선순위에 맞는 Role-based System으로 재구성했다.',
@@ -939,7 +939,7 @@ export const projects: Project[] = [
         backToWorkLabel: '← ALL WORK',
       },
       en: {
-        eyebrow: 'CASE STUDY 05 — DIGITAL PRODUCT / ROLE-BASED UX',
+        eyebrow: 'PROJECT 05 — DIGITAL PRODUCT / ROLE-BASED UX',
         title: 'SkolePlan — Danish School Internal System UX Redesign',
         subtitle:
           "SkolePlan redesigns the internal system staff at a Danish Efterskole use for everyday school operations — attendance, scheduling, and student status. After observing how teachers, kitchen staff, and dormitory staff actually worked on site, the single shared interface was rebuilt into a role-based system matched to each role's tasks and information priorities.",
