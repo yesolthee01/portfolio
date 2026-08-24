@@ -2,27 +2,21 @@ import { useEffect } from 'react';
 
 /**
  * The single global interaction pass: a soft glow that follows the cursor
- * across every card surface (see the `.card::after` etc. rules in
- * global.css). One delegated `pointermove` listener on `document` finds
- * the hovered card via `closest()` and writes its pointer position as
- * `--spot-x`/`--spot-y` (percentages) — the CSS radial-gradient and
- * hover opacity do the rest. Mounted once from `App.tsx`.
+ * across clickable card links (see the `a.card::after` / `a.short-card::after`
+ * rules in global.css). One delegated `pointermove` listener on `document`
+ * finds the hovered link via `closest()` and writes its pointer position as
+ * `--spot-x`/`--spot-y` (percentages) — the CSS radial-gradient and hover
+ * opacity do the rest. Mounted once from `App.tsx`.
+ *
+ * Scoped to `a.card`/`a.short-card` only — cards that aren't actually
+ * clickable (AiCard, findings, age cards, role cards, QA cards, solution
+ * pillars, process steps, the principle card) don't get the glow, since it
+ * would imply an affordance they don't have.
  *
  * Skipped entirely on touch/coarse-pointer devices and for
  * prefers-reduced-motion, matching the CSS gates in global.css.
  */
-const SPOTLIGHT_SELECTOR = [
-  '.card',
-  '.short-card',
-  '.ai-card',
-  '.finding-card',
-  '.age-card',
-  '.role-card',
-  '.qa-card',
-  '.solution-card',
-  '.process-card',
-  '.case-principle-card',
-].join(', ');
+const SPOTLIGHT_SELECTOR = ['a.card', 'a.short-card'].join(', ');
 
 export function useCursorSpotlight() {
   useEffect(() => {
