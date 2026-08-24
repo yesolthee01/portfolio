@@ -387,7 +387,7 @@ export const projects: Project[] = [
         },
         {
           title: 'USER TEST & ITERATION',
-          desc: '프로토타입을 대상으로 사용자 테스트와 전문가 피드백을 진행했다. 기능을 완성하는 것보다 사용자가 핵심 기능을 발견하고, 이해하고, 다음 행동으로 자연스럽게 이동할 수 있는지에 집중해 문제를 발견하고 디자인을 반복적으로 개선했다.',
+          desc: '프로토타입을 대상으로 사용자 테스트와 전문가 피드백을 진행했다. 사용자가 핵심 기능을 발견하고, 이해하고, 다음 행동으로 자연스럽게 이동할 수 있는지에 집중해 문제를 발견하고 디자인을 반복적으로 개선했다.',
         },
       ],
       en: [
@@ -405,7 +405,7 @@ export const projects: Project[] = [
         },
         {
           title: 'USER TEST & ITERATION',
-          desc: "Ran user testing and expert review on the prototype. Focused less on finishing features and more on whether users could discover, understand, and naturally move on to the next action — surfacing problems and iterating on the design accordingly.",
+          desc: "Ran user testing and expert review on the prototype. Focused on whether users could discover, understand, and naturally move on to the next action — surfacing problems and iterating on the design accordingly.",
         },
       ],
     },
@@ -426,14 +426,14 @@ export const projects: Project[] = [
         eyebrow: 'AI 선생님과 함께하는 맞춤형 영어학습 앱',
         title: 'Talkable',
         subtitle:
-          'Talkable은 AI와의 실시간 대화를 통해 영어를 연습하고, 실제 대화에서 발견된 약점을 다음 학습으로 연결하는 개인화 영어 학습 서비스다. 사용자의 대화를 분석해 발음·문법·유창성·어휘에 대한 피드백을 제공하고, 이를 복습과 새로운 대화로 이어지는 지속적인 Learning Loop로 설계했다.',
+          '대학교 졸업 캡스톤으로 진행한 프로젝트다. Talkable은 AI와의 실시간 대화를 통해 영어를 연습하고, 실제 대화에서 발견된 약점을 다음 학습으로 연결하는 개인 맞춤형 영어 회화 학습 서비스다. 사용자의 대화를 분석해 발음·문법·유창성·어휘에 대한 피드백을 제공하고, 이를 개인 맞춤형 복습과 챌린지 활동을 통해 지속적으로 학습할 수 있는 Learning Loop로 설계했다.',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
         roleLabel: 'MY ROLE',
         role:
-          '졸업 프로젝트의 UX/UI Designer로 참여해 사용자 리서치부터 서비스 구조 설계, UI 디자인, 프로토타이핑과 사용자 테스트까지 전반적인 UX/UI 디자인을 담당했다. 개발 과정에서는 AI 기반 대화와 개인화 피드백이 실제 서비스 경험으로 연결될 수 있도록 기능과 인터랙션을 구체화하고, 프로토타입을 반복적으로 테스트하며 개선했다.',
+          'UX/UI Designer로 참여해 사용자 리서치부터 서비스 구조 설계, UI 디자인, 프로토타이핑과 사용자 테스트까지 전반적인 UX/UI 디자인을 담당했다. 개발 과정에서는 AI 기반 대화와 개인화 피드백이 실제 서비스 경험으로 연결될 수 있도록 기능과 인터랙션을 구체화하고, 프로토타입을 반복적으로 테스트하며 개선했다.',
         problemLabel: 'THE CHALLENGE',
         problem:
-          '영어회화는 실제로 말하며 연습해야 하지만, 학습자가 자신의 수준에 맞는 대화 상대와 지속적으로 연습하고 구체적인 피드백을 받기는 어렵다. 사용자 리서치를 통해 개인화된 학습의 부족, 제한적인 피드백, 지속적인 학습 동기 부족을 주요 문제로 정의했다. 단순히 AI와 대화하는 경험을 만드는 것을 넘어, 대화에서 발견된 약점이 실제 학습과 성장으로 이어지는 경험을 만드는 것이 핵심 과제였다.',
+          '영어 회화 실력은 실제로 말하며 연습해야 늘지만, 학습자 혼자서 꾸준히 대화를 연습하고 자신의 수준에 맞는 구체적인 피드백을 받기는 쉽지 않다. 사용자 리서치를 통해 개인화된 학습의 부족, 제한적인 피드백, 지속적인 학습 동기 부족을 주요 문제로 정의했다. 단순히 AI와 대화하는 경험을 만드는 것을 넘어, 대화에서 발견된 약점이 실제 학습과 성장으로 이어지는 경험을 만드는 것이 핵심 과제였다.',
         solutionLabel: 'THE SOLUTION',
         solution: [
           {
@@ -487,30 +487,30 @@ export const projects: Project[] = [
           {
             title: '중요한 피드백 기능을 더 쉽게 찾도록',
             issue:
-              '대화가 끝난 뒤 받은 피드백을 확인하는 기능이 있었지만, 일부 사용자가 해당 버튼을 바로 발견하지 못했다. 중요한 학습 기능임에도 다른 인터페이스 요소에 묻혀 시각적 우선순위가 충분하지 않다는 문제를 발견했다.',
+              '대화가 끝난 뒤 받은 피드백을 확인하는 기능이 있었지만, 테스트 참가자의 15%가 해당 버튼을 바로 발견하지 못했다. 중요한 학습 기능임에도 다른 인터페이스 요소에 묻혀 시각적 우선순위가 충분하지 않다는 문제를 발견했다.',
             fix: "→ 피드백 아이콘을 보다 직관적인 형태로 변경하고 크기를 키워 시각적 위계를 강화했다. 대화가 끝난 뒤 사용자가 자연스럽게 '다음에는 피드백을 확인해야 한다'고 인지할 수 있도록 인터페이스를 개선했다.",
             image: '/images/work/talkable/finding-1.png',
             imageLabel: '피드백 발견성 개선 — TALKABLE UI',
           },
           {
-            title: '피드백에서 다시 대화까지',
+            title: '피드백 유형 간 이동을 더 쉽게',
             issue:
-              '사용자 테스트에서 피드백을 확인한 뒤 다시 대화로 돌아가는 과정에 일부 어려움이 나타났다. 또한 전문가 피드백을 통해 기존 피드백 화면의 정보 구조와 이동 방식이 학습 흐름을 방해할 수 있다는 점을 확인했다.',
-            fix: '→ 피드백을 스크롤형 구조로 재구성하고, 피드백 유형을 아이콘 방식에서 탭 구조로 변경했다. 또한 대화로 돌아가는 기능을 하단에서 상단으로 이동시켜, 피드백을 확인한 뒤 다음 행동으로 보다 자연스럽게 이어지도록 개선했다.',
+              '피드백 화면에는 서로 다른 두 가지 피드백 유형이 있었지만, 테스트 참가자의 30%가 처음 보여지는 유형에서 다른 유형으로 넘어가는 방법을 찾지 못했다. 또한 전문가 피드백을 통해 기존 정보 구조와 이동 방식이 학습 흐름을 방해할 수 있다는 점도 확인했다.',
+            fix: '→ 피드백을 스크롤형 구조로 재구성하고, 두 피드백 유형을 아이콘 방식 대신 상단 탭 구조로 변경해 사용자가 유형 사이를 직관적으로 오갈 수 있도록 개선했다.',
             image: '/images/work/talkable/finding-2.png',
             imageLabel: '피드백 구조 개편 — TALKABLE UI',
           },
           {
             title: '복습 기능을 독립적인 학습 영역으로',
             issue:
-              '저장한 단어를 복습하는 기능이 기존 저장목록 내부에 위치해 있어 사용자가 단어 시험과 복습 기능을 쉽게 발견하기 어려웠다.',
+              '저장한 단어를 복습하는 기능이 기존 저장목록 내부에 위치해 있어, 테스트 참가자의 40%가 단어 시험과 복습 기능을 쉽게 발견하지 못했다.',
             fix: '→ 하단 Navigation에 Review 영역을 독립적으로 추가하고, 저장 단어와 피드백을 한곳에서 확인하도록 Information Architecture를 재구성했다. 또한 여러 단어 학습 방식을 상단에 배치해 사용자가 원하는 복습 방식에 바로 접근할 수 있도록 개선했다.',
             image: '/images/work/talkable/finding-3.png',
             imageLabel: '리뷰 독립 탭 — TALKABLE UI',
           },
           {
             title: '목표와 보상을 더 명확하게',
-            issue: '일부 사용자가 Challenge 아이템이 무엇을 의미하고 어떻게 획득하는지 바로 이해하지 못했다.',
+            issue: '테스트 참가자의 40%가 Challenge 아이템이 무엇을 의미하고 어떻게 획득하는지 바로 이해하지 못했다.',
             fix: '→ Challenge에 학습 목표와 아이템에 대한 설명을 추가하고, 목표 달성 후 획득 결과가 명확하게 전달되도록 피드백을 보완했다. 이를 통해 사용자가 Challenge의 목적과 다음 행동을 보다 직관적으로 이해하도록 했다.',
             image: '/images/work/talkable/finding-4.png',
             imageLabel: 'Challenge 목표/보상 개선 — TALKABLE UI',
@@ -527,14 +527,14 @@ export const projects: Project[] = [
         eyebrow: 'A Personalized English App With an AI Teacher',
         title: 'Talkable',
         subtitle:
-          "Talkable is a personalized English-learning service that lets users practice through real-time conversation with AI and turns weaknesses found in those conversations into the next round of learning. It analyzes each conversation for pronunciation, grammar, fluency, and vocabulary, feeding that feedback into a continuous Learning Loop of review and new conversation.",
+          "This was a university graduation capstone project. Talkable is a personalized English conversation-learning service that lets users practice through real-time conversation with AI and turns weaknesses found in those conversations into the next round of learning. It analyzes each conversation for pronunciation, grammar, fluency, and vocabulary, and turns that feedback into a continuous Learning Loop of personalized review and challenges.",
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
         roleLabel: 'MY ROLE',
         role:
-          'Joined as UX/UI Designer on a graduation capstone project, covering the full design process from user research through service structure, UI design, prototyping, and user testing. During development, worked out the features and interactions that turned AI-driven conversation and personalized feedback into an actual product experience, testing and refining the prototype through repeated iteration.',
+          'Joined as UX/UI Designer, covering the full design process from user research through service structure, UI design, prototyping, and user testing. During development, worked out the features and interactions that turned AI-driven conversation and personalized feedback into an actual product experience, testing and refining the prototype through repeated iteration.',
         problemLabel: 'THE CHALLENGE',
         problem:
-          "English conversation has to be practiced by actually speaking, but it's hard for learners to keep practicing with a conversation partner suited to their level and get specific feedback. User research identified a lack of personalization, limited feedback, and low motivation to keep learning as the core problems. The challenge went beyond simply building a conversation with AI — it was building an experience where weaknesses found in conversation actually led to learning and growth.",
+          "English speaking ability improves through actual practice, but it's hard for learners to keep practicing on their own and get specific feedback suited to their level. User research identified a lack of personalization, limited feedback, and low motivation to keep learning as the core problems. The challenge went beyond simply building a conversation with AI — it was building an experience where weaknesses found in conversation actually led to learning and growth.",
         solutionLabel: 'THE SOLUTION',
         solution: [
           {
@@ -588,30 +588,30 @@ export const projects: Project[] = [
           {
             title: 'Making a key feedback feature easier to find',
             issue:
-              "There was a way to check feedback after a conversation ended, but some users didn't notice the button right away. Despite being a core learning feature, it was buried among other interface elements without enough visual priority.",
+              "There was a way to check feedback after a conversation ended, but 15% of test participants didn't notice the button right away. Despite being a core learning feature, it was buried among other interface elements without enough visual priority.",
             fix: '→ Changed the feedback icon to a more intuitive form and enlarged it to strengthen visual hierarchy, so users would naturally recognize that feedback was the next thing to check after a conversation.',
             image: '/images/work/talkable/finding-1.png',
             imageLabel: 'FEEDBACK DISCOVERABILITY — TALKABLE UI',
           },
           {
-            title: 'From feedback back to conversation',
+            title: 'Making it easier to move between feedback types',
             issue:
-              "User testing surfaced some difficulty in the path from checking feedback back to starting a new conversation. Expert feedback also confirmed that the existing feedback screen's information structure and navigation could interrupt the learning flow.",
-            fix: '→ Restructured feedback into a scrollable layout and switched feedback types from icons to a tab structure. Also moved the button to return to conversation from the bottom to the top of the screen, so the next action after checking feedback followed more naturally.',
+              "The feedback screen had two distinct feedback types, but 30% of test participants couldn't find how to move from the one shown first to the other. Expert feedback also confirmed that the existing information structure and navigation could interrupt the learning flow.",
+            fix: '→ Restructured feedback into a scrollable layout and changed the two feedback types from an icon-based switch to a top tab structure, so users could move between them intuitively.',
             image: '/images/work/talkable/finding-2.png',
             imageLabel: 'FEEDBACK RESTRUCTURE — TALKABLE UI',
           },
           {
             title: 'Making review its own dedicated space',
             issue:
-              'The feature for reviewing saved words lived inside the existing saved-items list, making it hard for users to discover vocabulary quizzes and review features.',
+              'The feature for reviewing saved words lived inside the existing saved-items list, and 40% of test participants had trouble discovering the vocabulary quiz and review features.',
             fix: '→ Added Review as its own area in the bottom navigation and restructured the information architecture so saved words and feedback could be checked in one place. Also placed the different review formats up top so users could jump straight to the one they wanted.',
             image: '/images/work/talkable/finding-3.png',
             imageLabel: 'REVIEW TAB — TALKABLE UI',
           },
           {
             title: 'Making goals and rewards clearer',
-            issue: "Some users didn't immediately understand what a Challenge item meant or how to earn it.",
+            issue: "40% of test participants didn't immediately understand what a Challenge item meant or how to earn it.",
             fix: "→ Added explanations of the learning goal and the item to each Challenge, and improved the feedback shown after completing a goal so the reward was clearly communicated — helping users understand the purpose of each Challenge and what to do next.",
             image: '/images/work/talkable/finding-4.png',
             imageLabel: 'CHALLENGE GOALS & REWARDS — TALKABLE UI',
