@@ -1297,7 +1297,7 @@ a.short-card:hover {
 }
 
 .process-card p {
-  font-size: 12px;
+  font-size: 13.5px;
   line-height: 1.6;
   margin: 0;
   color: var(--ink-soft);
@@ -1339,14 +1339,19 @@ a.short-card:hover {
 }
 
 .solution-subtitle {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   margin: 0 0 10px;
   color: var(--ink);
 }
 
 .solution-desc {
-  font-size: 12.5px;
+  /* Matches .process-card p (13.5px) — these two are the same
+     index-card pattern (index number + h3 + short paragraph) used back
+     to back on this page, so their body copy reads at one consistent
+     size instead of solution cards feeling smaller than process cards
+     right below them. */
+  font-size: 13.5px;
   line-height: 1.7;
   margin: 0;
   color: var(--ink-soft);

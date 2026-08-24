@@ -100,9 +100,9 @@ export const projects: Project[] = [
             desc: '별도의 컨트롤러가 없는 환경에서 사용자가 자신의 움직임과 시스템의 반응을 즉시 연결할 수 있도록 시각·사운드 피드백을 설계했다. 사용자 테스트에서 플레이 방향의 변화나 시선 이동이 필요한 순간을 놓치는 문제를 발견했고, 행동을 유도하는 안내 UI와 피드백을 추가해 게임의 흐름을 보다 직관적으로 이해할 수 있도록 개선했다.',
           },
           {
-            title: 'FUN',
-            subtitle: '설명 없이 몸이 먼저 반응하는 플레이',
-            desc: '점프하기, 바닥 밟기, 벽면 터치하기 등 누구나 이미 알고 있는 몸의 동작으로 플레이를 구성했다. 규칙을 따로 설명하지 않아도 몸이 먼저 반응할 수 있도록 설계해, 다섯 개의 맵마다 다른 동작을 자연스럽게 시도하며 즐길 수 있도록 했다.',
+            title: 'INTUITION',
+            subtitle: '직관적인 플레이 방식',
+            desc: '점프하기, 바닥 밟기, 벽면 터치하기 등 누구나 이미 알고 있는 몸의 동작으로 플레이를 구성해 직관적으로 이해하고 바로 즐길 수 있도록 설계했다. 다섯 개의 맵마다 서로 다른 동작을 경험하도록 구성해 지루하지 않게 즐길 수 있도록 했다.',
           },
           {
             title: 'IMMERSION',
@@ -165,9 +165,9 @@ export const projects: Project[] = [
             desc: "With no controller in hand, designed visual and sound feedback so users could immediately connect their movement to the system's response. User testing surfaced moments where players missed cues to change direction or look elsewhere, so guiding UI and feedback were added to make the game's flow more intuitive.",
           },
           {
-            title: 'FUN',
-            subtitle: 'Play the body already knows',
-            desc: 'Built play around actions everyone already knows — jumping, stomping the floor, touching a wall — so the rules land through the body before any instruction is needed. Each of the five maps calls for a different action, keeping the experience varied without ever feeling repetitive.',
+            title: 'INTUITION',
+            subtitle: 'An intuitive way to play',
+            desc: 'Built play around actions everyone already knows — jumping, stomping the floor, touching a wall — so anyone can understand it and start playing right away. Each of the five maps calls for a different action, keeping the experience varied without ever feeling repetitive.',
           },
           {
             title: 'IMMERSION',
