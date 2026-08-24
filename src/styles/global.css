@@ -1401,7 +1401,11 @@ a.short-card:hover {
   font-size: 14.5px;
   line-height: 1.8;
   color: var(--ink-soft);
-  max-width: var(--content-default);
+  /* Same fix as .case-research-intro below: this sits directly above a
+     full-width row (the loop-flow chips / loop-steps), so capping it to
+     --content-default wrapped it onto extra lines the section had no
+     reason to force. */
+  max-width: none;
   margin: 0 0 36px;
 }
 
@@ -1591,7 +1595,9 @@ a.short-card:hover {
   font-size: 14.5px;
   line-height: 1.8;
   color: var(--ink-soft);
-  max-width: var(--content-default);
+  /* Same width-mismatch fix as .case-research-intro / .case-loop-intro —
+     this sits right above the full-width principle-qa-grid. */
+  max-width: none;
   margin: 0 0 28px;
 }
 
@@ -1634,7 +1640,8 @@ a.short-card:hover {
   font-size: 14.5px;
   line-height: 1.8;
   color: var(--ink-soft);
-  max-width: var(--content-default);
+  /* Same fix — sits right below the full-width principle-qa-grid. */
+  max-width: none;
   margin: 28px 0 0;
 }
 
@@ -1646,7 +1653,8 @@ a.short-card:hover {
   font-size: 14.5px;
   line-height: 1.8;
   color: var(--ink-soft);
-  max-width: var(--content-default);
+  /* Same fix — sits right above the full-width role-cards column. */
+  max-width: none;
   margin: 0 0 32px;
 }
 
@@ -1657,8 +1665,24 @@ a.short-card:hover {
 }
 
 .role-card {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 32px;
+  align-items: center;
   border-radius: 24px;
   padding: 28px 30px;
+}
+
+.role-card-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.role-card-image {
+  border-radius: 16px;
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .role-card-head {
@@ -1693,7 +1717,6 @@ a.short-card:hover {
   line-height: 1.7;
   color: var(--ink-soft);
   margin: 0 0 20px;
-  max-width: 640px;
 }
 
 .role-card-priority {
@@ -2095,7 +2118,11 @@ a.short-card:hover {
     grid-template-columns: 1fr;
   }
   .role-card {
+    grid-template-columns: 1fr;
     padding: 24px 22px;
+  }
+  .role-card-image {
+    height: 200px;
   }
   .activities-grid {
     grid-template-columns: 1fr;

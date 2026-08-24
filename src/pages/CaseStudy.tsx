@@ -159,24 +159,38 @@ function AgeCardRow({ card, index }: { card: AgeCard; index: number }) {
 function RoleCardRow({ card, index }: { card: RoleCard; index: number }) {
   return (
     <div className="role-card glass">
-      <div className="role-card-head">
-        <div className="role-card-index">{String(index + 1).padStart(2, '0')}</div>
-        <div>
-          <div className="role-card-role">{card.role}</div>
-          <div className="role-card-focus">{card.focus}</div>
+      <div className="role-card-main">
+        <div className="role-card-head">
+          <div className="role-card-index">{String(index + 1).padStart(2, '0')}</div>
+          <div>
+            <div className="role-card-role">{card.role}</div>
+            <div className="role-card-focus">{card.focus}</div>
+          </div>
+        </div>
+        <p className="role-card-desc">{card.desc}</p>
+        <div className="role-card-priority">
+          <span className="role-card-priority-label">{card.priorityLabel}</span>
+          <div className="tag-row">
+            {card.priority.map((item) => (
+              <span className="tag glass" key={item}>
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
-      <p className="role-card-desc">{card.desc}</p>
-      <div className="role-card-priority">
-        <span className="role-card-priority-label">{card.priorityLabel}</span>
-        <div className="tag-row">
-          {card.priority.map((item) => (
-            <span className="tag glass" key={item}>
-              {item}
-            </span>
-          ))}
+      {card.image ? (
+        <ProjectImage
+          src={card.image}
+          alt={`${card.role} — ${card.focus}`}
+          label={card.imageLabel ?? card.role}
+          className="role-card-image"
+        />
+      ) : (
+        <div className="img-placeholder role-card-image">
+          <span>{card.imageLabel ?? card.role}</span>
         </div>
-      </div>
+      )}
     </div>
   );
 }

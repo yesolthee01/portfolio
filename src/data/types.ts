@@ -62,9 +62,9 @@ export interface AgeCard {
 }
 
 /** One role's focused view within a role-based redesign (e.g. Teacher,
- * Kitchen Staff, Dormitory Staff). Rendered as a full-width stacked card
- * with a priority tag list — used instead of AgeCard when a project's
- * segments are user roles rather than age groups. */
+ * Kitchen Staff, Dormitory Staff). Rendered as a full-width card with a
+ * priority tag list and a small screen image — used instead of AgeCard
+ * when a project's segments are user roles rather than age groups. */
 export interface RoleCard {
   /** e.g. 'TEACHER' */
   role: string;
@@ -73,6 +73,11 @@ export interface RoleCard {
   desc: string;
   priorityLabel: string;
   priority: string[];
+  /** Small supporting screen image shown alongside the card's text.
+   * Optional — renders a soft placeholder (labeled with imageLabel, or
+   * role if that's not set) until a real file is added. */
+  image?: string;
+  imageLabel?: string;
 }
 
 /** One role's "what do I need first" question paired with the design

@@ -927,7 +927,7 @@ export const projects: Project[] = [
           'UX Designer로서 현장 관찰과 인터뷰·설문을 통한 사용자 리서치부터 UX 전략, Information Architecture, User Flow와 UI 재설계까지 전반을 담당했다. 특히 실제 업무 흐름과 기존 시스템 사이의 차이를 파악하고, 각 역할이 필요한 정보와 핵심 업무에 더 빠르게 접근할 수 있도록 구조를 재설계하는 데 집중했다.',
         problemLabel: 'THE CHALLENGE',
         problem:
-          '같은 시스템을 사용하지만, 모든 교직원이 같은 정보를 필요로 하지는 않았다. 기존 시스템은 복잡한 Navigation 구조로 인해 필요한 정보를 찾기까지 여러 단계를 거쳐야 했고, 중요한 정보가 즉시 드러나지 않았다. 현장 리서치를 통해 교사·주방·기숙사 담당자마다 확인해야 할 정보와 수행하는 업무의 우선순위가 다르다는 점을 발견했다. 따라서 핵심 질문을 다음과 같이 정의했다 — 하나의 시스템이 서로 다른 역할의 실제 업무 방식에 어떻게 맞춰질 수 있을까?',
+          '같은 시스템을 사용하지만, 모든 교직원이 같은 정보를 필요로 하지는 않았다. 기존 시스템은 복잡한 Navigation 구조로 인해 필요한 정보를 찾기까지 여러 단계를 거쳐야 했고, 중요한 정보가 즉시 드러나지 않았다. 현장 리서치를 통해 교사·주방·기숙사 담당자마다 확인해야 할 정보와 수행하는 업무의 우선순위가 다르다는 점을 발견했다.',
         rolesLabel: 'ROLE-BASED UX',
         rolesIntro:
           '리서치에서 발견한 역할별 업무 차이를 바탕으로, 동일했던 기존 인터페이스를 각 사용자의 핵심 업무와 정보가 먼저 보이는 구조로 재설계했다.',
@@ -987,7 +987,7 @@ export const projects: Project[] = [
           "As UX Designer, I led the process end to end — from on-site observation and user research through interviews and surveys, to UX strategy, information architecture, user flow, and UI redesign. The focus was on identifying the gap between actual workflows and the existing system, and restructuring it so each role could reach the information and tasks it needed faster.",
         problemLabel: 'THE CHALLENGE',
         problem:
-          "Everyone used the same system, but not everyone needed the same information. The existing system's deep navigation structure meant several steps were needed just to find what mattered, and key information wasn't surfaced immediately. On-site research showed that teachers, kitchen staff, and dormitory staff each checked different information and prioritized different tasks. This led to the core question: how can a single system adapt to the actual working styles of different roles?",
+          "Everyone used the same system, but not everyone needed the same information. The existing system's deep navigation structure meant several steps were needed just to find what mattered, and key information wasn't surfaced immediately. On-site research showed that teachers, kitchen staff, and dormitory staff each checked different information and prioritized different tasks.",
         rolesLabel: 'ROLE-BASED UX',
         rolesIntro:
           "Based on the role-specific differences uncovered in research, the previously identical interface was redesigned so each user's core tasks and information surface first.",
