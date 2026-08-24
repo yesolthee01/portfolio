@@ -495,8 +495,8 @@ export const projects: Project[] = [
           {
             title: '피드백 유형 간 이동을 더 쉽게',
             issue:
-              '피드백 화면에는 서로 다른 두 가지 피드백 유형이 있었지만, 테스트 참가자의 30%가 처음 보여지는 유형에서 다른 유형으로 넘어가는 방법을 찾지 못했다. 또한 전문가 피드백을 통해 기존 정보 구조와 이동 방식이 학습 흐름을 방해할 수 있다는 점도 확인했다.',
-            fix: '→ 피드백을 스크롤형 구조로 재구성하고, 두 피드백 유형을 아이콘 방식 대신 상단 탭 구조로 변경해 사용자가 유형 사이를 직관적으로 오갈 수 있도록 개선했다.',
+              '피드백 화면에는 서로 다른 두 가지 피드백 유형이 있었지만, 하단에서 올라오는 바텀시트 형태로 제공되어 테스트 참가자의 30%가 이를 인지하지 못하고 다른 유형으로 넘어가는 방법을 찾지 못했다. 또한 전문가 피드백을 통해 기존 정보 구조와 이동 방식이 학습 흐름을 방해할 수 있다는 점도 확인했다.',
+            fix: '→ 바텀시트 대신 피드백 내용을 페이지 안에 모두 배치해 스크롤로 확인할 수 있도록 재구성하고, 두 피드백 유형은 아이콘 방식 대신 상단 탭 구조로 전환해 유형 사이를 직관적으로 오갈 수 있도록 개선했다.',
             image: '/images/work/talkable/finding-2.png',
             imageLabel: '피드백 구조 개편 — TALKABLE UI',
           },
@@ -596,8 +596,8 @@ export const projects: Project[] = [
           {
             title: 'Making it easier to move between feedback types',
             issue:
-              "The feedback screen had two distinct feedback types, but 30% of test participants couldn't find how to move from the one shown first to the other. Expert feedback also confirmed that the existing information structure and navigation could interrupt the learning flow.",
-            fix: '→ Restructured feedback into a scrollable layout and changed the two feedback types from an icon-based switch to a top tab structure, so users could move between them intuitively.',
+              "The feedback screen had two distinct feedback types, but they were presented inside a bottom sheet that slid up from the bottom of the screen, and 30% of test participants didn't notice it or find how to move to the other type. Expert feedback also confirmed that the existing information structure and navigation could interrupt the learning flow.",
+            fix: '→ Replaced the bottom sheet by placing all the feedback content directly in the page as a scrollable layout, and changed the two feedback types from an icon-based switch to a top tab structure, so users could move between them intuitively.',
             image: '/images/work/talkable/finding-2.png',
             imageLabel: 'FEEDBACK RESTRUCTURE — TALKABLE UI',
           },
