@@ -1045,6 +1045,15 @@ a.short-card:hover {
   padding: 70px 0 50px;
 }
 
+/* The hero eyebrow reuses .card-eyebrow as-is (same plain colored text,
+   no pill/background) so the small label above the title matches
+   exactly how it reads on the homepage card — this only restores the
+   larger breathing room a hero title needs above it, since a card's
+   14px is too tight at hero scale. */
+.case-eyebrow {
+  margin-bottom: 18px;
+}
+
 .case-title {
   font-family: var(--font-display);
   font-weight: 600;

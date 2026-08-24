@@ -228,7 +228,7 @@ export function CaseStudy() {
 
       <div className="frame">
         <div className="case-hero">
-          <div className="eyebrow glass">{cs.eyebrow}</div>
+          <div className="card-eyebrow case-eyebrow">{cs.eyebrow}</div>
           <h1 className="case-title">{cs.title}</h1>
           <p className="case-subtitle">{cs.subtitle}</p>
           {project.heroVideo ? (
