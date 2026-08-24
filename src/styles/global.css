@@ -1682,7 +1682,10 @@ a.short-card:hover {
   border-radius: 16px;
   height: 220px;
   width: 100%;
-  object-fit: cover;
+  /* These are phone-mockup screenshots (portrait, transparent corners),
+     not full-bleed photos — contain keeps the whole device visible
+     instead of cover cropping into the frame. */
+  object-fit: contain;
 }
 
 .role-card-head {

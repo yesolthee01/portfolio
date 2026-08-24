@@ -283,13 +283,15 @@ export function CaseStudy() {
         {cs.principleQA && cs.principleQA.length > 0 ? (
           <div className="case-section case-principle">
             <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
-            {cs.principleIntro && <p className="case-principle-intro">{cs.principleIntro}</p>}
-            <div className="principle-qa-grid">
-              {cs.principleQA.map((qa) => (
-                <PrincipleQACard qa={qa} key={qa.role} />
-              ))}
+            <div className="case-principle-card case-principle-card--qa glass">
+              {cs.principleIntro && <p className="case-principle-intro">{cs.principleIntro}</p>}
+              <div className="principle-qa-grid">
+                {cs.principleQA.map((qa) => (
+                  <PrincipleQACard qa={qa} key={qa.role} />
+                ))}
+              </div>
+              {cs.principleClosing && <p className="case-principle-closing">{cs.principleClosing}</p>}
             </div>
-            {cs.principleClosing && <p className="case-principle-closing">{cs.principleClosing}</p>}
           </div>
         ) : (
           cs.principle && (

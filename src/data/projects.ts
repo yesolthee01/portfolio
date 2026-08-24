@@ -88,7 +88,7 @@ export const projects: Project[] = [
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
         principleLabel: 'DESIGN PRINCIPLE',
         principle:
-          '설명 없이도 몸이 이해할 수 있는 인터랙션을 설계하는 것이 핵심 원칙이었다. 점프하고, 밟고, 벽을 터치하는 — 누구나 이미 아는 동작으로 플레이를 구성하고, 그 움직임에 즉각적으로 반응하는 시각·사운드 피드백을 더해 사용자가 스스로 배우며 몰입하도록 했다. 컨트롤러 없이도, 별도의 설명 없이도 몸이 곧 인터페이스가 되는 경험을 만드는 것을 프로젝트의 중심 원칙으로 삼았다.',
+          '게임을 선택하고, 플레이 방법을 이해하고, 다음 행동을 결정해야 하는 순간에 명확한 시각적 단서를 제공했다. 사용자 테스트에서 발견한 혼란 지점을 바탕으로 게임 선택을 위한 visual cue, 행동 중심의 튜토리얼, 플레이 방향을 안내하는 UI를 보완해 몰입을 유지하면서도 다음 행동을 자연스럽게 이해할 수 있도록 설계했다.',
         roleLabel: 'MY ROLE',
         role:
           'PM과 UX/UI Designer로 참여해 콘텐츠 기획부터 인터랙션 설계, 사용자 테스트, 전시까지 프로젝트 전 과정을 이끌었다. UI와 배경 비주얼 제작의 약 25%를 담당했으며, 게임 개발자와 디자이너 간 협업을 조율했다. 사용자 반응을 검증하고 경험을 개선하기 위해 교내 테스트 전시를 기획·운영했으며, 프로젝트 기반의 리서치 논문을 공동 저술했다.',
@@ -156,7 +156,7 @@ export const projects: Project[] = [
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
         principleLabel: 'DESIGN PRINCIPLE',
         principle:
-          "The core principle was designing interaction the body could understand without instruction. Play was built around actions everyone already knows — jumping, stomping, touching a wall — paired with visual and sound feedback that responded instantly, so users could learn through their own movement and stay immersed. Making the body itself the interface, with no controller and no explanation needed, was the project's central design principle.",
+          "The principle was providing clear visual cues at the moments that mattered most — choosing a game, understanding how to play, and deciding the next move. Based on points of confusion found in user testing, visual cues for game selection, action-driven tutorials, and UI guiding the direction of play were added, so players could stay immersed while still understanding what to do next.",
         roleLabel: 'MY ROLE',
         role:
           'Joined as PM and UX/UI Designer, leading the project from content planning and interaction design through user testing and exhibition. Handled roughly 25% of UI and background visual production, and coordinated collaboration between game developers and designers. Planned and ran an in-school test exhibition to validate user response and improve the experience, and co-authored a research paper based on the project.',
@@ -296,7 +296,7 @@ export const projects: Project[] = [
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
         principleLabel: 'DESIGN PRINCIPLE',
         principle:
-          "관람객에게 '천천히 보세요'라고 말하는 대신, 공간 자체가 걸음을 늦추도록 설계하는 것이 핵심 원칙이었다. 발자국으로 이어지는 동선, 자연과 경쟁하지 않는 색과 식물, 보고 들으며 이야기에 머무르게 하는 두 개의 감각 트랙 — 이 모든 요소는 관람객에게 지시하지 않으면서도 자연스럽게 낯선 사람의 이야기에 정서적으로 머무르게 만들었다. 설명이 아니라 공간과 감각으로 경험을 이끄는 것을 전시의 중심 원칙으로 삼았다.",
+          '자연스럽게 걸음을 늦추고 이야기에 머물 수 있는 환경을 만드는 것을 중심 원칙으로 삼았다. 발자국을 따라 이어지는 동선으로 관람 속도를 조절하고, 주변 자연과 경쟁하지 않는 공간을 구성했으며, 사진·텍스트·목소리를 함께 사용해 머무는 시간이 인물에 대한 정서적 연결로 이어지도록 설계했다.',
         roleLabel: 'MY ROLE',
         role:
           '공간과 비주얼을 총괄하는 전시 디렉터로 참여해 전시 컨셉부터 공간 구성, 포스터/인쇄물 디자인, 현장 설치까지 전반을 설계했다. 담당 교사와 사진·오디오 제작을 맡은 학생들과 협업해 전시를 완성했다.',
@@ -337,7 +337,7 @@ export const projects: Project[] = [
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
         principleLabel: 'DESIGN PRINCIPLE',
         principle:
-          "Rather than telling visitors to slow down, the core principle was letting the space itself do that work. A footprint path that guided circulation, a palette and planting that never competed with nature, and two sensory tracks — seeing and hearing — that let visitors stay with a stranger's story: none of it instructed visitors directly, yet all of it naturally held them in someone else's story a little longer. Leading the experience through space and the senses, not explanation, was the exhibition's central design principle.",
+          "The central principle was creating an environment that naturally slowed visitors down and let them stay with each story. A footprint path paced how visitors moved through the space, the space itself was built not to compete with the surrounding nature, and photos, text, and voice were used together so that the time visitors lingered turned into an emotional connection with each person.",
         roleLabel: 'MY ROLE',
         role:
           'Took part as exhibition director overseeing space and visuals, designing everything from the exhibition concept and spatial layout to poster/print design and on-site installation. Completed the exhibition in collaboration with a supervising teacher and the students responsible for photography and audio recording.',
@@ -442,7 +442,7 @@ export const projects: Project[] = [
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
         principleLabel: 'DESIGN PRINCIPLE',
         principle:
-          '정해진 커리큘럼을 따라가는 학습이 아니라, 사용자가 실제로 나눈 대화에서 학습이 시작되도록 설계하는 것이 핵심 원칙이었다. 대화에서 발견된 약점은 피드백으로, 피드백은 복습과 챌린지로 자연스럽게 이어지도록 Conversation → Feedback → Review → Challenge의 순환 구조를 만들었다. 한 번의 평가로 끝나는 학습이 아니라, 내 대화가 계속 다음 학습으로 이어지고 그 성장이 눈에 보이게 만드는 것을 Talkable의 중심 설계 원칙으로 삼았다.',
+          '사용자가 실제로 나눈 대화에서 학습을 시작하고, 개인의 수준과 약점에 맞는 피드백과 복습으로 다음 학습을 연결하는 것을 중심 원칙으로 삼았다. 학습 기록과 성장 과정을 지속적으로 보여주어, 매번의 대화가 일회성 연습으로 끝나지 않고 사용자에게 맞춰 축적되는 학습 경험이 되도록 설계했다.',
         roleLabel: 'MY ROLE',
         role:
           'UX/UI Designer로 참여해 사용자 리서치부터 서비스 구조 설계, UI 디자인, 프로토타이핑과 사용자 테스트까지 전반적인 UX/UI 디자인을 담당했다. 개발 과정에서는 AI 기반 대화와 개인화 피드백이 실제 서비스 경험으로 연결될 수 있도록 기능과 인터랙션을 구체화하고, 프로토타입을 반복적으로 테스트하며 개선했다.',
@@ -546,7 +546,7 @@ export const projects: Project[] = [
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
         principleLabel: 'DESIGN PRINCIPLE',
         principle:
-          "Rather than learning that follows a fixed curriculum, the core principle was making the user's own conversation the starting point for learning. Weaknesses surfaced in conversation fed into feedback, and feedback fed into review and challenges, forming a loop — Conversation → Feedback → Review → Challenge. Instead of learning that ends with a single assessment, making each conversation carry forward into the next round of learning, with that growth made visible, was Talkable's central design principle.",
+          "The central principle was starting learning from the user's own real conversations, then connecting each one to the next round of learning through feedback and review matched to that person's level and weaknesses. Learning history and progress were shown continuously, so no single conversation ended as a one-off exercise — instead, each one accumulated into a learning experience built around that user.",
         roleLabel: 'MY ROLE',
         role:
           'Joined as UX/UI Designer, covering the full design process from user research through service structure, UI design, prototyping, and user testing. During development, worked out the features and interactions that turned AI-driven conversation and personalized feedback into an actual product experience, testing and refining the prototype through repeated iteration.',
@@ -920,7 +920,7 @@ export const projects: Project[] = [
         eyebrow: '덴마크 학교 임직원 어플리케이션 리디자인',
         title: 'SkolePlan(DK) 리디자인',
         subtitle:
-          'SkolePlan은 덴마크 Efterskole 교직원들이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템을 재설계한 UX 프로젝트다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고, 하나의 동일한 인터페이스 대신 각 역할의 업무와 정보 우선순위에 맞는 Role-based System으로 재구성했다.',
+          'SkolePlan은 덴마크 Efterskole 교직원들이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템을 재설계한 UX 프로젝트다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고 사용자 대상 설문조사와 인터뷰를 진행했으며, 하나의 동일한 인터페이스 대신 각 역할의 업무와 정보 우선순위에 맞는 Role-based System으로 재구성했다.',
         heroLabel: 'HERO IMAGE — SKOLEPLAN',
         roleLabel: 'MY ROLE',
         role:
@@ -938,6 +938,8 @@ export const projects: Project[] = [
             desc: '교사에게 가장 중요한 것은 오늘의 일정과 학생 출석 현황을 빠르게 확인하고 처리하는 것이었다. 여러 페이지를 탐색하는 대신 홈 화면에서 당일 수업과 출석 상태를 바로 확인하고 필요한 업무로 이동할 수 있도록 구성했다.',
             priorityLabel: 'Priority',
             priority: ['Schedule', 'Attendance', 'Upcoming Activities'],
+            image: '/images/work/skoleplan/role-card-1.png',
+            imageLabel: '교사 홈 화면 — SKOLEPLAN UI',
           },
           {
             role: 'KITCHEN STAFF',
@@ -945,6 +947,8 @@ export const projects: Project[] = [
             desc: '주방 담당자는 개별 학생의 상세 정보보다 식사 인원과 식이 요구사항을 빠르게 파악하는 것이 중요했다. 홈 화면에서 전체 식사 인원과 Vegan · Vegetarian · Gluten-free · Halal 등의 정보를 한눈에 확인할 수 있도록 구성했다.',
             priorityLabel: 'Priority',
             priority: ['Student Count', 'Dietary Needs', 'Meal Planning'],
+            image: '/images/work/skoleplan/role-card-2.png',
+            imageLabel: '주방 담당자 홈 화면 — SKOLEPLAN UI',
           },
           {
             role: 'DORMITORY STAFF',
@@ -952,6 +956,8 @@ export const projects: Project[] = [
             desc: '기숙사 담당자에게는 학생들의 출결과 현재 상태를 빠르게 파악하는 것이 중요했다. 등교 여부와 외부 활동 등 학생 현황을 홈 화면에서 바로 확인할 수 있도록 해 반복적인 정보 탐색을 줄였다.',
             priorityLabel: 'Priority',
             priority: ['Presence', 'Absence', 'Student Status'],
+            image: '/images/work/skoleplan/role-card-3.png',
+            imageLabel: '기숙사 담당자 홈 화면 — SKOLEPLAN UI',
           },
         ],
         principleLabel: 'DESIGN PRINCIPLE',
@@ -980,7 +986,7 @@ export const projects: Project[] = [
         eyebrow: 'Danish School Staff Application Redesign',
         title: 'SkolePlan (DK) Redesign',
         subtitle:
-          "SkolePlan redesigns the internal system staff at a Danish Efterskole use for everyday school operations — attendance, scheduling, and student status. After observing how teachers, kitchen staff, and dormitory staff actually worked on site, the single shared interface was rebuilt into a role-based system matched to each role's tasks and information priorities.",
+          "SkolePlan redesigns the internal system staff at a Danish Efterskole use for everyday school operations — attendance, scheduling, and student status. After observing how teachers, kitchen staff, and dormitory staff actually worked on site and running user surveys and interviews, the single shared interface was rebuilt into a role-based system matched to each role's tasks and information priorities.",
         heroLabel: 'HERO IMAGE — SKOLEPLAN',
         roleLabel: 'MY ROLE',
         role:
@@ -998,6 +1004,8 @@ export const projects: Project[] = [
             desc: "For teachers, what mattered most was quickly checking and handling today's schedule and student attendance. Instead of navigating multiple pages, the home screen was built to show the day's classes and attendance status immediately, with a direct path to the task at hand.",
             priorityLabel: 'Priority',
             priority: ['Schedule', 'Attendance', 'Upcoming Activities'],
+            image: '/images/work/skoleplan/role-card-1.png',
+            imageLabel: 'TEACHER HOME — SKOLEPLAN UI',
           },
           {
             role: 'KITCHEN STAFF',
@@ -1005,6 +1013,8 @@ export const projects: Project[] = [
             desc: 'For kitchen staff, quickly grasping meal counts and dietary requirements mattered more than individual student detail. The home screen was built to show the total meal count and dietary information — vegan, vegetarian, gluten-free, halal — at a glance.',
             priorityLabel: 'Priority',
             priority: ['Student Count', 'Dietary Needs', 'Meal Planning'],
+            image: '/images/work/skoleplan/role-card-2.png',
+            imageLabel: 'KITCHEN STAFF HOME — SKOLEPLAN UI',
           },
           {
             role: 'DORMITORY STAFF',
@@ -1012,6 +1022,8 @@ export const projects: Project[] = [
             desc: "For dormitory staff, quickly grasping students' attendance and current status mattered most. Presence, absence, and off-site activity could now be checked directly from the home screen, cutting down on repetitive searching.",
             priorityLabel: 'Priority',
             priority: ['Presence', 'Absence', 'Student Status'],
+            image: '/images/work/skoleplan/role-card-3.png',
+            imageLabel: 'DORMITORY STAFF HOME — SKOLEPLAN UI',
           },
         ],
         principleLabel: 'DESIGN PRINCIPLE',
