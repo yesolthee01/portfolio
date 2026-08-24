@@ -913,10 +913,18 @@ a.short-card:hover {
 
 /* ---------- ABOUT ---------- */
 
+/* Was a 2-column grid (body text | numbered points) — the fixed 420px
+   cap on .about-body left the text column much narrower than the space
+   the grid actually gave it, while the points column sat noticeably
+   wider beside it, so the gap between them read as arbitrary rather than
+   intentional. Now a single column: the body text runs the section's
+   full available width (up to --content-default, matching the site's
+   other long-form paragraphs), and the numbered points sit in their own
+   row below it instead of squeezed into a side column. */
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
   margin-top: 20px;
 }
 
@@ -931,7 +939,7 @@ a.short-card:hover {
   font-size: 15.5px;
   line-height: 1.8;
   color: var(--ink-soft);
-  max-width: 420px;
+  max-width: var(--content-default);
 }
 
 .about-body strong {
@@ -955,12 +963,14 @@ a.short-card:hover {
    about-keyword chip grid this replaced: a full sentence reads awkwardly
    forced into a square glass box, but flows naturally as one line in a
    list. Reuses the index-number visual language of .process-index rather
-   than inventing a new one. */
+   than inventing a new one. Sits below the body text as a single row
+   (each point still exactly one line) rather than a side column, and
+   wraps only if the viewport is too narrow to fit all four. */
 .about-points {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 44px;
 }
 
 .about-point {
@@ -1810,18 +1820,26 @@ a.short-card:hover {
    — with only the column fixed per child, so the row auto-advances one
    step per entry. */
 .exp-timeline {
+  position: relative;
   display: grid;
   grid-template-columns: 108px 20px 1fr;
   column-gap: 20px;
   row-gap: 32px;
 }
 
+/* Positioned absolutely (out of grid flow) rather than as a grid item
+   spanning `grid-row: 1 / -1`: a same-column sibling spanning every row
+   blocks auto-placement from ever finding a free cell in that column, so
+   every dot/content pair after it gets silently pushed down one row —
+   which read as a phantom blank line above the first entry. Centered on
+   the dot column (108px date column + 20px gap + half the 20px dot
+   column = 138px from the timeline's left edge). */
 .exp-timeline-line {
-  grid-column: 2;
-  grid-row: 1 / -1;
-  justify-self: center;
+  position: absolute;
+  left: 138px;
+  top: 0;
+  bottom: 0;
   width: 1px;
-  height: 100%;
   background: var(--glass-border);
 }
 
@@ -1999,6 +2017,9 @@ a.short-card:hover {
   .exp-timeline {
     grid-template-columns: 74px 16px 1fr;
     column-gap: 12px;
+  }
+  .exp-timeline-line {
+    left: 94px;
   }
   .exp-timeline-date {
     font-size: 10px;
