@@ -1,11 +1,11 @@
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
-import { useInView } from '../hooks/useInView';
+import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
 
 export function ContactSection() {
   const { lang } = useLanguage();
   const contact = siteCopy[lang].contact;
-  const { ref, inView } = useInView<HTMLDivElement>();
+  const { ref, inView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
   // Each CTA button watches its own scroll position — see the SCROLL
   // REVEAL block in global.css. Only two, fixed in number, so calling
   // the hook twice directly here (rather than mapping) keeps this a

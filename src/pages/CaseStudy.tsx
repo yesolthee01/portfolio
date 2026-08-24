@@ -4,7 +4,7 @@ import { Nav } from '../components/Nav';
 import { ProjectImage } from '../components/ProjectImage';
 import { useLanguage } from '../i18n/LanguageContext';
 import { getProjectBySlug, getAdjacentProjects } from '../data/projects';
-import { useInView } from '../hooks/useInView';
+import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
 import type { Finding, LoopStep, AgeCard, RoleCard, PrincipleQA } from '../data/types';
 
 function HeroGallery({ images, alt, label }: { images: string[]; alt: string; label: string }) {
@@ -236,6 +236,24 @@ export function CaseStudy() {
   const { lang } = useLanguage();
   const project = getProjectBySlug(slug);
 
+  // One useInView per `.case-section` block below, called unconditionally
+  // (rules of hooks) even though several of those blocks only render when
+  // their data is present — see SECTION_REVEAL_ROOT_MARGIN in useInView.ts.
+  const { ref: principleRef, inView: principleInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: roleRef, inView: roleInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: challengeRef, inView: challengeInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: solutionRef, inView: solutionInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: loopRef, inView: loopInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: researchBasisRef, inView: researchBasisInView } = useInView<HTMLDivElement>(
+    0,
+    SECTION_REVEAL_ROOT_MARGIN,
+  );
+  const { ref: researchRef, inView: researchInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: rolesRef, inView: rolesInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: processRef, inView: processInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: findingsRef, inView: findingsInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: resultRef, inView: resultInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+
   if (!project || !project.caseStudy || !project.process) {
     return <Navigate to="/" replace />;
   }
@@ -281,7 +299,7 @@ export function CaseStudy() {
         </div>
 
         {cs.principleQA && cs.principleQA.length > 0 ? (
-          <div className="case-section case-principle">
+          <div className={`case-section case-principle${principleInView ? ' in-view' : ''}`} ref={principleRef}>
             <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
             <div className="case-principle-card case-principle-card--qa glass">
               {cs.principleIntro && <p className="case-principle-intro">{cs.principleIntro}</p>}
@@ -295,7 +313,7 @@ export function CaseStudy() {
           </div>
         ) : (
           cs.principle && (
-            <div className="case-section case-principle">
+            <div className={`case-section case-principle${principleInView ? ' in-view' : ''}`} ref={principleRef}>
               <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
               <div className="case-principle-card glass">
                 <p className="case-principle-body">{cs.principle}</p>
@@ -305,19 +323,19 @@ export function CaseStudy() {
         )}
 
         {cs.role && (
-          <div className="case-section case-row">
+          <div className={`case-section case-row${roleInView ? ' in-view' : ''}`} ref={roleRef}>
             <div className="case-section-label case-row-label">{cs.roleLabel ?? 'MY ROLE'}</div>
             <p className="case-row-body">{cs.role}</p>
           </div>
         )}
 
-        <div className="case-section case-row">
+        <div className={`case-section case-row${challengeInView ? ' in-view' : ''}`} ref={challengeRef}>
           <div className="case-section-label case-row-label">{cs.problemLabel}</div>
           <p className="case-row-body">{cs.problem}</p>
         </div>
 
         {cs.solution && cs.solution.length > 0 && (
-          <div className="case-section case-solution">
+          <div className={`case-section case-solution${solutionInView ? ' in-view' : ''}`} ref={solutionRef}>
             <div className="case-section-label case-solution-label">{cs.solutionLabel ?? 'THE SOLUTION'}</div>
             <div className="solution-grid">
               {cs.solution.map((pillar, i) => (
@@ -333,7 +351,7 @@ export function CaseStudy() {
         )}
 
         {cs.loopSteps && cs.loopSteps.length > 0 && (
-          <div className="case-section case-loop">
+          <div className={`case-section case-loop${loopInView ? ' in-view' : ''}`} ref={loopRef}>
             <div className="case-section-label case-loop-label">{cs.loopLabel ?? 'LEARNING LOOP'}</div>
             <div className="loop-flow glass">
               {cs.loopSteps.map((step, i) => (
@@ -354,14 +372,14 @@ export function CaseStudy() {
         )}
 
         {cs.researchBasis && (
-          <div className="case-section case-row">
+          <div className={`case-section case-row${researchBasisInView ? ' in-view' : ''}`} ref={researchBasisRef}>
             <div className="case-section-label case-row-label">{cs.researchBasisLabel ?? 'RESEARCH BASIS'}</div>
             <p className="case-row-body">{cs.researchBasis}</p>
           </div>
         )}
 
         {cs.ageCards && cs.ageCards.length > 0 && (
-          <div className="case-section case-research">
+          <div className={`case-section case-research${researchInView ? ' in-view' : ''}`} ref={researchRef}>
             <div className="case-section-label case-research-label">{cs.researchLabel ?? 'RESEARCH → DESIGN TRANSLATION'}</div>
             {cs.researchIntro && <p className="case-research-intro">{cs.researchIntro}</p>}
             <div className="age-cards">
@@ -373,7 +391,7 @@ export function CaseStudy() {
         )}
 
         {cs.roleCards && cs.roleCards.length > 0 && (
-          <div className="case-section case-roles">
+          <div className={`case-section case-roles${rolesInView ? ' in-view' : ''}`} ref={rolesRef}>
             <div className="case-section-label case-roles-label">{cs.rolesLabel ?? 'ROLE-BASED UX'}</div>
             {cs.rolesIntro && <p className="case-roles-intro">{cs.rolesIntro}</p>}
             <div className="role-cards">
@@ -384,7 +402,7 @@ export function CaseStudy() {
           </div>
         )}
 
-        <div className="case-section case-process">
+        <div className={`case-section case-process${processInView ? ' in-view' : ''}`} ref={processRef}>
           <div className="case-section-label case-process-label">{cs.processLabel}</div>
           <div className="process-grid">
             {process.map((step, i) => (
@@ -398,7 +416,7 @@ export function CaseStudy() {
         </div>
 
         {findings.length > 0 && (
-          <div className="case-section case-findings">
+          <div className={`case-section case-findings${findingsInView ? ' in-view' : ''}`} ref={findingsRef}>
             <div className="case-section-label case-findings-label">{cs.findingsLabel ?? 'FROM USER TESTING'}</div>
             {cs.findingsIntro && <p className="case-findings-intro">{cs.findingsIntro}</p>}
             {findingsBanner ? (
@@ -435,7 +453,7 @@ export function CaseStudy() {
           </div>
         )}
 
-        <div className="case-section case-row">
+        <div className={`case-section case-row${resultInView ? ' in-view' : ''}`} ref={resultRef}>
           <div className="case-section-label case-row-label">{cs.resultLabel}</div>
           <p className="case-row-body">{cs.result}</p>
         </div>

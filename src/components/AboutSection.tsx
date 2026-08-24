@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
-import { useInView } from '../hooks/useInView';
+import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
 import { renderInlineMarkup } from '../utils/markup';
 import { AboutPoint } from './AboutPoint';
 
 export function AboutSection() {
   const { lang } = useLanguage();
   const about = siteCopy[lang].about;
-  const { ref, inView } = useInView<HTMLDivElement>();
+  const { ref, inView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
 
   return (
     <div id="about" className={`section${inView ? ' in-view' : ''}`} ref={ref}>

@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Nav } from '../components/Nav';
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
+import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
 import type { ExperienceItem, ActivityItem } from '../data/types';
 
 /** A vertical line-and-dot timeline (date left, marker center, content
@@ -47,6 +48,12 @@ export function About() {
   const { lang } = useLanguage();
   const ap = siteCopy[lang].aboutPage;
 
+  const { ref: strengthsRef, inView: strengthsInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: experienceRef, inView: experienceInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: intlRef, inView: intlInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: educationRef, inView: educationInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+  const { ref: activitiesRef, inView: activitiesInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
+
   return (
     <div className="page">
       <Nav variant="case" backHref="/#about" backLabel={ap.backLabel} />
@@ -62,7 +69,7 @@ export function About() {
           ))}
         </div>
 
-        <div className="case-section">
+        <div className={`case-section${strengthsInView ? ' in-view' : ''}`} ref={strengthsRef}>
           <div className="case-section-label about-strengths-label">{ap.strengthsLabel}</div>
           <div className="process-grid">
             {ap.strengths.map((s, i) => (
@@ -75,17 +82,17 @@ export function About() {
           </div>
         </div>
 
-        <div className="case-section">
+        <div className={`case-section${experienceInView ? ' in-view' : ''}`} ref={experienceRef}>
           <div className="case-section-label about-exp-label">{ap.experienceLabel}</div>
           <ExperienceTimeline items={ap.experience} />
         </div>
 
-        <div className="case-section">
+        <div className={`case-section${intlInView ? ' in-view' : ''}`} ref={intlRef}>
           <div className="case-section-label about-exp-label">{ap.intlLabel}</div>
           <ExperienceTimeline items={ap.intlExposure} />
         </div>
 
-        <div className="case-section case-row">
+        <div className={`case-section case-row${educationInView ? ' in-view' : ''}`} ref={educationRef}>
           <div className="case-section-label case-row-label">{ap.educationLabel}</div>
           <p className="case-row-body">
             {ap.educationOrg}
@@ -94,7 +101,7 @@ export function About() {
           </p>
         </div>
 
-        <div className="case-section">
+        <div className={`case-section${activitiesInView ? ' in-view' : ''}`} ref={activitiesRef}>
           <div className="case-section-label about-activities-label">{ap.activitiesLabel}</div>
           <div className="activities-grid">
             <div className="activity-group">

@@ -1304,6 +1304,18 @@ a.short-card:hover {
 .case-section {
   padding: var(--section-spacing) 0;
   border-top: 1px solid var(--glass-border);
+  /* Same reveal-on-scroll treatment as the homepage `.section` blocks —
+     see SECTION_REVEAL_ROOT_MARGIN in useInView.ts for why the trigger
+     point is pulled up instead of firing the instant the section pokes
+     into view. */
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.case-section.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .case-section-label {

@@ -4,12 +4,12 @@ import { fullProjects, shortProjects } from '../data/projects';
 import { WorkCard } from './WorkCard';
 import { ShortWorkCard } from './ShortWorkCard';
 import { MoreWorkTeaser } from './MoreWorkTeaser';
-import { useInView } from '../hooks/useInView';
+import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
 
 export function WorkSection() {
   const { lang } = useLanguage();
   const work = siteCopy[lang].work;
-  const { ref, inView } = useInView<HTMLDivElement>();
+  const { ref, inView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
 
   return (
     <div id="work" className={`section${inView ? ' in-view' : ''}`} ref={ref}>

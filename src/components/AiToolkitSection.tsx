@@ -1,12 +1,12 @@
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
-import { useInView } from '../hooks/useInView';
+import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
 import { AiCard } from './AiCard';
 
 export function AiToolkitSection() {
   const { lang } = useLanguage();
   const ai = siteCopy[lang].aiToolkit;
-  const { ref, inView } = useInView<HTMLDivElement>();
+  const { ref, inView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
 
   return (
     <div id="ai" className={`section${inView ? ' in-view' : ''}`} ref={ref}>
