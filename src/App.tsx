@@ -26,7 +26,15 @@ function ScrollManager() {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
       });
     } else {
-      window.scrollTo(0, 0);
+      // `behavior: 'auto'` here is load-bearing, not decorative: `html` in
+      // global.css sets `scroll-behavior: smooth` site-wide (for the hash
+      // case above), and a bare `window.scrollTo(0, 0)` silently inherits
+      // that — so landing on a new page while scrolled far down (e.g.
+      // clicking Previous/Next at the bottom of a case study) animated a
+      // fast, disorienting scroll-up instead of just starting at the top.
+      // This forces an instant jump for page-to-page navigation while
+      // leaving the intentional smooth scroll-to-anchor above untouched.
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     }
   }, [location.pathname, location.hash]);
 
