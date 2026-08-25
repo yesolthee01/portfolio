@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
 import { renderInlineMarkup } from '../utils/markup';
+import { scrollToSection } from '../utils/scrollToSection';
 import { HeroBackdrop } from './HeroBackdrop';
 
 /** Parses hero headline markup: '\n' -> line break, '**word**' -> emphasis
@@ -50,10 +51,10 @@ export function Hero() {
         </div>
 
         <div className="hero-cta hero-reveal" style={{ animationDelay: '0.6s' }}>
-          <a href="#work" className="btn btn-primary press-bounce">
+          <a href="#work" className="btn btn-primary press-bounce" onClick={scrollToSection('work')}>
             {hero.ctaWork}
           </a>
-          <a href="#about" className="btn btn-outline press-bounce">
+          <a href="#about" className="btn btn-outline press-bounce" onClick={scrollToSection('about')}>
             {hero.ctaAbout}
           </a>
         </div>

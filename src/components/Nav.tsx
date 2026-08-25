@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage, type Lang } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
+import { scrollToSection } from '../utils/scrollToSection';
 
 function LangToggle() {
   const { lang, setLang } = useLanguage();
@@ -47,16 +48,40 @@ export function Nav({ variant = 'home', backHref = '/#work', backLabel }: NavPro
               <span />
             </button>
             <div className={`nav-links${open ? ' open' : ''}`}>
-              <a href="#about" onClick={() => setOpen(false)}>
+              <a
+                href="#about"
+                onClick={(e) => {
+                  scrollToSection('about')(e);
+                  setOpen(false);
+                }}
+              >
                 {nav.about}
               </a>
-              <a href="#work" onClick={() => setOpen(false)}>
+              <a
+                href="#work"
+                onClick={(e) => {
+                  scrollToSection('work')(e);
+                  setOpen(false);
+                }}
+              >
                 {nav.work}
               </a>
-              <a href="#ai" onClick={() => setOpen(false)}>
+              <a
+                href="#ai"
+                onClick={(e) => {
+                  scrollToSection('ai')(e);
+                  setOpen(false);
+                }}
+              >
                 {nav.ai}
               </a>
-              <a href="#contact" onClick={() => setOpen(false)}>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  scrollToSection('contact')(e);
+                  setOpen(false);
+                }}
+              >
                 {nav.contact}
               </a>
               <LangToggle />

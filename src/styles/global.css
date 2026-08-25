@@ -149,7 +149,15 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
+  /* No global `scroll-behavior: smooth` here on purpose — it used to live
+     here, but a blanket smooth-scroll also silently applies to plain
+     `window.scrollTo()` calls that want an instant jump (e.g. ScrollManager
+     resetting to the top on a page change in App.tsx), which made
+     Previous/Next between case studies visibly scroll up from wherever
+     you'd been reading instead of just starting at the top. Smooth
+     scrolling for hash anchors (e.g. `/#work`) is applied explicitly per
+     call via `scrollIntoView({ behavior: 'smooth' })` in ScrollManager
+     instead, so only that specific case animates. */
 }
 
 body {

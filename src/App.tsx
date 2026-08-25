@@ -26,14 +26,17 @@ function ScrollManager() {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
       });
     } else {
-      // `behavior: 'auto'` here is load-bearing, not decorative: `html` in
-      // global.css sets `scroll-behavior: smooth` site-wide (for the hash
-      // case above), and a bare `window.scrollTo(0, 0)` silently inherits
-      // that — so landing on a new page while scrolled far down (e.g.
-      // clicking Previous/Next at the bottom of a case study) animated a
-      // fast, disorienting scroll-up instead of just starting at the top.
-      // This forces an instant jump for page-to-page navigation while
-      // leaving the intentional smooth scroll-to-anchor above untouched.
+      // Explicit `behavior: 'auto'` rather than a bare `window.scrollTo(0, 0)`.
+      // `html` in global.css deliberately does NOT set a global
+      // `scroll-behavior: smooth` (see the comment there) precisely because
+      // that used to make this reset silently animate too — landing on a
+      // new page while scrolled far down (e.g. clicking Previous/Next at
+      // the bottom of a case study) visibly scrolled up from the old
+      // position instead of just starting at the top. Spelling out `auto`
+      // here keeps this jump instant regardless of any scroll-behavior
+      // set elsewhere in the future, without relying on the CSS staying a
+      // particular way. Smooth scrolling for hash anchors stays local to
+      // the branch above, via `scrollIntoView({ behavior: 'smooth' })`.
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     }
   }, [location.pathname, location.hash]);
