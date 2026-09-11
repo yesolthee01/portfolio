@@ -128,6 +128,7 @@
   --type-project-body: var(--fs-lg);
   --type-project-body-small: var(--fs-sm);
   --type-project-heading: var(--fs-heading-sm);
+  --type-project-result: var(--fs-display);
 
   /* ---------- SPACING SCALE ----------
      Every margin on the site is one of these — an even step (2px below
@@ -1085,7 +1086,7 @@ a.short-card:hover {
 .about-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: var(--fs-display);
+  font-size: var(--type-project-result);
   margin: 0 0 var(--space-4);
 }
 
