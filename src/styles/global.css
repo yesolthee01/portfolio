@@ -1436,11 +1436,13 @@ a.short-card:hover {
 }
 
 .case-problem-body strong {
-  display: block;
-  margin-bottom: var(--space-14);
   color: var(--ink);
   font-size: var(--fs-emphasis);
   line-height: 1.45;
+}
+
+.case-problem-body p:not(:last-child) {
+  margin-bottom: var(--space-28);
 }
 
 .case-role-tags {

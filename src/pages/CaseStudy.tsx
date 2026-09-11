@@ -84,6 +84,11 @@ function HeroGallery({ images, alt, label }: { images: string[]; alt: string; la
     </div>
   );
 }
+function renderParagraphs(text: string) {
+  return text.split(/\n{2,}/).map((paragraph, index) => (
+    <p key={index}>{renderInlineMarkup(paragraph)}</p>
+  ));
+}
 
 function FindingCard({
   finding,
@@ -374,7 +379,7 @@ export function CaseStudy() {
         <div className={`case-section case-row${challengeInView ? ' in-view' : ''}`} ref={challengeRef}>
           <div className="case-section-label case-row-label">{cs.problemLabel}</div>
           <div className="case-row-body case-problem-body">
-            <p>{renderInlineMarkup(cs.problem)}</p>
+            {renderParagraphs(cs.problem)}
           </div>
         </div>
 
