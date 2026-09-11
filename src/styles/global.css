@@ -1826,8 +1826,14 @@ a.short-card:hover {
   color: var(--ink-soft);
   /* Same width-mismatch fix as .case-research-intro / .case-loop-intro —
      this sits right above the full-width principle-qa-grid. */
-  max-width: var(--project-prose-wide);
+  max-width: none;
   margin: 0 0 var(--space-28);
+}
+
+@media (min-width: 861px) {
+  .case-principle-intro {
+    white-space: nowrap;
+  }
 }
 
 .principle-qa-grid {
