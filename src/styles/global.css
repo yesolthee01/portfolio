@@ -1231,11 +1231,12 @@ a.short-card:hover {
 }
 
 .case-subtitle {
-    max-width: var(--project-prose-wide);
+  max-width: var(--project-prose-wide);
   font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
-    margin: 0 0 var(--project-label-gap);
+  white-space: pre-line;
+  margin: 0 0 var(--project-label-gap);
 }
 
 .case-subtitle strong {
@@ -1909,91 +1910,67 @@ a.short-card:hover {
   font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
-  /* Same fix — sits right above the full-width role-cards column. */
-  max-width: var(--project-prose-wide);
+  /* Same width-mismatch fix as .case-principle-intro: this sits right
+     above the full-width role-cards column, so capping it to the prose
+     width was forcing an awkward one-word-orphan wrap on the last line. */
+  max-width: none;
   margin: 0 0 var(--project-label-gap);
 }
 
-.case-research-findings-label {
-  margin-bottom: var(--space-20);
+@media (min-width: 861px) {
+  .case-roles-intro {
+    white-space: nowrap;
+  }
 }
 
-.research-finding-group {
+.case-research-findings-label {
+  margin-bottom: var(--project-label-gap);
+}
+
+/* Three-up card grid for the role-specific research findings — matches
+   the .process-card / .solution-card index-card pattern used elsewhere
+   on this page instead of the plain bordered list it used to be. */
+.research-role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+
+.research-role-card {
+  border-radius: 20px;
+  padding: 26px 24px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-48);
-}
-
-.research-finding-editorial {
-  display: grid;
-  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1fr);
-  gap: clamp(44px, 8vw, 104px);
-}
-
-.research-finding-copy {
-  padding-top: 4px;
-}
-
-.research-finding-headline {
-  font-size: clamp(22px, 3vw, 32px);
-  line-height: 1.45;
-  font-weight: 600;
-  margin: 0 0 var(--space-24);
-  color: var(--ink);
-  white-space: pre-line;
-}
-
-.research-finding-headline strong {
-  color: var(--accent);
-}
-
-.research-finding-label {
-  font-size: var(--fs-caption);
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  margin-bottom: var(--space-12);
-}
-
-.research-role-list {
-  border-top: 1px solid var(--glass-border);
-}
-
-.research-role-item {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 4px 12px;
-  padding: 22px 0;
-  border-bottom: 1px solid var(--glass-border);
+  gap: var(--space-8);
 }
 
 .research-role-index {
-  grid-row: 1 / 4;
-  padding-top: 2px;
-  color: var(--accent);
-  font-size: var(--fs-caption);
-  letter-spacing: 0.06em;
-}
-
-.research-role-item strong {
-  color: var(--accent);
-  font-size: var(--fs-caption);
+  font-family: var(--font-display);
   font-weight: 600;
+  font-size: var(--fs-index);
+  color: var(--accent);
+  margin-bottom: var(--space-4);
 }
 
-.research-role-caption {
-  order: 3;
-  color: var(--ink-soft);
+.research-role-name {
   font-size: var(--fs-caption);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .research-role-info {
-  order: 2;
   color: var(--ink);
   font-family: var(--font-display);
-  font-size: var(--fs-heading-lg);
+  font-size: var(--fs-heading-sm);
   font-weight: 600;
   line-height: 1.35;
+}
+
+.research-role-caption {
+  color: var(--ink-soft);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
 }
 
 .role-cards {
@@ -2109,21 +2086,26 @@ a.short-card:hover {
   margin-bottom: var(--space-36);
 }
 
+/* Matches the .process-card / .solution-card index-card pattern instead
+   of the old plain thin-border-top text columns — this is the closing
+   section of the page, so it should carry the same weight as the cards
+   above it rather than reading as an unfinished afterthought. */
 .case-result-highlight {
+  border-radius: 20px;
+  padding: 26px 24px;
   display: flex;
   flex-direction: column;
   gap: var(--space-10);
-  padding-top: var(--space-16);
-  border-top: 1px solid var(--glass-border);
+}
+
+.case-result-highlight-index {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-index);
+  color: var(--accent);
 }
 
 .case-result-highlight strong {
-  color: var(--accent);
-  font-size: var(--fs-caption);
-  font-weight: 600;
-}
-
-.case-result-highlight span {
   color: var(--ink);
   font-family: var(--font-display);
   font-size: var(--fs-heading-sm);
@@ -2131,10 +2113,33 @@ a.short-card:hover {
   line-height: 1.4;
 }
 
-.case-result-verification {
+.case-result-highlight span {
+  color: var(--ink-soft);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+}
+
+/* VALIDATION + TAKEAWAY share one emphasis card — same border-left-accent
+   treatment as .case-principle-card — instead of two separate thin-line
+   text blocks with no visual container. */
+.case-result-outcome {
   max-width: var(--project-prose-wide);
-  margin: 0 0 var(--space-36);
-  padding-top: var(--space-20);
+  border-radius: 24px;
+  border-left: 3px solid var(--accent);
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-28);
+}
+
+.case-result-verification,
+.case-result-insight {
+  margin: 0;
+  color: inherit;
+}
+
+.case-result-insight {
+  padding-top: var(--space-28);
   border-top: 1px solid var(--glass-border);
 }
 
@@ -2155,19 +2160,12 @@ a.short-card:hover {
   margin: 0;
 }
 
-.case-result-insight {
-  max-width: var(--project-prose-wide);
-  padding-top: var(--space-20);
-  border-top: 1px solid var(--glass-border);
-  color: var(--accent);
-  margin: 0;
-}
-
 .case-result-insight p {
   margin: 0;
   font-size: var(--fs-emphasis);
   line-height: 1.7;
   font-weight: 600;
+  color: var(--ink);
   white-space: pre-line;
 }
 
@@ -2491,7 +2489,8 @@ a.short-card:hover {
   }
   .process-grid,
   .solution-grid,
-  .principle-qa-grid {
+  .principle-qa-grid,
+  .research-role-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .case-row {
@@ -2548,11 +2547,7 @@ a.short-card:hover {
   .case-result-highlights {
     grid-template-columns: 1fr;
   }
-  .research-finding-editorial {
-    grid-template-columns: 1fr;
-    gap: var(--space-24);
-  }
-  .research-role-list {
+  .research-role-grid {
     grid-template-columns: 1fr;
   }
   .loop-step {

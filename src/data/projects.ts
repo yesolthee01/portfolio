@@ -920,7 +920,7 @@ export const projects: Project[] = [
         eyebrow: '덴마크 학교 교직원 업무 시스템 개선',
         title: 'SkolePlan 리디자인',
         subtitle:
-          'SkolePlan은 덴마크 Efterskole 교직원이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템입니다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고 인터뷰와 설문을 진행한 결과, 역할마다 필요한 정보와 업무 우선순위가 다르다는 점을 발견했습니다. **역할별 핵심 업무가 먼저 보이는 시스템으로 재설계했습니다.**',
+          'SkolePlan은 덴마크 Efterskole 교직원이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템입니다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고 인터뷰와 설문을 진행한 결과, 역할마다 필요한 정보와\n업무 우선순위가 다르다는 점을 발견했습니다. **역할별 핵심 업무가 먼저 보이는 시스템으로 재설계했습니다.**',
         heroLabel: 'HERO IMAGE — SKOLEPLAN',
         roleLabel: '담당 역할',
         roleTags: ['사용자 리서치', '문제 정의', '정보 구조 설계', 'User Flow', 'UI 리디자인', '프로토타입 검증'],
@@ -970,17 +970,8 @@ export const projects: Project[] = [
             imageLabel: '기숙사 담당자 홈 화면 — SKOLEPLAN UI',
           },
         ],
-        principleIntro:
+        principle:
           '기능을 추가하기보다, 각 역할 별 자주 수행하는 업무와 먼저 확인해야 하는 정보를 기준으로 기존 정보 구조를 재정렬했습니다.',
-        principleQA: [
-          { role: '교사', question: '오늘 어떤 수업이 있지?', answer: '오늘의 일정 · 출석' },
-          {
-            role: '주방 담당자',
-            question: '오늘 몇 명의 식사를 준비해야 하는가?',
-            answer: '식사 인원과 식이 요구사항',
-          },
-          { role: '기숙사 담당자', question: '현재 학생들의 상태는 어떤가?', answer: '출결 · 학생 현황' },
-        ],
         processLabel: '문제 해결 과정',
         resultLabel: '결과 및 검증',
         result:
@@ -1043,19 +1034,8 @@ export const projects: Project[] = [
           },
         ],
         principleLabel: 'DESIGN PRINCIPLE',
-        principleIntro:
-          'Instead of showing every user the same information, information priority was designed differently by role. Even on the same system, what each role wanted to know first was different.',
-        principleQA: [
-          { role: 'TEACHER', question: 'What do I need to do today?', answer: "Today's schedule and attendance" },
-          {
-            role: 'KITCHEN STAFF',
-            question: 'How many students should I prepare for?',
-            answer: 'Meal count and dietary needs',
-          },
-          { role: 'DORMITORY STAFF', question: 'What is the current student status?', answer: 'Student attendance and status' },
-        ],
-        principleClosing:
-          "Rather than adding new features, the core design principle was to restructure the information architecture and home dashboard around the real priorities of each role's work.",
+        principle:
+          "Instead of showing every user the same information, information priority was designed differently by role. Even on the same system, what each role wanted to know first was different. Rather than adding new features, the core design principle was to restructure the information architecture and home dashboard around the real priorities of each role's work.",
         processLabel: 'PROCESS',
         resultLabel: 'RESULT / IMPACT',
         result:

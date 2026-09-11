@@ -6,7 +6,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 import { getProjectBySlug, getAdjacentProjects } from '../data/projects';
 import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
 import { renderInlineMarkup } from '../utils/markup';
-import type { Finding, LoopStep, AgeCard, RoleCard, PrincipleQA, CaseStudyContent } from '../data/types';
+import type { Finding, LoopStep, AgeCard, RoleCard, PrincipleQA } from '../data/types';
 
 function HeroGallery({ images, alt, label }: { images: string[]; alt: string; label: string }) {
   const [index, setIndex] = useState(0);
@@ -199,33 +199,6 @@ function PrincipleQACard({ qa }: { qa: PrincipleQA }) {
   );
 }
 
-function ResearchFindingGroupBlock({ group }: { group: NonNullable<CaseStudyContent['researchFindings']> }) {
-  return (
-    <div className="research-finding-group">
-      <div className="research-finding-editorial">
-        <div className="research-finding-copy">
-          <p className="research-finding-headline">{renderInlineMarkup(group.headline)}</p>
-        </div>
-
-        <div className="research-roles">
-          <div className="research-finding-label">{group.roleTitle}</div>
-          <div className="research-role-list">
-            {group.roleItems.map((item, index) => (
-              <div className="research-role-item" key={item.role}>
-                <span className="research-role-index">{String(index + 1).padStart(2, '0')}</span>
-                <strong>{item.role}</strong>
-                <span className="research-role-info">{item.info}</span>
-                <span className="research-role-caption">{item.support}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-    </div>
-  );
-}
-
 function LoopStepRow({ step, index }: { step: LoopStep; index: number }) {
   const { ref, inView } = useInView<HTMLDivElement>(0.25);
 
@@ -373,8 +346,17 @@ export function CaseStudy() {
 
         {isSkolePlan && cs.researchFindings && (
           <div className={`case-section case-research-findings${researchInView ? ' in-view' : ''}`} ref={researchRef}>
-            <div className="case-section-label case-research-findings-label">사용자 조사에서 발견한 핵심 문제</div>
-            <ResearchFindingGroupBlock group={cs.researchFindings} />
+            <div className="case-section-label case-research-findings-label">{cs.researchFindings.roleTitle}</div>
+            <div className="research-role-grid">
+              {cs.researchFindings.roleItems.map((item, index) => (
+                <div className="research-role-card glass" key={item.role}>
+                  <div className="research-role-index">{String(index + 1).padStart(2, '0')}</div>
+                  <div className="research-role-name">{item.role}</div>
+                  <div className="research-role-info">{item.info}</div>
+                  <div className="research-role-caption">{item.support}</div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
@@ -504,20 +486,23 @@ export function CaseStudy() {
             <div className="case-section-label case-result-label">{cs.resultLabel}</div>
             <h2 className="case-result-headline">{renderInlineMarkup(cs.resultHeadline)}</h2>
             <div className="case-result-highlights">
-              {cs.resultHighlights.map((highlight) => (
-                <div className="case-result-highlight" key={highlight.title}>
+              {cs.resultHighlights.map((highlight, i) => (
+                <div className="case-result-highlight glass" key={highlight.title}>
+                  <div className="case-result-highlight-index">{String(i + 1).padStart(2, '0')}</div>
                   <strong>{highlight.title}</strong>
                   <span>{highlight.desc}</span>
                 </div>
               ))}
             </div>
-            <div className="case-result-verification">
-              <span>VALIDATION</span>
-              <p>{cs.resultVerification}</p>
-            </div>
-            <div className="case-result-insight">
-              <span>TAKEAWAY</span>
-              <p>{cs.resultTakeaway}</p>
+            <div className="case-result-outcome glass">
+              <div className="case-result-verification">
+                <span>VALIDATION</span>
+                <p>{cs.resultVerification}</p>
+              </div>
+              <div className="case-result-insight">
+                <span>TAKEAWAY</span>
+                <p>{cs.resultTakeaway}</p>
+              </div>
             </div>
           </div>
         ) : (
