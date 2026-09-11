@@ -1,0 +1,302 @@
+/* ============================================================
+   CASE STUDY LAYOUT CLEANUP
+   Keeps the existing visual language, but normalizes spacing, reading
+   widths, wrapping, and alignment across project detail pages.
+   Imported after global.css so these rules intentionally override only
+   the layout inconsistencies called out during the portfolio review.
+   ============================================================ */
+
+:root {
+  /* One vertical rhythm for case-study sections. */
+  --project-section-gap: 64px;
+  --project-label-gap: 24px;
+
+  /* Keep prose on a stable reading rail while full-width visuals stay on
+     the project container rail. */
+  --project-prose-width: 720px;
+  --project-prose-wide: 760px;
+}
+
+/* ---------- HERO / SECTION RHYTHM ---------- */
+
+.case-hero {
+  padding: 72px 0 64px;
+}
+
+.case-section {
+  padding: var(--project-section-gap) 0;
+}
+
+.case-section-label {
+  line-height: 1.4;
+}
+
+/* ---------- READING RAILS ---------- */
+
+.case-row-body,
+.case-subtitle,
+.case-loop-intro,
+.case-research-intro,
+.case-principle-intro,
+.case-principle-closing,
+.case-roles-intro,
+.case-result-headline {
+  max-width: var(--project-prose-wide);
+}
+
+/* Body copy should wrap naturally. Avoid layout-specific forced line
+   breaks: Korean word integrity is already handled globally with
+   word-break: keep-all. */
+.case-row-body p,
+.case-subtitle,
+.case-loop-intro,
+.case-research-intro,
+.case-principle-intro,
+.case-principle-closing,
+.case-roles-intro,
+.case-result-headline {
+  white-space: normal;
+}
+
+/* Headline balancing is useful; prose should not be forced to one line. */
+.case-title,
+.case-result-headline {
+  text-wrap: balance;
+}
+
+/* Explicitly undo the desktop nowrap exceptions in global.css. */
+@media (min-width: 861px) {
+  .case-principle-intro,
+  .case-roles-intro {
+    white-space: normal;
+  }
+}
+
+/* ---------- LABEL + CONTENT ALIGNMENT ---------- */
+
+/* Keep the editorial label/body split consistent wherever the page uses
+   a two-column text row. */
+.case-row {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+}
+
+.case-row-label {
+  grid-column: 1 / 4;
+}
+
+.case-row-body {
+  grid-column: 5 / 13;
+  width: 100%;
+}
+
+/* Sections that introduce a full-width grid should keep their intro on
+   the same reading rail instead of switching arbitrarily to max-width:none. */
+.case-principle-intro,
+.case-roles-intro,
+.case-research-intro,
+.case-loop-intro {
+  width: 100%;
+  margin-bottom: var(--project-label-gap);
+}
+
+/* ---------- RESEARCH FINDINGS ---------- */
+
+.case-research-findings-label,
+.case-principle-label,
+.case-roles-label,
+.case-process-label,
+.case-solution-label,
+.case-findings-label,
+.case-result-label {
+  margin-bottom: var(--project-label-gap);
+}
+
+.research-role-grid,
+.principle-qa-grid,
+.process-grid,
+.solution-grid,
+.case-result-highlights {
+  gap: var(--grid-gap);
+}
+
+/* ---------- ROLE-BASED UX ---------- */
+
+/* Replace percentage-driven columns with stable rails: role identity,
+   flexible explanation, fixed mockup. This keeps all three rows aligned
+   even when the body copy lengths differ. */
+.role-card {
+  grid-template-columns: 132px minmax(0, 1fr) 220px;
+  column-gap: 32px;
+  min-height: 0;
+  padding: 32px 0;
+  align-items: start;
+}
+
+.role-card-identity,
+.role-card-content {
+  align-self: start;
+}
+
+.role-card-content {
+  max-width: 520px;
+}
+
+.role-card-image {
+  width: 220px;
+  height: 300px;
+  justify-self: end;
+  align-self: center;
+  object-fit: contain;
+}
+
+.role-card-focus {
+  margin-bottom: 12px;
+}
+
+/* ---------- PROCESS ---------- */
+
+.process-card {
+  height: 100%;
+  padding: 24px;
+}
+
+.process-card p {
+  line-height: 1.7;
+}
+
+/* ---------- RESULT / CONCLUSION ---------- */
+
+.case-result-headline {
+  margin-bottom: 36px;
+}
+
+.case-result-highlights {
+  margin-bottom: 36px;
+}
+
+/* The conclusion should not visually collapse from full-width highlights
+   into a much narrower block. Keep the outcome on the same full rail and
+   use two balanced columns on desktop. */
+.case-result-outcome {
+  max-width: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  padding: 32px 36px;
+}
+
+.case-result-verification {
+  padding-right: 32px;
+}
+
+.case-result-insight {
+  padding-top: 0;
+  padding-left: 32px;
+  border-top: 0;
+  border-left: 1px solid var(--glass-border);
+}
+
+.case-result-verification p,
+.case-result-insight p {
+  max-width: 100%;
+}
+
+/* ---------- FOOTER ---------- */
+
+.case-footer-nav {
+  padding: 56px 0 24px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1024px) {
+  .role-card {
+    grid-template-columns: 116px minmax(0, 1fr) 180px;
+    column-gap: 24px;
+  }
+
+  .role-card-image {
+    width: 180px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    --project-section-gap: 52px;
+    --project-label-gap: 20px;
+  }
+
+  .case-hero {
+    padding: 56px 0 48px;
+  }
+
+  .case-row {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+
+  .case-row-label,
+  .case-row-body {
+    grid-column: auto;
+  }
+
+  .role-card {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    padding: 28px 0;
+  }
+
+  .role-card-content {
+    max-width: var(--project-prose-wide);
+  }
+
+  .role-card-image {
+    width: min(220px, 72vw);
+    height: auto;
+    max-height: 300px;
+    justify-self: start;
+  }
+
+  .case-result-outcome {
+    grid-template-columns: 1fr;
+    padding: 28px 26px;
+  }
+
+  .case-result-verification {
+    padding-right: 0;
+  }
+
+  .case-result-insight {
+    margin-top: 24px;
+    padding-top: 24px;
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--glass-border);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --project-section-gap: 44px;
+    --project-label-gap: 18px;
+  }
+
+  .case-hero {
+    padding: 48px 0 40px;
+  }
+
+  .role-card-image {
+    justify-self: center;
+  }
+
+  .case-result-outcome {
+    padding: 24px 20px;
+  }
+
+  .case-footer-nav {
+    padding-top: 44px;
+  }
+}
