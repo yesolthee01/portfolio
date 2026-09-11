@@ -362,6 +362,19 @@ export function CaseStudy() {
 
         {isSkolePlan && principleSection}
 
+        <div className={`case-section case-process${processInView ? ' in-view' : ''}`} ref={processRef}>
+          <div className="case-section-label case-process-label">{cs.processLabel}</div>
+          <div className="process-grid">
+            {process.map((step, i) => (
+              <div className="process-card glass" key={step.title}>
+                <div className="process-index">{String(i + 1).padStart(2, '0')}</div>
+                <h3>{step.title}</h3>
+                {renderParagraphs(step.desc)}
+              </div>
+            ))}
+          </div>
+        </div>
+
         {cs.solution && cs.solution.length > 0 && (
           <div className={`case-section case-solution${solutionInView ? ' in-view' : ''}`} ref={solutionRef}>
             <div className="case-section-label case-solution-label">{cs.solutionLabel ?? 'THE SOLUTION'}</div>
@@ -429,19 +442,6 @@ export function CaseStudy() {
             </div>
           </div>
         )}
-
-        <div className={`case-section case-process${processInView ? ' in-view' : ''}`} ref={processRef}>
-          <div className="case-section-label case-process-label">{cs.processLabel}</div>
-          <div className="process-grid">
-            {process.map((step, i) => (
-              <div className="process-card glass" key={step.title}>
-                <div className="process-index">{String(i + 1).padStart(2, '0')}</div>
-                <h3>{step.title}</h3>
-                {renderParagraphs(step.desc)}
-              </div>
-            ))}
-          </div>
-        </div>
 
         {findings.length > 0 && (
           <div className={`case-section case-findings${findingsInView ? ' in-view' : ''}`} ref={findingsRef}>

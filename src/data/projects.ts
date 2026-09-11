@@ -86,9 +86,6 @@ export const projects: Project[] = [
         subtitle:
           "'미드나잇 카니발(Midnight Carnival)'은 5면 공간형 XR 플랫폼을 기반으로 한 체험형 e-sports 콘텐츠다. 신체 움직임과 디지털 인터랙션을 연결해, 여러 사용자가 온몸으로 함께 즐기는 협동형 경험을 제공한다.",
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
-        principleLabel: 'DESIGN PRINCIPLE',
-        principle:
-          '게임을 선택하고, 플레이 방법을 이해하고, 다음 행동을 결정해야 하는 순간에 명확한 시각적 단서를 제공했다. 사용자 테스트에서 발견한 혼란 지점을 바탕으로 게임 선택을 위한 visual cue, 행동 중심의 튜토리얼, 플레이 방향을 안내하는 UI를 보완해 몰입을 유지하면서도 다음 행동을 자연스럽게 이해할 수 있도록 설계했다.',
         roleLabel: 'MY ROLE',
         role:
           'PM과 UX/UI Designer로 참여해 콘텐츠 기획부터 인터랙션 설계, 사용자 테스트, 전시까지 프로젝트 전 과정을 이끌었다. UI와 배경 비주얼 제작의 약 25%를 담당했으며, 게임 개발자와 디자이너 간 협업을 조율했다. 사용자 반응을 검증하고 경험을 개선하기 위해 교내 테스트 전시를 기획·운영했으며, 프로젝트 기반의 리서치 논문을 공동 저술했다.',
@@ -154,9 +151,6 @@ export const projects: Project[] = [
         subtitle:
           "'Midnight Carnival' is an experiential e-sports piece built on a five-wall spatial XR platform. It connects physical movement with digital interaction, letting multiple users play together with their whole bodies in a cooperative experience.",
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
-        principleLabel: 'DESIGN PRINCIPLE',
-        principle:
-          "The principle was providing clear visual cues at the moments that mattered most — choosing a game, understanding how to play, and deciding the next move. Based on points of confusion found in user testing, visual cues for game selection, action-driven tutorials, and UI guiding the direction of play were added, so players could stay immersed while still understanding what to do next.",
         roleLabel: 'MY ROLE',
         role:
           'Joined as PM and UX/UI Designer, leading the project from content planning and interaction design through user testing and exhibition. Handled roughly 25% of UI and background visual production, and coordinated collaboration between game developers and designers. Planned and ran an in-school test exhibition to validate user response and improve the experience, and co-authored a research paper based on the project.',
@@ -438,11 +432,8 @@ export const projects: Project[] = [
         eyebrow: 'AI 선생님과 함께하는 맞춤형 영어학습 앱',
         title: 'Talkable',
         subtitle:
-          '대학교 졸업 캡스톤으로 진행한 프로젝트다. Talkable은 AI와의 실시간 대화를 통해 영어를 연습하고, 실제 대화에서 발견된 약점을 다음 학습으로 연결하는 개인 맞춤형 영어 회화 학습 서비스다. 사용자의 대화를 분석해 발음·문법·유창성·어휘에 대한 피드백을 제공하고, 이를 개인 맞춤형 복습과 챌린지 활동을 통해 지속적으로 학습할 수 있는 Learning Loop로 설계했다.',
+          '대학교 졸업 캡스톤으로 진행한 프로젝트다. Talkable은 AI와의 실시간 대화를 통해 영어를 연습하고, 실제 대화에서 발견된 약점을 다음 학습으로 연결하는 개인 맞춤형 영어 회화 학습 서비스다. 대화 → 피드백 → 복습 → 챌린지로 이어지는 Learning Loop로 설계했다.',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
-        principleLabel: 'DESIGN PRINCIPLE',
-        principle:
-          '사용자가 실제로 나눈 대화에서 학습을 시작하고, 개인의 수준과 약점에 맞는 피드백과 복습으로 다음 학습을 연결하는 것을 중심 원칙으로 삼았다. 학습 기록과 성장 과정을 지속적으로 보여주어, 매번의 대화가 일회성 연습으로 끝나지 않고 사용자에게 맞춰 축적되는 학습 경험이 되도록 설계했다.',
         roleLabel: 'MY ROLE',
         role:
           'UX/UI Designer로 참여해 사용자 리서치부터 서비스 구조 설계, UI 디자인, 프로토타이핑과 사용자 테스트까지 전반적인 UX/UI 디자인을 담당했다. 개발 과정에서는 AI 기반 대화와 개인화 피드백이 실제 서비스 경험으로 연결될 수 있도록 기능과 인터랙션을 구체화하고, 프로토타입을 반복적으로 테스트하며 개선했다.',
@@ -469,7 +460,7 @@ export const projects: Project[] = [
         ],
         loopLabel: 'LEARNING LOOP',
         loopIntro:
-          '이 과정을 반복해 실제 대화에서 발견된 약점이 다음 학습으로 이어지는 순환 구조를 만들었다.',
+          '사용자가 실제로 나눈 대화에서 학습을 시작해, 개인의 수준과 약점에 맞는 피드백과 복습으로 다음 학습을 연결했다. 이 과정을 반복하며 대화에서 발견된 약점이 다음 학습으로 이어지는 순환 구조를 만들었다.',
         loopSteps: [
           {
             title: 'CONVERSATION',
@@ -544,9 +535,6 @@ export const projects: Project[] = [
         subtitle:
           "This was a university graduation capstone project. Talkable is a personalized English conversation-learning service that lets users practice through real-time conversation with AI and turns weaknesses found in those conversations into the next round of learning. It analyzes each conversation for pronunciation, grammar, fluency, and vocabulary, and turns that feedback into a continuous Learning Loop of personalized review and challenges.",
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
-        principleLabel: 'DESIGN PRINCIPLE',
-        principle:
-          "The central principle was starting learning from the user's own real conversations, then connecting each one to the next round of learning through feedback and review matched to that person's level and weaknesses. Learning history and progress were shown continuously, so no single conversation ended as a one-off exercise — instead, each one accumulated into a learning experience built around that user.",
         roleLabel: 'MY ROLE',
         role:
           'Joined as UX/UI Designer, covering the full design process from user research through service structure, UI design, prototyping, and user testing. During development, worked out the features and interactions that turned AI-driven conversation and personalized feedback into an actual product experience, testing and refining the prototype through repeated iteration.',
@@ -573,7 +561,7 @@ export const projects: Project[] = [
         ],
         loopLabel: 'LEARNING LOOP',
         loopIntro:
-          'Repeating this cycle created a loop where weaknesses found in real conversation fed directly into the next round of learning.',
+          "Learning started from the user's own conversations, connecting each one to the next round of learning through feedback and review matched to their level and weaknesses. Repeating this cycle created a loop where weaknesses found in real conversation fed directly into the next round of learning.",
         loopSteps: [
           {
             title: 'CONVERSATION',
@@ -876,16 +864,16 @@ export const projects: Project[] = [
     process: {
       kr: [
         {
-          title: '관찰하고 문제를 정의했습니다',
-          desc: '현장 관찰과 인터뷰·설문을 통해 교직원의 실제 업무 흐름을 확인했습니다.\n\n**“깊은 정보 탐색 · 낮은 정보 가시성 · 업무 흐름과 화면 구조의 불일치”**를 핵심 문제로 정의했습니다.',
+          title: '관찰하고 문제를 정의했다',
+          desc: '현장 관찰과 인터뷰·설문을 통해 교직원의 실제 업무 흐름을 확인했다.\n\n**“깊은 정보 탐색 · 낮은 정보 가시성 · 업무 흐름과 화면 구조의 불일치”**를 핵심 문제로 정의했다.',
         },
         {
-          title: '업무의 우선순위를 정했습니다',
-          desc: '역할별 반복 업무와 가장 먼저 확인해야 할 정보를 비교했습니다.\n\n이를 바탕으로 **“교사·주방·기숙사 담당자별 정보 우선순위”**를 정의했습니다.',
+          title: '업무의 우선순위를 정했다',
+          desc: '역할별 반복 업무와 가장 먼저 확인해야 할 정보를 비교했다.\n\n이를 바탕으로 **“교사·주방·기숙사 담당자별 정보 우선순위”**를 정의했다.',
         },
         {
-          title: '정보 구조와 화면을 개선했습니다',
-          desc: '역할별 우선순위를 기준으로 Home Dashboard와 Navigation을 재구성했습니다.\n\n**“핵심 업무까지의 탐색 단계를 줄이고, 중요한 정보를 먼저 확인할 수 있도록”** 개선했습니다.',
+          title: '정보 구조와 화면을 개선했다',
+          desc: '역할별 우선순위를 기준으로 Home Dashboard와 Navigation을 재구성했다.\n\n**“핵심 업무까지의 탐색 단계를 줄이고, 중요한 정보를 먼저 확인할 수 있도록”** 개선했다.',
         },
       ],
       en: [
@@ -920,19 +908,19 @@ export const projects: Project[] = [
         eyebrow: '덴마크 학교 교직원 업무 시스템 개선',
         title: 'SkolePlan 리디자인',
         subtitle:
-          'SkolePlan은 덴마크 Efterskole 교직원이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템입니다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고 인터뷰와 설문을 진행한 결과, 역할마다 필요한 정보와\n업무 우선순위가 다르다는 점을 발견했습니다. **역할별 핵심 업무가 먼저 보이는 시스템으로 재설계했습니다.**',
+          'SkolePlan은 덴마크 Efterskole 교직원이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템이다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고 인터뷰와 설문을 진행한 결과, 역할마다 필요한 정보와\n업무 우선순위가 다르다는 점을 발견했다. **역할별 핵심 업무가 먼저 보이는 시스템으로 재설계했다.**',
         heroLabel: 'HERO IMAGE — SKOLEPLAN',
         roleLabel: '담당 역할',
         roleTags: ['사용자 리서치', '문제 정의', '정보 구조 설계', 'User Flow', 'UI 리디자인', '프로토타입 검증'],
         role:
-          '현장 관찰과 인터뷰·설문을 통해 업무 흐름을 파악하고, 역할별 정보 우선순위를 정의해 서비스 구조와 주요 화면을 재설계했습니다.',
+          '현장 관찰과 인터뷰·설문을 통해 업무 흐름을 파악하고, 역할별 정보 우선순위를 정의해 서비스 구조와 주요 화면을 재설계했다.',
         problemLabel: '문제 정의',
         problem:
-          '**같은 시스템을 사용하지만, 필요한 정보의 우선순위는 달랐습니다.**\n\n기존 시스템은 모든 교직원에게 동일한 정보 구조를 제공했습니다. 그래서 사용자는 필요한 정보에 도달하기 위해 여러 단계를 거쳐야 했고, 업무 중 자주 확인하는 정보도 즉시 파악하기 어려웠습니다. 설문조사와 인터뷰를 통해 교사·주방·기숙사 담당자마다 반복적으로 수행하는 업무와 가장 먼저 확인해야 하는 정보가 다르다는 점을 핵심 문제로 정의했습니다.',
+          '**같은 시스템을 사용하지만, 필요한 정보의 우선순위는 달랐다.**\n\n기존 시스템은 모든 교직원에게 동일한 정보 구조를 제공했다. 그래서 사용자는 필요한 정보에 도달하기 위해 여러 단계를 거쳐야 했고, 업무 중 자주 확인하는 정보도 즉시 파악하기 어려웠다. 설문조사와 인터뷰를 통해 교사·주방·기숙사 담당자마다 반복적으로 수행하는 업무와 가장 먼저 확인해야 하는 정보가 다르다는 점을 핵심 문제로 정의했다.',
         researchFindings: {
           commonTitle: '공통 업무',
           commonItems: ['출석 확인', '당일 일정', '학생 현황'],
-          headline: '같은 시스템을 사용하지만,\n역할마다 **업무의 우선순위**는 달랐습니다.',
+          headline: '같은 시스템을 사용하지만,\n역할마다 **업무의 우선순위**는 달랐다.',
           roleTitle: '역할 별 필요로하는 핵심 정보',
           roleItems: [
             { role: '교사', info: '수업 일정 · 출석', support: '오늘의 수업과 학생 출석을 가장 먼저 확인' },
@@ -944,53 +932,50 @@ export const projects: Project[] = [
             { role: '기숙사 담당자', info: '학생 출결 · 현재 상태', support: '학생의 재실 여부와 현재 상태를 우선 확인' },
           ],
         },
-        principleLabel: '설계 원칙',
         rolesIntro:
-          '리서치에서 발견한 역할별 업무 차이를 바탕으로, 동일했던 기존 인터페이스를 각 사용자의 핵심 업무와 정보가 먼저 보이는 구조로 재설계했습니다.',
+          '리서치에서 발견한 역할별 업무 차이를 바탕으로, 기능을 추가하기보다 각 역할이 먼저 확인해야 하는 정보를 중심으로 기존 인터페이스를 재설계했다.',
         roleCards: [
           {
             role: '교사',
             focus: '일정과 출석을 한눈에',
-            desc: '교사에게 가장 중요한 것은 오늘의 일정과 학생 출석 현황을 빠르게 확인하고 처리하는 것이었습니다. 여러 페이지를 탐색하는 대신 홈 화면에서 당일 수업과 출석 상태를 바로 확인하고 필요한 업무로 이동할 수 있도록 구성했습니다.',
+            desc: '교사에게 가장 중요한 것은 오늘의 일정과 학생 출석 현황을 빠르게 확인하고 처리하는 것이었다. 여러 페이지를 탐색하는 대신 홈 화면에서 당일 수업과 출석 상태를 바로 확인하고 필요한 업무로 이동할 수 있도록 구성했다.',
             image: '/images/work/skoleplan/role-card-1.png',
             imageLabel: '교사 홈 화면 — SKOLEPLAN UI',
           },
           {
             role: '주방 담당자',
             focus: '식사 준비 정보를 한눈에',
-            desc: '주방 담당자는 개별 학생의 상세 정보보다 전체 식사 인원과 식이 요구사항을 빠르게 파악하는 것이 중요했습니다. 홈 화면에서 전체 식사 인원과 Vegan · Vegetarian · Gluten-free · Halal 등의 정보를 한눈에 확인할 수 있도록 구성했습니다.',
+            desc: '주방 담당자는 개별 학생의 상세 정보보다 전체 식사 인원과 식이 요구사항을 빠르게 파악하는 것이 중요했다. 홈 화면에서 전체 식사 인원과 Vegan · Vegetarian · Gluten-free · Halal 등의 정보를 한눈에 확인할 수 있도록 구성했다.',
             image: '/images/work/skoleplan/role-card-2.png',
             imageLabel: '주방 담당자 홈 화면 — SKOLEPLAN UI',
           },
           {
             role: '기숙사 담당자',
             focus: '학생 현황을 빠르게 확인',
-            desc: '기숙사 담당자에게는 학생들의 출결과 현재 상태를 빠르게 파악하는 것이 중요했습니다. 등교 여부와 외부 활동 등 학생 현황을 홈 화면에서 바로 확인할 수 있도록 해 반복적인 정보 탐색을 줄였습니다.',
+            desc: '기숙사 담당자에게는 학생들의 출결과 현재 상태를 빠르게 파악하는 것이 중요했다. 등교 여부와 외부 활동 등 학생 현황을 홈 화면에서 바로 확인할 수 있도록 해 반복적인 정보 탐색을 줄였다.',
             image: '/images/work/skoleplan/role-card-3.png',
             imageLabel: '기숙사 담당자 홈 화면 — SKOLEPLAN UI',
           },
         ],
-        principle:
-          '기능을 추가하기보다, 각 역할 별 자주 수행하는 업무와 먼저 확인해야 하는 정보를 기준으로 기존 정보 구조를 재정렬했습니다.',
         processLabel: '문제 해결 과정',
         resultLabel: '결과 및 검증',
         result:
-          '역할별 Dashboard 프로토타입을 교직원에게 공유해 실제 업무 흐름과 정보 구성의 적합성을 확인했습니다. 교사는 일정과 출석, 주방 담당자는 식사 인원과 식이 요구사항, 기숙사 담당자는 학생 출결과 현황을 한 화면에서 확인할 수 있다는 점에 긍정적인 피드백을 보였습니다.\n\n이를 통해 기능을 늘리는 것보다 사용자의 업무 맥락에 맞춰 정보의 우선순위를 재구성하는 것이 업무 효율과 정보 접근성을 높이는 데 중요하다는 점을 확인했습니다.',
-        resultHeadline: '역할에 맞는 정보 구조로,\n핵심 업무에 더 빠르게 접근할 수 있도록 했습니다.',
+          '역할별 Dashboard 프로토타입을 교직원에게 공유해 실제 업무 흐름과 정보 구성의 적합성을 확인했다. 교사는 일정과 출석, 주방 담당자는 식사 인원과 식이 요구사항, 기숙사 담당자는 학생 출결과 현황을 한 화면에서 확인할 수 있다는 점에서 긍정적인 피드백을 얻었다.\n\n이를 통해 기능을 늘리는 것보다 사용자의 업무 맥락에 맞춰 정보의 우선순위를 재구성하는 것이 업무 효율과 정보 접근성을 높이는 데 중요하다는 점을 확인했다.',
+        resultHeadline: '역할에 맞는 정보 구조로,\n핵심 업무에 더 빠르게 접근할 수 있도록 했다.',
         resultHighlights: [
-          { title: '정보 접근 방식 개선', desc: '모든 사용자에게 동일했던 화면을 역할별 업무 우선순위에 맞춰 재구성했습니다.' },
+          { title: '정보 접근 방식 개선', desc: '동일했던 화면 구조를 역할별 우선순위에 맞춰 다시 설계했다.' },
           {
             title: '핵심 업무 중심의 화면 설계',
-            desc: '로그인 후 여러 메뉴를 탐색하기보다, 가장 자주 확인하는 정보와 업무를 홈에서 바로 확인할 수 있도록 했습니다.',
+            desc: '로그인 후 여러 메뉴를 탐색하기보다, 가장 자주 확인하는 정보와 업무를 홈에서 바로 확인할 수 있도록 했다.',
           },
           {
             title: '실제 사용자에게 방향성 검증',
-            desc: '역할별 Dashboard 프로토타입을 교직원에게 공유해 실제 업무 흐름과 정보 구성의 적합성을 확인했습니다.',
+            desc: '역할별 Dashboard 프로토타입을 교직원에게 공유해 실제 업무 흐름과 정보 구성의 적합성을 확인했다.',
           },
         ],
-        resultVerification: '각 역할에 필요한 정보를 한 화면에서 바로 확인할 수 있다는 점에서 긍정적인 피드백을 확인했습니다.',
+        resultVerification: '각 역할에 필요한 정보를 한 화면에서 바로 확인할 수 있다는 점에서 긍정적인 피드백을 확인했다.',
         resultTakeaway:
-          '기능을 더하는 것보다,\n사용자의 실제 업무 흐름을 이해하고\n정보의 우선순위를 다시 정하는 것이 더 중요한 개선이 될 수 있었습니다.',
+          '기능을 더하는 것보다,\n사용자의 실제 업무 흐름을 이해하고\n정보의 우선순위를 다시 정하는 것이 더 중요한 개선이었다.',
         prevLabel: '← PREVIOUS — SEOUL CITY-FUNDED XR RESEARCH',
         nextLabel: 'BACK TO ALL WORK →',
         backToWorkLabel: '← ALL WORK',
@@ -1007,9 +992,8 @@ export const projects: Project[] = [
         problemLabel: 'THE CHALLENGE',
         problem:
           "Everyone used the same system, but not everyone needed the same information. The existing system's deep navigation structure meant several steps were needed just to find what mattered, and key information wasn't surfaced immediately. On-site research showed that teachers, kitchen staff, and dormitory staff each checked different information and prioritized different tasks.",
-        rolesLabel: '역할별 업무 흐름 개선',
         rolesIntro:
-          "Based on the role-specific differences uncovered in research, the previously identical interface was redesigned so each user's core tasks and information surface first.",
+          "Based on the role-specific differences uncovered in research, the interface was redesigned — not by adding features, but by restructuring the information architecture around what each role needed to check first.",
         roleCards: [
           {
             role: 'TEACHER',
@@ -1033,9 +1017,6 @@ export const projects: Project[] = [
             imageLabel: 'DORMITORY STAFF HOME — SKOLEPLAN UI',
           },
         ],
-        principleLabel: 'DESIGN PRINCIPLE',
-        principle:
-          "Instead of showing every user the same information, information priority was designed differently by role. Even on the same system, what each role wanted to know first was different. Rather than adding new features, the core design principle was to restructure the information architecture and home dashboard around the real priorities of each role's work.",
         processLabel: 'PROCESS',
         resultLabel: 'RESULT / IMPACT',
         result:
