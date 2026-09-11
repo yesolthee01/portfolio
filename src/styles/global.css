@@ -95,10 +95,15 @@
      galleries, loop steps, role/age cards) intentionally keep their own
      values and are not tied to these. */
   --container-max: 1080px;
+  --project-container-max: var(--container-max);
   --grid-gap: 18px;
   --content-default: 720px;
   --content-wide: 760px;
   --section-spacing: 56px;
+  --project-prose-width: var(--content-default);
+  --project-prose-wide: var(--content-wide);
+  --project-section-gap: var(--section-spacing);
+  --project-label-gap: var(--space-32);
 
   /* ---------- TYPE SCALE ----------
      Every font-size on the site pulls from one of these — reach for the
@@ -119,6 +124,10 @@
   --fs-heading-lg: 24px; /* home full work-card title */
   --fs-section: 25px; /* site section headers (WORK, ABOUT, CONTACT, ...) */
   --fs-display: 32px; /* about-title */
+  --type-project-label: var(--fs-caption);
+  --type-project-body: var(--fs-lg);
+  --type-project-body-small: var(--fs-sm);
+  --type-project-heading: var(--fs-heading-sm);
 
   /* ---------- SPACING SCALE ----------
      Every margin on the site is one of these — an even step (2px below
@@ -199,7 +208,7 @@ button {
 
 .frame {
   position: relative;
-  max-width: var(--container-max);
+  max-width: var(--project-container-max);
   margin: 0 auto;
   padding: 0 var(--pad-x);
 }
@@ -1209,6 +1218,7 @@ a.short-card:hover {
   font-weight: 600;
   font-size: clamp(30px, 4.8vw, 56px);
   line-height: 1.1;
+  text-wrap: balance;
   letter-spacing: -0.02em;
   margin: 0 0 var(--space-24);
   /* No max-width cap: the old 860px cap was narrower than the page's own
@@ -1220,18 +1230,11 @@ a.short-card:hover {
 }
 
 .case-subtitle {
-  /* No max-width cap — same fix as .case-title right above it: this sat
-     capped at 720px while .case-title (no cap) and the full-width hero
-     image right below both use the page's full ~1080px container, so
-     the subtitle wrapped narrower than either neighbor for no reason
-     (e.g. stranding a lone "It" at the end of a line on Midnight
-     Carnival's EN subtitle). Only wraps now when the text is actually
-     too long for the container. */
-  max-width: none;
+    max-width: var(--project-prose-wide);
   font-size: var(--fs-base);
   line-height: 1.8;
   color: var(--ink-soft);
-  margin: 0 0 var(--space-36);
+    margin: 0 0 var(--project-label-gap);
 }
 
 .case-subtitle strong {
@@ -1387,7 +1390,7 @@ a.short-card:hover {
    duplicate padding/border-top/typography themselves. */
 
 .case-section {
-  padding: var(--section-spacing) 0;
+  padding: var(--project-section-gap) 0;
   border-top: 1px solid var(--glass-border);
   /* Same reveal-on-scroll treatment as the homepage `.section` blocks,
      using the shared SCROLL REVEAL SYSTEM tokens (:root) — see
@@ -1406,10 +1409,14 @@ a.short-card:hover {
 }
 
 .case-section-label {
-  font-size: var(--fs-caption);
+  font-size: var(--type-project-label);
   color: var(--accent);
   font-weight: 600;
   letter-spacing: 0.06em;
+}
+
+.project-container {
+  width: 100%;
 }
 
 .case-row {
@@ -1424,9 +1431,9 @@ a.short-card:hover {
 
 .case-row-body {
   grid-column: 5 / 13;
-  font-size: var(--fs-lg);
+  font-size: var(--type-project-body);
   line-height: 1.85;
-  max-width: var(--content-default);
+  max-width: var(--project-prose-width);
   color: var(--ink-soft);
 }
 
@@ -1453,7 +1460,7 @@ a.short-card:hover {
 }
 
 .case-process-label {
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--project-label-gap);
 }
 
 .process-grid {
@@ -1497,7 +1504,7 @@ a.short-card:hover {
 }
 
 .case-solution-label {
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--project-label-gap);
 }
 
 .solution-grid {
@@ -1551,7 +1558,7 @@ a.short-card:hover {
 }
 
 .case-loop-label {
-  margin-bottom: var(--space-24);
+  margin-bottom: var(--project-label-gap);
 }
 
 .loop-flow {
@@ -1598,8 +1605,8 @@ a.short-card:hover {
      full-width row (the loop-flow chips / loop-steps), so capping it to
      --content-default wrapped it onto extra lines the section had no
      reason to force. */
-  max-width: none;
-  margin: 0 0 var(--space-36);
+  max-width: var(--project-prose-wide);
+  margin: 0 0 var(--project-label-gap);
 }
 
 .loop-steps {
@@ -1687,8 +1694,8 @@ a.short-card:hover {
      full-width age-cards grid — capping it to --content-default made it
      wrap onto extra lines it didn't need. Let it use the full section
      width instead. */
-  max-width: none;
-  margin: 0 0 var(--space-32);
+  max-width: var(--project-prose-wide);
+  margin: 0 0 var(--project-label-gap);
 }
 
 .age-cards {
@@ -1785,7 +1792,7 @@ a.short-card:hover {
 }
 
 .case-principle-label {
-  margin-bottom: var(--space-20);
+  margin-bottom: var(--project-label-gap);
 }
 
 .case-principle-card {
@@ -1811,7 +1818,7 @@ a.short-card:hover {
   color: var(--ink-soft);
   /* Same width-mismatch fix as .case-research-intro / .case-loop-intro —
      this sits right above the full-width principle-qa-grid. */
-  max-width: none;
+  max-width: var(--project-prose-wide);
   margin: 0 0 var(--space-28);
 }
 
@@ -1857,12 +1864,12 @@ a.short-card:hover {
   line-height: 1.8;
   color: var(--ink-soft);
   /* Same fix — sits right below the full-width principle-qa-grid. */
-  max-width: none;
+  max-width: var(--project-prose-wide);
   margin: var(--space-28) 0 0;
 }
 
 .case-roles-label {
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--project-label-gap);
 }
 
 .case-roles-intro {
@@ -1870,8 +1877,8 @@ a.short-card:hover {
   line-height: 1.8;
   color: var(--ink-soft);
   /* Same fix — sits right above the full-width role-cards column. */
-  max-width: none;
-  margin: 0 0 var(--space-32);
+  max-width: var(--project-prose-wide);
+  margin: 0 0 var(--project-label-gap);
 }
 
 .case-research-findings-label {
@@ -2048,7 +2055,7 @@ a.short-card:hover {
      sections, so the gap under "FROM USER TESTING" read noticeably
      tighter than the same gap under "THE SOLUTION" / "PROCESS" right
      above it on the same page. */
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--project-label-gap);
 }
 
 .case-findings-intro {
@@ -2470,6 +2477,8 @@ a.short-card:hover {
 @media (max-width: 768px) {
   :root {
     --pad-x: var(--pad-x-mobile);
+    --project-section-gap: 44px;
+    --project-label-gap: 24px;
   }
 
   .nav-links {

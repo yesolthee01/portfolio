@@ -331,7 +331,7 @@ export function CaseStudy() {
     <div className="page">
       <Nav variant="case" backHref="/#work" backLabel={cs.backToWorkLabel} />
 
-      <div className="frame">
+      <div className="frame project-container">
         <div className="case-hero">
           <div className="card-eyebrow case-eyebrow">{cs.eyebrow}</div>
           <h1 className="case-title">{cs.title}</h1>
