@@ -910,11 +910,11 @@ export const projects: Project[] = [
         subtitle:
           'SkolePlan은 덴마크 Efterskole 교직원이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템이다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고 인터뷰와 설문을 진행한 결과, 역할마다 필요한 정보와\n업무 우선순위가 다르다는 점을 발견했다. **역할별 핵심 업무가 먼저 보이는 시스템으로 재설계했다.**',
         heroLabel: 'HERO IMAGE — SKOLEPLAN',
-        roleLabel: '담당 역할',
+        roleLabel: 'MY ROLE',
         roleTags: ['사용자 리서치', '문제 정의', '정보 구조 설계', 'User Flow', 'UI 리디자인', '프로토타입 검증'],
         role:
           '현장 관찰과 인터뷰·설문을 통해 업무 흐름을 파악하고, 역할별 정보 우선순위를 정의해 서비스 구조와 주요 화면을 재설계했다.',
-        problemLabel: '문제 정의',
+        problemLabel: 'THE CHALLENGE',
         problem:
           '**같은 시스템을 사용하지만, 필요한 정보의 우선순위는 달랐다.**\n\n기존 시스템은 모든 교직원에게 동일한 정보 구조를 제공했다. 그래서 사용자는 필요한 정보에 도달하기 위해 여러 단계를 거쳐야 했고, 업무 중 자주 확인하는 정보도 즉시 파악하기 어려웠다. 설문조사와 인터뷰를 통해 교사·주방·기숙사 담당자마다 반복적으로 수행하는 업무와 가장 먼저 확인해야 하는 정보가 다르다는 점을 핵심 문제로 정의했다.',
         researchFindings: {
@@ -957,8 +957,8 @@ export const projects: Project[] = [
             imageLabel: '기숙사 담당자 홈 화면 — SKOLEPLAN UI',
           },
         ],
-        processLabel: '문제 해결 과정',
-        resultLabel: '결과 및 검증',
+        processLabel: 'PROCESS',
+        resultLabel: 'RESULT / IMPACT',
         result:
           '역할별 Dashboard 프로토타입을 교직원에게 공유해 실제 업무 흐름과 정보 구성의 적합성을 확인했다. 교사는 일정과 출석, 주방 담당자는 식사 인원과 식이 요구사항, 기숙사 담당자는 학생 출결과 현황을 한 화면에서 확인할 수 있다는 점에서 긍정적인 피드백을 얻었다.\n\n이를 통해 기능을 늘리는 것보다 사용자의 업무 맥락에 맞춰 정보의 우선순위를 재구성하는 것이 업무 효율과 정보 접근성을 높이는 데 중요하다는 점을 확인했다.',
         resultHeadline: '역할에 맞는 정보 구조로,\n핵심 업무에 더 빠르게 접근할 수 있도록 했다.',
