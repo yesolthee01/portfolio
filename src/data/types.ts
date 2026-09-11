@@ -158,9 +158,9 @@ export interface CaseStudyContent {
   resultLabel: string;
   result: string;
   resultHeadline?: string;
-  resultHighlights?: { role: string; info: string }[];
+  resultHighlights?: { title: string; desc: string }[];
   resultVerification?: string;
-  resultInsight?: string;
+  resultTakeaway?: string;
   prevLabel: string;
   nextLabel: string;
   backToWorkLabel: string;

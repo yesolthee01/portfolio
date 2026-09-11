@@ -499,20 +499,26 @@ export function CaseStudy() {
           </div>
         )}
 
-        {isSkolePlan && cs.resultHeadline && cs.resultHighlights && cs.resultVerification && cs.resultInsight ? (
+        {isSkolePlan && cs.resultHeadline && cs.resultHighlights && cs.resultVerification && cs.resultTakeaway ? (
           <div className={`case-section case-result${resultInView ? ' in-view' : ''}`} ref={resultRef}>
             <div className="case-section-label case-result-label">{cs.resultLabel}</div>
             <h2 className="case-result-headline">{renderInlineMarkup(cs.resultHeadline)}</h2>
             <div className="case-result-highlights">
               {cs.resultHighlights.map((highlight) => (
-                <div className="case-result-highlight" key={highlight.role}>
-                  <strong>{highlight.role}</strong>
-                  <span>{highlight.info}</span>
+                <div className="case-result-highlight" key={highlight.title}>
+                  <strong>{highlight.title}</strong>
+                  <span>{highlight.desc}</span>
                 </div>
               ))}
             </div>
-            <p className="case-result-verification">{cs.resultVerification}</p>
-            <p className="case-result-insight">{cs.resultInsight}</p>
+            <div className="case-result-verification">
+              <span>VALIDATION</span>
+              <p>{cs.resultVerification}</p>
+            </div>
+            <div className="case-result-insight">
+              <span>TAKEAWAY</span>
+              <p>{cs.resultTakeaway}</p>
+            </div>
           </div>
         ) : (
           <div className={`case-section case-row${resultInView ? ' in-view' : ''}`} ref={resultRef}>

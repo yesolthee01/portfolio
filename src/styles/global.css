@@ -2132,10 +2132,26 @@ a.short-card:hover {
 
 .case-result-verification {
   max-width: var(--project-prose-wide);
+  margin: 0 0 var(--space-36);
+  padding-top: var(--space-20);
+  border-top: 1px solid var(--glass-border);
+}
+
+.case-result-verification > span,
+.case-result-insight > span {
+  display: block;
+  color: var(--accent);
+  font-size: var(--type-project-label);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-12);
+}
+
+.case-result-verification p {
   color: var(--ink-soft);
   font-size: var(--type-project-body);
   line-height: 1.8;
-  margin: 0 0 var(--space-36);
+  margin: 0;
 }
 
 .case-result-insight {
@@ -2143,10 +2159,15 @@ a.short-card:hover {
   padding-top: var(--space-20);
   border-top: 1px solid var(--glass-border);
   color: var(--accent);
-  font-size: var(--fs-base);
+  margin: 0;
+}
+
+.case-result-insight p {
+  margin: 0;
+  font-size: var(--fs-emphasis);
   line-height: 1.7;
   font-weight: 600;
-  margin: 0;
+  white-space: pre-line;
 }
 
 .findings-grid {
