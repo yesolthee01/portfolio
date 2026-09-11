@@ -97,7 +97,6 @@ export interface ResearchFindingGroup {
   body: string;
   roleTitle: string;
   roleItems: { role: string; info: string; support: string }[];
-  insight: string;
 }
 
 export interface CaseStudyContent {

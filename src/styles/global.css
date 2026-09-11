@@ -1964,29 +1964,6 @@ a.short-card:hover {
   line-height: 1.35;
 }
 
-.research-finding-insight {
-  display: grid;
-  grid-template-columns: minmax(80px, 0.68fr) minmax(0, 1fr);
-  gap: clamp(44px, 8vw, 104px);
-  margin: 0;
-  padding-top: var(--space-20);
-  border-top: 1px solid var(--glass-border);
-  color: var(--accent);
-  line-height: 1.7;
-  font-weight: 500;
-}
-
-.research-finding-insight > span {
-  font-size: var(--fs-caption);
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-
-.research-finding-insight p {
-  margin: 0;
-  white-space: pre-line;
-}
-
 .role-cards {
   display: flex;
   flex-direction: column;
@@ -2447,8 +2424,7 @@ a.short-card:hover {
   .findings-grid {
     grid-template-columns: 1fr;
   }
-  .research-finding-editorial,
-  .research-finding-insight {
+  .research-finding-editorial {
     grid-template-columns: 1fr;
     gap: var(--space-24);
   }

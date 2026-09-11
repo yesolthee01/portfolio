@@ -235,10 +235,6 @@ function ResearchFindingGroupBlock({ group }: { group: NonNullable<CaseStudyCont
         </div>
       </div>
 
-      <div className="research-finding-insight">
-        <span>INSIGHT</span>
-        <p>{group.insight}</p>
-      </div>
     </div>
   );
 }
