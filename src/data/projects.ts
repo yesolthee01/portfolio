@@ -23,7 +23,7 @@ export const projects: Project[] = [
     order: 3,
     tier: 'full',
     medium: 'spatial',
-    tags: ['모바일 서비스 기획', '사용성 테스트', 'UX 설계', '개발 협업'],
+    tags: ['사용자 테스트', '인터랙션 설계', '개발 협업', '반복 개선'],
     images: {
       thumb: '/images/work/midnight-carnival/thumb.jpg',
       hero: 'https://img.youtube.com/vi/sJRy-V2xb8I/hqdefault.jpg',
