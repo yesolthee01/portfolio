@@ -90,11 +90,21 @@ export interface PrincipleQA {
   answer: string;
 }
 
+export interface ResearchFindingGroup {
+  commonTitle: string;
+  commonItems: string[];
+  roleTitle: string;
+  roleItems: { role: string; info: string }[];
+  insight: string;
+}
+
 export interface CaseStudyContent {
   eyebrow: string;
   title: string;
   subtitle: string;
   heroLabel: string;
+  roleTags?: string[];
+  researchFindings?: ResearchFindingGroup;
   /** Optional — leads the page with an ownership statement before the
    * challenge/process/result. Omit until written for a given project. */
   roleLabel?: string;

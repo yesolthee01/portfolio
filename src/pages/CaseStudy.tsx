@@ -5,7 +5,8 @@ import { ProjectImage } from '../components/ProjectImage';
 import { useLanguage } from '../i18n/LanguageContext';
 import { getProjectBySlug, getAdjacentProjects } from '../data/projects';
 import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
-import type { Finding, LoopStep, AgeCard, RoleCard, PrincipleQA } from '../data/types';
+import { renderInlineMarkup } from '../utils/markup';
+import type { Finding, LoopStep, AgeCard, RoleCard, PrincipleQA, CaseStudyContent } from '../data/types';
 
 function HeroGallery({ images, alt, label }: { images: string[]; alt: string; label: string }) {
   const [index, setIndex] = useState(0);
@@ -205,6 +206,33 @@ function PrincipleQACard({ qa }: { qa: PrincipleQA }) {
   );
 }
 
+function ResearchFindingGroupBlock({ group }: { group: NonNullable<CaseStudyContent['researchFindings']> }) {
+  return (
+    <div className="research-finding-group glass">
+      <div className="research-finding-column">
+        <h3>{group.commonTitle}</h3>
+        <ul>
+          {group.commonItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="research-finding-column">
+        <h3>{group.roleTitle}</h3>
+        <div className="research-role-list">
+          {group.roleItems.map((item) => (
+            <div className="research-role-item" key={item.role}>
+              <strong>{item.role}</strong>
+              <span>→ {item.info}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <p className="research-finding-insight">{group.insight}</p>
+    </div>
+  );
+}
+
 function LoopStepRow({ step, index }: { step: LoopStep; index: number }) {
   const { ref, inView } = useInView<HTMLDivElement>(0.25);
 
@@ -267,6 +295,31 @@ export function CaseStudy() {
   const compactFindings = findings.filter((f) => !f.featured);
   const findingsSplit = featuredFindings.length > 0 && compactFindings.length > 0;
   const findingsBanner = cs.findingsImageLayout === 'banner';
+  const isSkolePlan = project.slug === 'skoleplan';
+
+  const principleSection = cs.principleQA && cs.principleQA.length > 0 ? (
+    <div className={`case-section case-principle${principleInView ? ' in-view' : ''}`} ref={principleRef}>
+      <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
+      <div className="case-principle-card case-principle-card--qa glass">
+        {cs.principleIntro && <p className="case-principle-intro">{cs.principleIntro}</p>}
+        <div className="principle-qa-grid">
+          {cs.principleQA.map((qa) => (
+            <PrincipleQACard qa={qa} key={qa.role} />
+          ))}
+        </div>
+        {cs.principleClosing && <p className="case-principle-closing">{cs.principleClosing}</p>}
+      </div>
+    </div>
+  ) : (
+    cs.principle && (
+      <div className={`case-section case-principle${principleInView ? ' in-view' : ''}`} ref={principleRef}>
+        <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
+        <div className="case-principle-card glass">
+          <p className="case-principle-body">{cs.principle}</p>
+        </div>
+      </div>
+    )
+  );
 
   return (
     <div className="page">
@@ -276,7 +329,7 @@ export function CaseStudy() {
         <div className="case-hero">
           <div className="card-eyebrow case-eyebrow">{cs.eyebrow}</div>
           <h1 className="case-title">{cs.title}</h1>
-          <p className="case-subtitle">{cs.subtitle}</p>
+          <p className="case-subtitle">{renderInlineMarkup(cs.subtitle)}</p>
           {project.heroVideo ? (
             <div className="case-hero-video">
               <iframe
@@ -298,41 +351,41 @@ export function CaseStudy() {
           )}
         </div>
 
-        {cs.principleQA && cs.principleQA.length > 0 ? (
-          <div className={`case-section case-principle${principleInView ? ' in-view' : ''}`} ref={principleRef}>
-            <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
-            <div className="case-principle-card case-principle-card--qa glass">
-              {cs.principleIntro && <p className="case-principle-intro">{cs.principleIntro}</p>}
-              <div className="principle-qa-grid">
-                {cs.principleQA.map((qa) => (
-                  <PrincipleQACard qa={qa} key={qa.role} />
-                ))}
-              </div>
-              {cs.principleClosing && <p className="case-principle-closing">{cs.principleClosing}</p>}
-            </div>
-          </div>
-        ) : (
-          cs.principle && (
-            <div className={`case-section case-principle${principleInView ? ' in-view' : ''}`} ref={principleRef}>
-              <div className="case-section-label case-principle-label">{cs.principleLabel ?? 'DESIGN PRINCIPLE'}</div>
-              <div className="case-principle-card glass">
-                <p className="case-principle-body">{cs.principle}</p>
-              </div>
-            </div>
-          )
-        )}
+        {!isSkolePlan && principleSection}
 
         {cs.role && (
           <div className={`case-section case-row${roleInView ? ' in-view' : ''}`} ref={roleRef}>
             <div className="case-section-label case-row-label">{cs.roleLabel ?? 'MY ROLE'}</div>
-            <p className="case-row-body">{cs.role}</p>
+            <div className="case-row-body">
+              <p>{cs.role}</p>
+              {cs.roleTags && (
+                <div className="case-role-tags">
+                  {cs.roleTags.map((tag) => (
+                    <span className="tag glass" key={tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         )}
 
         <div className={`case-section case-row${challengeInView ? ' in-view' : ''}`} ref={challengeRef}>
           <div className="case-section-label case-row-label">{cs.problemLabel}</div>
-          <p className="case-row-body">{cs.problem}</p>
+          <div className="case-row-body case-problem-body">
+            <p>{renderInlineMarkup(cs.problem)}</p>
+          </div>
         </div>
+
+        {isSkolePlan && cs.researchFindings && (
+          <div className={`case-section case-research-findings${researchInView ? ' in-view' : ''}`} ref={researchRef}>
+            <div className="case-section-label case-research-findings-label">사용자 조사에서 발견한 핵심 문제</div>
+            <ResearchFindingGroupBlock group={cs.researchFindings} />
+          </div>
+        )}
+
+        {isSkolePlan && principleSection}
 
         {cs.solution && cs.solution.length > 0 && (
           <div className={`case-section case-solution${solutionInView ? ' in-view' : ''}`} ref={solutionRef}>

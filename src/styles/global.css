@@ -1234,6 +1234,11 @@ a.short-card:hover {
   margin: 0 0 var(--space-36);
 }
 
+.case-subtitle strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .case-hero-image {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -1421,9 +1426,28 @@ a.short-card:hover {
   grid-column: 5 / 13;
   font-size: var(--fs-lg);
   line-height: 1.85;
-  margin: 0;
   max-width: var(--content-default);
   color: var(--ink-soft);
+}
+
+.case-row-body p {
+  margin: 0;
+  white-space: pre-line;
+}
+
+.case-problem-body strong {
+  display: block;
+  margin-bottom: var(--space-14);
+  color: var(--ink);
+  font-size: var(--fs-emphasis);
+  line-height: 1.45;
+}
+
+.case-role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--space-20);
 }
 
 .case-process-label {
@@ -1846,6 +1870,59 @@ a.short-card:hover {
   /* Same fix — sits right above the full-width role-cards column. */
   max-width: none;
   margin: 0 0 var(--space-32);
+}
+
+.case-research-findings-label {
+  margin-bottom: var(--space-20);
+}
+
+.research-finding-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gap);
+  padding: 28px 30px;
+  border-radius: 24px;
+}
+
+.research-finding-column h3 {
+  font-size: var(--fs-heading-sm);
+  margin: 0 0 var(--space-14);
+  font-family: var(--font-display);
+}
+
+.research-finding-column ul {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+.research-role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.research-role-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.research-role-item strong {
+  color: var(--ink);
+}
+
+.research-finding-insight {
+  grid-column: 1 / -1;
+  margin: var(--space-4) 0 0;
+  padding-top: var(--space-20);
+  border-top: 1px solid var(--glass-border);
+  color: var(--accent);
+  line-height: 1.7;
+  font-weight: 500;
 }
 
 .role-cards {
@@ -2274,6 +2351,12 @@ a.short-card:hover {
        width — below this breakpoint .case-row stacks to a single
        column, so the explicit column spans need to reset or they'd
        overflow past the single track. */
+    grid-column: auto;
+  }
+  .research-finding-group {
+    grid-template-columns: 1fr;
+  }
+  .research-finding-insight {
     grid-column: auto;
   }
   .age-card-body {
