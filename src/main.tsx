@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from './App';
 import { LanguageProvider } from './i18n/LanguageContext';
+import './data/contentOverrides';
 import './styles/global.css';
 import './styles/layout-cleanup.css';
 
