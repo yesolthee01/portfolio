@@ -409,9 +409,13 @@ button {
 
 .tag-row .tag {
   min-width: 0;
-  padding-inline: 6px;
+  padding-inline: 2px;
+  font-size: 11px;
+  letter-spacing: 0.02em;
   text-align: center;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tag.medium-app {
@@ -2387,6 +2391,11 @@ a.short-card:hover {
 @media (max-width: 640px) {
   .tag-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .tag-row .tag {
+    padding-inline: 6px;
+    font-size: var(--fs-caption);
+    letter-spacing: 0.05em;
   }
 
   .ai-grid,
