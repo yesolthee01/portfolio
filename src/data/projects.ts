@@ -20,10 +20,10 @@ import type { Project } from './types';
 export const projects: Project[] = [
   {
     slug: 'midnight-carnival',
-    order: 1,
+    order: 3,
     tier: 'full',
     medium: 'spatial',
-    tags: ['SPATIAL UX', 'XR', 'SIGGRAPH ASIA 2024'],
+    tags: ['모바일 서비스 기획', '사용성 테스트', 'UX 설계', '개발 협업'],
     images: {
       thumb: '/images/work/midnight-carnival/thumb.jpg',
       hero: 'https://img.youtube.com/vi/sJRy-V2xb8I/hqdefault.jpg',
@@ -71,7 +71,7 @@ export const projects: Project[] = [
       kr: {
         imgLabel: 'HMD 착용 없이 즐기는 XR 게임',
         title: 'Midnight Carnival',
-        desc: 'SIGGRAPH Asia 2024(도쿄) 선정 전시. 헤드셋 없이 물리적 공간을 인터랙티브 놀이터로 바꾸는 공간 기반 XR 경험.',
+        desc: '물리적 공간과 디지털 인터랙션이 결합된 XR 경험을 설계하고, 실제 사용자의 행동을 관찰하며 인터랙션을 반복 개선했습니다. SIGGRAPH Asia 2024 도쿄에 선정되었습니다.',
       },
       en: {
         imgLabel: 'XR Gaming Without a Headset',
@@ -221,8 +221,8 @@ export const projects: Project[] = [
   },
   {
     slug: 'outdoor-dome',
-    order: 2,
-    tier: 'full',
+    order: 4,
+    tier: 'short',
     medium: 'spatial',
     tags: ['SPATIAL UX', 'EXHIBITION', 'DENMARK'],
     images: {
@@ -374,10 +374,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'talkable',
-    order: 3,
+    order: 2,
     tier: 'full',
     medium: 'ai',
-    tags: ['AI PRODUCT', 'MOBILE APP', 'EDTECH'],
+    tags: ['모바일 서비스 기획', '사용성 테스트', 'UX 설계', '개발 협업'],
     images: {
       thumb: '/images/work/talkable/thumb.jpg',
       hero: '/images/work/talkable/hero-1.jpg',
@@ -425,7 +425,7 @@ export const projects: Project[] = [
       kr: {
         imgLabel: 'AI 선생님과 함께하는 맞춤형 영어학습 앱',
         title: 'Talkable',
-        desc: 'AI 기반 회화 피드백으로 실전 영어를 학습하는 앱의 전반적인 UX 설계.',
+        desc: 'AI 회화 피드백을 활용한 모바일 학습 서비스의 사용자 흐름과 주요 기능을 설계하고, 개발 과정에서 반복적으로 프로토타입을 검증했습니다.',
       },
       en: {
         imgLabel: 'A Personalized English App With an AI Teacher',
@@ -646,7 +646,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'seoul-xr-research',
-    order: 4,
+    order: 5,
     tier: 'short',
     medium: 'spatial',
     tags: ['XR RESEARCH', 'SEOUL CITY-FUNDED', 'EXHIBITION'],
@@ -864,10 +864,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'skoleplan',
-    order: 5,
-    tier: 'short',
+    order: 1,
+    tier: 'full',
     medium: 'app',
-    tags: ['EDTECH', 'ROLE-BASED UX', 'DENMARK'],
+    tags: ['사용자 조사', '정보 구조', '서비스 개선', '사용성 검증'],
     images: {
       thumb: '/images/work/skoleplan/thumb.jpg',
       hero: '/images/work/skoleplan/hero-1.jpg',
@@ -907,7 +907,7 @@ export const projects: Project[] = [
       kr: {
         imgLabel: '덴마크 학교 임직원 어플리케이션 리디자인',
         title: 'SkolePlan(DK) 리디자인',
-        desc: '실제 교직원의 업무를 리서치하고, 역할별 정보 우선순위에 맞게 내부 시스템을 재설계한 UX 프로젝트.',
+        desc: '실제 교직원의 업무와 사용상의 불편을 조사하고, 역할별 정보 우선순위를 기반으로 내부 업무 시스템의 구조와 화면을 개선했습니다.',
       },
       en: {
         imgLabel: 'Danish School Staff Application Redesign',

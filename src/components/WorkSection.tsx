@@ -18,7 +18,7 @@ export function WorkSection() {
           <span className="idx">02</span> {work.title}
         </h2>
         <div className="section-meta">
-          {fullProjects.length} PROJECTS · {shortProjects.length} MORE
+          {work.meta}
         </div>
       </div>
       <div className="work-grid">

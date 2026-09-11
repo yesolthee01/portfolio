@@ -36,7 +36,7 @@ export const siteCopy: Localized<{
     ctaWork: string;
     ctaAbout: string;
   };
-  work: { title: string };
+  work: { title: string; meta: string };
   moreWork: { title: string; badge: string; desc: string };
   aiToolkit: { title: string; sub: string; categories: ToolkitCategory[] };
   about: {
@@ -72,7 +72,7 @@ export const siteCopy: Localized<{
       ctaWork: '프로젝트 보기',
       ctaAbout: '소개 보기',
     },
-    work: { title: 'Selected Work' },
+    work: { title: '주요 프로젝트', meta: '주요 프로젝트 3개 · 전체 5개' },
     moreWork: {
       title: 'More Work',
       badge: 'SOON',
@@ -272,7 +272,7 @@ export const siteCopy: Localized<{
       ctaWork: 'VIEW SELECTED WORK →',
       ctaAbout: 'ABOUT ME',
     },
-    work: { title: 'Selected Work' },
+    work: { title: 'Selected Work', meta: '3 PROJECTS · 2 MORE' },
     moreWork: {
       title: 'More Work',
       badge: 'SOON',
