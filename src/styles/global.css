@@ -402,9 +402,16 @@ button {
 }
 
 .tag-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
+}
+
+.tag-row .tag {
+  min-width: 0;
+  padding-inline: 6px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .tag.medium-app {
@@ -2378,6 +2385,10 @@ a.short-card:hover {
 }
 
 @media (max-width: 640px) {
+  .tag-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .ai-grid,
   .process-grid,
   .solution-grid,
