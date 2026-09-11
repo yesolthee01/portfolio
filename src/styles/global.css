@@ -1801,6 +1801,14 @@ a.short-card:hover {
   padding: 36px 40px;
 }
 
+.case-principle-card--qa {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 .case-principle-body {
   /* Was 16.5px — the one deliberately-emphasized paragraph on the site
      (a pull-quote-style principle statement), so it keeps its own step
@@ -1831,6 +1839,15 @@ a.short-card:hover {
 .qa-card {
   border-radius: 20px;
   padding: 26px 24px;
+}
+
+.case-principle-card--qa .qa-card {
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .qa-role {
@@ -1914,14 +1931,6 @@ a.short-card:hover {
   color: var(--accent);
 }
 
-.research-finding-body {
-  font-size: var(--fs-base);
-  line-height: 1.8;
-  color: var(--ink-soft);
-  margin: 0;
-  white-space: pre-line;
-}
-
 .research-finding-label {
   font-size: var(--fs-caption);
   color: var(--accent);
@@ -1974,26 +1983,26 @@ a.short-card:hover {
 .role-cards {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0;
 }
 
 .role-card {
   display: grid;
-  grid-template-columns: 1.3fr 0.9fr;
-  gap: 32px;
+  grid-template-columns: minmax(120px, 0.16fr) minmax(0, 0.44fr) minmax(150px, 0.22fr) minmax(150px, 0.18fr);
+  gap: var(--grid-gap);
   align-items: center;
-  border-radius: 24px;
-  padding: 28px 30px;
+  min-height: 220px;
+  padding: var(--space-28) 0;
+  border-top: 1px solid var(--glass-border);
 }
 
-.role-card-main {
-  display: flex;
-  flex-direction: column;
+.role-card:last-child {
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .role-card-image {
-  border-radius: 16px;
-  height: 220px;
+  border-radius: 0;
+  height: 250px;
   width: 100%;
   /* These are phone-mockup screenshots (portrait, transparent corners),
      not full-bleed photos — contain keeps the whole device visible
@@ -2002,10 +2011,18 @@ a.short-card:hover {
 }
 
 .role-card-head {
+  display: contents;
+}
+
+.role-card-identity {
+  align-self: start;
   display: flex;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: var(--space-14);
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.role-card-content {
+  align-self: start;
 }
 
 .role-card-index {
@@ -2018,28 +2035,31 @@ a.short-card:hover {
 .role-card-role {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-base);
   letter-spacing: 0.02em;
 }
 
 .role-card-focus {
-  font-size: var(--fs-caption);
-  color: var(--ink-soft);
-  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--fs-heading-sm);
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 var(--space-12);
 }
 
 .role-card-desc {
   font-size: var(--fs-sm);
   line-height: 1.7;
   color: var(--ink-soft);
-  margin: 0 0 var(--space-20);
+  margin: 0;
 }
 
 .role-card-priority {
+  align-self: start;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
+  gap: var(--space-12);
 }
 
 .role-card-priority-label {
@@ -2047,6 +2067,20 @@ a.short-card:hover {
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--accent);
+}
+
+.role-priority-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.role-priority-item {
+  padding: 5px 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-caption);
+  color: var(--ink-soft);
 }
 
 .case-findings-label {
@@ -2391,6 +2425,23 @@ a.short-card:hover {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .role-card {
+    grid-template-columns: 120px minmax(0, 1fr) 180px;
+  }
+  .role-card-priority {
+    grid-column: 2;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .role-priority-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .role-card-image {
+    grid-column: 3;
+    grid-row: 1 / 4;
+  }
   .case-row-label,
   .case-row-body {
     /* 12-col label/body split only makes sense at the row's normal
@@ -2452,9 +2503,20 @@ a.short-card:hover {
   }
   .role-card {
     grid-template-columns: 1fr;
-    padding: 24px 22px;
+    min-height: 0;
+    padding: var(--space-24) 0;
+  }
+  .role-card-priority {
+    grid-column: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .role-priority-list {
+    flex-direction: row;
   }
   .role-card-image {
+    grid-column: auto;
+    grid-row: auto;
     height: 200px;
   }
   .activities-grid {

@@ -94,7 +94,6 @@ export interface ResearchFindingGroup {
   commonTitle: string;
   commonItems: string[];
   headline: string;
-  body: string;
   roleTitle: string;
   roleItems: { role: string; info: string; support: string }[];
 }

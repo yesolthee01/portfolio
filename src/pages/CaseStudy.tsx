@@ -164,25 +164,23 @@ function AgeCardRow({ card, index }: { card: AgeCard; index: number }) {
 
 function RoleCardRow({ card, index }: { card: RoleCard; index: number }) {
   return (
-    <div className="role-card glass">
-      <div className="role-card-main">
-        <div className="role-card-head">
-          <div className="role-card-index">{String(index + 1).padStart(2, '0')}</div>
-          <div>
-            <div className="role-card-role">{card.role}</div>
-            <div className="role-card-focus">{card.focus}</div>
-          </div>
-        </div>
+    <div className="role-card">
+      <div className="role-card-identity">
+        <div className="role-card-index">{String(index + 1).padStart(2, '0')}</div>
+        <div className="role-card-role">{card.role}</div>
+      </div>
+      <div className="role-card-content">
+        <h3 className="role-card-focus">{card.focus}</h3>
         <p className="role-card-desc">{card.desc}</p>
-        <div className="role-card-priority">
-          <span className="role-card-priority-label">{card.priorityLabel}</span>
-          <div className="tag-row">
-            {card.priority.map((item) => (
-              <span className="tag glass" key={item}>
-                {item}
-              </span>
-            ))}
-          </div>
+      </div>
+      <div className="role-card-priority">
+        <span className="role-card-priority-label">{card.priorityLabel}</span>
+        <div className="role-priority-list">
+          {card.priority.map((item) => (
+            <span className="role-priority-item glass" key={item}>
+              {item}
+            </span>
+          ))}
         </div>
       </div>
       {card.image ? (
@@ -217,7 +215,6 @@ function ResearchFindingGroupBlock({ group }: { group: NonNullable<CaseStudyCont
       <div className="research-finding-editorial">
         <div className="research-finding-copy">
           <p className="research-finding-headline">{renderInlineMarkup(group.headline)}</p>
-          <p className="research-finding-body">{group.body}</p>
         </div>
 
         <div className="research-roles">

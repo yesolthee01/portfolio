@@ -933,7 +933,6 @@ export const projects: Project[] = [
           commonTitle: '공통 업무',
           commonItems: ['출석 확인', '당일 일정', '학생 현황'],
           headline: '같은 시스템을 사용하지만,\n역할마다 **업무의 우선순위**는 달랐습니다.',
-          body: '출석, 일정, 학생 현황 등 공통적으로 확인하는 정보는 있었지만, 실제 업무에서 가장 먼저 필요한 정보는 역할마다 달랐습니다.',
           roleTitle: '역할 별 필요로하는 핵심 정보',
           roleItems: [
             { role: '교사', info: '수업 일정 · 출석', support: '오늘의 수업과 학생 출석을 가장 먼저 확인' },
