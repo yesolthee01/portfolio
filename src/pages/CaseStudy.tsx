@@ -455,7 +455,7 @@ export function CaseStudy() {
               <div className="process-card glass" key={step.title}>
                 <div className="process-index">{String(i + 1).padStart(2, '0')}</div>
                 <h3>{step.title}</h3>
-                <p>{step.desc}</p>
+                {renderParagraphs(step.desc)}
               </div>
             ))}
           </div>
@@ -499,10 +499,27 @@ export function CaseStudy() {
           </div>
         )}
 
-        <div className={`case-section case-row${resultInView ? ' in-view' : ''}`} ref={resultRef}>
-          <div className="case-section-label case-row-label">{cs.resultLabel}</div>
-          <p className="case-row-body">{cs.result}</p>
-        </div>
+        {isSkolePlan && cs.resultHeadline && cs.resultHighlights && cs.resultVerification && cs.resultInsight ? (
+          <div className={`case-section case-result${resultInView ? ' in-view' : ''}`} ref={resultRef}>
+            <div className="case-section-label case-result-label">{cs.resultLabel}</div>
+            <h2 className="case-result-headline">{renderInlineMarkup(cs.resultHeadline)}</h2>
+            <div className="case-result-highlights">
+              {cs.resultHighlights.map((highlight) => (
+                <div className="case-result-highlight" key={highlight.role}>
+                  <strong>{highlight.role}</strong>
+                  <span>{highlight.info}</span>
+                </div>
+              ))}
+            </div>
+            <p className="case-result-verification">{cs.resultVerification}</p>
+            <p className="case-result-insight">{cs.resultInsight}</p>
+          </div>
+        ) : (
+          <div className={`case-section case-row${resultInView ? ' in-view' : ''}`} ref={resultRef}>
+            <div className="case-section-label case-row-label">{cs.resultLabel}</div>
+            <p className="case-row-body">{cs.result}</p>
+          </div>
+        )}
 
         <div className="case-footer-nav">
           {prev ? (

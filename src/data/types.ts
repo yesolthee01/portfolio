@@ -157,6 +157,10 @@ export interface CaseStudyContent {
   findingsImageLayout?: 'banner';
   resultLabel: string;
   result: string;
+  resultHeadline?: string;
+  resultHighlights?: { role: string; info: string }[];
+  resultVerification?: string;
+  resultInsight?: string;
   prevLabel: string;
   nextLabel: string;
   backToWorkLabel: string;
