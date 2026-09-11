@@ -83,9 +83,9 @@ export const siteCopy: Localized<{
       sub: 'TOOLS & TECHNOLOGIES I WORK WITH',
       categories: [
         {
-          label: 'GENERATIVE AI',
+          label: '생성형 AI 활용',
           items: [
-            { mark: 'Ai', markBg: '#333f43', title: 'ChatGPT / Claude', desc: '리서치 종합, 인터뷰 스크립트 분석, 카피 초안 작성 등 다양한 작업에 생성형 AI를 활용합니다.' },
+            { mark: 'Ai', markBg: '#333f43', title: 'ChatGPT / Claude', desc: '리서치 내용 정리, 인터뷰 데이터 분석, 아이디어 구조화와 카피 초안 등 반복적인 작업의 효율을 높이는 데 활용합니다.' },
             { mark: 'Cu', markBg: '#333f43', title: 'Cursor / AI 코딩', desc: '디자인을 직접 동작하는 프로토타입으로 빠르게 구현합니다.' },
           ],
           note: '이 외에도 필요에 따라 새로운 AI 툴을 자유롭게 찾아 활용합니다.',
@@ -100,7 +100,7 @@ export const siteCopy: Localized<{
           ],
         },
         {
-          label: 'REALTIME & DEVELOPMENT',
+          label: '프로토타이핑 & 개발 이해',
           items: [
             { mark: 'Ue', markBg: '#333f43', title: 'Unreal Engine', desc: '공간형 XR 콘텐츠와 인터랙티브 전시를 실시간 엔진으로 구현합니다.' },
             {
