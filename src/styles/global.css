@@ -1879,52 +1879,103 @@ a.short-card:hover {
 }
 
 .research-finding-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--grid-gap);
-  padding: 28px 30px;
-  border-radius: 24px;
-}
-
-.research-finding-column h3 {
-  font-size: var(--fs-heading-sm);
-  margin: 0 0 var(--space-14);
-  font-family: var(--font-display);
-}
-
-.research-finding-column ul {
-  margin: 0;
-  padding-left: 1.2em;
-  color: var(--ink-soft);
-  line-height: 1.8;
-}
-
-.research-role-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-28);
 }
 
-.research-role-item {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  color: var(--ink-soft);
-  line-height: 1.6;
-}
-
-.research-role-item strong {
+.research-finding-headline {
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.45;
+  font-weight: 600;
+  margin: 0;
   color: var(--ink);
 }
 
+.research-finding-label {
+  font-size: var(--fs-caption);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-12);
+}
+
+.research-common-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.research-common-item {
+  padding: 10px 16px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  background: var(--glass);
+  color: var(--ink-soft);
+  font-size: var(--fs-sm);
+}
+
+.research-finding-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--glass-border);
+  position: relative;
+}
+
+.research-finding-divider::after {
+  content: '→';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 10px;
+  background: var(--bg);
+  color: var(--accent);
+}
+
+.research-role-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+
+.research-role-item {
+  min-height: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-8);
+  padding: 22px 20px;
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.research-role-item strong {
+  color: var(--accent);
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+.research-role-caption {
+  color: var(--ink-soft);
+  font-size: var(--fs-caption);
+}
+
+.research-role-info {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: var(--fs-heading-sm);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 .research-finding-insight {
-  grid-column: 1 / -1;
   margin: var(--space-4) 0 0;
-  padding-top: var(--space-20);
-  border-top: 1px solid var(--glass-border);
   color: var(--accent);
   line-height: 1.7;
   font-weight: 500;
+  text-align: center;
 }
 
 .role-cards {
@@ -2355,12 +2406,6 @@ a.short-card:hover {
        overflow past the single track. */
     grid-column: auto;
   }
-  .research-finding-group {
-    grid-template-columns: 1fr;
-  }
-  .research-finding-insight {
-    grid-column: auto;
-  }
   .age-card-body {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -2391,6 +2436,9 @@ a.short-card:hover {
     grid-template-columns: 1fr;
   }
   .findings-grid {
+    grid-template-columns: 1fr;
+  }
+  .research-role-list {
     grid-template-columns: 1fr;
   }
   .loop-step {

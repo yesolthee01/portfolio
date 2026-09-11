@@ -213,26 +213,39 @@ function PrincipleQACard({ qa }: { qa: PrincipleQA }) {
 
 function ResearchFindingGroupBlock({ group }: { group: NonNullable<CaseStudyContent['researchFindings']> }) {
   return (
-    <div className="research-finding-group glass">
-      <div className="research-finding-column">
-        <h3>{group.commonTitle}</h3>
-        <ul>
+    <div className="research-finding-group">
+      <p className="research-finding-headline">
+        같은 시스템을 사용하지만,
+        <br />
+        역할마다 먼저 확인해야 하는 정보는 달랐습니다.
+      </p>
+
+      <div className="research-common">
+        <div className="research-finding-label">{group.commonTitle}</div>
+        <div className="research-common-items">
           {group.commonItems.map((item) => (
-            <li key={item}>{item}</li>
+            <span className="research-common-item" key={item}>
+              {item}
+            </span>
           ))}
-        </ul>
+        </div>
       </div>
-      <div className="research-finding-column">
-        <h3>{group.roleTitle}</h3>
+
+      <div className="research-finding-divider" aria-hidden="true" />
+
+      <div className="research-roles">
+        <div className="research-finding-label">{group.roleTitle}</div>
         <div className="research-role-list">
           {group.roleItems.map((item) => (
             <div className="research-role-item" key={item.role}>
               <strong>{item.role}</strong>
-              <span>→ {item.info}</span>
+              <span className="research-role-caption">가장 먼저 필요한 정보</span>
+              <span className="research-role-info">{item.info}</span>
             </div>
           ))}
         </div>
       </div>
+
       <p className="research-finding-insight">{group.insight}</p>
     </div>
   );
