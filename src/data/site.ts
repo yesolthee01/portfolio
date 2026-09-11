@@ -65,9 +65,9 @@ export const siteCopy: Localized<{
     nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
       eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
-      headline: '좋은 디자인은\n올바른 **질문**에서 시작됩니다.',
-      subLine1: '디지털 제품부터 XR과 공간 경험까지,',
-      subLine2: '사용자의 행동을 관찰하여, 최고의 경험을 디자인하는 UX Designer입니다.',
+      headline: '사용자의 불편을 발견하고, 서비스의 개선으로 연결합니다.',
+      subLine1: '사용자와 서비스가 만나는 과정에서 문제를 발견하고,',
+      subLine2: '리서치와 기획, 협업과 검증을 통해 더 나은 경험을 만들어갑니다.',
       chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
       ctaWork: 'VIEW SELECTED WORK →',
       ctaAbout: 'ABOUT ME',
