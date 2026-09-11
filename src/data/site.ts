@@ -250,9 +250,9 @@ export const siteCopy: Localized<{
       backLabel: '← BACK',
     },
     contact: {
-      line1: "Let's build",
-      line2part1: 'something',
-      line2accent: 'real',
+      line1: '더 나은 경험을',
+      line2part1: '고민하고,',
+      line2accent: '만들어갑니다',
       line2part2: '.',
       email: 'sjjyysye@gmail.com',
       linkedin: 'LINKEDIN ↗',
