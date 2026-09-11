@@ -173,16 +173,6 @@ function RoleCardRow({ card, index }: { card: RoleCard; index: number }) {
         <h3 className="role-card-focus">{card.focus}</h3>
         <p className="role-card-desc">{card.desc}</p>
       </div>
-      <div className="role-card-priority">
-        <span className="role-card-priority-label">{card.priorityLabel}</span>
-        <div className="role-priority-list">
-          {card.priority.map((item) => (
-            <span className="role-priority-item glass" key={item}>
-              {item}
-            </span>
-          ))}
-        </div>
-      </div>
       {card.image ? (
         <ProjectImage
           src={card.image}

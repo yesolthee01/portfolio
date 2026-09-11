@@ -1988,7 +1988,7 @@ a.short-card:hover {
 
 .role-card {
   display: grid;
-  grid-template-columns: minmax(120px, 0.16fr) minmax(0, 0.44fr) minmax(150px, 0.22fr) minmax(150px, 0.18fr);
+  grid-template-columns: minmax(120px, 0.16fr) minmax(0, 0.56fr) minmax(150px, 0.28fr);
   gap: var(--grid-gap);
   align-items: center;
   min-height: 220px;
@@ -2053,34 +2053,6 @@ a.short-card:hover {
   line-height: 1.7;
   color: var(--ink-soft);
   margin: 0;
-}
-
-.role-card-priority {
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-12);
-}
-
-.role-card-priority-label {
-  font-size: var(--fs-caption);
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--accent);
-}
-
-.role-priority-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-6);
-}
-
-.role-priority-item {
-  padding: 5px 10px;
-  border-radius: var(--radius-pill);
-  font-size: var(--fs-caption);
-  color: var(--ink-soft);
 }
 
 .case-findings-label {
@@ -2428,16 +2400,6 @@ a.short-card:hover {
   .role-card {
     grid-template-columns: 120px minmax(0, 1fr) 180px;
   }
-  .role-card-priority {
-    grid-column: 2;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .role-priority-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
   .role-card-image {
     grid-column: 3;
     grid-row: 1 / 4;
@@ -2505,14 +2467,6 @@ a.short-card:hover {
     grid-template-columns: 1fr;
     min-height: 0;
     padding: var(--space-24) 0;
-  }
-  .role-card-priority {
-    grid-column: auto;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .role-priority-list {
-    flex-direction: row;
   }
   .role-card-image {
     grid-column: auto;

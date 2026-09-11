@@ -71,8 +71,6 @@ export interface RoleCard {
   /** e.g. 'Schedule & Attendance' */
   focus: string;
   desc: string;
-  priorityLabel: string;
-  priority: string[];
   /** Small supporting screen image shown alongside the card's text.
    * Optional — renders a soft placeholder (labeled with imageLabel, or
    * role if that's not set) until a real file is added. */
