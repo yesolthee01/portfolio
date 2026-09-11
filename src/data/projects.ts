@@ -224,7 +224,7 @@ export const projects: Project[] = [
     order: 4,
     tier: 'short',
     medium: 'spatial',
-    tags: ['SPATIAL UX', 'EXHIBITION', 'DENMARK'],
+    tags: ['공간 경험 설계', '전시 기획', '사용자 경험'],
     images: {
       thumb: '/images/work/outdoor-dome/thumb.jpg',
       hero: '/images/work/outdoor-dome/hero-1.jpg',
@@ -279,7 +279,7 @@ export const projects: Project[] = [
       kr: {
         imgLabel: '야외 돔 전시',
         title: 'Designing Empathy Through Space',
-        desc: '덴마크에서 진행한 야외 돔 몰입 전시. 공간 연출만으로 낯선 이야기에 정서적으로 몰입하게 만드는 경험을 디렉팅했습니다.',
+        desc: '덴마크에서 진행한 야외 돔 몰입 전시. 공간과 관람 흐름을 설계해 낯선 이야기에 자연스럽게 몰입하는 경험을 기획했습니다.',
       },
       en: {
         imgLabel: 'Outdoor Dome Exhibition',
@@ -649,7 +649,7 @@ export const projects: Project[] = [
     order: 5,
     tier: 'short',
     medium: 'spatial',
-    tags: ['XR RESEARCH', 'SEOUL CITY-FUNDED', 'EXHIBITION'],
+    tags: ['사용자 리서치', '콘텐츠 기획', '산학협력'],
     images: {
       thumb: 'https://img.youtube.com/vi/IvBbAEDmrlk/hqdefault.jpg',
       hero: 'https://img.youtube.com/vi/IvBbAEDmrlk/hqdefault.jpg',
@@ -697,7 +697,7 @@ export const projects: Project[] = [
       kr: {
         imgLabel: '서울시 지원 XR 산학협력 프로젝트',
         title: '연령 맞춤형 XR 콘텐츠',
-        desc: '유아부터 고령자까지 5개 연령대의 발달 이론을 근거로, 연령 맞춤형 XR 콘텐츠를 설계한 산학협력 프로젝트.',
+        desc: '유아부터 고령자까지 5개 연령대의 특성과 발달 이론을 조사하고, 사용자 특성에 맞춘 XR 콘텐츠를 설계한 산학협력 프로젝트입니다.',
       },
       en: {
         imgLabel: 'Seoul City-Funded XR Industry-Academia Project',
