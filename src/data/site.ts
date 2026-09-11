@@ -64,13 +64,13 @@ export const siteCopy: Localized<{
   kr: {
     nav: { work: 'Work', ai: 'Toolkit', about: 'About', contact: 'Contact' },
     hero: {
-      eyebrow: 'USER EXPERIENCE DESIGNER — BASED IN COPENHAGEN, FROM SEOUL',
+      eyebrow: 'UX DESIGNER · SERVICE IMPROVEMENT',
       headline: '사용자의 불편을 발견하고,\n서비스의 개선으로 연결합니다.',
       subLine1: '사용자와 서비스가 만나는 과정에서 문제를 발견하고,',
       subLine2: '리서치와 기획, 협업과 검증을 통해 더 나은 경험을 만들어갑니다.',
-      chips: ['DIGITAL PRODUCT', 'SPATIAL / XR', 'EXPERIENCE'],
-      ctaWork: 'VIEW SELECTED WORK →',
-      ctaAbout: 'ABOUT ME',
+      chips: ['서비스 기획', 'UX 디자인', '사용자 문제 분석', '사용성 검증'],
+      ctaWork: '프로젝트 보기',
+      ctaAbout: '소개 보기',
     },
     work: { title: 'Selected Work' },
     moreWork: {
@@ -116,7 +116,7 @@ export const siteCopy: Localized<{
     },
     about: {
       title: 'About',
-      body: '**사용자가 무엇을 필요로 하고, 어떤 맥락에서 어려움을 겪는지 이해**하는 것에서 디자인을 시작합니다. 디지털 프로덕트부터 XR과 공간 경험까지 다양한 매체를 다루며, 사람의 행동을 중심으로 경험을 설계합니다.\n리서치와 기획을 통해 문제를 정의하고, 복잡한 정보와 요구를 명확한 사용자 흐름과 인터랙션으로 구조화하는 데 강점이 있습니다. 아이디어가 실제로 작동하는 형태가 될 때까지 다양한 역할의 팀원들과 함께 구체화해 나가는 과정을 좋아합니다.',
+      body: '**사용자가 무엇을 필요로 하고, 어떤 맥락에서 어려움을 겪는지 이해하는 것에서 시작합니다.** 사용자 조사와 실제 사용 흐름을 바탕으로 문제를 구조화하고, 기능과 화면의 개선 방향을 구체화합니다.\n\n리서치와 기획부터 프로토타이핑, 개발 협업, 사용성 검증까지 제품이 만들어지고 개선되는 전 과정을 경험했습니다. 복잡한 요구사항을 명확한 사용자 흐름으로 정리하고, 실제로 작동하는 결과물까지 연결하는 데 강점이 있습니다.',
       kw1: '문제의 핵심을 찾습니다',
       kw2: '다양한 직무와 협업합니다',
       kw3: '복잡한 정보를 구조화합니다',
