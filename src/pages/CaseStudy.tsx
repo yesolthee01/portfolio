@@ -214,39 +214,31 @@ function PrincipleQACard({ qa }: { qa: PrincipleQA }) {
 function ResearchFindingGroupBlock({ group }: { group: NonNullable<CaseStudyContent['researchFindings']> }) {
   return (
     <div className="research-finding-group">
-      <p className="research-finding-headline">
-        같은 시스템을 사용하지만,
-        <br />
-        역할마다 먼저 확인해야 하는 정보는 달랐습니다.
-      </p>
+      <div className="research-finding-editorial">
+        <div className="research-finding-copy">
+          <p className="research-finding-headline">{renderInlineMarkup(group.headline)}</p>
+          <p className="research-finding-body">{group.body}</p>
+        </div>
 
-      <div className="research-common">
-        <div className="research-finding-label">{group.commonTitle}</div>
-        <div className="research-common-items">
-          {group.commonItems.map((item) => (
-            <span className="research-common-item" key={item}>
-              {item}
-            </span>
-          ))}
+        <div className="research-roles">
+          <div className="research-finding-label">{group.roleTitle}</div>
+          <div className="research-role-list">
+            {group.roleItems.map((item, index) => (
+              <div className="research-role-item" key={item.role}>
+                <span className="research-role-index">{String(index + 1).padStart(2, '0')}</span>
+                <strong>{item.role}</strong>
+                <span className="research-role-info">{item.info}</span>
+                <span className="research-role-caption">{item.support}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="research-finding-divider" aria-hidden="true" />
-
-      <div className="research-roles">
-        <div className="research-finding-label">{group.roleTitle}</div>
-        <div className="research-role-list">
-          {group.roleItems.map((item) => (
-            <div className="research-role-item" key={item.role}>
-              <strong>{item.role}</strong>
-              <span className="research-role-caption">가장 먼저 필요한 정보</span>
-              <span className="research-role-info">{item.info}</span>
-            </div>
-          ))}
-        </div>
+      <div className="research-finding-insight">
+        <span>INSIGHT</span>
+        <p>{group.insight}</p>
       </div>
-
-      <p className="research-finding-insight">{group.insight}</p>
     </div>
   );
 }
