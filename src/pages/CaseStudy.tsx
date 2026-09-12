@@ -382,7 +382,7 @@ export function CaseStudy() {
                 <div className="solution-card glass" key={pillar.title}>
                   <div className="solution-index">{String(i + 1).padStart(2, '0')}</div>
                   <h3>{pillar.title}</h3>
-                  <p className="solution-subtitle">{pillar.subtitle}</p>
+                  {pillar.subtitle && <p className="solution-subtitle">{pillar.subtitle}</p>}
                   <p className="solution-desc">{pillar.desc}</p>
                 </div>
               ))}

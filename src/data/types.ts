@@ -11,7 +11,9 @@ export interface ProcessStep {
  * a scannable bridge from "what was hard" to "how it was solved". */
 export interface SolutionPillar {
   title: string;
-  subtitle: string;
+  /** Optional — a short tagline shown between the title and the
+   * paragraph. Omit for a plainer title + paragraph card. */
+  subtitle?: string;
   desc: string;
 }
 
