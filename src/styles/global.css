@@ -2014,30 +2014,27 @@ a.short-card:hover {
 .role-cards {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 16px;
 }
 
+/* Every other case-study list section (.age-card, .finding-card,
+   .solution-card, .process-card) renders each item as its own glass
+   card — background/blur/border/radius. Role cards used to be a plain
+   divided row instead (border-top only, no fill), which made this the
+   one section on the page that didn't read as "cards" the way the rest
+   of the site does. Matching that pattern here instead. */
 .role-card {
   display: grid;
   grid-template-columns: minmax(120px, 0.16fr) minmax(0, 0.56fr) minmax(150px, 0.28fr);
   gap: var(--grid-gap);
   align-items: center;
   min-height: 220px;
-  padding: var(--space-28) 0;
-  border-top: 1px solid var(--glass-border);
-}
-
-/* No divider directly under the section intro paragraph, and none right
-   before the next section's own top border either — the intro already
-   reads as its own line, and the next .case-section supplies the single
-   divider before RESULT/IMPACT, so the first/last card's own borders
-   would just duplicate that separation. */
-.role-cards .role-card:first-child {
-  border-top: none;
-}
-
-.role-cards .role-card:last-child {
-  border-bottom: none;
+  padding: var(--space-28) 30px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
 }
 
 .role-card-image {
