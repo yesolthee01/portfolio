@@ -243,16 +243,14 @@ export function CaseStudy() {
   );
   const { ref: researchRef, inView: researchInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
   const { ref: rolesRef, inView: rolesInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
-  const { ref: processRef, inView: processInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
   const { ref: findingsRef, inView: findingsInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
   const { ref: resultRef, inView: resultInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
 
-  if (!project || !project.caseStudy || !project.process) {
+  if (!project || !project.caseStudy) {
     return <Navigate to="/" replace />;
   }
 
   const cs = project.caseStudy[lang];
-  const process = project.process[lang];
   const { prev, next } = getAdjacentProjects(project.slug);
 
   const findings = cs.findings ?? [];
@@ -319,8 +317,6 @@ export function CaseStudy() {
           )}
         </div>
 
-        {!isSkolePlan && principleSection}
-
         {cs.role && (
           <div className={`case-section case-row${roleInView ? ' in-view' : ''}`} ref={roleRef}>
             <div className="case-section-label case-row-label">{cs.roleLabel ?? 'MY ROLE'}</div>
@@ -359,20 +355,7 @@ export function CaseStudy() {
           )}
         </div>
 
-        {isSkolePlan && principleSection}
-
-        <div className={`case-section case-process${processInView ? ' in-view' : ''}`} ref={processRef}>
-          <div className="case-section-label case-process-label">{cs.processLabel}</div>
-          <div className="process-grid">
-            {process.map((step, i) => (
-              <div className="process-card glass" key={step.title}>
-                <div className="process-index">{String(i + 1).padStart(2, '0')}</div>
-                <h3>{step.title}</h3>
-                {renderParagraphs(step.desc)}
-              </div>
-            ))}
-          </div>
-        </div>
+        {principleSection}
 
         {cs.solution && cs.solution.length > 0 && (
           <div className={`case-section case-solution${solutionInView ? ' in-view' : ''}`} ref={solutionRef}>

@@ -144,8 +144,11 @@ export interface CaseStudyContent {
   rolesLabel?: string;
   rolesIntro?: string;
   roleCards?: RoleCard[];
-  /** Optional — a single emphasized callout paragraph, typically a
-   * closing design principle. */
+  /** Optional — a single emphasized callout paragraph, rendered right
+   * after THE CHALLENGE (before `solution`/detail sections). Originally
+   * a closing design-principle statement; also reused per-project as a
+   * short "solution direction" bridge when a project has no `solution`
+   * pillars of its own (see SkolePlan's principle-as-해결방향 usage). */
   principleLabel?: string;
   principle?: string;
   /** Optional — when set, DESIGN PRINCIPLE renders as an intro
@@ -154,10 +157,18 @@ export interface CaseStudyContent {
   principleIntro?: string;
   principleQA?: PrincipleQA[];
   principleClosing?: string;
-  /** Optional — a plain paragraph section, e.g. citing the research or
-   * theory a project's design decisions were grounded in. */
+  /** Optional — a plain paragraph section rendered after
+   * `solution`/`loopSteps`, before `ageCards`/`roleCards`/findings.
+   * Originally used for citing the research or theory a project's design
+   * decisions were grounded in; also reused per-project as a general
+   * "how it was actually built/refined" detail paragraph when a project
+   * needs one (see Midnight Carnival's researchBasis-as-인터랙션설계
+   * usage). */
   researchBasisLabel?: string;
   researchBasis?: string;
+  /** No longer rendered on the page (see CaseStudy.tsx) — kept only so
+   * each project's original step-by-step process notes stay in the data
+   * file for reference. `processLabel` is likewise unused. */
   processLabel: string;
   /** Optional — specific usability findings + fixes from testing. */
   findingsLabel?: string;

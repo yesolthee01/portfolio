@@ -88,14 +88,14 @@ export const projects: Project[] = [
           '미드나잇 카니발은 바닥과 벽면을 활용하는 5면 공간에서 여러 사용자가 몸을 움직이며 즐기는 체험형 게임이다. 호쿠요 레이저 센서로 사용자의 움직임을 감지하고, 점프·이동·터치와 같은 신체 동작을 게임의 입력 방식으로 연결했다.\n\n별도의 컨트롤러나 HMD 없이도 사용자가 공간 안에서 자연스럽게 게임의 규칙을 이해하고 참여할 수 있는 경험을 만드는 데 집중했다.',
         period: '2024.08 – 2024.12',
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
-        roleLabel: 'MY ROLE',
+        roleLabel: '나의 역할',
         roleTags: ['콘텐츠 기획', '인터랙션 설계', '사용자 흐름', 'UI 설계', '사용자 테스트', '전시 운영'],
         role:
           'PM과 UX/UI 디자이너로 참여해 콘텐츠 기획, 인터랙션 구조 설계, 사용자 테스트와 전시 운영까지 프로젝트 전 과정에 참여했다. 개발자·디자이너와 게임별 동작 방식과 피드백 구조를 조율하고, 사용자 행동을 관찰해 튜토리얼과 안내 UI를 반복 개선했다.\n\nUI와 공간 비주얼 제작에도 참여했으며, 교내 테스트 전시를 직접 기획·운영하고 프로젝트의 연구 과정을 바탕으로 논문을 공동 저술했다.',
-        problemLabel: 'THE CHALLENGE',
+        problemLabel: '문제 정의',
         problem:
           '익숙한 컨트롤러가 없는 공간에서, 사용자가 무엇을 해야 하는지 어떻게 직관적으로 알 수 있을까? Midnight Carnival은 컨트롤러나 HMD 없이 몸의 움직임만으로 플레이하는 방식이기 때문에, 사용자가 처음 공간에 들어왔을 때 어디를 보고 어떻게 움직여야 하는지 별도의 학습 없이 이해할 수 있어야 했다.\n\n동시에 Hokuyo 센서의 제한된 인식 범위 안에서 사용자의 움직임을 안정적으로 감지해야 했고, 시스템의 반응이 늦거나 불명확하면 사용자는 자신의 행동이 제대로 인식됐는지 판단하기 어려웠다. 따라서 핵심 과제를 직관적인 행동 유도, 명확한 시스템 피드백, 공간 전체의 몰입 유지로 정의했다.',
-        solutionLabel: 'THE SOLUTION',
+        solutionLabel: '해결 방향',
         solution: [
           {
             title: '즉각적인 피드백',
@@ -114,6 +114,9 @@ export const projects: Project[] = [
           },
         ],
         processLabel: 'PROCESS',
+        researchBasisLabel: '인터랙션 설계',
+        researchBasis:
+          '사용자의 신체 움직임이 실제 게임 입력으로 작동하는 프로토타입을 제작하고, 실제 공간에서 동작 인식 범위와 반응 방식을 확인하며 인터랙션을 구체화했다. 충돌 판정, 센서 인식, 시각·음향 피드백의 타이밍을 반복적으로 점검하며 사용자의 동작과 시스템 반응이 자연스럽게 연결되도록 개발팀과 함께 조정했다.',
         findingsLabel: '사용자 테스트 및 개선',
         findingsImageLayout: 'banner',
         findings: [
@@ -141,7 +144,7 @@ export const projects: Project[] = [
             imageLabel: '방향 안내 인터랙션 — MIDNIGHT CARNIVAL',
           },
         ],
-        resultLabel: 'RESULT / IMPACT',
+        resultLabel: '결과 및 검증',
         result:
           '교내 사용자 테스트에서 발견한 문제를 반영해 게임 선택, 튜토리얼, 플레이 중 방향 안내를 개선하고, 처음 참여하는 사용자도 별도의 설명 없이 게임 흐름을 이해할 수 있도록 경험을 구체화했다.\n\nSIGGRAPH Asia 2024 Tokyo 한국 공동관에 선정되어 전시하였다. 이후 현대백화점 문화홀에서도 전시되어 수백 명의 관람객이 실제로 체험했다. 프로젝트의 기획·개발 및 사용자 경험 연구 과정은 이후 관련 논문 공동 저술로 이어졌다.',
         resultTakeaway:
@@ -183,6 +186,9 @@ export const projects: Project[] = [
           },
         ],
         processLabel: 'PROCESS',
+        researchBasisLabel: 'INTERACTION DESIGN',
+        researchBasis:
+          "Built a prototype where physical movement worked as direct game input, validating recognition range and response in the actual space. Repeatedly tested and adjusted collision detection, audio-visual feedback sync, and the timing between user movement and system response, working with the development team so a player's action and the system's response felt naturally connected.",
         findingsLabel: 'FROM USER TESTING',
         findingsImageLayout: 'banner',
         findings: [
@@ -297,17 +303,17 @@ export const projects: Project[] = [
           '봉사활동을 하던 덴마크 학교에서 학생들이 여행에서 만난 사람들의 사진, 글, 목소리를 하나의 공간 경험으로 연결한 전시다. 관람객이 기록을 단순히 읽고 지나가는 대신, 발자국을 따라 천천히 이동하며 한 사람의 이야기에 머물 수 있도록 공간과 동선을 설계했다.',
         period: '2026.05',
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
-        principleLabel: 'DESIGN PRINCIPLE',
+        principleLabel: '해결 방향',
         principle:
           '자연스럽게 걸음을 늦추고 이야기에 머물 수 있는 환경을 만드는 것을 중심 원칙으로 삼았다. 발자국을 따라 이어지는 동선으로 관람 속도를 조절하고, 주변 자연과 경쟁하지 않는 공간을 구성했으며, 사진·텍스트·목소리를 함께 사용해 머무는 시간이 인물에 대한 정서적 연결로 이어지도록 설계했다.',
-        roleLabel: 'MY ROLE',
+        roleLabel: '나의 역할',
         roleTags: ['전시 기획', '공간 구성', '관람 동선', '시각 디자인', '현장 운영'],
         role:
           '전시 디렉터로 참여해 전체 콘셉트와 공간 구성, 관람 동선, 그래픽 및 인쇄물 디자인, 현장 설치를 총괄했다. 담당 교사와 사진·글·오디오 콘텐츠를 제작한 학생들과 협업하며 서로 다른 기록이 하나의 전시 경험으로 이어지도록 구성했다.',
-        problemLabel: 'THE CHALLENGE',
+        problemLabel: '문제 정의',
         problem:
           '지나치기 쉬운 공간에서, 어떻게 관람객의 걸음을 늦출 수 있을까?\n\n전시 공간은 사방이 투명한 야외 돔으로, 내부가 한눈에 보여 관람객이 내용을 충분히 경험하지 않고 지나가기 쉬웠다. 또한 시간과 날씨에 따라 빛과 주변 풍경이 계속 달라지는 환경이었다.\n\n따라서 공간을 과하게 채우기보다 관람객의 이동 속도를 자연스럽게 늦추고, 낯선 사람의 이야기에 시선과 시간을 머물게 하는 것을 핵심 과제로 삼았다.',
-        solutionLabel: 'THE SOLUTION',
+        solutionLabel: '공간 경험 설계',
         solution: [
           {
             title: '걸음을 늦추는 동선',
@@ -323,7 +329,7 @@ export const projects: Project[] = [
           },
         ],
         processLabel: 'PROCESS',
-        resultLabel: 'RESULT / IMPACT',
+        resultLabel: '결과 및 관찰',
         result:
           '약 일주일간 운영된 전시에 학생 약 130명을 비롯해 학부모와 지역 주민이 방문했다. 현장에서는 관람객들이 발자국을 따라 이동하다 특정 인물의 사진과 글 앞에서 걸음을 멈추거나, 오디오를 들으며 머무는 모습을 확인할 수 있었다.\n\n공간을 더 많이 채우는 것보다 사람이 어디에서 속도를 늦추고 무엇에 머물게 할지를 설계하는 것이 경험을 만드는 중요한 요소라는 점을 배웠다.',
         prevLabel: '← PREVIOUS — MIDNIGHT CARNIVAL',
@@ -445,13 +451,13 @@ export const projects: Project[] = [
           'Talkable은 AI와 실시간 영어 대화를 나누고, 대화에서 발견된 개인의 약점을 피드백·복습·챌린지로 연결하는 영어 회화 학습 서비스다.\n\n단순히 AI와 대화하는 경험에 그치지 않고, 사용자의 실제 대화 데이터를 다음 학습 행동으로 전환하는 구조에 집중했다. 이를 위해 대화 → 피드백 → 복습 → 챌린지가 반복되는 학습 루프를 설계했다.',
         period: '2024.03 – 2024.11',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
-        roleLabel: 'MY ROLE',
+        roleLabel: '나의 역할',
         role:
           '사용자 리서치와 문제 정의부터 서비스 구조 및 User Flow 설계, UI 디자인, 프로토타이핑, 사용자 테스트까지 전 과정을 담당했다.\n\n특히 AI 대화에서 생성된 피드백이 일회성 결과로 끝나지 않고 복습과 다음 학습 행동으로 이어지도록 기능과 정보 구조를 설계했다. 사용자 테스트와 전문가 피드백을 바탕으로 핵심 기능의 발견성, Navigation, 정보 구조를 반복 개선했다.',
-        problemLabel: 'THE CHALLENGE',
+        problemLabel: '문제 정의',
         problem:
           '대화 경험을 실제 학습 경험으로 어떻게 연결할 수 있을까? 영어 회화 서비스의 문제는 단순히 대화 기회가 부족한 것만이 아니었다. 혼자 연습할 때는 자신의 수준에 맞는 구체적인 피드백을 받기 어렵고, 대화를 마친 뒤 무엇을 다시 학습해야 하는지도 명확하지 않았다.\n\n사용자 리서치에서 개인화 부족, 제한적인 피드백, 낮은 학습 동기를 주요 문제로 정의했다. 이에 Talkable의 핵심 과제를 단순한 AI 대화 기능을 제공하는 것이 아니라, 실제 대화에서 발견된 약점을 사용자가 이해하고 복습·재도전까지 이어갈 수 있는 학습 구조를 만드는 것으로 설정했다.',
-        solutionLabel: 'THE SOLUTION',
+        solutionLabel: '해결 방향',
         solution: [
           {
             title: 'PERSONALIZATION',
@@ -469,7 +475,7 @@ export const projects: Project[] = [
             desc: '학습 현황과 Challenge를 통해 사용자가 자신의 반복 학습 과정과 성취를 확인할 수 있도록 설계했다. 작은 학습 목표를 제시해 복습 이후 다시 대화로 돌아갈 수 있는 동기를 만들고자 했다.',
           },
         ],
-        loopLabel: 'LEARNING LOOP',
+        loopLabel: '학습 흐름',
         loopIntro:
           '대화를 일회성 연습으로 끝내지 않고, 피드백 → 복습 → 재도전으로 이어지는 반복 학습 구조를 설계했다.',
         loopSteps: [
@@ -499,7 +505,7 @@ export const projects: Project[] = [
           },
         ],
         processLabel: 'PROCESS',
-        findingsLabel: 'USER TESTING & ITERATION',
+        findingsLabel: '사용자 테스트 및 개선',
         findings: [
           {
             title: '중요한 피드백 기능을 더 쉽게 찾도록',
@@ -534,7 +540,7 @@ export const projects: Project[] = [
             imageLabel: 'Challenge 목표/보상 개선 — TALKABLE UI',
           },
         ],
-        resultLabel: 'RESULT / VALIDATION',
+        resultLabel: '결과 및 검증',
         result:
           '사용자 테스트와 전문가 피드백을 바탕으로 정보 구조를 개선하고, 대화 → 피드백 → 복습 → 챌린지로 이어지는 학습 루프를 실제 사용 흐름에 맞게 구체화했다.\n\n이를 통해 톡커블의 핵심 가설이었던 “AI와의 대화에서 얻은 피드백이 복습과 재도전으로 이어지며 학습 효과를 극대화할 수 있는가”를 프로토타입 수준에서 검증했다. 최종 프로토타입은 졸업전시에서 선보였으며, 프로젝트의 연구·개발 과정은 이후 논문과 학술 발표로 확장됐다.',
         prevLabel: '← PREVIOUS — DESIGNING EMPATHY THROUGH SPACE',
@@ -716,14 +722,14 @@ export const projects: Project[] = [
           '서울시 지원 산학협력 R&D 과제로 진행한 헤드셋 프리 XR 콘텐츠 연구·개발 프로젝트다. 유아부터 고령자까지 다섯 연령대의 신체·인지 발달 특성을 조사하고, 이를 반영하여 서로 다른 움직임과 게임 방식으로 구현했다.\n\n연령별 신체·인지 발달 이론을 바탕으로 각 연령대의 주요 특성과 필요한 경험을 정리하고, 이를 실제 XR 공간에서 수행할 수 있는 움직임과 인터랙션으로 설계했다.',
         period: '2025.01 – 2025.07',
         heroLabel: 'HERO IMAGE — SEOUL CITY-FUNDED XR RESEARCH',
-        roleLabel: 'MY ROLE',
+        roleLabel: '나의 역할',
         role:
           'PM과 UX 디자이너로 참여해 연령별 발달 특성을 조사하고, 연구에서 얻은 인사이트를 게임 콘셉트와 신체 인터랙션으로 구체화하는 과정을 담당했다. 개발자·디자이너와 각 콘텐츠의 핵심 행동과 플레이 방식을 조율하고, 실제 XR 콘텐츠 제작과 전시까지 참여했다. 연구 과정과 결과는 논문으로 정리해 국내·외 학술 발표로 확장했다.',
         roleTags: ['리서치', '경험 기획', '인터랙션 설계', '콘텐츠 기획', '개발 협업', '연구 및 검증'],
-        problemLabel: 'THE CHALLENGE',
+        problemLabel: '문제 정의',
         problem:
           '같은 게임에 난이도만 바꾸는 것으로 ‘연령 맞춤’이라 할 수 있을까?\n\n같은 인터랙션이 모든 연령대에 동일한 경험을 제공하지는 않는다. 연령에 따라 신체 능력, 인지 방식, 반응 속도, 참여 동기가 달라지기 때문이다.\n\n따라서 이 프로젝트에서는 연령별 난이도를 조절하는 것을 넘어, 각 연령대의 발달 특성을 어떤 행동과 게임 방식으로 연결할 것인지를 핵심 과제로 정의했다.',
-        researchLabel: 'RESEARCH → DESIGN TRANSLATION',
+        researchLabel: '리서치에서 설계로',
         researchIntro:
           '연령별 발달 특성을 정리한 뒤, 이를 실제 XR 공간에서 수행할 수 있는 행동과 게임 방식으로 변환했다.',
         ageCards: [
@@ -774,14 +780,11 @@ export const projects: Project[] = [
             imageLabel: '농장 걷기와 수확 — SEOUL XR RESEARCH',
           },
         ],
-        principleLabel: 'DESIGN PRINCIPLE',
-        principle:
-          '연령에 따라 난이도만 조절한 것이 아니라, 인터랙션 자체를 다르게 설계했다. 아동은 밟고, 초등학생은 찾고 해결하며, 청소년은 판단하고 던진다. 성인은 빠르게 피하고, 고령자는 걷고 기억한다. 같은 XR 플랫폼을 사용하면서도 사용자의 신체·인지적 특성에 따라 플레이의 핵심 행동 자체를 다르게 설계하는 것을 프로젝트의 중심 원칙으로 삼았다.',
-        researchBasisLabel: 'RESEARCH BASIS',
+        researchBasisLabel: '연구 근거',
         researchBasis:
           '연령별 경험 설계의 근거를 마련하기 위해 운동발달, 인지발달, 심리사회적 발달 관련 선행 연구를 조사했다. Gallahue의 운동발달 이론, Piaget의 인지발달 이론, Erikson의 심리사회적 발달 이론 등을 참고하되, 이론 자체를 정리하는 데 그치지 않고 각 특성이 실제 사용자의 행동과 인터랙션에 어떻게 반영될 수 있는지를 중심으로 분석했다.',
         processLabel: 'PROCESS',
-        resultLabel: 'RESULT / IMPACT',
+        resultLabel: '결과 및 검증',
         result:
           '연구에서 도출한 연령별 설계 원칙을 다섯 가지 XR 콘텐츠로 구현해, 연구 결과가 문서나 프로토타입에 머물지 않고 실제 공간에서 경험할 수 있는 형태로 연결했다.\n\n완성된 콘텐츠는 서울시 지원 산학협력 연구 결과물로 제작됐으며, 이후 현대백화점 문화홀에서 실제 관람객을 대상으로 전시됐다. 연구 과정과 결과는 논문으로 정리해 국내·외 학술 발표로 확장했다.',
         resultTakeaway:
@@ -855,9 +858,6 @@ export const projects: Project[] = [
             imageLabel: 'WALK & HARVEST — SEOUL XR RESEARCH',
           },
         ],
-        principleLabel: 'DESIGN PRINCIPLE',
-        principle:
-          "Difficulty wasn't the only thing adjusted by age — the interaction itself was designed differently. Children step, schoolchildren find and solve, teens judge and throw. Adults dodge quickly, older adults walk and remember. Designing the core action of play itself differently based on users' physical and cognitive traits, while using the same XR platform, was the project's central principle.",
         researchBasisLabel: 'RESEARCH BASIS',
         researchBasis:
           "To ground the age-specific Experience Design, prior research and theory in developmental psychology, motor development, and cognitive development were reviewed. Research Insights were drawn from Gallahue's motor development theory, Piaget's theory of cognitive development, and Erikson's psychosocial development theory, alongside research on Kolb's experiential learning and neuroplasticity. Rather than simply presenting the theory itself, the focus stayed on how each insight could be reflected in actual user behavior and interaction.",
@@ -937,11 +937,11 @@ export const projects: Project[] = [
           'SkolePlan은 덴마크 Efterskole 교직원이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템이다.\n\n현장 관찰과 인터뷰·설문을 통해 교사, 주방 담당자, 기숙사 담당자는 자주 확인하는 정보와 업무 흐름은 서로 다르다는 점을 발견했다. 이를 바탕으로 역할별 정보 우선순위를 다시 정의하고 홈 화면과 탐색 구조를 재설계했다.',
         period: '2026.03',
         heroLabel: 'HERO IMAGE — SKOLEPLAN',
-        roleLabel: 'MY ROLE',
+        roleLabel: '나의 역할',
         roleTags: ['사용자 조사', '문제 정의', '정보 구조 설계', '사용자 흐름', '화면 설계', '프로토타입 검증'],
         role:
           '현장 관찰과 인터뷰·설문을 통해 교직원의 실제 업무 흐름과 반복 업무를 파악하고, 역할별로 가장 먼저 필요한 정보의 우선순위를 정의했다. 이를 바탕으로 정보 구조와 사용자 흐름, 주요 화면을 재설계하고 프로토타입을 제작해 실제 교직원에게 방향성을 검증했다.',
-        problemLabel: 'THE CHALLENGE',
+        problemLabel: '문제 정의',
         problem:
           '기존 SkolePlan은 모든 교직원에게 동일한 정보 구조를 제공하고 있었다. 그 결과 사용자는 자주 확인하는 정보에 도달하기 위해 여러 화면을 거쳐야 했고, 업무 중 바로 확인해야 하는 정보도 한눈에 파악하기 어려웠다.\n\n현장 조사 결과, 문제는 기능의 부족보다 각 역할의 업무 우선순위가 화면 구조에 반영되지 않은 것에 가까웠다. 교사, 주방 담당자, 기숙사 담당자는 반복적으로 수행하는 업무와 가장 먼저 확인해야 하는 정보가 서로 달랐다.',
         researchFindings: {
@@ -955,6 +955,10 @@ export const projects: Project[] = [
             { role: '기숙사 담당자', info: '학생 출결 · 현재 상태' },
           ],
         },
+        principleLabel: '해결 방향',
+        principle:
+          '교사·주방·기숙사 담당자별 핵심 업무와 정보 우선순위를 정리하고, 이를 기준으로 홈 화면의 정보 구성과 탐색 구조를 다시 설계했다.',
+        rolesLabel: '역할별 화면 설계',
         rolesIntro:
           '리서치에서 발견한 역할별 업무 차이를 바탕으로, 각 역할이 먼저 확인해야 하는 정보를 중심으로 UX를 재설계했다.',
         roleCards: [
@@ -981,7 +985,7 @@ export const projects: Project[] = [
           },
         ],
         processLabel: 'PROCESS',
-        resultLabel: 'RESULT / IMPACT',
+        resultLabel: '결과 및 검증',
         result:
           '역할별 Dashboard 프로토타입을 교직원에게 공유해 실제 업무 흐름과 정보 구성의 적합성을 확인했다. 교사는 일정과 출석, 주방 담당자는 식사 인원과 식이 요구사항, 기숙사 담당자는 학생 출결과 현황을 한 화면에서 확인할 수 있다는 점에서 긍정적인 피드백을 얻었다.\n\n이를 통해 기능을 늘리는 것보다 사용자의 업무 맥락에 맞춰 정보의 우선순위를 재구성하는 것이 업무 효율과 정보 접근성을 높이는 데 중요하다는 점을 확인했다.',
         resultHeadline: '역할에 맞는 정보 구조로,\n핵심 업무에 더 빠르게 접근할 수 있도록 했다.',
@@ -1008,6 +1012,9 @@ export const projects: Project[] = [
         problemLabel: 'THE CHALLENGE',
         problem:
           "Everyone used the same system, but not everyone needed the same information. The existing system's deep navigation structure meant several steps were needed just to find what mattered, and key information wasn't surfaced immediately. On-site research showed that teachers, kitchen staff, and dormitory staff each checked different information and prioritized different tasks.",
+        principleLabel: 'SOLUTION DIRECTION',
+        principle:
+          "Compared the workflows of teachers, kitchen staff, and dormitory staff to define the information each role needed most and the priority of their core tasks, then redesigned the home screen's information layout and navigation around those priorities.",
         rolesIntro:
           "Based on the role-specific differences uncovered in research, the interface was redesigned — not by adding features, but by restructuring the information architecture around what each role needed to check first.",
         roleCards: [
@@ -1052,8 +1059,11 @@ export const projectsByOrder = [...projects].sort((a, b) => a.order - b.order);
 /** Every project with its own /work/:slug case study page, regardless of
  * card tier/size — powers page lookup and the prev/next footer nav so a
  * compact-card project (like Seoul XR Research) still slots into the
- * click-through chain between full-card case studies. */
-export const caseStudyProjects = projectsByOrder.filter((p) => p.process && p.caseStudy);
+ * click-through chain between full-card case studies. Only `caseStudy`
+ * is required — `process` is no longer rendered on the page (kept in
+ * the data only for reference), so a project doesn't need it to have a
+ * case study page. */
+export const caseStudyProjects = projectsByOrder.filter((p) => p.caseStudy);
 
 export function getProjectBySlug(slug: string | undefined): Project | undefined {
   return caseStudyProjects.find((p) => p.slug === slug);
