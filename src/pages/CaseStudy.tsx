@@ -351,7 +351,7 @@ export function CaseStudy() {
                   <div className="research-role-card glass" key={item.role}>
                     <div className="research-role-name">{item.role}</div>
                     <div className="research-role-info">{item.info}</div>
-                    <div className="research-role-caption">{item.support}</div>
+                    {item.support && <div className="research-role-caption">{item.support}</div>}
                   </div>
                 ))}
               </div>
@@ -492,9 +492,7 @@ export function CaseStudy() {
                   <strong>{highlight.title}</strong> | {highlight.desc}
                 </p>
               ))}
-              <p>
-                <strong>VALIDATION</strong> | {cs.resultVerification}
-              </p>
+              <p>{cs.resultVerification}</p>
               <p className="case-result-takeaway">{cs.resultTakeaway}</p>
             </div>
           </div>

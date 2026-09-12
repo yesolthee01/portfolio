@@ -93,7 +93,9 @@ export interface ResearchFindingGroup {
   commonItems: string[];
   headline: string;
   roleTitle: string;
-  roleItems: { role: string; info: string; support: string }[];
+  /** `support` is optional — omit it to show just the role name + core
+   * info line, with no explanatory caption underneath. */
+  roleItems: { role: string; info: string; support?: string }[];
 }
 
 export interface CaseStudyContent {
