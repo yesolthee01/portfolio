@@ -293,15 +293,12 @@ export function CaseStudy() {
 
       <div className="frame project-container">
         <div className="case-hero">
-          <div className="card-eyebrow case-eyebrow">{cs.eyebrow}</div>
+          <div className="card-eyebrow case-eyebrow">
+            {cs.period ? `[${cs.period} | ${cs.eyebrow}]` : cs.eyebrow}
+          </div>
           <h1 className="case-title">{cs.title}</h1>
-          {cs.summary && <p className="case-result-headline">{cs.summary}</p>}
+          {cs.summary && <p className="case-summary">{cs.summary}</p>}
           <p className="case-subtitle">{renderInlineMarkup(cs.subtitle)}</p>
-          {cs.period && (
-            <div className="case-role-tags">
-              <span className="tag glass">{cs.period}</span>
-            </div>
-          )}
           {project.heroVideo ? (
             <div className="case-hero-video">
               <iframe
@@ -348,23 +345,22 @@ export function CaseStudy() {
           <div className="case-row-body case-problem-body">
             {renderParagraphs(cs.problem)}
           </div>
-        </div>
-
-        {isSkolePlan && cs.researchFindings && (
-          <div className={`case-section case-research-findings${researchInView ? ' in-view' : ''}`} ref={researchRef}>
-            <div className="case-section-label case-research-findings-label">{cs.researchFindings.roleTitle}</div>
-            <div className="research-role-grid">
-              {cs.researchFindings.roleItems.map((item, index) => (
-                <div className="research-role-card glass" key={item.role}>
-                  <div className="research-role-index">{String(index + 1).padStart(2, '0')}</div>
-                  <div className="research-role-name">{item.role}</div>
-                  <div className="research-role-info">{item.info}</div>
-                  <div className="research-role-caption">{item.support}</div>
-                </div>
-              ))}
+          {isSkolePlan && cs.researchFindings && (
+            <div className="case-challenge-findings">
+              <div className="case-challenge-findings-label">{cs.researchFindings.roleTitle}</div>
+              <div className="research-role-grid">
+                {cs.researchFindings.roleItems.map((item, index) => (
+                  <div className="research-role-card glass" key={item.role}>
+                    <div className="research-role-index">{String(index + 1).padStart(2, '0')}</div>
+                    <div className="research-role-name">{item.role}</div>
+                    <div className="research-role-info">{item.info}</div>
+                    <div className="research-role-caption">{item.support}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
 
         {isSkolePlan && principleSection}
 
@@ -491,24 +487,16 @@ export function CaseStudy() {
           <div className={`case-section case-result${resultInView ? ' in-view' : ''}`} ref={resultRef}>
             <div className="case-section-label case-result-label">{cs.resultLabel}</div>
             <h2 className="case-result-headline">{renderInlineMarkup(cs.resultHeadline)}</h2>
-            <div className="case-result-highlights">
-              {cs.resultHighlights.map((highlight, i) => (
-                <div className="case-result-highlight glass" key={highlight.title}>
-                  <div className="case-result-highlight-index">{String(i + 1).padStart(2, '0')}</div>
-                  <strong>{highlight.title}</strong>
-                  <span>{highlight.desc}</span>
-                </div>
+            <div className="case-result-text">
+              {cs.resultHighlights.map((highlight) => (
+                <p key={highlight.title}>
+                  <strong>{highlight.title}</strong> — {highlight.desc}
+                </p>
               ))}
-            </div>
-            <div className="case-result-outcome glass">
-              <div className="case-result-verification">
-                <span>VALIDATION</span>
-                <p>{cs.resultVerification}</p>
-              </div>
-              <div className="case-result-insight">
-                <span>TAKEAWAY</span>
-                <p>{cs.resultTakeaway}</p>
-              </div>
+              <p>
+                <strong>VALIDATION</strong> {cs.resultVerification}
+              </p>
+              <p className="case-result-takeaway">{cs.resultTakeaway}</p>
             </div>
           </div>
         ) : (

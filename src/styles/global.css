@@ -1239,6 +1239,20 @@ a.short-card:hover {
   margin: 0 0 var(--project-label-gap);
 }
 
+/* The one-line summary sits directly above the subtitle at the subtitle's
+   own body size (bold) — a small margin-bottom groups it tightly with the
+   subtitle below, instead of the large-display styling that used to make
+   it read as a second title line grouped with the heading above. */
+.case-summary {
+  max-width: var(--project-prose-wide);
+  font-size: var(--fs-base);
+  line-height: 1.8;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: pre-line;
+  margin: 0 0 var(--space-8);
+}
+
 .case-subtitle strong {
   color: var(--accent);
   font-weight: 600;
@@ -1452,6 +1466,22 @@ a.short-card:hover {
 
 .case-problem-body p:not(:last-child) {
   margin-bottom: var(--space-28);
+}
+
+/* The role-specific "핵심 정보" cards now live inside THE CHALLENGE
+   section itself (merged from a separate section) — aligned under the
+   body column via the same grid-column as .case-row-body. */
+.case-challenge-findings {
+  grid-column: 5 / 13;
+  margin-top: var(--space-28);
+}
+
+.case-challenge-findings-label {
+  font-size: var(--fs-caption);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-14);
 }
 
 .case-role-tags {
@@ -1993,6 +2023,13 @@ a.short-card:hover {
   border-bottom: 1px solid var(--glass-border);
 }
 
+/* No divider directly under the section intro paragraph — the intro
+   already reads as its own line, so the first card's top border just
+   duplicated that separation. */
+.role-cards .role-card:first-child {
+  border-top: none;
+}
+
 .role-card-image {
   border-radius: 0;
   height: 250px;
@@ -2096,6 +2133,39 @@ a.short-card:hover {
   display: flex;
   flex-direction: column;
   gap: var(--space-10);
+}
+
+/* Plain, text-only RESULT/IMPACT (SkolePlan) — the page already has a
+   lot of card grids above this point, so the closing section reads as
+   flowing prose instead of another row of boxes. Reuses the same body
+   typography as .case-row-body / .case-problem-body. */
+.case-result-text {
+  max-width: var(--project-prose-wide);
+  font-size: var(--type-project-body);
+  line-height: 1.85;
+  color: var(--ink-soft);
+}
+
+.case-result-text p {
+  margin: 0 0 var(--space-20);
+}
+
+.case-result-text p:last-child {
+  margin-bottom: 0;
+}
+
+.case-result-text strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.case-result-takeaway {
+  margin-top: var(--space-8) !important;
+  font-size: var(--fs-emphasis);
+  line-height: 1.7;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: pre-line;
 }
 
 .case-result-highlight-index {
@@ -2505,7 +2575,8 @@ a.short-card:hover {
     grid-row: 1 / 4;
   }
   .case-row-label,
-  .case-row-body {
+  .case-row-body,
+  .case-challenge-findings {
     /* 12-col label/body split only makes sense at the row's normal
        width — below this breakpoint .case-row stacks to a single
        column, so the explicit column spans need to reset or they'd
