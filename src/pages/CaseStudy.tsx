@@ -499,7 +499,10 @@ export function CaseStudy() {
         ) : (
           <div className={`case-section case-row${resultInView ? ' in-view' : ''}`} ref={resultRef}>
             <div className="case-section-label case-row-label">{cs.resultLabel}</div>
-            <p className="case-row-body">{cs.result}</p>
+            <div className="case-row-body">
+              <p>{cs.result}</p>
+              {cs.resultTakeaway && <p className="case-result-takeaway">{cs.resultTakeaway}</p>}
+            </div>
           </div>
         )}
 

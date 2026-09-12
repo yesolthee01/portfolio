@@ -1458,6 +1458,14 @@ a.short-card:hover {
   white-space: pre-line;
 }
 
+/* When a .case-row-body holds more than one paragraph (e.g. a plain
+   RESULT/IMPACT section with an emphasized closing takeaway line),
+   space them apart instead of the default 0 margin meant for a single
+   paragraph. */
+.case-row-body p:not(:last-child) {
+  margin-bottom: var(--space-20);
+}
+
 .case-problem-body strong {
   color: var(--ink);
   font-size: var(--fs-emphasis);
