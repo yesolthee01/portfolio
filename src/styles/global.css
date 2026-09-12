@@ -912,6 +912,14 @@ button {
   margin-top: var(--space-20);
 }
 
+/* When only one short card is present, stretch it across the full row
+   (matching the full-width cards above) instead of leaving the second
+   grid column empty. Reverts automatically to a normal half-width card
+   if a second short-tier project is ever added back. */
+.short-card:only-child {
+  grid-column: 1 / -1;
+}
+
 .short-card {
   display: block;
   text-decoration: none;
