@@ -336,27 +336,32 @@ export const siteCopy: Localized<{
       eyebrow: 'ABOUT',
       title: 'Yesol Kim',
       intro:
-        "I work across a range of project formats — from mobile/web UX/UI design to XR interactive content and digital content design. I've stayed consistently interested in understanding human behavior and usage context, and structuring complex information into clearer experiences.\nI'm currently a social media marketing intern at a Copenhagen-based startup, handling digital content production and communication, and I also work freelance on XR game UX/UI design. I've also supported Korean companies expanding into Europe at trade fairs there — interpreting and joining business meetings — building experience connecting people and business outside of design work as well.\nRather than limiting myself to one role or medium, I'm shaping my direction as a UX/UI designer by gaining experience understanding people and solving problems across different environments.",
+        "I understand human behavior and the context people use a product in, and turn complex problems into clear experiences and structure. Across different environments — from mobile/web services to XR interactive content — I work through user research, problem definition, information architecture, user flow design, prototyping, and validation. I'm strong at quickly picking up a new domain, organizing what's needed, and shaping it into a real, working experience.",
       strengthsLabel: 'STRENGTHS',
       strengths: [
-        { title: 'I start with behavior', desc: 'I observe real behavior and context through user/desk research and interviews.' },
         {
-          title: 'I structure complexity',
-          desc: 'Using information architecture and user flow mapping, I find the core problem and flow inside scattered information and requirements.',
+          title: 'I find problems in real user context',
+          desc: 'Through interviews, user research, and on-site observation, I look at real behavior and context to trace problems back to their cause.',
         },
-        { title: 'I turn ideas into reality fast', desc: 'I use prototypes and AI tools to quickly shape and validate ideas.' },
+        {
+          title: 'I structure complex information',
+          desc: 'I organize scattered information and requirements to define the core problem, then shape it into information architecture and user flows.',
+        },
+        {
+          title: 'I validate ideas quickly',
+          desc: 'I turn ideas into prototypes quickly, check how real users respond, and improve through iteration.',
+        },
       ],
       experienceLabel: 'EXPERIENCE',
       experience: [
         {
-          role: 'International Volunteer',
-          org: 'Odsherreds Efterskole',
-          location: 'Odsherreds, Denmark',
-          period: '09.2025 – 06.2026',
+          role: 'SNS Marketing Intern',
+          org: 'A Copenhagen-based startup',
+          location: 'Copenhagen, Denmark',
+          period: '08.2026 – Present',
           highlights: [
-            'Co-directed a documentary class, guiding students through the full planning, filming, and editing process and mentoring their digital storytelling work',
-            'Planned and executed a site-specific exhibition inside a transparent dome for Global Day, designing the spatial setup and coordinating installation — attracted 300+ visitors',
-            'Delivered cultural programs and events for 150+ students, including Korean street food sessions and weekly activities',
+            'Structures product and business information into digital content and intro materials that are easy for external audiences to understand',
+            'Produces social and web content, improving product messaging and communication',
           ],
         },
         {
@@ -365,8 +370,8 @@ export const siteCopy: Localized<{
           location: 'Seoul, Korea',
           period: '01.2025 – 07.2025',
           highlights: [
-            'Planned XR content and led UX/UI design work',
-            'Handled practical, on-the-ground work for commercial exhibition environments — coordinating internal and external stakeholders, hardware optimization, and more',
+            'Planned the experience structure and interactions of XR content based on research into physical and cognitive development across age groups',
+            'Collaborated with the development and design teams to build prototypes, adjusting content and user experience to fit the exhibition environment',
           ],
         },
         {
@@ -375,8 +380,8 @@ export const siteCopy: Localized<{
           location: 'Seoul, Korea',
           period: '09.2024 – 12.2024',
           highlights: [
-            'Designed UX/UI for an AI-based Korean speech learning platform, structuring user flows and interaction patterns in Figma',
-            'Developed pitch materials and demo assets, contributing to selection for Asia Demo Day (Hanoi) — Grand Prize winner',
+            'Designed the user flow and core features of an AI-based Korean learning service and built UX/UI prototypes',
+            'Produced pitch materials and demos explaining the product flow, contributing to selection for Asia Demo Day and the Grand Prize',
           ],
         },
         {
@@ -385,8 +390,8 @@ export const siteCopy: Localized<{
           location: 'Seoul, Korea',
           period: '07.2024 – 08.2024',
           highlights: [
-            'Designed immersive gameplay and interaction experiences for a room-scale XR esports exhibition',
-            'Supported live exhibition installations across multiple public showcases, collaborating with multidisciplinary teams to translate creative concepts into interactive spatial experiences',
+            'Designed gameplay, interaction, and UX/UI for a large-scale spatial XR e-sports exhibition',
+            'Collaborated with developers and designers from prototype testing through public exhibition implementation',
           ],
         },
         {
@@ -395,21 +400,31 @@ export const siteCopy: Localized<{
           location: 'Seoul, Korea',
           period: '11.2023 – 02.2024',
           highlights: [
-            'Built a modular visual system for the brand’s Instagram, enabling consistent content production',
-            'Designed a hospitality marketing platform end-to-end as the sole designer, defining IA, user flows, and interaction systems',
+            'Designed a modular visual system for the brand’s social channels, organizing content production and visual consistency',
+            'Designed the information architecture, user flow, and core interactions for a hospitality marketing platform',
           ],
         },
       ],
       intlLabel: 'INTERNATIONAL EXPOSURE',
       intlExposure: [
         {
-          role: 'Viva Tech',
+          role: 'International Volunteer Work',
+          org: 'Odsherreds Efterskole',
+          location: 'Odsherreds, Denmark',
+          period: '09.2025 – 06.2026',
+          highlights: [
+            'Planned and ran documentary/digital storytelling classes and cultural programs',
+            'Collaborated with students and staff to plan exhibitions and spatial projects, through to on-site execution',
+          ],
+        },
+        {
+          role: 'Viva Technology',
           org: 'Newjak Co.',
           location: 'Paris, France',
           period: '06.2026',
           highlights: [
-            'Represented Newjak’s XR content solutions at Viva Tech, presenting products to international industry professionals and potential partners',
-            'Presented product capabilities and use cases, and engaged with potential partners on XR applications and collaboration opportunities',
+            'Introduced XR content solutions and use cases to international industry professionals and potential partners',
+            'Supported on-site business meetings and product demonstrations',
           ],
         },
         {
@@ -418,8 +433,8 @@ export const siteCopy: Localized<{
           location: 'Paris, France',
           period: '06.2026',
           highlights: [
-            'Ran Newjak’s XR content exhibition',
-            'Handled hardware installation, sensor calibration, and guided visitor gameplay',
+            'Ran the XR content exhibition and set up hardware and sensors',
+            'Guided visitor gameplay and ran on-site content operations',
           ],
         },
         {
@@ -428,8 +443,8 @@ export const siteCopy: Localized<{
           location: 'Barcelona, Spain',
           period: '03.2026',
           highlights: [
-            'Represented Newjak’s XR content solutions at Mobile World Congress, presenting products to international industry professionals and potential partners',
-            'Presented product capabilities and use cases, and engaged with potential partners on XR applications and collaboration opportunities',
+            'Introduced XR content solutions and use cases to international industry professionals',
+            'Supported product demonstrations and business communication with potential partners',
           ],
         },
         {
@@ -438,8 +453,8 @@ export const siteCopy: Localized<{
           location: 'Tokyo, Japan',
           period: '12.2024',
           highlights: [
-            'Selected to present an interactive XR platform at SIGGRAPH Asia, an international conference and exhibition for computer graphics and interactive technologies',
-            'Demonstrated the experience to a global audience of researchers, artists, and industry professionals, communicating the concept, interaction design, and creative vision behind the project',
+            'Demonstrated spatial XR content to an international audience and introduced the interaction design',
+            'Shared project planning and user experience with researchers, artists, and industry professionals',
           ],
         },
       ],
