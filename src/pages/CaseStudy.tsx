@@ -289,7 +289,7 @@ export function CaseStudy() {
       <Nav variant="case" backHref="/#work" backLabel={cs.backToWorkLabel} />
 
       <div className="frame project-container">
-        <div className="case-hero">
+        <div className="case-hero case-hero--project">
           <div className="card-eyebrow case-eyebrow">
             {cs.period ? `[${cs.period} | ${cs.eyebrow}]` : cs.eyebrow}
           </div>

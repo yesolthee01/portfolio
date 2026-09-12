@@ -44,6 +44,15 @@
   max-width: var(--project-prose-wide);
 }
 
+/* The project hero's own summary/subtitle sat on the narrower prose rail
+   while the title and hero photo right above/below them ran the full
+   .case-hero width — the two read as different widths on the same block.
+   Let the hero copy run full width there so it lines up with the photo. */
+.case-hero--project .case-summary,
+.case-hero--project .case-subtitle {
+  max-width: none;
+}
+
 /* Body copy should wrap naturally. Avoid layout-specific forced line
    breaks: Korean word integrity is already handled globally with
    word-break: keep-all. */
