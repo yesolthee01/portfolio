@@ -149,8 +149,8 @@ export const projects: Project[] = [
           '교내 사용자 테스트에서 발견한 문제를 반영해 게임 선택, 튜토리얼, 플레이 중 방향 안내를 개선하고, 처음 참여하는 사용자도 별도의 설명 없이 게임 흐름을 이해할 수 있도록 경험을 구체화했다.\n\nSIGGRAPH Asia 2024 Tokyo 한국 공동관에 선정되어 전시하였다. 이후 현대백화점 문화홀에서도 전시되어 수백 명의 관람객이 실제로 체험했다. 프로젝트의 기획·개발 및 사용자 경험 연구 과정은 이후 관련 논문 공동 저술로 이어졌다.',
         resultTakeaway:
           '낯선 인터랙션, 낯선 경험을 주는 프로덕트일수록 더 많은 설명을 더하기보다, 사용자의 행동과 시스템의 반응이 자연스럽게 연결되도록 설계하는 것이 최고의 경험을 설계하는 것에 있어 아주 중요했다.',
-        prevLabel: '← PREVIOUS',
-        nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
+        prevLabel: '← PREVIOUS — SKOLEPLAN',
+        nextLabel: 'NEXT — SEOUL CITY-FUNDED XR RESEARCH →',
         backToWorkLabel: '← ALL WORK',
       },
       en: {
@@ -223,15 +223,15 @@ export const projects: Project[] = [
           "Reflecting the problems found in the in-school user test, improved game selection, the tutorial, and in-game directional guidance, shaping the experience so first-time players could understand the game's flow without any separate explanation.\n\nSelected for and exhibited at the Korea joint pavilion at SIGGRAPH Asia 2024 Tokyo. Later exhibited at the Hyundai Department Store Culture Hall as well, where hundreds of visitors experienced it directly. The project's planning, development, and user experience research process went on to become a co-authored research paper.",
         resultTakeaway:
           "The more unfamiliar the interaction or experience a product offers, the more important it was to design so a user's action and the system's response connect naturally — rather than simply adding more explanation — in creating the best possible experience.",
-        prevLabel: '← PREVIOUS',
-        nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
+        prevLabel: '← PREVIOUS — SKOLEPLAN',
+        nextLabel: 'NEXT — SEOUL CITY-FUNDED XR RESEARCH →',
         backToWorkLabel: '← ALL WORK',
       },
     },
   },
   {
     slug: 'outdoor-dome',
-    order: 4,
+    order: 5,
     tier: 'short',
     medium: 'spatial',
     tags: ['공간 경험 설계', '전시 기획', '사용자 경험'],
@@ -335,8 +335,8 @@ export const projects: Project[] = [
         resultLabel: '결과 및 관찰',
         result:
           '약 일주일간 운영된 전시에 학생 약 130명을 비롯해 학부모와 지역 주민이 방문했다. 현장에서는 관람객들이 발자국을 따라 이동하다 특정 인물의 사진과 글 앞에서 걸음을 멈추거나, 오디오를 들으며 머무는 모습을 확인할 수 있었다.\n\n공간을 더 많이 채우는 것보다 사람이 어디에서 속도를 늦추고 무엇에 머물게 할지를 설계하는 것이 경험을 만드는 중요한 요소라는 점을 배웠다.',
-        prevLabel: '← PREVIOUS — MIDNIGHT CARNIVAL',
-        nextLabel: 'NEXT — TALKABLE →',
+        prevLabel: '← PREVIOUS — SEOUL CITY-FUNDED XR RESEARCH',
+        nextLabel: 'BACK TO ALL WORK →',
         backToWorkLabel: '← ALL WORK',
       },
       en: {
@@ -376,15 +376,15 @@ export const projects: Project[] = [
         resultLabel: 'RESULT / OBSERVATION',
         result:
           "Over roughly a week, the exhibition welcomed around 130 students along with parents and local residents. On site, visitors could be seen following the footprint path and pausing in front of a particular person's photo and writing, or lingering as they listened to the audio.\n\nThe project confirmed that designing where people slow down and what they stay with matters more to the experience than simply filling the space with more content.",
-        prevLabel: '← PREVIOUS — MIDNIGHT CARNIVAL',
-        nextLabel: 'NEXT — TALKABLE →',
+        prevLabel: '← PREVIOUS — SEOUL CITY-FUNDED XR RESEARCH',
+        nextLabel: 'BACK TO ALL WORK →',
         backToWorkLabel: '← ALL WORK',
       },
     },
   },
   {
     slug: 'talkable',
-    order: 2,
+    order: 1,
     tier: 'full',
     medium: 'ai',
     tags: ['모바일 서비스 기획', '사용성 테스트', 'UX 설계', '개발 협업'],
@@ -544,8 +544,8 @@ export const projects: Project[] = [
         resultLabel: '결과 및 검증',
         result:
           '사용자 테스트와 전문가 피드백을 바탕으로 정보 구조를 개선하고, 대화 → 피드백 → 복습 → 챌린지로 이어지는 학습 루프를 실제 사용 흐름에 맞게 구체화했다.\n\n이를 통해 톡커블의 핵심 가설이었던 “AI와의 대화에서 얻은 피드백이 복습과 재도전으로 이어지며 학습 효과를 극대화할 수 있는가”를 프로토타입 수준에서 검증했다. 최종 프로토타입은 졸업전시에서 선보였으며, 프로젝트의 연구·개발 과정은 이후 논문과 학술 발표로 확장됐다.',
-        prevLabel: '← PREVIOUS — DESIGNING EMPATHY THROUGH SPACE',
-        nextLabel: 'NEXT — SEOUL CITY-FUNDED XR RESEARCH →',
+        prevLabel: '← PREVIOUS',
+        nextLabel: 'NEXT — SKOLEPLAN →',
         backToWorkLabel: '← ALL WORK',
       },
       en: {
@@ -647,16 +647,16 @@ export const projects: Project[] = [
         resultLabel: 'RESULT / VALIDATION',
         result:
           'Based on user testing and expert feedback, improved the information structure and shaped the Learning Loop — Conversation → Feedback → Review → Challenge — to fit how it would actually be used.\n\nThrough this, validated Talkable\'s core hypothesis — "can feedback from a conversation with AI lead to review and another attempt, maximizing the learning effect?" — at the prototype level. The final prototype was shown at the graduation exhibition, and the project\'s research and development process later extended into a paper and academic presentation.',
-        prevLabel: '← PREVIOUS — DESIGNING EMPATHY THROUGH SPACE',
-        nextLabel: 'NEXT — SEOUL CITY-FUNDED XR RESEARCH →',
+        prevLabel: '← PREVIOUS',
+        nextLabel: 'NEXT — SKOLEPLAN →',
         backToWorkLabel: '← ALL WORK',
       },
     },
   },
   {
     slug: 'seoul-xr-research',
-    order: 5,
-    tier: 'short',
+    order: 4,
+    tier: 'full',
     medium: 'spatial',
     tags: ['사용자 리서치', '콘텐츠 기획', '산학협력'],
     images: {
@@ -790,8 +790,8 @@ export const projects: Project[] = [
           '연구에서 도출한 연령별 설계 원칙을 다섯 가지 XR 콘텐츠로 구현해, 연구 결과가 문서나 프로토타입에 머물지 않고 실제 공간에서 경험할 수 있는 형태로 연결했다.\n\n완성된 콘텐츠는 서울시 지원 산학협력 연구 결과물로 제작됐으며, 이후 현대백화점 문화홀에서 실제 관람객을 대상으로 전시됐다. 연구 과정과 결과는 논문으로 정리해 국내·외 학술 발표로 확장했다.',
         resultTakeaway:
           '사용자 특성을 이해한다는 것은 화면의 크기나 난이도를 바꾸는 것이 아니라, 그 사람이 자연스럽게 할 수 있는 행동부터 다시 설계하는 일이었다.',
-        prevLabel: '← PREVIOUS — TALKABLE',
-        nextLabel: 'NEXT — SKOLEPLAN →',
+        prevLabel: '← PREVIOUS — MIDNIGHT CARNIVAL',
+        nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
         backToWorkLabel: '← ALL WORK',
       },
       en: {
@@ -869,15 +869,15 @@ export const projects: Project[] = [
           "The age-specific design principles drawn from the research were built into five XR pieces of content, connecting the research so it didn't stay in documents or a prototype, but could be experienced in an actual space.\n\nThe finished content was produced as the output of a Seoul City-funded industry-academia research collaboration, and was later exhibited to the public at the Hyundai Department Store Culture Hall. The research process and findings were written up into a paper and extended into domestic and international academic presentations.",
         resultTakeaway:
           "Understanding a user's traits wasn't about changing the size of the screen or the difficulty level — it meant redesigning starting from the actions a person could do naturally.",
-        prevLabel: '← PREVIOUS — TALKABLE',
-        nextLabel: 'NEXT — SKOLEPLAN →',
+        prevLabel: '← PREVIOUS — MIDNIGHT CARNIVAL',
+        nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
         backToWorkLabel: '← ALL WORK',
       },
     },
   },
   {
     slug: 'skoleplan',
-    order: 1,
+    order: 2,
     tier: 'full',
     medium: 'app',
     tags: ['사용자 조사', '정보 구조', '서비스 개선', '사용성 검증'],
@@ -998,8 +998,8 @@ export const projects: Project[] = [
           '역할별 정보 우선순위를 반영해 홈 화면과 탐색 구조를 재구성하고, 주요 업무에 필요한 정보를 여러 메뉴를 거치지 않고 바로 확인할 수 있도록 했다.\n\n완성한 역할별 프로토타입을 실제 교직원에게 공유해 정보 구성과 업무 흐름의 적합성을 확인했다. 특히 각 역할에 필요한 정보를 한 화면에서 바로 확인할 수 있다는 점에서 긍정적인 피드백을 얻었다.',
         resultTakeaway:
           '이번 리디자인에서 가장 중요한 변화는 기능을 더하는 것이 아니라, 실제 업무 흐름에 맞춰 정보의 우선순위를 다시 정한 것이었다.',
-        prevLabel: '← PREVIOUS — SEOUL CITY-FUNDED XR RESEARCH',
-        nextLabel: 'BACK TO ALL WORK →',
+        prevLabel: '← PREVIOUS — TALKABLE',
+        nextLabel: 'NEXT — MIDNIGHT CARNIVAL →',
         backToWorkLabel: '← ALL WORK',
       },
       en: {
@@ -1067,8 +1067,8 @@ export const projects: Project[] = [
           "Restructured the home screen and navigation to reflect each role's information priorities, so the information needed for core tasks could be checked directly without going through multiple menus.\n\nShared the finished role-based prototypes with actual staff to check how well the information layout matched their workflow, and received positive feedback — especially on being able to check each role's needed information directly on a single screen.",
         resultTakeaway:
           "The most important change in this redesign wasn't adding features — it was reprioritizing information to match actual workflows.",
-        prevLabel: '← PREVIOUS — SEOUL CITY-FUNDED XR RESEARCH',
-        nextLabel: 'BACK TO ALL WORK →',
+        prevLabel: '← PREVIOUS — TALKABLE',
+        nextLabel: 'NEXT — MIDNIGHT CARNIVAL →',
         backToWorkLabel: '← ALL WORK',
       },
     },
@@ -1081,7 +1081,7 @@ export const projectsByOrder = [...projects].sort((a, b) => a.order - b.order);
 
 /** Every project with its own /work/:slug case study page, regardless of
  * card tier/size — powers page lookup and the prev/next footer nav so a
- * compact-card project (like Seoul XR Research) still slots into the
+ * compact-card project (like Designing Empathy Through Space) still slots into the
  * click-through chain between full-card case studies. Only `caseStudy`
  * is required — `process` is no longer rendered on the page (kept in
  * the data only for reference), so a project doesn't need it to have a

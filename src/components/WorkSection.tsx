@@ -3,7 +3,6 @@ import { siteCopy } from '../data/site';
 import { fullProjects, shortProjects } from '../data/projects';
 import { WorkCard } from './WorkCard';
 import { ShortWorkCard } from './ShortWorkCard';
-import { MoreWorkTeaser } from './MoreWorkTeaser';
 import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
 
 export function WorkSection() {
@@ -31,7 +30,6 @@ export function WorkSection() {
           <ShortWorkCard project={project} key={project.slug} />
         ))}
       </div>
-      <MoreWorkTeaser />
     </div>
   );
 }

@@ -72,7 +72,7 @@ export const siteCopy: Localized<{
       ctaWork: '프로젝트 보기',
       ctaAbout: '소개 보기',
     },
-    work: { title: '주요 프로젝트', meta: '주요 프로젝트 3개 · 전체 5개' },
+    work: { title: '주요 프로젝트', meta: '주요 프로젝트 4개 · 전체 5개' },
     moreWork: {
       title: 'More Work',
       badge: 'SOON',
@@ -116,7 +116,7 @@ export const siteCopy: Localized<{
     },
     about: {
       title: 'About',
-      body: '**사용자가 무엇을 필요로 하고, 어떤 맥락에서 어려움을 겪는지 이해하는 것에서 시작합니다.** 사용자 조사와 실제 사용 흐름을 바탕으로 문제를 구조화하고, 기능과 화면의 개선 방향을 구체화합니다.\n\n리서치와 기획부터 프로토타이핑, 개발 협업, 사용성 검증까지 제품이 만들어지고 개선되는 전 과정을 경험했습니다. 복잡한 요구사항을 명확한 사용자 흐름으로 정리하고, 실제로 작동하는 결과물까지 연결하는 데 강점이 있습니다.',
+      body: '**사용자가 무엇을 필요로 하고, 어떤 맥락에서 어려움을 겪는지 이해하는 것에서 시작합니다.** 사용자 조사와 실제 사용 흐름을 바탕으로 문제를 구조화하고, 기능과 화면의 개선 방향을 구체화합니다.\n\n리서치와 기획부터 프로토타이핑, 개발 협업, 사용성 검증까지 서비스, 프로덕트가 만들어지고 개선되는 전 과정을 경험했습니다. 복잡한 요구사항을 사용자 관점에서 구조화하고, 개발·디자인팀과 협업해 실제 서비스 경험으로 구체화하는 데 강점이 있습니다.',
       kw1: '문제의 핵심을 찾습니다',
       kw2: '다양한 직무와 협업합니다',
       kw3: '복잡한 정보를 구조화합니다',
@@ -281,7 +281,7 @@ export const siteCopy: Localized<{
       ctaWork: 'VIEW SELECTED WORK →',
       ctaAbout: 'ABOUT ME',
     },
-    work: { title: 'Selected Work', meta: '3 PROJECTS · 2 MORE' },
+    work: { title: 'Selected Work', meta: '4 PROJECTS · 1 MORE' },
     moreWork: {
       title: 'More Work',
       badge: 'SOON',
