@@ -2065,11 +2065,21 @@ a.short-card:hover {
 
 .role-card-focus {
   font-family: var(--font-display);
-  font-size: var(--fs-heading-sm);
+  font-size: var(--fs-base);
   line-height: 1.35;
   font-weight: 600;
   color: var(--ink);
   margin: 0 0 var(--space-12);
+}
+
+/* Same nowrap-at-desktop-width fix as .case-principle-intro — the
+   content column is narrow enough at 3-up desktop width that these
+   short "X · Y" phrases were wrapping to two lines; below this
+   breakpoint the card stacks to full width, so wrapping there is fine. */
+@media (min-width: 861px) {
+  .role-card-focus {
+    white-space: nowrap;
+  }
 }
 
 .role-card-desc {
