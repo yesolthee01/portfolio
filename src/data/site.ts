@@ -127,7 +127,7 @@ export const siteCopy: Localized<{
       eyebrow: 'ABOUT',
       title: 'Yesol Kim',
       intro:
-        '사람의 행동과 사용 맥락을 이해하고, 복잡한 문제를 명확한 경험과 구조로 풀어갑니다. 모바일·웹 서비스부터 XR 인터랙티브 콘텐츠까지 서로 다른 환경에서 사용자 조사, 문제 정의, 정보 구조와 사용자 흐름 설계, 프로토타이핑과 검증합니다. 새로운 분야를 빠르게 이해하고 필요한 정보를 정리해 실제 경험으로 구체화하는 과정에 강점이 있습니다.',
+        '**사람의 행동과 사용 맥락을 이해하고, 복잡한 문제를 명확한 경험과 구조로 풀어갑니다.**\n모바일·웹 서비스부터 XR 인터랙티브 콘텐츠까지 서로 다른 환경에서 사용자 조사, 문제 정의, 정보 구조와 사용자 흐름 설계, 프로토타이핑과 검증합니다. 새로운 분야를 빠르게 이해하고 필요한 정보를 정리해 실제 경험으로 구체화하는 과정에 강점이 있습니다.',
       strengthsLabel: '강점',
       strengths: [
         { title: '사용자 맥락에서 문제를 발견합니다', desc: '인터뷰와 사용자 조사, 현장 관찰을 통해 실제 행동과 사용 맥락을 살피고 문제의 원인을 찾습니다.' },
@@ -141,7 +141,7 @@ export const siteCopy: Localized<{
       experience: [
         {
           role: 'SNS 마케팅 인턴',
-          org: '코펜하겐 소재 스타트업',
+          org: 'Seecon',
           location: 'Copenhagen, Denmark',
           period: '2026.08 – 현재',
           highlights: [
@@ -150,7 +150,7 @@ export const siteCopy: Localized<{
           ],
         },
         {
-          role: '연구원 · 파트타임',
+          role: '연구원',
           org: '서울여자대학교',
           location: 'Seoul, Korea',
           period: '2025.01 – 2025.07',
@@ -160,7 +160,7 @@ export const siteCopy: Localized<{
           ],
         },
         {
-          role: '프로덕트 디자이너 · 파트타임',
+          role: '프로덕트 디자이너',
           org: 'SpeakontheRock Co.',
           location: 'Seoul, Korea',
           period: '2024.09 – 2024.12',
@@ -170,7 +170,7 @@ export const siteCopy: Localized<{
           ],
         },
         {
-          role: '프로덕트 디자인 인턴 · 풀타임',
+          role: '프로덕트 디자인 인턴',
           org: 'Newjak Co.',
           location: 'Seoul, Korea',
           period: '2024.07 – 2024.08',
@@ -180,7 +180,7 @@ export const siteCopy: Localized<{
           ],
         },
         {
-          role: 'MD · 파트타임',
+          role: 'MD',
           org: 'Treepicker Co.',
           location: 'Seoul, Korea',
           period: '2023.11 – 2024.02',

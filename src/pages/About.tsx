@@ -3,6 +3,7 @@ import { Nav } from '../components/Nav';
 import { useLanguage } from '../i18n/LanguageContext';
 import { siteCopy } from '../data/site';
 import { useInView, SECTION_REVEAL_ROOT_MARGIN } from '../hooks/useInView';
+import { renderInlineMarkup } from '../utils/markup';
 import type { ExperienceItem, ActivityItem } from '../data/types';
 
 /** A vertical line-and-dot timeline (date left, marker center, content
@@ -48,7 +49,6 @@ export function About() {
   const { lang } = useLanguage();
   const ap = siteCopy[lang].aboutPage;
 
-  const { ref: strengthsRef, inView: strengthsInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
   const { ref: experienceRef, inView: experienceInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
   const { ref: intlRef, inView: intlInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
   const { ref: educationRef, inView: educationInView } = useInView<HTMLDivElement>(0, SECTION_REVEAL_ROOT_MARGIN);
@@ -64,14 +64,10 @@ export function About() {
           <h1 className="case-title">{ap.title}</h1>
           {ap.intro.split('\n').map((para, i) => (
             <p className="case-subtitle" key={i}>
-              {para}
+              {renderInlineMarkup(para)}
             </p>
           ))}
-        </div>
-
-        <div className={`case-section${strengthsInView ? ' in-view' : ''}`} ref={strengthsRef}>
-          <div className="case-section-label about-strengths-label">{ap.strengthsLabel}</div>
-          <div className="process-grid">
+          <div className="about-strengths-grid">
             {ap.strengths.map((s, i) => (
               <div className="process-card glass" key={s.title}>
                 <div className="process-index">{String(i + 1).padStart(2, '0')}</div>

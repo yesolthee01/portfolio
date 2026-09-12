@@ -2433,10 +2433,22 @@ a.short-card:hover {
    process-card grid (for STRENGTHS) from the CaseStudy page — only the
    experience timeline and activities list below are new shapes. */
 
-.about-strengths-label,
 .about-exp-label,
 .about-activities-label {
   margin-bottom: var(--space-20);
+}
+
+/* STRENGTHS cards sit inside .case-hero, right under the intro copy,
+   instead of in their own labeled .case-section — no heading, just a
+   divider echoing .about-points on the homepage, so the cards read as
+   part of the same intro block rather than a separate page section. */
+.about-strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--grid-gap);
+  border-top: 1px solid var(--glass-border);
+  padding-top: 32px;
+  margin-top: 32px;
 }
 
 /* Vertical line-and-dot timeline: one shared grid per list so a single
@@ -2450,6 +2462,13 @@ a.short-card:hover {
   grid-template-columns: 108px 20px 1fr;
   column-gap: 20px;
   row-gap: 32px;
+  /* Baseline alignment (instead of separate hand-tuned offsets on the
+     date and dot) keeps the date, the dot, and the role title's first
+     line sitting on one consistent line per row, regardless of the two
+     columns' different font sizes — the dot has no text of its own, so
+     its synthesized baseline is its bottom margin edge, which lands
+     right on the shared text baseline. */
+  align-items: baseline;
 }
 
 /* Positioned absolutely (out of grid flow) rather than as a grid item
@@ -2474,17 +2493,14 @@ a.short-card:hover {
   font-size: var(--fs-caption);
   letter-spacing: 0.04em;
   color: var(--ink-soft);
-  padding-top: 3px;
   white-space: nowrap;
 }
 
 .exp-timeline-dot {
   grid-column: 2;
   justify-self: center;
-  align-self: start;
   width: 9px;
   height: 9px;
-  margin-top: var(--space-4);
   border-radius: 50%;
   background: var(--accent);
   border: 2px solid var(--glass-strong);
