@@ -2023,13 +2023,17 @@ a.short-card:hover {
    divided row instead (border-top only, no fill), which made this the
    one section on the page that didn't read as "cards" the way the rest
    of the site does. Matching that pattern here instead. */
+/* Padding is intentionally NOT set here — layout-cleanup.css (loaded
+   after this file) owns .role-card's grid-template-columns/padding at
+   every breakpoint, so a value here would be dead weight that could
+   silently drift out of sync with the real one, the same way
+   contentOverrides.ts used to shadow projects.ts. */
 .role-card {
   display: grid;
   grid-template-columns: minmax(120px, 0.16fr) minmax(0, 0.56fr) minmax(150px, 0.28fr);
   gap: var(--grid-gap);
   align-items: center;
   min-height: 220px;
-  padding: var(--space-28) 30px;
   background: var(--glass);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
