@@ -158,31 +158,32 @@ export const projects: Project[] = [
         title: 'Midnight Carnival',
         summary: 'A five-wall spatial XR co-op game played entirely through body movement — no wearables required.',
         subtitle:
-          "'Midnight Carnival' is an experiential e-sports piece built on a five-wall spatial XR platform. It connects physical movement with digital interaction, letting multiple users play together with their whole bodies in a cooperative experience.",
+          "Midnight Carnival is an experiential game where multiple users move their bodies together in a five-wall space that uses the floor and walls. Hokuyo laser sensors detect user movement, connecting physical actions — jumping, moving, touching — directly to the game's input.\n\nThe focus was on creating an experience where users could naturally understand the game's rules and join in within the space, without a separate controller or HMD.",
         period: 'Aug 2024 – Dec 2024',
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
         roleLabel: 'MY ROLE',
+        roleTags: ['Content Planning', 'Interaction Design', 'User Flow', 'UI Design', 'User Testing', 'Exhibition Operations'],
         role:
-          'Joined as PM and UX/UI Designer, leading the project from content planning and interaction design through user testing and exhibition. Handled roughly 25% of UI and background visual production, and coordinated collaboration between game developers and designers. Planned and ran an in-school test exhibition to validate user response and improve the experience, and co-authored a research paper based on the project.',
+          "Joined as PM and UX/UI Designer, taking part in the project's full process — from content planning and interaction structure design through user testing and exhibition operations. Coordinated with developers and designers on each game's mechanics and feedback structure, and observed user behavior to repeatedly improve the tutorial and guiding UI.\n\nAlso took part in producing UI and spatial visuals, personally planned and ran the in-school test exhibition, and co-authored a paper based on the project's research process.",
         problemLabel: 'THE CHALLENGE',
         problem:
-          'In a five-wall XR space, users needed to understand and enjoy the game through body movement alone, with no separate instructions. At the same time, movement had to be accurately detected within the limited recognition range of the Hokuyo laser sensors — while designing interactions intuitive enough to keep the game fun and immersive.',
+          "In a space with no familiar controller, how could users intuitively know what to do? Because Midnight Carnival is played through body movement alone, without a controller or HMD, users needed to understand where to look and how to move the moment they entered the space, with no separate instruction.\n\nAt the same time, user movement had to be reliably detected within the limited recognition range of the Hokuyo sensors, and if the system's response was slow or unclear, users found it hard to tell whether their action had registered at all. The core challenge was defined as guiding intuitive action, delivering clear system feedback, and keeping the whole space immersive.",
         solutionLabel: 'THE SOLUTION',
         solution: [
           {
-            title: 'FEEDBACK',
-            subtitle: 'Interaction understood through response, not instruction',
-            desc: "With no controller in hand, designed visual and sound feedback so users could immediately connect their movement to the system's response. User testing surfaced moments where players missed cues to change direction or look elsewhere, so guiding UI and feedback were added to make the game's flow more intuitive.",
+            title: 'IMMEDIATE FEEDBACK',
+            subtitle: 'So you instantly know your movement was recognized',
+            desc: "With no separate controller, users needed to be able to immediately connect their own actions with the system's response. Whenever movement was detected or the game state changed, visual and sound feedback were provided together, so the current state and the result of an action could be understood right away.",
           },
           {
-            title: 'INTUITION',
-            subtitle: 'An intuitive way to play',
-            desc: 'Built play around actions everyone already knows — jumping, stomping the floor, touching a wall — so anyone can understand it and start playing right away. Each of the five maps calls for a different action, keeping the experience varied without ever feeling repetitive.',
+            title: 'FAMILIAR BODY MOVEMENT',
+            subtitle: 'Play understood through the body, not instructions',
+            desc: "Used actions everyone already knows — jumping, moving, stepping on the floor, touching a wall — as the game's input method. Each game used a different action, but was built so players could jump straight in without learning any complex new controls.",
           },
           {
-            title: 'IMMERSION',
-            subtitle: 'Making the whole space part of the experience',
-            desc: "Connected the walls and floor into a single play space where visuals, sound, and body movement respond together. Designed the experience so users feel like they've stepped inside the space, not just watching a screen.",
+            title: 'IMMERSION ACROSS THE WHOLE SPACE',
+            subtitle: 'Playing inside the space, not just watching a screen',
+            desc: 'Connected the floor and walls into a single play space where visuals, sound, and body movement respond together. Designed the game flow so users explore and move through the surrounding space, rather than facing one direction and one screen.',
           },
         ],
         processLabel: 'PROCESS',
@@ -195,31 +196,33 @@ export const projects: Project[] = [
           {
             title: 'Games were hard to tell apart from text alone',
             issue:
-              "The initial selection screen showed only game names as text, making it hard for first-time users to intuitively grasp what each game was about. With a wide range of user ages in mind, relying less on text also mattered.",
-            fix: '→ Added a symbolic graphic for each game, reducing dependence on language or prior knowledge and making selection more intuitive.',
+              "The initial selection screen offered only game titles as text, making it hard for first-time users to anticipate each game's distinct feel.",
+            fix: "→ Added a symbolic graphic for each game so its character and way of playing could be grasped intuitively before selecting it.",
             image: '/images/work/midnight-carnival/finding-1.jpg',
             imageLabel: 'GAME SELECTION ICONS — MIDNIGHT CARNIVAL UI',
           },
           {
             title: 'How to play was hard to grasp from text alone',
             issue:
-              "In a spatial interaction most users were encountering for the first time, short text alone made it hard to quickly understand where to look and how to move.",
-            fix: '→ Paired the tutorial with graphics visualizing the actual gameplay screen and required actions, so players could understand how to play more quickly.',
+              'For users unfamiliar with spatial interaction, short text alone made it hard to convey where to look and what action to take.',
+            fix: '→ Changed the tutorial to show the actual gameplay screen together with the required body movement, so players could visually understand what to do before playing.',
             image: '/images/work/midnight-carnival/finding-2.jpg',
             imageLabel: 'TUTORIAL VISUALIZATION — MIDNIGHT CARNIVAL UI',
           },
           {
             title: 'Missed direction changes during play',
             issue:
-              "Some users didn't notice when the rotating floor's direction changed and kept moving in the old direction.",
-            fix: '→ Added directional guiding UI on the walls so players could immediately register the next move.',
+              "Even when the floor's direction of travel changed mid-game, some users didn't notice and kept moving in the old direction.",
+            fix: '→ Added directional guides on the walls to naturally draw the eye toward the next play area, so the next move could be recognized immediately.',
             image: '/images/work/midnight-carnival/finding-3.jpg',
             imageLabel: 'DIRECTIONAL GUIDE — MIDNIGHT CARNIVAL',
           },
         ],
         resultLabel: 'RESULT / IMPACT',
         result:
-          "First unveiled at the Korea joint pavilion at SIGGRAPH Asia 2024 Tokyo, and later exhibited at the Hyundai Department Store Culture Hall, reaching hundreds of visitors. Co-authored a related research paper based on the project's experience and findings.",
+          "Reflecting the problems found in the in-school user test, improved game selection, the tutorial, and in-game directional guidance, shaping the experience so first-time players could understand the game's flow without any separate explanation.\n\nSelected for and exhibited at the Korea joint pavilion at SIGGRAPH Asia 2024 Tokyo. Later exhibited at the Hyundai Department Store Culture Hall as well, where hundreds of visitors experienced it directly. The project's planning, development, and user experience research process went on to become a co-authored research paper.",
+        resultTakeaway:
+          "The more unfamiliar the interaction or experience a product offers, the more important it was to design so a user's action and the system's response connect naturally — rather than simply adding more explanation — in creating the best possible experience.",
         prevLabel: '← PREVIOUS',
         nextLabel: 'NEXT — DESIGNING EMPATHY THROUGH SPACE →',
         backToWorkLabel: '← ALL WORK',
@@ -341,40 +344,38 @@ export const projects: Project[] = [
         title: 'Designing Empathy Through Space',
         summary: "A spatial storytelling exhibition where visitors follow a footprint path to linger in someone else's story.",
         subtitle:
-          "Bringing together photos, writing, and voice recordings that students collected from people they met while traveling, the space and circulation were designed so visitors could do more than simply view a stranger's story — they could pause and stay within that person's perspective for a moment.",
+          "At a Danish school where I was volunteering, this exhibition connected photos, writing, and voice recordings that students collected from people they met while traveling into a single spatial experience. Instead of simply reading through the records and moving on, the space and circulation were designed so visitors could follow a footprint path and slowly linger within one person's story.",
         period: 'May 2026',
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
-        principleLabel: 'DESIGN PRINCIPLE',
+        principleLabel: 'SOLUTION DIRECTION',
         principle:
           "The central principle was creating an environment that naturally slowed visitors down and let them stay with each story. A footprint path paced how visitors moved through the space, the space itself was built not to compete with the surrounding nature, and photos, text, and voice were used together so that the time visitors lingered turned into an emotional connection with each person.",
         roleLabel: 'MY ROLE',
+        roleTags: ['Exhibition Planning', 'Spatial Composition', 'Visitor Flow', 'Visual Design', 'On-site Operations'],
         role:
-          'Took part as exhibition director overseeing space and visuals, designing everything from the exhibition concept and spatial layout to poster/print design and on-site installation. Completed the exhibition in collaboration with a supervising teacher and the students responsible for photography and audio recording.',
+          "Took part as exhibition director, overseeing the overall concept, spatial composition, visitor flow, graphic and print design, and on-site installation. Worked with the supervising teacher and the students who produced the photo, writing, and audio content, shaping how these different records came together into a single exhibition experience.",
         problemLabel: 'THE CHALLENGE',
         problem:
-          'The fully open, transparent dome made it easy for visitors to scan the exhibition at a glance and walk past. Being outdoors also meant light and weather kept changing. The core challenge was slowing visitors down and helping them stay emotionally present with strangers’ stories, without competing against the surrounding natural environment.',
-        solutionLabel: 'THE SOLUTION',
+          "In a space that's easy to walk past, how could visitors' pace be slowed down?\n\nThe exhibition space was an outdoor dome, transparent on every side, so the whole interior was visible at a glance — making it easy for visitors to pass through without fully experiencing the content. It was also an environment where light and the surrounding scenery kept changing with time and weather.\n\nSo rather than filling the space more densely, the core challenge was set as naturally slowing visitors' pace and letting their eyes and time linger on a stranger's story.",
+        solutionLabel: 'SPATIAL EXPERIENCE DESIGN',
         solution: [
           {
-            title: 'PACING',
-            subtitle: 'A path that slows the walk',
-            desc: "A path marked by footprints on the ground guided visitors to move slowly through the stories instead of scanning the exhibition at a glance — turning the exhibition's metaphor of 'walking in someone else's shoes' into an actual physical movement.",
+            title: 'A PATH THAT SLOWS THE WALK',
+            desc: "Laid out the circulation so visitors moved along footprints on the floor, encouraging them to walk slowly through the stories rather than scanning the space at a glance. Turned the exhibition's metaphor of 'walking in someone else's shoes' into visitors' actual movement.",
           },
           {
-            title: 'ENVIRONMENT',
-            subtitle: "A space that doesn't compete with nature",
-            desc: 'A low-saturation palette with soft pink as an accent color, and plants placed inside the dome, connected the interior space naturally with the landscape outside. Rather than controlling the shifting light and surrounding nature, the design chose to absorb them as part of the exhibition experience.',
+            title: 'A SPACE THAT TAKES IN ITS SURROUNDINGS',
+            desc: 'Built primarily around low-saturation colors and placed plants so the exhibition connected naturally with the natural landscape outside the transparent dome. Rather than controlling the shifting light and weather, treated them as part of the exhibition experience.',
           },
           {
-            title: 'STORYTELLING',
-            subtitle: 'Stories met by seeing and hearing',
-            desc: 'A visual track built from portraits and writing was paired with an audio track of voice recordings made by the students and ambient natural sound. The experience was designed so visitors could connect with each person emotionally through seeing and hearing, not just reading.',
+            title: 'STORIES SEEN AND HEARD',
+            desc: "Paired each person's photo and writing with voice recordings the students made themselves and the sounds of the site. Designed so visitors wouldn't just read a person's story, but could see and hear it, and stay with it a little longer.",
           },
         ],
         processLabel: 'PROCESS',
-        resultLabel: 'RESULT / IMPACT',
+        resultLabel: 'RESULT / OBSERVATION',
         result:
-          'Over roughly a week, the exhibition welcomed around 130 students along with parents and nearby residents. On site, visitors could be seen following the footprint path, pausing naturally as they read individual portraits and stories or listened to the audio.',
+          "Over roughly a week, the exhibition welcomed around 130 students along with parents and local residents. On site, visitors could be seen following the footprint path and pausing in front of a particular person's photo and writing, or lingering as they listened to the audio.\n\nThe project confirmed that designing where people slow down and what they stay with matters more to the experience than simply filling the space with more content.",
         prevLabel: '← PREVIOUS — MIDNIGHT CARNIVAL',
         nextLabel: 'NEXT — TALKABLE →',
         backToWorkLabel: '← ALL WORK',
@@ -552,15 +553,15 @@ export const projects: Project[] = [
         title: 'Talkable',
         summary: "A personalized English conversation app that turns weaknesses found in real conversation into the next lesson.",
         subtitle:
-          "This was a university graduation capstone project. Users practice through real-time conversation with AI, and each conversation is analyzed for pronunciation, grammar, fluency, and vocabulary — feeding into a continuous Learning Loop of Conversation → Feedback → Review → Challenge.",
+          "Talkable is an English speaking practice service where users have real-time conversations with AI, and personal weaknesses found in those conversations connect into feedback, review, and challenges.\n\nRather than stopping at the experience of simply talking with AI, the focus was on a structure that turns a user's actual conversation data into the next learning action. To do this, a repeating Learning Loop of Conversation → Feedback → Review → Challenge was designed.",
         period: 'Mar 2024 – Nov 2024',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
         roleLabel: 'MY ROLE',
         role:
-          'Joined as UX/UI Designer, covering the full design process from user research through service structure, UI design, prototyping, and user testing. During development, worked out the features and interactions that turned AI-driven conversation and personalized feedback into an actual product experience, testing and refining the prototype through repeated iteration.',
+          "Owned the full process — from user research and problem definition through service structure and user flow design, UI design, prototyping, and user testing.\n\nIn particular, designed the features and information structure so feedback generated from AI conversations didn't end as a one-off result, but carried through into review and the next learning action. Based on user testing and expert feedback, repeatedly improved the discoverability of core features, navigation, and information structure.",
         problemLabel: 'THE CHALLENGE',
         problem:
-          "English speaking ability improves through actual practice, but it's hard for learners to keep practicing on their own and get specific feedback suited to their level. User research identified a lack of personalization, limited feedback, and low motivation to keep learning as the core problems. The challenge went beyond simply building a conversation with AI — it was building an experience where weaknesses found in conversation actually led to learning and growth.",
+          "How could the experience of having a conversation be connected to an actual learning experience? The problem with English conversation services wasn't simply a lack of chances to talk. Practicing alone made it hard to get specific feedback suited to one's own level, and it wasn't clear what to study again after a conversation ended.\n\nUser research identified a lack of personalization, limited feedback, and low learning motivation as the core problems. Talkable's core challenge was set not as simply offering an AI conversation feature, but as building a learning structure where users could understand the weaknesses found in real conversation and carry them through to review and another attempt.",
         solutionLabel: 'THE SOLUTION',
         solution: [
           {
@@ -570,40 +571,40 @@ export const projects: Project[] = [
           },
           {
             title: 'FEEDBACK',
-            subtitle: 'Turning mistakes into the next lesson',
-            desc: "Feedback didn't stop at a results screen judging right and wrong. Expressions and feedback surfaced during conversation were saved for review, so learning flowed naturally through Conversation → Feedback → Review.",
+            subtitle: 'Connecting feedback to the next lesson',
+            desc: "Provided weaknesses and expressions that needed improvement, found in conversation, as feedback, and saved what was needed so it could be reviewed later. Built the learning flow so feedback didn't stop at simply being checked, but carried through into actual repeated practice.",
           },
           {
             title: 'MOTIVATION',
-            subtitle: 'Making invisible growth visible',
-            desc: 'Focused on the fact that language learning is hard to feel progress in over a short time. Visualized learning status on a dashboard and combined it with Daily Challenges and growth elements, so small repeated learning and small wins stayed visible over time.',
+            subtitle: 'So small growth keeps being visible',
+            desc: "Designed learning status and Challenges so users could see their own repeated learning process and achievements. Presented small learning goals to create the motivation to return to another conversation after review.",
           },
         ],
         loopLabel: 'LEARNING LOOP',
         loopIntro:
-          "Learning started from the user's own conversations, connecting each one to the next round of learning through feedback and review matched to their level and weaknesses. Repeating this cycle created a loop where weaknesses found in real conversation fed directly into the next round of learning.",
+          "Rather than letting a conversation end as a one-off practice, designed a repeating learning structure that flows from feedback to review to another attempt.",
         loopSteps: [
           {
             title: 'CONVERSATION',
-            desc: 'Has a real English conversation with AI on a topic suited to their level.',
+            desc: "Has a real-time English conversation with AI, generating the user's own actual speech data.",
             image: '/images/work/talkable/loop-conversation.png',
             imageLabel: 'CONVERSATION — TALKABLE UI',
           },
           {
             title: 'FEEDBACK',
-            desc: 'Reviews personalized feedback on pronunciation, grammar, fluency, and vocabulary based on the conversation.',
+            desc: "Analyzes the conversation and provides specific feedback on the user's weaknesses and expressions that need improvement.",
             image: '/images/work/talkable/loop-feedback.png',
             imageLabel: 'FEEDBACK — TALKABLE UI',
           },
           {
             title: 'REVIEW',
-            desc: 'Revisits saved words and feedback from the conversation through different review formats.',
+            desc: 'Saves the words, expressions, and feedback found in conversation, and reviews them repeatedly in different formats.',
             image: '/images/work/talkable/loop-review.png',
             imageLabel: 'REVIEW — TALKABLE UI',
           },
           {
             title: 'CHALLENGE',
-            desc: 'Confirms progress by completing small learning goals, then starts a new conversation.',
+            desc: 'Completes small learning goals to confirm progress, then moves into a new conversation.',
             image: '/images/work/talkable/loop-challenge.png',
             imageLabel: 'CHALLENGE — TALKABLE UI',
           },
@@ -643,9 +644,9 @@ export const projects: Project[] = [
             imageLabel: 'CHALLENGE GOALS & REWARDS — TALKABLE UI',
           },
         ],
-        resultLabel: 'RESULT / IMPACT',
+        resultLabel: 'RESULT / VALIDATION',
         result:
-          "Talkable didn't stop at an idea and UI design — it was built into a prototype where AI-driven real-time conversation and personalized feedback could actually be experienced, and demonstrated live at the graduation exhibition. Through user testing and expert feedback, the discoverability, information structure, and navigation of the core Learning Loop were repeatedly improved, and the project's research and development process was written up into a paper and presented at an academic conference.",
+          'Based on user testing and expert feedback, improved the information structure and shaped the Learning Loop — Conversation → Feedback → Review → Challenge — to fit how it would actually be used.\n\nThrough this, validated Talkable\'s core hypothesis — "can feedback from a conversation with AI lead to review and another attempt, maximizing the learning effect?" — at the prototype level. The final prototype was shown at the graduation exhibition, and the project\'s research and development process later extended into a paper and academic presentation.',
         prevLabel: '← PREVIOUS — DESIGNING EMPATHY THROUGH SPACE',
         nextLabel: 'NEXT — SEOUL CITY-FUNDED XR RESEARCH →',
         backToWorkLabel: '← ALL WORK',
@@ -796,20 +797,21 @@ export const projects: Project[] = [
       en: {
         eyebrow: 'Seoul City-Funded XR Industry-Academia Project',
         title: 'Age-Tailored XR Content',
-        summary: "Five XR experiences that translate each age group's physical and cognitive development traits into distinct movement and interaction.",
+        summary: "A spatially immersive, interactive XR experience shaped by each age group's physical and cognitive development traits.",
         subtitle:
-          'This project was carried out as a Seoul City-funded R&D industry-academia initiative, [Development of Headset-Free XR Content Technology Using Generative AI]. Grounded in developmental psychology and motor/cognitive development theory across five age groups — early childhood, children, teenagers, adults, and older adults — the project designed age-tailored content within a single five-wall spatial XR platform.',
+          "A headset-free XR content research and development project carried out as a Seoul City-funded industry-academia R&D initiative. Investigated the physical and cognitive development traits of five age groups, from early childhood to older adults, and implemented them as distinct movements and game mechanics.\n\nBased on theories of physical and cognitive development by age, organized the key traits and needed experience for each age group, and designed them into movements and interactions that could actually be performed in an XR space.",
         period: 'Jan 2025 – Jul 2025',
         heroLabel: 'HERO IMAGE — SEOUL CITY-FUNDED XR RESEARCH',
         roleLabel: 'MY ROLE',
+        roleTags: ['Research', 'Experience Planning', 'Interaction Design', 'Content Planning', 'Development Collaboration', 'Research & Validation'],
         role:
-          "Joined as PM and UX Designer, leading the research into developmental traits across age groups and turning those insights into game concepts and physical interactions. Wrote up the findings into a paper that carried through to academic presentations, and also took part in producing the actual XR content and running the exhibition.",
+          "Joined as PM and UX Designer, researching developmental traits by age group and turning the resulting insights into game concepts and physical interactions. Coordinated with developers and designers on the core action and play style for each piece of content, and took part in producing the actual XR content and running the exhibition. Wrote up the research process and findings into a paper that extended into domestic and international academic presentations.",
         problemLabel: 'THE CHALLENGE',
         problem:
-          "The same interaction doesn't deliver the same experience to users of every age. Physical ability, cognitive style, reaction speed, and motivation to participate all shift with age, so the core challenge wasn't simply tuning difficulty — it was deciding what movement and game mechanic each age group's traits should be translated into.",
+          "Can simply changing a game's difficulty really be called 'tailored to age'? The same interaction doesn't deliver the same experience to users of every age, because physical ability, cognitive style, reaction speed, and motivation to participate all shift with age.\n\nSo this project defined its core challenge as going beyond adjusting difficulty by age — deciding what movement and game mechanic each age group's development traits should be translated into.",
         researchLabel: 'RESEARCH → DESIGN TRANSLATION',
         researchIntro:
-          'Based on research in developmental psychology, motor development, and cognitive development, the key traits of each age group were organized and translated into behaviors and interactions that could actually be performed in an XR space.',
+          'After organizing each age group\'s developmental traits, translated them into behaviors and game mechanics that could actually be performed in an XR space.',
         ageCards: [
           {
             ageGroup: 'EARLY YEARS',
@@ -823,9 +825,9 @@ export const projects: Project[] = [
           {
             ageGroup: 'SCHOOL AGE',
             tagline: 'Find & Solve',
-            insight: 'A stage where quickness, judgment, and spatial awareness develop, and a sense of achievement comes from solving tasks.',
-            translation: 'Connected this to an experience of directly exploring the space and quickly finding and solving a goal.',
-            interaction: '→ Find the target in the space',
+            insight: 'A stage where judgment and spatial awareness develop, and a sense of achievement comes from exploring and solving tasks.',
+            translation: 'Connected this to an experience of directly exploring the space, finding a goal, and solving it.',
+            interaction: '→ Find and solve the target in the space',
             image: '/images/work/seoul-xr-research/age-card-2.jpg',
             imageLabel: 'CATCH THE MOUSE — SEOUL XR RESEARCH',
           },
@@ -860,11 +862,13 @@ export const projects: Project[] = [
         ],
         researchBasisLabel: 'RESEARCH BASIS',
         researchBasis:
-          "To ground the age-specific Experience Design, prior research and theory in developmental psychology, motor development, and cognitive development were reviewed. Research Insights were drawn from Gallahue's motor development theory, Piaget's theory of cognitive development, and Erikson's psychosocial development theory, alongside research on Kolb's experiential learning and neuroplasticity. Rather than simply presenting the theory itself, the focus stayed on how each insight could be reflected in actual user behavior and interaction.",
+          "To ground the age-specific experience design, reviewed prior research in motor development, cognitive development, and psychosocial development. Drew on Gallahue's motor development theory, Piaget's theory of cognitive development, and Erikson's theory of psychosocial development, but rather than simply presenting the theories themselves, focused the analysis on how each trait could be reflected in actual user behavior and interaction.",
         processLabel: 'PROCESS',
-        resultLabel: 'RESULT / IMPACT',
+        resultLabel: 'RESULT / VALIDATION',
         result:
-          'The age-specific design principles drawn from the research were built into five XR experiences, and the research did not stop at a prototype — it carried through into an actual exhibition experience. The project was carried out as a Seoul-funded industry-academia research collaboration, and was later exhibited to the public at the Hyundai Department Store Culture Hall. The research process and findings were written up into a paper and extended into domestic and international academic presentations.',
+          "The age-specific design principles drawn from the research were built into five XR pieces of content, connecting the research so it didn't stay in documents or a prototype, but could be experienced in an actual space.\n\nThe finished content was produced as the output of a Seoul City-funded industry-academia research collaboration, and was later exhibited to the public at the Hyundai Department Store Culture Hall. The research process and findings were written up into a paper and extended into domestic and international academic presentations.",
+        resultTakeaway:
+          "Understanding a user's traits wasn't about changing the size of the screen or the difficulty level — it meant redesigning starting from the actions a person could do naturally.",
         prevLabel: '← PREVIOUS — TALKABLE',
         nextLabel: 'NEXT — SKOLEPLAN →',
         backToWorkLabel: '← ALL WORK',
@@ -1003,20 +1007,33 @@ export const projects: Project[] = [
         title: 'SkolePlan (DK) Redesign',
         summary: "A school staff system redesigned so each role's core tasks surface first, based on the different information priorities uncovered by role.",
         subtitle:
-          "SkolePlan is the internal system staff at a Danish Efterskole use for everyday school operations — attendance, scheduling, and student status. The redesign began with on-site observation and interviews with teachers, kitchen staff, and dormitory staff to define the problem.",
+          "SkolePlan is the internal system staff at a Danish Efterskole use for everyday school operations — attendance, scheduling, and student status.\n\nThrough on-site observation and interviews and surveys, found that teachers, kitchen staff, and dormitory staff each check different information and follow different workflows. Based on this, redefined the information priorities for each role and redesigned the home screen and navigation structure.",
         period: 'March 2026',
         heroLabel: 'HERO IMAGE — SKOLEPLAN',
         roleLabel: 'MY ROLE',
+        roleTags: ['User Research', 'Problem Definition', 'Information Architecture', 'User Flow', 'UI Design', 'Prototype Validation'],
         role:
-          "As UX Designer, I led the process end to end — from on-site observation and user research through interviews and surveys, to UX strategy, information architecture, user flow, and UI redesign. The focus was on identifying the gap between actual workflows and the existing system, and restructuring it so each role could reach the information and tasks it needed faster.",
+          "Through on-site observation and interviews and surveys, identified staff's actual workflows and recurring tasks, and defined the information priorities each role needed first. Based on this, redesigned the information architecture, user flow, and core screens, then built a prototype and validated the direction with actual staff.",
         problemLabel: 'THE CHALLENGE',
         problem:
-          "Everyone used the same system, but not everyone needed the same information. The existing system's deep navigation structure meant several steps were needed just to find what mattered, and key information wasn't surfaced immediately. On-site research showed that teachers, kitchen staff, and dormitory staff each checked different information and prioritized different tasks.",
+          "The existing SkolePlan gave every staff member the same information structure. As a result, users had to pass through multiple screens to reach information they checked often, and information they needed to check immediately during work wasn't easy to grasp at a glance.\n\nOn-site research showed the problem was less a lack of features than the fact that each role's task priorities weren't reflected in the screen structure. Teachers, kitchen staff, and dormitory staff each had different recurring tasks and different information they needed to check first.",
+        researchFindings: {
+          commonTitle: 'Shared Tasks',
+          commonItems: ['Attendance Check', "Today's Schedule", 'Student Status'],
+          headline: "Everyone used the same system,\nbut each role's **task priorities** differed.",
+          roleTitle: 'Core Information Each Role Needs',
+          roleItems: [
+            { role: 'Teacher', info: "Today's Schedule · Student Attendance" },
+            { role: 'Kitchen Staff', info: 'Meal Count · Dietary Requirements' },
+            { role: 'Dormitory Staff', info: 'Student Attendance · Current Status' },
+          ],
+        },
         principleLabel: 'SOLUTION DIRECTION',
         principle:
           "Compared the workflows of teachers, kitchen staff, and dormitory staff to define the information each role needed most and the priority of their core tasks, then redesigned the home screen's information layout and navigation around those priorities.",
+        rolesLabel: 'ROLE-BASED SCREEN DESIGN',
         rolesIntro:
-          "Based on the role-specific differences uncovered in research, the interface was redesigned — not by adding features, but by restructuring the information architecture around what each role needed to check first.",
+          "Based on the role-specific workflow differences uncovered in research, redesigned the UX around the information each role needed to check first.",
         roleCards: [
           {
             role: 'TEACHER',
@@ -1041,9 +1058,15 @@ export const projects: Project[] = [
           },
         ],
         processLabel: 'PROCESS',
-        resultLabel: 'RESULT / IMPACT',
+        resultLabel: 'RESULT / VALIDATION',
         result:
-          'Rebuilt the single shared interface into role-based dashboards, completing a prototype that gives each staff member direct access to their own core tasks and information. Staff feedback on the prototype was positive: teachers found checking schedules and attendance clearer, kitchen staff found grasping meal counts and dietary needs clearer, and dormitory staff found checking student attendance and status clearer.',
+          "Shared role-based dashboard prototypes with staff to check how well the workflow and information layout matched their actual work. Feedback was positive: teachers could check schedule and attendance, kitchen staff meal counts and dietary needs, and dormitory staff student attendance and status, all on a single screen.\n\nThis confirmed that restructuring information priorities around users' actual work context — rather than simply adding features — was what mattered most for improving task efficiency and information access.",
+        resultHeadline: 'With an information structure built for each role,\ncore tasks became faster to reach.',
+        resultHighlights: [],
+        resultVerification:
+          "Restructured the home screen and navigation to reflect each role's information priorities, so the information needed for core tasks could be checked directly without going through multiple menus.\n\nShared the finished role-based prototypes with actual staff to check how well the information layout matched their workflow, and received positive feedback — especially on being able to check each role's needed information directly on a single screen.",
+        resultTakeaway:
+          "The most important change in this redesign wasn't adding features — it was reprioritizing information to match actual workflows.",
         prevLabel: '← PREVIOUS — SEOUL CITY-FUNDED XR RESEARCH',
         nextLabel: 'BACK TO ALL WORK →',
         backToWorkLabel: '← ALL WORK',
