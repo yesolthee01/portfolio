@@ -162,11 +162,10 @@ function AgeCardRow({ card, index }: { card: AgeCard; index: number }) {
   );
 }
 
-function RoleCardRow({ card, index }: { card: RoleCard; index: number }) {
+function RoleCardRow({ card }: { card: RoleCard }) {
   return (
     <div className="role-card">
       <div className="role-card-identity">
-        <div className="role-card-index">{String(index + 1).padStart(2, '0')}</div>
         <div className="role-card-role">{card.role}</div>
       </div>
       <div className="role-card-content">
@@ -347,11 +346,9 @@ export function CaseStudy() {
           </div>
           {isSkolePlan && cs.researchFindings && (
             <div className="case-challenge-findings">
-              <div className="case-challenge-findings-label">{cs.researchFindings.roleTitle}</div>
               <div className="research-role-grid">
-                {cs.researchFindings.roleItems.map((item, index) => (
+                {cs.researchFindings.roleItems.map((item) => (
                   <div className="research-role-card glass" key={item.role}>
-                    <div className="research-role-index">{String(index + 1).padStart(2, '0')}</div>
                     <div className="research-role-name">{item.role}</div>
                     <div className="research-role-info">{item.info}</div>
                     <div className="research-role-caption">{item.support}</div>
@@ -438,8 +435,8 @@ export function CaseStudy() {
             <div className="case-section-label case-roles-label">{cs.rolesLabel ?? 'ROLE-BASED UX'}</div>
             {cs.rolesIntro && <p className="case-roles-intro">{cs.rolesIntro}</p>}
             <div className="role-cards">
-              {cs.roleCards.map((card, i) => (
-                <RoleCardRow card={card} index={i} key={card.role} />
+              {cs.roleCards.map((card) => (
+                <RoleCardRow card={card} key={card.role} />
               ))}
             </div>
           </div>
@@ -484,17 +481,19 @@ export function CaseStudy() {
         )}
 
         {isSkolePlan && cs.resultHeadline && cs.resultHighlights && cs.resultVerification && cs.resultTakeaway ? (
-          <div className={`case-section case-result${resultInView ? ' in-view' : ''}`} ref={resultRef}>
-            <div className="case-section-label case-result-label">{cs.resultLabel}</div>
-            <h2 className="case-result-headline">{renderInlineMarkup(cs.resultHeadline)}</h2>
-            <div className="case-result-text">
+          <div className={`case-section case-row${resultInView ? ' in-view' : ''}`} ref={resultRef}>
+            <div className="case-row-label">
+              <div className="case-section-label">{cs.resultLabel}</div>
+              <p className="case-result-side-headline">{renderInlineMarkup(cs.resultHeadline)}</p>
+            </div>
+            <div className="case-row-body case-result-text">
               {cs.resultHighlights.map((highlight) => (
                 <p key={highlight.title}>
-                  <strong>{highlight.title}</strong> — {highlight.desc}
+                  <strong>{highlight.title}</strong> | {highlight.desc}
                 </p>
               ))}
               <p>
-                <strong>VALIDATION</strong> {cs.resultVerification}
+                <strong>VALIDATION</strong> | {cs.resultVerification}
               </p>
               <p className="case-result-takeaway">{cs.resultTakeaway}</p>
             </div>

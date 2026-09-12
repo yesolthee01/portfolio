@@ -1476,14 +1476,6 @@ a.short-card:hover {
   margin-top: var(--space-28);
 }
 
-.case-challenge-findings-label {
-  font-size: var(--fs-caption);
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  margin-bottom: var(--space-14);
-}
-
 .case-role-tags {
   display: flex;
   flex-wrap: wrap;
@@ -2019,15 +2011,17 @@ a.short-card:hover {
   border-top: 1px solid var(--glass-border);
 }
 
-.role-card:last-child {
-  border-bottom: 1px solid var(--glass-border);
-}
-
-/* No divider directly under the section intro paragraph — the intro
-   already reads as its own line, so the first card's top border just
-   duplicated that separation. */
+/* No divider directly under the section intro paragraph, and none right
+   before the next section's own top border either — the intro already
+   reads as its own line, and the next .case-section supplies the single
+   divider before RESULT/IMPACT, so the first/last card's own borders
+   would just duplicate that separation. */
 .role-cards .role-card:first-child {
   border-top: none;
+}
+
+.role-cards .role-card:last-child {
+  border-bottom: none;
 }
 
 .role-card-image {
@@ -2102,6 +2096,20 @@ a.short-card:hover {
 
 .case-result-label {
   margin-bottom: var(--project-label-gap);
+}
+
+/* SkolePlan's RESULT/IMPACT headline moved into the label column's own
+   blank space below the label, instead of a full-width display line
+   above the body text — matches the label+body split every other
+   .case-row section already uses. */
+.case-result-side-headline {
+  font-family: var(--font-display);
+  font-size: var(--fs-heading-sm);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: pre-line;
+  margin: 0;
 }
 
 .case-result-headline {
