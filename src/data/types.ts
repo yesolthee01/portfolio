@@ -99,7 +99,15 @@ export interface ResearchFindingGroup {
 export interface CaseStudyContent {
   eyebrow: string;
   title: string;
+  /** Optional — a bold one-line hook shown above the subtitle paragraph,
+   * distilling the project's core problem→solution into a single
+   * scannable sentence. Reuses the RESULT section's headline styling. */
+  summary?: string;
   subtitle: string;
+  /** Optional — a short project duration shown as a small pill under the
+   * subtitle (e.g. '2024.08 – 2024.12'). Omit for projects without a
+   * clear timeframe to state. */
+  period?: string;
   heroLabel: string;
   roleTags?: string[];
   researchFindings?: ResearchFindingGroup;

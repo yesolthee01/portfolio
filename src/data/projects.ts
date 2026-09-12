@@ -83,8 +83,10 @@ export const projects: Project[] = [
       kr: {
         eyebrow: 'HMD 착용 없이 즐기는 XR 게임',
         title: 'Midnight Carnival',
+        summary: '웨어러블 없이 몸의 움직임만으로 즐기는 5면 공간형 XR 협동 게임',
         subtitle:
           "'미드나잇 카니발(Midnight Carnival)'은 5면 공간형 XR 플랫폼을 기반으로 한 체험형 e-sports 콘텐츠다. 신체 움직임과 디지털 인터랙션을 연결해, 여러 사용자가 온몸으로 함께 즐기는 협동형 경험을 제공한다.",
+        period: '2024.08 – 2024.12',
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
         roleLabel: 'MY ROLE',
         role:
@@ -148,8 +150,10 @@ export const projects: Project[] = [
       en: {
         eyebrow: 'XR Gaming Without a Headset',
         title: 'Midnight Carnival',
+        summary: 'A five-wall spatial XR co-op game played entirely through body movement — no wearables required.',
         subtitle:
           "'Midnight Carnival' is an experiential e-sports piece built on a five-wall spatial XR platform. It connects physical movement with digital interaction, letting multiple users play together with their whole bodies in a cooperative experience.",
+        period: 'Aug 2024 – Dec 2024',
         heroLabel: 'HERO IMAGE — MIDNIGHT CARNIVAL, SIGGRAPH ASIA 2024',
         roleLabel: 'MY ROLE',
         role:
@@ -285,8 +289,10 @@ export const projects: Project[] = [
       kr: {
         eyebrow: '야외 돔 전시',
         title: 'Designing Empathy Through Space',
+        summary: '발자국을 따라 걸으며 타인의 이야기에 잠시 머무는 공간형 스토리텔링 전시',
         subtitle:
-          "'Everyone Has a Story to Tell — Walking in Others Shoes'는 타인의 삶과 관점을 직접 보고, 듣고, 따라 걸으며 경험하도록 설계한 공간형 스토리텔링 전시다. 학생들이 여행에서 만난 사람들의 사진과 글, 목소리를 하나의 경험으로 연결해, 관람객이 낯선 사람의 이야기를 단순히 감상하는 것을 넘어 그들의 관점에 잠시 머물 수 있도록 공간과 동선을 설계했다.",
+          '학생들이 여행에서 만난 사람들의 사진과 글, 목소리를 하나의 경험으로 연결한 공간형 스토리텔링 전시다. 관람객이 낯선 사람의 이야기를 단순히 감상하는 것을 넘어, 그들의 관점에 잠시 머물 수 있도록 공간과 동선을 설계했다.',
+        period: '2026.05',
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
         principleLabel: 'DESIGN PRINCIPLE',
         principle:
@@ -326,8 +332,10 @@ export const projects: Project[] = [
       en: {
         eyebrow: 'Outdoor Dome Exhibition',
         title: 'Designing Empathy Through Space',
+        summary: "A spatial storytelling exhibition where visitors follow a footprint path to linger in someone else's story.",
         subtitle:
-          "'Everyone Has a Story to Tell — Walking in Others Shoes' is a spatial storytelling exhibition designed to let visitors see, hear, and walk alongside the lives and perspectives of others. Bringing together photos, writing, and voice recordings that students collected from people they met while traveling, the space and circulation were designed so visitors could do more than simply view a stranger's story — they could pause and stay within that person's perspective for a moment.",
+          "Bringing together photos, writing, and voice recordings that students collected from people they met while traveling, the space and circulation were designed so visitors could do more than simply view a stranger's story — they could pause and stay within that person's perspective for a moment.",
+        period: 'May 2026',
         heroLabel: 'HERO IMAGE — OUTDOOR DOME EXHIBITION, DENMARK',
         principleLabel: 'DESIGN PRINCIPLE',
         principle:
@@ -431,8 +439,10 @@ export const projects: Project[] = [
       kr: {
         eyebrow: 'AI 선생님과 함께하는 맞춤형 영어학습 앱',
         title: 'Talkable',
+        summary: 'AI와의 대화에서 발견한 약점을 다음 학습으로 연결하는 개인 맞춤형 영어 회화 학습 서비스',
         subtitle:
-          '대학교 졸업 캡스톤으로 진행한 프로젝트다. Talkable은 AI와의 실시간 대화를 통해 영어를 연습하고, 실제 대화에서 발견된 약점을 다음 학습으로 연결하는 개인 맞춤형 영어 회화 학습 서비스다. 대화 → 피드백 → 복습 → 챌린지로 이어지는 Learning Loop로 설계했다.',
+          '대학교 졸업 캡스톤으로 진행한 프로젝트다. 실시간 대화를 통해 영어를 연습하고, 대화 → 피드백 → 복습 → 챌린지로 이어지는 Learning Loop로 학습이 이어지도록 설계했다.',
+        period: '2024.03 – 2024.11',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
         roleLabel: 'MY ROLE',
         role:
@@ -532,8 +542,10 @@ export const projects: Project[] = [
       en: {
         eyebrow: 'A Personalized English App With an AI Teacher',
         title: 'Talkable',
+        summary: "A personalized English conversation app that turns weaknesses found in real conversation into the next lesson.",
         subtitle:
-          "This was a university graduation capstone project. Talkable is a personalized English conversation-learning service that lets users practice through real-time conversation with AI and turns weaknesses found in those conversations into the next round of learning. It analyzes each conversation for pronunciation, grammar, fluency, and vocabulary, and turns that feedback into a continuous Learning Loop of personalized review and challenges.",
+          "This was a university graduation capstone project. Users practice through real-time conversation with AI, and each conversation is analyzed for pronunciation, grammar, fluency, and vocabulary — feeding into a continuous Learning Loop of Conversation → Feedback → Review → Challenge.",
+        period: 'Mar 2024 – Nov 2024',
         heroLabel: 'HERO IMAGE — TALKABLE APP SCREENS',
         roleLabel: 'MY ROLE',
         role:
@@ -697,8 +709,10 @@ export const projects: Project[] = [
       kr: {
         eyebrow: '서울시 지원 XR 산학협력 프로젝트',
         title: '연령 맞춤형 XR 콘텐츠',
+        summary: '연령별 신체·인지 발달 특성을 서로 다른 움직임과 인터랙션으로 번역한 5개의 XR 경험',
         subtitle:
-          '이 프로젝트는 서울시 지원 R&D 산학협력 과제 [생성형 AI를 활용한 헤드셋 프리 XR 콘텐츠 기술 개발]로 진행됐다. 유아, 아동, 중고등학생, 성인, 고령 5개 연령대의 발달심리·운동·인지 발달 이론을 근거로 연령 맞춤형 XR 콘텐츠를 설계했으며, 하나의 5면 공간형 XR 플랫폼 안에서 각 연령대가 자신의 신체·인지 특성에 맞는 방식으로 움직이고 참여할 수 있도록 서로 다른 5개의 경험을 구성했다.',
+          '이 프로젝트는 서울시 지원 R&D 산학협력 과제 [생성형 AI를 활용한 헤드셋 프리 XR 콘텐츠 기술 개발]로 진행됐다. 유아, 아동, 중고등학생, 성인, 고령 5개 연령대의 발달심리·운동·인지 발달 이론을 근거로, 하나의 5면 공간형 XR 플랫폼 안에서 연령별 맞춤 콘텐츠를 설계했다.',
+        period: '2025.01 – 2025.07',
         heroLabel: 'HERO IMAGE — SEOUL CITY-FUNDED XR RESEARCH',
         roleLabel: 'MY ROLE',
         role:
@@ -774,8 +788,10 @@ export const projects: Project[] = [
       en: {
         eyebrow: 'Seoul City-Funded XR Industry-Academia Project',
         title: 'Age-Tailored XR Content',
+        summary: "Five XR experiences that translate each age group's physical and cognitive development traits into distinct movement and interaction.",
         subtitle:
-          'This project was carried out as a Seoul City-funded R&D industry-academia initiative, [Development of Headset-Free XR Content Technology Using Generative AI]. Grounded in developmental psychology and motor/cognitive development theory across five age groups — early childhood, children, teenagers, adults, and older adults — it designed age-tailored XR content. Within a single five-wall spatial XR platform, five distinct experiences were built so each age group could move and participate in ways suited to their own physical and cognitive traits.',
+          'This project was carried out as a Seoul City-funded R&D industry-academia initiative, [Development of Headset-Free XR Content Technology Using Generative AI]. Grounded in developmental psychology and motor/cognitive development theory across five age groups — early childhood, children, teenagers, adults, and older adults — the project designed age-tailored content within a single five-wall spatial XR platform.',
+        period: 'Jan 2025 – Jul 2025',
         heroLabel: 'HERO IMAGE — SEOUL CITY-FUNDED XR RESEARCH',
         roleLabel: 'MY ROLE',
         role:
@@ -907,8 +923,10 @@ export const projects: Project[] = [
       kr: {
         eyebrow: '덴마크 학교 교직원 업무 시스템 개선',
         title: 'SkolePlan 리디자인',
+        summary: '역할마다 다른 정보 우선순위를 발견해, 역할별 핵심 업무가 먼저 보이도록 재설계한 학교 업무 시스템',
         subtitle:
-          'SkolePlan은 덴마크 Efterskole 교직원이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템이다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고 인터뷰와 설문을 진행한 결과, 역할마다 필요한 정보와\n업무 우선순위가 다르다는 점을 발견했다. **역할별 핵심 업무가 먼저 보이는 시스템으로 재설계했다.**',
+          'SkolePlan은 덴마크 Efterskole 교직원이 출석, 일정, 학생 현황 등 일상적인 학교 업무에 사용하는 내부 시스템이다. 실제 학교 현장에서 교사·주방·기숙사 담당자의 업무를 관찰하고 인터뷰와 설문을 진행해 문제를 정의했다.',
+        period: '2026.03',
         heroLabel: 'HERO IMAGE — SKOLEPLAN',
         roleLabel: 'MY ROLE',
         roleTags: ['사용자 리서치', '문제 정의', '정보 구조 설계', 'User Flow', 'UI 리디자인', '프로토타입 검증'],
@@ -983,8 +1001,10 @@ export const projects: Project[] = [
       en: {
         eyebrow: 'Danish School Staff Application Redesign',
         title: 'SkolePlan (DK) Redesign',
+        summary: "A school staff system redesigned so each role's core tasks surface first, based on the different information priorities uncovered by role.",
         subtitle:
-          "SkolePlan redesigns the internal system staff at a Danish Efterskole use for everyday school operations — attendance, scheduling, and student status. After observing how teachers, kitchen staff, and dormitory staff actually worked on site and running user surveys and interviews, the single shared interface was rebuilt into a role-based system matched to each role's tasks and information priorities.",
+          "SkolePlan is the internal system staff at a Danish Efterskole use for everyday school operations — attendance, scheduling, and student status. The redesign began with on-site observation and interviews with teachers, kitchen staff, and dormitory staff to define the problem.",
+        period: 'March 2026',
         heroLabel: 'HERO IMAGE — SKOLEPLAN',
         roleLabel: 'MY ROLE',
         role:

@@ -295,7 +295,13 @@ export function CaseStudy() {
         <div className="case-hero">
           <div className="card-eyebrow case-eyebrow">{cs.eyebrow}</div>
           <h1 className="case-title">{cs.title}</h1>
+          {cs.summary && <p className="case-result-headline">{cs.summary}</p>}
           <p className="case-subtitle">{renderInlineMarkup(cs.subtitle)}</p>
+          {cs.period && (
+            <div className="case-role-tags">
+              <span className="tag glass">{cs.period}</span>
+            </div>
+          )}
           {project.heroVideo ? (
             <div className="case-hero-video">
               <iframe
