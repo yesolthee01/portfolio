@@ -325,7 +325,7 @@ export const siteCopy: Localized<{
     },
     about: {
       title: 'About',
-      body: "I start designing from **understanding what users need, and in what context they struggle**. Across digital products, XR, and spatial experiences, I design experiences centered on human behavior.\nI define problems through research and planning, and I'm strongest at structuring complex information and requirements into clear user flows and interactions. I enjoy the process of building ideas into working form together with teammates across different roles.",
+      body: "I start designing from **understanding what users need, and in what context they struggle**. Across digital products, XR, and spatial experiences, I design experiences centered on human behavior.\nFrom research and planning through prototyping, development collaboration, and usability validation, I've experienced the full process behind building and improving services and products. I'm strong at structuring complex requirements from the user's perspective, and at working with development and design teams to shape them into real service experiences.",
       kw1: 'I find the core of the problem',
       kw2: 'I collaborate across disciplines',
       kw3: 'I structure complex information',
@@ -336,7 +336,7 @@ export const siteCopy: Localized<{
       eyebrow: 'ABOUT',
       title: 'Yesol Kim',
       intro:
-        "I understand human behavior and the context people use a product in, and turn complex problems into clear experiences and structure. Across different environments — from mobile/web services to XR interactive content — I work through user research, problem definition, information architecture, user flow design, prototyping, and validation. I'm strong at quickly picking up a new domain, organizing what's needed, and shaping it into a real, working experience.",
+        "**I understand human behavior and the context people use a product in, and turn complex problems into clear experiences and structure.**\nAcross different environments — from mobile/web services to XR interactive content — I work through user research, problem definition, information architecture, user flow design, prototyping, and validation. I'm strong at quickly picking up a new domain, organizing what's needed, and shaping it into a real, working experience.",
       strengthsLabel: 'STRENGTHS',
       strengths: [
         {
@@ -356,7 +356,7 @@ export const siteCopy: Localized<{
       experience: [
         {
           role: 'SNS Marketing Intern',
-          org: 'A Copenhagen-based startup',
+          org: 'Seecon',
           location: 'Copenhagen, Denmark',
           period: '08.2026 – Present',
           highlights: [
@@ -365,7 +365,7 @@ export const siteCopy: Localized<{
           ],
         },
         {
-          role: 'Researcher (Part-time)',
+          role: 'Researcher',
           org: 'Seoul Women’s University',
           location: 'Seoul, Korea',
           period: '01.2025 – 07.2025',
@@ -375,7 +375,7 @@ export const siteCopy: Localized<{
           ],
         },
         {
-          role: 'Product Designer (Part-time)',
+          role: 'Product Designer',
           org: 'SpeakontheRock Co.',
           location: 'Seoul, Korea',
           period: '09.2024 – 12.2024',
@@ -385,7 +385,7 @@ export const siteCopy: Localized<{
           ],
         },
         {
-          role: 'Product Design Intern (Full-time)',
+          role: 'Product Design Intern',
           org: 'Newjak Co.',
           location: 'Seoul, Korea',
           period: '07.2024 – 08.2024',
@@ -395,7 +395,7 @@ export const siteCopy: Localized<{
           ],
         },
         {
-          role: 'MD (Part-time)',
+          role: 'MD',
           org: 'Treepicker Co.',
           location: 'Seoul, Korea',
           period: '11.2023 – 02.2024',
