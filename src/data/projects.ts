@@ -24,6 +24,7 @@ export const projects: Project[] = [
     tier: 'full',
     medium: 'spatial',
     tags: ['사용자 테스트', '인터랙션 설계', '개발 협업', '반복 개선'],
+    tagsEn: ['User Testing', 'Interaction Design', 'Development Collaboration', 'Iterative Design'],
     images: {
       thumb: '/images/work/midnight-carnival/thumb.jpg',
       hero: 'https://img.youtube.com/vi/sJRy-V2xb8I/hqdefault.jpg',
@@ -232,9 +233,10 @@ export const projects: Project[] = [
   {
     slug: 'outdoor-dome',
     order: 5,
-    tier: 'short',
+    tier: 'full',
     medium: 'spatial',
     tags: ['공간 경험 설계', '전시 기획', '사용자 경험'],
+    tagsEn: ['Spatial Experience Design', 'Exhibition Planning', 'User Experience'],
     images: {
       thumb: '/images/work/outdoor-dome/thumb.jpg',
       hero: '/images/work/outdoor-dome/hero-1.jpg',
@@ -388,6 +390,7 @@ export const projects: Project[] = [
     tier: 'full',
     medium: 'ai',
     tags: ['모바일 서비스 기획', '사용성 테스트', 'UX 설계', '개발 협업'],
+    tagsEn: ['Mobile App Planning', 'Usability Testing', 'UX Design', 'Development Collaboration'],
     images: {
       thumb: '/images/work/talkable/thumb.jpg',
       hero: '/images/work/talkable/hero-1.jpg',
@@ -659,6 +662,7 @@ export const projects: Project[] = [
     tier: 'full',
     medium: 'spatial',
     tags: ['사용자 리서치', '콘텐츠 기획', '산학협력'],
+    tagsEn: ['User Research', 'Content Planning', 'Industry–Academia Collaboration'],
     images: {
       thumb: 'https://img.youtube.com/vi/IvBbAEDmrlk/hqdefault.jpg',
       hero: 'https://img.youtube.com/vi/IvBbAEDmrlk/hqdefault.jpg',
@@ -881,6 +885,7 @@ export const projects: Project[] = [
     tier: 'full',
     medium: 'app',
     tags: ['사용자 조사', '정보 구조', '서비스 개선', '사용성 검증'],
+    tagsEn: ['User Research', 'Information Architecture', 'Service Improvement', 'Usability Validation'],
     images: {
       thumb: '/images/work/skoleplan/thumb.jpg',
       hero: '/images/work/skoleplan/hero-1.jpg',

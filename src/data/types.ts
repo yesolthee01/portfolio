@@ -266,7 +266,7 @@ export interface Project {
   tier: 'full' | 'short';
   medium: Medium;
   tags: string[];
-  images: {
+  tagsEn?: string[];  images: {
     thumb: string;
     hero: string;
   };

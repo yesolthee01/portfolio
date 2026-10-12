@@ -11,6 +11,7 @@ import { useInView } from '../hooks/useInView';
 export function ShortWorkCard({ project }: { project: Project }) {
   const { lang } = useLanguage();
   const card = project.card[lang];
+  const tags = lang === 'en' ? (project.tagsEn ?? project.tags) : project.tags;
   const result = project.resultLine?.[lang];
   const hasCaseStudy = Boolean(project.caseStudy && project.process);
   // Own scroll-reveal, independent of sibling cards — see the SCROLL
@@ -26,7 +27,7 @@ export function ShortWorkCard({ project }: { project: Project }) {
       <p className="short-card-desc">{card.desc}</p>
       {result && <p className="short-card-result">→ {result}</p>}
       <div className="tag-row">
-        {project.tags.map((tag) => (
+        {tags.map((tag) => (
           <span className={`tag glass medium-${project.medium}`} key={tag}>
             {tag}
           </span>

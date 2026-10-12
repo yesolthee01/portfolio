@@ -13,13 +13,16 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 function getInitialLang(): Lang {
-  // Korean is the default setting site-wide — a first-time visitor
-  // always lands in Korean regardless of browser/OS locale. Once someone
-  // explicitly switches (via the KR/EN toggle), that choice is
-  // remembered via STORAGE_KEY as before.
   if (typeof window === 'undefined') return 'kr';
+
+  // 링크에 지정된 언어를 먼저 적용
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  if (urlLang === 'kr' || urlLang === 'en') return urlLang;
+
+  // 링크에 언어가 없으면 이전에 선택한 언어 사용
   const stored = window.localStorage.getItem(STORAGE_KEY);
   if (stored === 'kr' || stored === 'en') return stored;
+
   return 'kr';
 }
 

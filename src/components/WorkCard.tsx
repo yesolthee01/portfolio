@@ -7,6 +7,7 @@ import { useInView } from '../hooks/useInView';
 export function WorkCard({ project }: { project: Project }) {
   const { lang } = useLanguage();
   const card = project.card[lang];
+  const tags = lang === 'en' ? (project.tagsEn ?? project.tags) : project.tags;
   // Own scroll-reveal, independent of sibling cards — see the SCROLL
   // REVEAL block in global.css.
   const { ref, inView } = useInView<HTMLAnchorElement>(0.2);
@@ -21,7 +22,7 @@ export function WorkCard({ project }: { project: Project }) {
         <h3 className="card-title">{card.title}</h3>
         <p className="card-desc">{card.desc}</p>
         <div className="tag-row">
-          {project.tags.map((tag) => (
+          {tags.map((tag) => (
             <span className={`tag glass medium-${project.medium}`} key={tag}>
               {tag}
             </span>
